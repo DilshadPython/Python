@@ -29,3 +29,9 @@ obj_2.first_name = ' Ellen'
 obj_2.id_num = '8798765'
 
 print(obj_2.first_name + ' << | >> ' + obj_2.id_num)
+
+print('###'*20)
+
+obj_3 = Student('Tilly', 'Raffi', 67)
+
+print(obj_3.id_num)
