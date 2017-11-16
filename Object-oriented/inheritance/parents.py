@@ -22,6 +22,10 @@ class Parent:
 	def email_address(self):
 		return '{}.{}'.format(self.first_name, self.last_name) + '@' + 'gmail.com'
 
+obj = Parent('Tim', 'Alan', '44')
+print(obj.first_name + ' ' + obj.last_name + ' ' + obj.age)
+
+
 
 class Son(Parent):
 	pass
