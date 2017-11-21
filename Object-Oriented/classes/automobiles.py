@@ -1,6 +1,6 @@
 # clas variables
 class Car:
-
+	#class veriable
 	profit = 1.09
 	number_in_the_store = 0
 
@@ -11,7 +11,7 @@ class Car:
 		self.types = types 
 		self.price = price
 
-
+		# instance variable
 		Car.number_in_the_store += 1
 
 
