@@ -2,6 +2,8 @@
 regular method and class method will taken the instance as first argument which 
 is self in the car_detail or payment method in this example
 '''
+import datetime
+
 
 # clas variables
 class Car:
@@ -19,11 +21,11 @@ class Car:
 
 		Car.number_in_the_store += 1
 
-		# regular methods
+
 	def car_detail(self):
 		return '{}, {}, {}, {}'.format(self.name, self.model, self.color, self.types, self.price)
 
-		# regular method
+
 	def payment(self):
 		self.price = float(self.price * self.profit)
 
@@ -37,17 +39,20 @@ class Car:
 	@classmethod
 	def from_string(cls, car_str):
 		name, model, color, types, price = car_str.split('-')
-		return cls(name, model, color, types, price)	
+		return cls(name, model, color, types, price)
+
+	@staticmethod
+	def is_not_workday(day):
+		if day.weekday == 5 or day.weekday == 6:
+			return False
+		return True
+
+obj_one = Car('Audi', 2017, 'Black', 'S3', 33.000)
+obj_two = Car('BMW', 2016, 'Gray', 'Z3', 28.500)
 
 
-obj_one = 'Ford-2010-Black-S3-33.100'
-obj_two = 'Mini-2018-Red-M1-28.500'
+off_days = datetime.date(2017, 3, 28)
 
-new_obj = Car.from_string(obj_one)
-new_obj_1 = Car.from_string(obj_two)
-# name, model, color, types, price = obj_two.split('-')
-
-
-
-print(new_obj.name + ' ' + new_obj.model + ' ' + new_obj.color + ' ' + new_obj.types + '|'  + new_obj.price)
-print(new_obj_1.name + ' ' + new_obj_1.model + ' ' + new_obj_1.color + ' ' + new_obj_1.types + '|'  + new_obj_1.price)
+print(' The date of 28 March 2017 is Tuesday not weekend the answer is\
+		 true but if is 25 or 26 than is Saturday and Sundy')
+print(Car.is_not_workday(off_days))
