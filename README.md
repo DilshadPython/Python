@@ -6,8 +6,8 @@ This repo is only my training time to starting learning python from beginning un
 ###  print 'Something'
 ### raw_input()
 =====================
-/> 3/2
-/> 1
+##### /> 3/2
+##### /> 1
 
 ************************
 
@@ -15,6 +15,6 @@ This repo is only my training time to starting learning python from beginning un
 ### print('Something')
 ### input()
 =====================
-/> 3/2
-/> 1.5
+#### /> 3/2
+#### /> 1.5
 
