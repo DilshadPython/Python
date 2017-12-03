@@ -5,9 +5,16 @@ This repo is only my training time to starting learning python from beginning un
 ### In Python2.7 :
 ###  print 'Something'
 ### raw_input()
+=====================
+/> 3/2
+/> 1
 
 ************************
 
 ### In Python3+ : 
 ### print('Something')
 ### input()
+=====================
+/> 3/2
+/> 1.5
+
