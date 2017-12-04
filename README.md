@@ -5,7 +5,8 @@ This repo is only my training time to starting learning python from beginning un
 ### In Python2.7 :
 ###  print 'Something'
 ### raw_input()
-=====================
+=============================
+##### / called class division
 ##### /> 3/2
 ##### /> 1
 
@@ -14,7 +15,8 @@ This repo is only my training time to starting learning python from beginning un
 ### In Python3+ : 
 ### print('Something')
 ### input()
-=====================
+=============================
+#### / called single division
 #### /> 3/2
 #### /> 1.5
 
