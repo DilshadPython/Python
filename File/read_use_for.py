@@ -1,0 +1,1 @@
+append_to_file = 'Add this line to the file created, by Dilshad'for line in open('appendfile.txt', 'r'):	line.readline()	print(line)# line.close()

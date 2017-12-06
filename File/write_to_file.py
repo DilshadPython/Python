@@ -1,0 +1,1 @@
+write_to_file = 'Hello, this message go to other file created and saved in the same directory :)'saveFile = open('thefile.txt', 'w')saveFile.write(write_to_file)saveFile.close()
