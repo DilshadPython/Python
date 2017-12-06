@@ -18,9 +18,12 @@ print(c)
 print('--------------------')
 
 x = [1, 4, 3, 5, 1, 5, 9, 2, 5, 8]
+print('Do not display duplication')
 print(set(x))
+
 
 i = 7
 for i in x:
-    print(i)
-
+	if i == 7:
+		print(i)
+	print(False)
