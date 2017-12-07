@@ -1,0 +1,7 @@
+a = 20
+
+print('First result: ', 15 - (a-15)) 
+
+a = 10
+
+print('Second result: ',15 - (a+15))
