@@ -1,1 +1,1 @@
-readme = open('thefile.txt', 'r').read()print readmeprint '****' * 7readscondfile = open('appendfile.txt', 'r').readlines()print readscondfileprint '****' * 7readthirdfile = open('appendfile.txt', 'r').read()splitfile = readthirdfile.split('\n')print readthirdfile
+readme = open('thefile.txt', 'r').read()print(readme)print('****' * 7)readscondfile = open('appendfile.txt', 'r').readlines()print(readscondfile)print('****' * 7)readthirdfile = open('appendfile.txt', 'r').read()splitfile = readthirdfile.split('\n')print(readthirdfile)
