@@ -1,1 +1,1 @@
-append_to_file = 'Add this line to the file created, by Dilshad'myFile = open('appendfile.txt', 'a')myFile.write('\n')myFile.write(append_to_file)myFile.close()
+append_to_file = 'Add this line to the file created, by Dilshad'																# ad stand for appendmyFile = open('appendfile.txt', 'a')myFile.write('\n')myFile.write(append_to_file)myFile.close()

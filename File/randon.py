@@ -13,16 +13,16 @@ while team:
     jumble += team[position]
     team = team[:position] + team[(position + 1):]
 
-print '\nThe jumble is ', jumble
+print('\nThe jumble is ', jumble)
 
-enter = raw_input('Guess: ')
+enter = input('Guess: ')
 enter = enter.lower()
 
 while (enter != correct) and (enter != ''):
-    print '\nSorry that is not correct'
-    enter = raw_input('Guess: ')
+    print('\nSorry that is not correct')
+    enter = input('Guess: ')
     enter = enter.lower()
 
 if enter == correct:
-    print 'Well done you win :)'
+    print('Well done you win :)')
 
