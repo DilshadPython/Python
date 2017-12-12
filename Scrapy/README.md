@@ -17,3 +17,8 @@
 ## TODO
 
 #### scrapy startproject example
+#### scrapy crawl tutorial -o result.csv
+#### scrapy crawl (Name od the spider) -o result.json
+#### (Name od the spider) find in spiders folder define in class expample (name = 'books')
+
+
