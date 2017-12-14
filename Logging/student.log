@@ -1,3 +1,6 @@
 2017-12-14 12:33:19,819:INFO:Create Student: 814747 - Dilshad, Abdulla, Anglia University. Dilshad-Abdulla@uni.edu
 2017-12-14 12:33:19,823:INFO:Create Student: 805321 - John, Kim, London University. John-Kim@uni.edu
 2017-12-14 12:33:19,823:INFO:Create Student: 866621 - Rachel, Doe, London University. Rachel-Doe@uni.edu
+2017-12-14 22:34:58,299:INFO:root:Create Student: 814747 - Dilshad, Abdulla, Anglia University. Dilshad-Abdulla@uni.edu
+2017-12-14 22:34:58,299:INFO:root:Create Student: 805321 - John, Kim, London University. John-Kim@uni.edu
+2017-12-14 22:34:58,301:INFO:root:Create Student: 866621 - Rachel, Doe, London University. Rachel-Doe@uni.edu

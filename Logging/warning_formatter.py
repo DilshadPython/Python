@@ -5,8 +5,8 @@ import logging
     camelcase. the debug after level=logging.DEBUG is an integer run in background
     which is different than logging.DEBUG() , method which used logging.DEBUG(something)    
 '''
-logging.basicConfig(filename='output.log', level=logging.DEBUG,
-					format='%(asctime)s:%(levelname)s:%(message)s')
+logging.basicConfig(filename='format.log', level=logging.DEBUG,
+					format='%(asctime)s:%(levelname)s:%(name)s:%(message)s')
 
 def full_name():
 	fname = 'Tom'

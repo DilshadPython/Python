@@ -1,7 +1,10 @@
 import logging
 
-logging.basicConfig(filename='student.log', level=logging.INFO, 
-					format='%(asctime)s:%(levelname)s:%(name)s:%(message)s') 
+
+logger = logging.getLogger(__name__)
+
+logging.basicConfig(filename='student_1.log', level=logging.INFO, 
+					format='%(levelname)s:%(name)s:%(message)s') 
 
 
 class Student:
@@ -12,9 +15,11 @@ class Student:
 		self.lname = lname
 		self.university = university 
 
-		logging.info('Create Student: {} - {}, {}, {}. {}'.format(self.std_id, self.fname, 
-													self.lname, self.university, 
-													self.email))
+		logger.info('Create Student: {} - {}, {}, {}. {}'.format(
+														self.std_id, self.fname, 
+														self.lname, self.university, 
+														self.email
+														))
 
 	@property
 	def email(self):
