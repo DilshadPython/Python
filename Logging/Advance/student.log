@@ -1,0 +1,33 @@
+2017-12-14 14:01:07,185:INFO:Create Student: 814747 - Dilshad, Abdulla, Anglia University. Dilshad-Abdulla@uni.edu
+2017-12-14 14:01:07,185:INFO:Create Student: 805321 - John, Kim, London University. John-Kim@uni.edu
+2017-12-14 14:01:07,185:INFO:Create Student: 866621 - Rachel, Doe, London University. Rachel-Doe@uni.edu
+2017-12-14 14:01:07,185:WARNING:Full name: Tom Alan
+2017-12-14 14:01:07,185:WARNING:Street: 6 Ursula Gould Way 
+City: E14 7FX 
+Post Code: London
+2017-12-14 14:01:07,185:WARNING:Phone: 07825810648 
+Email: info@gmail.com
+2017-12-14 14:13:52,388:INFO:Create Student: 814747 - Dilshad, Abdulla, Anglia University. Dilshad-Abdulla@uni.edu
+2017-12-14 14:13:52,388:INFO:Create Student: 805321 - John, Kim, London University. John-Kim@uni.edu
+2017-12-14 14:13:52,388:INFO:Create Student: 866621 - Rachel, Doe, London University. Rachel-Doe@uni.edu
+2017-12-14 14:14:15,134:INFO:Create Student: 814747 - Dilshad, Abdulla, Anglia University. Dilshad-Abdulla@uni.edu
+2017-12-14 14:14:15,134:INFO:Create Student: 805321 - John, Kim, London University. John-Kim@uni.edu
+2017-12-14 14:14:15,134:INFO:Create Student: 866621 - Rachel, Doe, London University. Rachel-Doe@uni.edu
+2017-12-14 14:14:59,451:INFO:Create Student: 814747 - Dilshad, Abdulla, Anglia University. Dilshad-Abdulla@uni.edu
+2017-12-14 14:14:59,451:INFO:Create Student: 805321 - John, Kim, London University. John-Kim@uni.edu
+2017-12-14 14:14:59,451:INFO:Create Student: 866621 - Rachel, Doe, London University. Rachel-Doe@uni.edu
+2017-12-14 14:14:59,451:INFO:Full name: Tom Alan
+2017-12-14 14:14:59,451:INFO:Street: 6 Ursula Gould Way 
+City: E14 7FX 
+Post Code: London
+2017-12-14 14:14:59,452:INFO:Phone: 07825810648 
+Email: info@gmail.com
+2017-12-14 20:35:54,178:INFO:Create Student: 814747 - Dilshad, Abdulla, Anglia University. Dilshad-Abdulla@uni.edu
+2017-12-14 20:35:54,178:INFO:Create Student: 805321 - John, Kim, London University. John-Kim@uni.edu
+2017-12-14 20:35:54,178:INFO:Create Student: 866621 - Rachel, Doe, London University. Rachel-Doe@uni.edu
+2017-12-14 20:35:54,178:INFO:Full name: Tom Alan
+2017-12-14 20:35:54,179:INFO:Street: 6 Ursula Gould Way 
+City: E14 7FX 
+Post Code: London
+2017-12-14 20:35:54,179:INFO:Phone: 07825810648 
+Email: info@gmail.com
