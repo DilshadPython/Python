@@ -27,5 +27,5 @@ data_frame = pd.read_csv('one_row.csv', names=['date', 'high'], index_col=0)
 data_frame.to_csv('onw_row2.csv')
 
 # remove the date and hight in the csv file
-data_frame.to_csv('onw_row4.csv', header=False)
+data_frame.to_csv('one_row3.csv', header=False)
 print(data_frame.head())
