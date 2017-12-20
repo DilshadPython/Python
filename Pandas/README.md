@@ -25,3 +25,6 @@
 ### Index 
 
 ### Readming differents files using pandas http://pandas.pydata.org/pandas-docs/stable/io.html
+
+## HDF stand for High article data format HDF5
+### required to install pip install numexpr and pip install tables
