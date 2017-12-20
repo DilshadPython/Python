@@ -17,10 +17,10 @@ output = data.DataReader('T', 'yahoo', start, end)
 
 print(output.head())
 
-print('\n################## NO HEAD ##############################')
-print(output)
+print('\n################################################')
+high_list = output['High'].tolist()
+print(high_list)
 
-print('\nWe using graph from here')
-output['Adj Close'].plot()
-plt.legend()
-plt.show()
+print('\n################################################')
+highz = output['High']
+print(highz)
