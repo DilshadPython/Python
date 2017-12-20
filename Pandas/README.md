@@ -1,8 +1,5 @@
 ## Pandas:
 
-### (This package not complete because of some issues with pandas_datareader and matplotlib
-### installation and python version)
-
 ### pandas is an open source, BSD-licensed library providing high-performance, easy-to-use data 	structures and data analysis tools for the Python programming language.
 
 ### pandas is a NUMFocus sponsored project. This will help ensure the success of development of pandas as a world-class open-source project, and makes it possible to donate to the project.
@@ -26,3 +23,5 @@
 
 ### 2. DataFrame is collection of multi columns can be converted to multi dimientions of list
 ### Index 
+
+### Readming differents files using pandas http://pandas.pydata.org/pandas-docs/stable/io.html
