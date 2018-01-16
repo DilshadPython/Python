@@ -1,6 +1,9 @@
 from bs4 import BeautifulSoup
 import re
 
+'''
+	BeautifulSoup use to extract data from the web
+'''
 input = """<html>
 				<head>
 					<title>Bootstrap</title>
