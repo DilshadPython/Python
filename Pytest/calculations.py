@@ -5,7 +5,7 @@ def adding(firstnumber, secondnumber):
 	total = firstnumber + secondnumber
 	return total
 
-def substrcting(firstnumber, secondnumber):
+def substracting(firstnumber, secondnumber):
 	result = firstnumber - secondnumber
 	return result
 
