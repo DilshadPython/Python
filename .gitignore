@@ -2,3 +2,5 @@
 *.sqlite3
 __pycache__
 .DS_STORE
+*.cache
+*.pytest_cache

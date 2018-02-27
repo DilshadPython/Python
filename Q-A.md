@@ -31,7 +31,7 @@
 #### A Python decorator is a specific change that we make in Python syntax to alter functions easily.
 
 ### What is pickling and unpickling?
-#### Pickle module accept any Python object and convert into a string and dumps it into a file using dump function,     this is called pickling. While the process of retrieving orgiginal Python objects from the stored string is called     unpickling.
+#### Pickle module accept any Python object and convert into a string and dumps it into a file using dump function, this is called pickling. While the process of retrieving orgiginal Python objects from the stored string is called unpickling.
 
 ### What are generators in Python?
 #### The way of implementing iterators are known as generators.  It is a normal function except that it yields expression in the function.
