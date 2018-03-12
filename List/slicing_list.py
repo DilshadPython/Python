@@ -5,6 +5,9 @@ num = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 
 # list[start:end:step]
 
+print(list(reversed(num)))
+
+print('')
 print(' ', num, ' ******  just print num')
 
 print('Index zero: ', num[0], ' ****** [0] ')
