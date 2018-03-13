@@ -1,4 +1,5 @@
 # create an empty list
+print('List icopy or use memory than tuple')
 a = []
 print(a)
 print('-----'*15)
