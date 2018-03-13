@@ -14,5 +14,5 @@ def contact(phone, email):
 
 
 full_name()
-address('6 Ursula Gould Way', 'E14 7FX', 'London')
+address('6 Ursula Gould Way', 'London', 'E14 7FX')
 contact('07825810648', 'info@gmail.com')

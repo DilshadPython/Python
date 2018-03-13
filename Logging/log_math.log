@@ -1,0 +1,9 @@
+INFO 2018-03-13 12:28:02,957 - First level info 10
+DEBUG 2018-03-13 12:28:02,957 - Second level debug 10
+WARNING 2018-03-13 12:28:02,957 - Third level warning 10
+ERROR 2018-03-13 12:28:02,957 - Fourth level error 10
+CRITICAL 2018-03-13 12:28:02,957 - Fifth level Critical 10
+INFO 2018-03-13 12:28:02,957 - quadratic_formula(1, 0, -4
+DEBUG 2018-03-13 12:28:02,958 -  # Compute the discriminant
+DEBUG 2018-03-13 12:28:02,958 -  # Compute the two roots
+DEBUG 2018-03-13 12:28:02,958 - # Return the roots
