@@ -1,10 +1,13 @@
+'''
+Fibonacci Sequence
+1, 1, 2, 3, 5, 8, 13, 21, 34, 55
+'''
 
-
-def fib(x):
+def fibonacci(x):
 	a = 0
 	b = 1
 	for i in range(0, 101):
 		a, b = b, a + b
 		print('Index: {} - Result {}'.format(i, a))
 
-fib(101)
+fibonacci(101)
