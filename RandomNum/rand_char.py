@@ -9,6 +9,9 @@ for x in range(10):
 
 
 print()
-test = ''.join([random.choice(string.ascii_letters + string.digits) for n in range(1, 9)])
+print(20*'##')
+
+
+test = ''.join([random.choice(string.ascii_letters + string.digits) for n in range(1, 6)])
 
 print(test)
