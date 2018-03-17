@@ -1,6 +1,7 @@
 
 '''
-Create function called studentid  
+Create dictionary with key as int and value is string, then create function to allow user enter
+the int return the string as as student name and siplay message if the student not in the dict 
 '''
 
 list_student_id = {
