@@ -1,5 +1,5 @@
 '''
-The comparasen between == and is in python
+The diferent between == and is in python
 '''
 
 names = ['Dilshad', 'Raffi', 'Tilly', 'Tom']
