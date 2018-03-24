@@ -1,6 +1,7 @@
 '''
  Because Python has first-class functions they can
  be used to emulate switch/case statements
+ https://www.getdrip.com/deliveries/iksa2qbgqiepw2auuyty?__s=qyvy26twbzapeofqm1wx
 '''
 def dispatch_dict(operator):
 	op = print(['add', 'sub', 'mul', 'div', 'rem'])
