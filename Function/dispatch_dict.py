@@ -5,7 +5,7 @@
 '''
 def dispatch_dict(operator):
 	op = print(['add', 'sub', 'mul', 'div', 'rem'])
-	operator = str(input('Enter the the operator: '))
+	operator = str(input('Plese Select on of the operators above: '))
 	x = int(input('Enter first number: '))
 	y = int(input('Enter second number: '))
 
