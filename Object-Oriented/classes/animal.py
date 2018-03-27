@@ -1,4 +1,4 @@
-
+# class with initialization __init__
 class Animal:
 
 	def __init__(self, name, sound):
