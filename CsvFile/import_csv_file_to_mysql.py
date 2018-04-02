@@ -1,16 +1,25 @@
+import sys
+
+from importlib import reload
+# sys.setdefaultencoding() does not exist, here!
+reload(sys)  # Reload does the trick!
+# sys.setdefaultencoding('UTF8')
+
 import xlrd
 import MySQLdb
 
 '''
 pip install xlrd
 pip install mysqlclient
-https://www.youtube.com/watch?v=YLXFEQLCogM
-'''
 
-test = xlrd.open_workbook('property-data.csv')
-sheet = test.sheet_by_price('PRICE')
+'''
+from xlrd import __VERSION__
+
+filename = xlrd.open_workbook('property_data.xls')
+sheet = filename.sheet_by_price('PRICE')
 # sheet = text.shet_by_index(0)
 
+print(sheet, '<<<')
 # 
 database = MySQLdb.connect(host='localhost', user='root', password='admin123', db='csvfile')
 

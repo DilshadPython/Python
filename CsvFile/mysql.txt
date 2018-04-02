@@ -1,5 +1,5 @@
 How to access mysql and create databases with table:
-1. mysql -u root -p
+1. mysql -u root -p + admin123
 
 2. mysql> create database csvfile;
 
@@ -25,3 +25,5 @@ How to access mysql and create databases with table:
 	Empty set (0.00 sec)
 
 6.  How to Create a MySQL Table:
+mysql> CREATE TABLE IF NOT EXISTS csvtable (PROPERTY_REFERENCE VARCHAR(33) DEFAULT NUll, PRICE INT(10), BEDROOMS INT(2) DEFAULT NULL, BATHROOMS INT(2) DEFAULT NULL, HOUSE_NUMBER INT(2) DEFAULT NULL, ADDRESS VARCHAR(50) DEFAULT NULL, REGION VARCHAR(30) DEFAULT NULL, POSTCODE VARCHAR(10) DEFAULT NULL, PROPERTY_TYPE VARCHAR(20) DEFAULT NULL);
+

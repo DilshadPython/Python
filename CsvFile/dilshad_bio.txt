@@ -1,0 +1,9 @@
+
+www.dilshadabdulla.net
+
+Summary of Development skills and work experiences 
+I have been a Python web application developer as full stack developer (Python-Django, Bootstrap, Git, Linux, Deployment, Agile methodology and Rest framework API) for over 3 years, mainly working in the backend using django as my master framework. I have also used flask for a few months. 
+I have very good experience with projects that have multi applications such as Dashboard or CMS, registrations, orders, celery translations and more. My front-end developer skills have given me very good experience with front-end (Bootstrap) with redesigning an idea of the application process. I have experience with JS but have not used any JS framework in my carreer because I have been involved mainly with the backend. However I have used JS for some of my applications if needed and one of the examples is feedback apps for www.alfa.com. I am trying to learn AngularJS in my spare time. 
+I am very open to learning new technologies and expanding my skills more in Linux, such as Docker and Ansible. At the moment, after working on a Digital Marketing platform, I am working on an E-commerce platform from scratch, trying to understand both, at a deep development level, so that I can add my own ideas on the top. 
+I am a member of London Python and London Django meetups, building pythonacademy on Google plus bringing likeminded developers into contact every day there or in Google Hangouts to share ideas and experiences. 
+
