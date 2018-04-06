@@ -1,0 +1,72 @@
+{
+  "listings": [
+    {
+      "listing": {
+        "beds": 1,
+        "extra_host_languages": [
+          "es",
+          "fr",
+        ],
+        "fully_refundable": true,
+        "id": 14177767,
+        "is_business_travel_ready": false,
+        "is_family_preferred": false,
+        "is_new_listing": false,
+        "is_superhost": false,
+        "lat": 38.72871983279113,
+        "lng": -9.1430894448315,
+        "localized_city": "Lisboa",
+        "localized_neighborhood": "São Jorge de Arroios",
+        "name": "Red room in the city center",
+        "person_capacity": 1,
+        "picture_count": 15,
+        "picture_urls": [
+          "https://a0.muscache.com/im/pictures/2e5d63dd-fdf5-4e34-85cb-c52ceafe3fc2.jpg?aki_policy=large",
+          "https://a0.muscache.com/im/pictures/9f0e0439-e49f-473c-a835-226811dba15d.jpg?aki_policy=large",
+          "https://a0.muscache.com/im/pictures/c90ac958-b158-410c-84af-d95148e38984.jpg?aki_policy=large",
+          "https://a0.muscache.com/im/pictures/a22eee21-d963-4161-a6e5-15c371f91295.jpg?aki_policy=large",
+          "https://a0.muscache.com/im/pictures/5645a244-8d3b-4c4d-9192-0eaaaf57bdef.jpg?aki_policy=large",
+          "https://a0.muscache.com/im/pictures/a16c0fc1-e581-4519-a9f4-d9da00f283f2.jpg?aki_policy=large",
+          "https://a0.muscache.com/im/pictures/52129cd2-0cf4-4579-821e-bc468b57c95b.jpg?aki_policy=large",
+          "https://a0.muscache.com/im/pictures/ade06b7c-9ca1-442c-b045-93dc38407005.jpg?aki_policy=large",
+          "https://a0.muscache.com/im/pictures/8a0a21bd-fe7e-43fb-8923-8134e1bb8800.jpg?aki_policy=large",
+          "https://a0.muscache.com/im/pictures/536bbb15-ea3d-41a2-8cd5-148bb490df7d.jpg?aki_policy=large",
+          "https://a0.muscache.com/im/pictures/cfe67940-20f1-4dcd-993f-ff4d64e75e9c.jpg?aki_policy=large",
+          "https://a0.muscache.com/im/pictures/fd5217e7-232f-42ab-bd25-94f00ea79bbe.jpg?aki_policy=large",
+          "https://a0.muscache.com/im/pictures/366e9648-28bd-4d4f-b477-2c8696a64e85.jpg?aki_policy=large",
+          "https://a0.muscache.com/im/pictures/e78df5cc-ba9c-4c2a-a7fb-b007401d5ec3.jpg?aki_policy=large",
+          "https://a0.muscache.com/im/pictures/8ca4870d-782c-4e7c-b516-e09d6be0a928.jpg?aki_policy=large"
+        ],
+        "preview_encoded_png": "iVBORw0KGgoAAAANSUhEUgAAAAMAAAAFCAIAAAAPE8H1AAAAPUlEQVQIHQEyAM3/Af2pPuUZahkb+QH+njn0VLvmspsB+ZpM5DSJ2KueAbZgNxYLA9Ph6gHKXBIkOiHeueJ43BhqXfjB2QAAAABJRU5ErkJggg==",
+        "reviews_count": 81,
+        "room_type": "Quarto inteiro",
+        "show_structured_name": false,
+        "space_type": "Quarto inteiro",
+        "star_rating": 5,
+        "tier_id": 0,
+        "fully_refundable_cutoff_days": 1
+      },
+      "pricing_quote": {
+        "can_instant_book": true,
+        "monthly_price_factor": null,
+        "price": null,
+        "rate": {
+          "amount": 23,
+          "amount_micros": null,
+          "amount_formatted": "$23",
+          "is_micros_accuracy": false,
+          "currency": "USD"
+        },
+        "rate_type": "nightly",
+        "rate_with_service_fee": {
+          "amount": 23,
+          "amount_micros": null,
+          "amount_formatted": "$23",
+          "is_micros_accuracy": false,
+          "currency": "USD"
+        },
+        "weekly_price_factor": null
+      },
+      "recommendation_reason": null,
+      "recommendation_reason_id": null
+    }

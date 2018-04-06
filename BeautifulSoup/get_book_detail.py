@@ -6,7 +6,7 @@ import requests as rq
 
 url = 'https://bookdepository.com/search?searchTerm=python&search=Find+book'
 
-file = open('books.txt', 'w')
+file = open('books.json', 'w')
 resp = rq.get(url)
 
 book_list = []

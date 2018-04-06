@@ -12,6 +12,7 @@ print(dir())
 
 
 import math
+
 print(dir())
 ['__builtins__', '__doc__', '__loader__', '__name__', '__package__', '__spec__', 'math']
 
@@ -20,4 +21,4 @@ print(help(__doc__))
 
 test = (1, 'a', 1.1)
 
-dir(test)
+dir(help(test))

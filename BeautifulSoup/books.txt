@@ -3,30 +3,30 @@ Book name                                                    Author             
 Python Pocket Reference                                      Mark Lutz                 Mark Lutz 
 Learning Python                                              Mark Lutz                 Mark Lutz 
 Automate The Boring Stuff With Python                        Al Sweigart               Al Sweigart
-Python For Kids                                              Jason Briggs              Jason Briggs
 Python Crash Course                                          Eric Matthes              Eric Matthes
-Learn Python the Hard Way                                    Zed A. Shaw               Zed A. Shaw
 Fluent Python                                                Luciano Ramalho           Luciano Ramalho
+Python For Kids                                              Jason Briggs              Jason Briggs
+Learn Python the Hard Way                                    Zed A. Shaw               Zed A. Shaw
 Python for Data Analysis, 2e                                 Wes McKinney              Wes McKinney
 Coding for Beginners: Using Python                           Louie Stowell             Louie Stowell
-Black Hat Python                                             Justin Seitz              Justin Seitz
-Python                                                       Christopher Cheng         Christopher Cheng
 Python Programming for the Absolute Beginner, Third Edition  Michael Dawson            Michael Dawson
-Computer Coding Python Projects for Kids                     Carol Vorderman           Carol Vorderman
+Black Hat Python                                             Justin Seitz              Justin Seitz
+Introduction to Machine Learning with Python                 Andreas C. Mueller        Andreas C. Mueller
 Learn Python 3 the Hard Way                                  Zed A. Shaw               Zed A. Shaw
-Introduction to Machine Learning with Python                 Sarah Guido               Sarah Guido
-Python Machine Learning                                      Sebastian Raschka         Sebastian Raschka
-Python Cookbook: No. 3                                       David Beazley             David Beazley
-Effective Python                                             Brett Slatkin             Brett Slatkin
+Python                                                       Christopher Cheng         Christopher Cheng
+Computer Coding Python Projects for Kids                     Carol Vorderman           Carol Vorderman
+The Python Years                                             Michael Palin             Michael Palin
 Python Data Science Handbook                                 Jake Vanderplas           Jake Vanderplas
+Effective Python                                             Brett Slatkin             Brett Slatkin
+Python Machine Learning                                      Sebastian Raschka         Sebastian Raschka
 Deep Learning with Python                                    Francois Chollet          Francois Chollet
+Programming Python                                           Mark Lutz                 Mark Lutz 
+Python Cookbook: No. 3                                       Brian K. Jones            Brian K. Jones
 Violent Python                                               TJ O'Connor               TJ O'Connor
-Python Essential Reference                                   David Beazley             David Beazley
-The Greedy Python                                            Richard Buckley           Richard Buckley
+Introducing Python                                           Bill Lubanovic            Bill Lubanovic
+Python Machine Learning -                                    Vahid Mirjalili           Vahid Mirjalili
+The Greedy Python                                            Dr Richard Buckley        Dr Richard Buckley
 Think Python, 2e                                             Allen B. Downey           Allen B. Downey
-Introduction to Computation and Programming Using Python     John V. Guttag            John V. Guttag
-Python For Dummies                                           Stef Maruch               Stef Maruch
-Python Machine Learning -                                    Sebastian Raschka         Sebastian Raschka
-Natural Language Processing with Python                      Steven Bird               Steven Bird
-Web Scraping with Python                                     Ryan Mitchell             Ryan Mitchell
-Scratch and Python: the basics                               Hywel Carver              Hywel Carver
+Natural Language Processing with Python                      Ewan Klein                Ewan Klein
+Python Essential Reference                                   David Beazley             David Beazley
+Monty Python Fluxx                                           Todd Cameron Hamilton     Todd Cameron Hamilton
