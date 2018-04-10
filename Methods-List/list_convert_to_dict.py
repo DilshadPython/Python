@@ -29,7 +29,7 @@ nums = [1, 2, 3, 4, 5, 6, 7, 8, 9,10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20]
 # zip both list together or pass them as iterators
 addthem_tother = zip(nums, teams)
 
-# pass them to dict function using list comprehentions instest of range use zip with slicing
+# pass them to dict function using list comprehentions instead of range use zip with slicing
 premier_league = dict([(key, value) for key, value in zip(nums[::1], teams[0::1])])
 
 print(premier_league)
