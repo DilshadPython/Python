@@ -3,7 +3,8 @@ regular method and class method will taken the instance as first argument which
 is self in the car_detail or payment method in this example
 '''
 
-# clas variables
+# class variables are variable that are shared amound all instance in the class, were 
+# instance variable can be unique for each instance like our name and address in the class. 
 class Car:
 
 	profit = 1.09
@@ -38,12 +39,14 @@ class Car:
 obj_audi = Car('Audi', 2017, 'Black', 'S3', 33.000)
 obj_bmw = Car('BMW', 2016, 'Gray', 'Z3', 28.500)
 
+print(obj_audi.car_detail())
 print('Default profit: ')
 print(Car.profit)
 print(obj_audi.profit)
 print(obj_bmw.profit)
 
 # We try to change the profit now
+print(obj_audi.car_detail())
 Car.set_payment(1.17)
 print('Change or overwritten profit')
 print(Car.profit)

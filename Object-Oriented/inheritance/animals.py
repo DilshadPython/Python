@@ -36,7 +36,7 @@ my_cat.can_speak()
 print(isinstance(my_cat, Cat))
 print(issubclass(Cat, Animals))
 
-print('\nAll Fals')
+print('\nAll False')
 print(isinstance(my_cat, Pigen))
 print(issubclass(Cat, Pigen))
 
