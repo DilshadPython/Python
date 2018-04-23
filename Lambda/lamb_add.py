@@ -9,3 +9,7 @@ result = lambda num: num + 8
 # We will display the result and passing the number to the result
 print('{} + 8 = {}'.format(num, result(num)))
 print(result(num))
+
+add = lambda x, y: x + y, 9 + 77
+
+print(add)
