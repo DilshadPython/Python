@@ -28,3 +28,46 @@ repr(obj, /)
 >>> dir(math)
 ['__doc__', '__loader__', '__name__', '__package__', '__spec__', 'acos', 'acosh', 'asin', 'asinh', 'atan', 'atan2', 'atanh', 'ceil', 'copysign', 'cos', 'cosh', 'degrees', 'e', 'erf', 'erfc', 'exp', 'expm1', 'fabs', 'factorial', 'floor', 'fmod', 'frexp', 'fsum', 'gamma', 'gcd', 'hypot', 'inf', 'isclose', 'isfinite', 'isinf', 'isnan', 'ldexp', 'lgamma', 'log', 'log10', 'log1p', 'log2', 'modf', 'nan', 'pi', 'pow', 'radians', 'sin', 'sinh', 'sqrt', 'tan', 'tanh', 'trunc']
 >>> help(math.isclose)
+
+
+# Python 3.x
+$ python3 -m http.server
+
+# Python 2.x
+$ python -m SimpleHTTPServer 8000
+
+
+### The goals of installing each library packages
+
+#### flake8==3.5.0
+##### This packaged installed for much better layout of the code
+
+Games $ flake8 raffi.py 
+
+raffi.py:6:1: W191 indentation contains tabs
+raffi.py:7:1: W191 indentation contains tabs
+raffi.py:9:1: W191 indentation contains tabs
+raffi.py:10:1: W191 indentation contains tabs
+raffi.py:11:1: W191 indentation contains tabs
+raffi.py:12:1: W191 indentation contains tabs
+raffi.py:13:1: W191 indentation contains tabs
+raffi.py:14:1: W191 indentation contains tabs
+raffi.py:15:1: W191 indentation contains tabs
+raffi.py:24:1: W191 indentation contains tabs
+raffi.py:25:1: W191 indentation contains tabs
+raffi.py:27:1: W191 indentation contains tabs
+raffi.py:28:1: W191 indentation contains tabs
+raffi.py:29:1: W191 indentation contains tabs
+raffi.py:30:1: W191 indentation contains tabs
+raffi.py:31:1: W191 indentation contains tabs
+raffi.py:32:1: W191 indentation contains tabs
+raffi.py:33:1: W293 blank line contains whitespace
+raffi.py:33:1: W191 indentation contains tabs
+raffi.py:36:1: E303 too many blank lines (3)
+raffi.py:49:1: W191 indentation contains tabs
+raffi.py:50:1: W191 indentation contains tabs
+raffi.py:51:1: W293 blank line contains whitespace
+raffi.py:51:1: W191 indentation contains tabs
+raffi.py:52:1: W191 indentation contains tabs
+raffi.py:53:1: W191 indentation contains tabs
+raffi.py:61:1: W391 blank line at end of file
