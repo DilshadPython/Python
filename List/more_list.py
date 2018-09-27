@@ -28,3 +28,9 @@ print('\n')
 print('\tAdd west Ham to the teams 2')
 team2.append('Westham United')
 print(team2)
+
+print('\n - We removed team in index 1 in the list. To use POP will print the team is removed in the list. \n')
+team3 = team2.pop(1)
+
+print(team3)
+print(team2)

@@ -22,14 +22,8 @@ teams = [
 	'West Bromwich Albion',	
 ]
 
-print(help(list.sort))
-# OUTPUT
-'''
-Help on method_descriptor:
+print(teams)
 
-sort(...)
-    L.sort(key=None, reverse=False) -> None -- stable sort *IN PLACE*
-
-'''
-## reverse = False ==> Sort in ascending order
-## reverse = True ==> Sort in descending order
+print('\n - Ascending order sorted or alphabetical. \n')
+teams.sort()
+print(teams)
