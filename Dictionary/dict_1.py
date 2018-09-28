@@ -4,18 +4,33 @@ Dictionaries in python are mapping, the mapping is collection of objects are sor
 
 defin_dict = {'key': 'value'}
 
-text = {'name': 'Dilshad', 'last_name': 'Abdulla', 'age': 44}
+details = {'name': 'Dilshad', 'last_name': 'Abdulla', 'age': 44, 'languages': ['English', 'German', 'Kurdish', 'Arabic']}
 
-print(text['name'])
-print(text['last_name'])
-print(text['age'])
+details['email'] = 'dilshad.abdulla@gmail.com'
 
-print('#####################')
-print(text['last_name'][0])
-print(text['last_name'][1:])
+print(details['name'])
+print(details['last_name'])
+print(details['age'])
+
+print('\n#####################')
+print(details['last_name'][0])
+print(details['last_name'][1:])
 print
-print(text['last_name'][:2])
-print(text['last_name'][::-1])
+print(details['last_name'][:2])
+print(details['last_name'][::-1])
 
-print('#####################')
-print(text['name'].upper())
+print('\n#####################')
+print(details['name'].upper())
+
+print('\n#####################')
+print(details['languages'])
+
+print('\n#####################')
+print(details.get('addrees'), ' <<< yes that is correct there is no address')
+
+print('\n#####################')
+print(details.get('email', ' Not Found'))
+print(details.get('website', ' Not Found'))
+
+print('\n#####################')
+print(details)
