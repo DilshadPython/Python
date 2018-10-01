@@ -15,9 +15,13 @@ dilmac = datetime.date(1973, 3, 28)
 print(dilmac)
 
 print('')
-today = datetime.datetime.now()
+to_day = datetime.datetime.now()
 
-print(today)
+print(to_day)
+
+print('###########')
+heute = datetime.datetime.today()
+print('To day is:', heute)
 
 print('')
 date_example = datetime.date(2010, 2, 15)
