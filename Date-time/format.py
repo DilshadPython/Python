@@ -8,7 +8,7 @@
 import datetime
 
 
-dilmac = datetime.date(1973, 3, 28)
+dilmac = datetime.date(1973, 5, 3)
 
 day_format = dilmac.strftime("%A, %B %d, %Y")
 
@@ -21,7 +21,7 @@ print('My name is Dilshad and ' + mybith.format(dilmac))
 print('')
 launch_date = datetime.date(1973, 5, 3)
 launch_time = datetime.time(20, 16, 2)
-launch_datetime = datetime.datetime(1973, 3, 28, 20, 16, 2)
+launch_datetime = datetime.datetime(1973, 5, 3, 20, 16, 2)
 
 print(launch_date)
 print(launch_time)
