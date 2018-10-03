@@ -19,7 +19,7 @@ mybith = 'I am born in Kurdistan in the {:%A, %B %d, %Y}.'
 print('My name is Dilshad and ' + mybith.format(dilmac))
 
 print('')
-launch_date = datetime.date(1973, 3, 28)
+launch_date = datetime.date(1973, 5, 3)
 launch_time = datetime.time(20, 16, 2)
 launch_datetime = datetime.datetime(1973, 3, 28, 20, 16, 2)
 
