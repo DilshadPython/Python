@@ -23,3 +23,6 @@ print(second_list)
 
 print('\n')
 print(my_shopping_lists)
+
+print(second_list[-1])
+print(second_list[-2])

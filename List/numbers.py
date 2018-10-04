@@ -8,6 +8,11 @@ print(number[::-1])
 print('--'*15)
 num = [6, 9, 12, 15, 18, 21, 24, 28, 31, 34, 38]
 print(num)
+print('\n The minimam number is ', min(num))
+
+print('\n The maximum number is ', max(num))
+
+print('\n The sum of the numberes are ',sum(num))
 
 
 print('--'*15)

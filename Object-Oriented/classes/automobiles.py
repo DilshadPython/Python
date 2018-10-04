@@ -48,5 +48,5 @@ print('\n**********************************************************************'
 print(instance_audi.__dict__)
 
 # now we try to find how many car are in the strore?
-print('We have {} numbers of cars in the strore'.format(Car.number_in_the_strore))
+print('We have {} numbers of cars in the strore'.format(Car.number_in_the_store))
 

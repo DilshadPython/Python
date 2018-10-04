@@ -1,0 +1,24 @@
+{
+	"title": "Python and JSON",
+	"started_year": 2018,
+	"is_clear": true,
+	"is_complex": false,
+	"author": "Dilshad Abdulla",
+	"dob": 1973,
+	"skills": [
+				"Python",
+				"Django", 
+				"Bootstrap",
+				"JSON",
+				"Flask",
+			],
+	"budget": null,
+	"teams": {
+		"frontend": "Rachel John",
+		"backend": "Dilshad Abdulla",
+		"devop": "Nicholas Herriot",
+		"database": "Cloudia Adam",
+		"research": "Antono Salvatore",
+	},
+	"duration": "3 months"
+}

@@ -1,7 +1,21 @@
 # math
 import math
-from math import *
 
-math.floor(2)
+# from math import *
 
-# math.floor(2**2, 3**2)
+print(math.floor(2.7))
+
+print('')
+
+print(math.floor(19.97))
+
+print('')
+
+print(math.floor(3**2))
+
+print('')
+
+print(math.floor(125//17))
+
+print('')
+print(math.floor(125/21))

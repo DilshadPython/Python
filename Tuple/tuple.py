@@ -2,7 +2,6 @@
 Tupe is immutable can not been change
 '''
 
-
 tup = ('England', 24, 'USA', 'France', 24, 'Germany', 'Spain', 24, -10, 'Italy', 16, 24)
 
 print(tup)
