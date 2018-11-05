@@ -19,7 +19,8 @@ print(blond_hair.difference(blue_eyes) == blue_eyes.difference(blond_hair))
 
 print('-------------------------------------------------------')
 print(blond_hair.symmetric_difference(blue_eyes))
-print(blond_hair.symmetric_difference(blue_eyes) == blue_eyes.symmetric_difference(blond_hair))
+print(blond_hair.symmetric_difference(blue_eyes) ==
+      blue_eyes.symmetric_difference(blond_hair))
 
 print('-------------------------------------------------------')
 print(o_blood.issubset(blond_hair))

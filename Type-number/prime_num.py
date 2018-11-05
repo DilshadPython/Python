@@ -12,17 +12,17 @@ import time
 
 def is_prime(num):
 
-	if num == 1:
-		return (' is Unit = ', False)
+    if num == 1:
+        return (' is Unit = ', False)
 
-	for i in range(2, num):
-		if num % i == 0:
-			return (' Not prime = ', False)
-	return (' Yes is Prime = ', True)
+    for i in range(2, num):
+        if num % i == 0:
+            return (' Not prime = ', False)
+    return (' Yes is Prime = ', True)
 
 start_time = time.time()
 for i in range(1, 51):
-	print(i, is_prime(i))
+    print(i, is_prime(i))
 
 end_time = time.time()
 print('The time is: ', end_time - start_time)

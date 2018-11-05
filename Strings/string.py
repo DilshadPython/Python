@@ -2,39 +2,37 @@ text = "Test that obj is (or is not) an instance of cls (which can be a class or
 
 print(len(text))
 
-print;
+print
 
 # indexing
 
 print(text[6])
 
-print;
+print
 
 print(text[22])
 
-print;
+print
 
 # slicing
 print('Display from lest to char number 37: >>> ', text[:37])
 
-print;
+print
 
 print('Display all from left to right: >>> ', text[:])
 
-print;
+print
 
 print('Display everything except last character: >>> ', text[:-1])
 
-print;
+print
 
 print('Display from left step by 1>>> ', text[::1])
 print('Display from left step by 2 >>> ', text[::2])
 print('Display from left step by 3 >>> ', text[::3])
 print('Display from left step by 4 >>> ', text[::4])
 
-print;
+print
 
 print('Dispay as reversed right to left: >>> ', text[::-1])
-print;
-
-
+print

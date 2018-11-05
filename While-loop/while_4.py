@@ -11,5 +11,5 @@ while a % 7 != 0:
     a = a + 1
 print('\n***********')
 print(1 % 2 == 0)
-print(2 % 2) #== 0
+print(2 % 2)  # == 0
 print(2 % 2 == 0)

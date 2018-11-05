@@ -10,12 +10,12 @@ req = urllib.request.urlopen('https://github.com/DilshadGit/Python')
 xml = BeautifulSoup(req, 'xml')
 
 for item in xml.findAll('link')[3:]:
-	url = item.text
-	news = urllib.request.urlopen(url).read()
-	
-	page = BeautifulSoup(news)
+    url = item.text
+    news = urllib.request.urlopen(url).read()
 
-	for p in page.findAll('p'):
-		print(p.text)
+    page = BeautifulSoup(news)
 
-	time.sleep(10)
+    for p in page.findAll('p'):
+        print(p.text)
+
+    time.sleep(10)

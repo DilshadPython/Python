@@ -39,7 +39,7 @@ print(test)
 
 print(len(test))
 
-# Another was to remove element in the test which is not exisit use discard 
+# Another was to remove element in the test which is not exisit use discard
 print('discard method will leave to continue without any error but remove will dispay an error\
 		if the element is not in the test')
 test.discard(12)

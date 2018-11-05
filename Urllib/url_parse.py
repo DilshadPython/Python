@@ -1,7 +1,5 @@
-import urllib.request 
-import urllib.parse 
-
-
+import urllib.request
+import urllib.parse
 
 
 values = {'q': 'Martina Salvatore'}
@@ -15,4 +13,4 @@ url = 'https://www.google.com/search?' + data
 req = urllib.request.Request(url)
 resp = urllib.request.urlopen(req)
 resp_data = resp.read()
-print(resp_data) 
+print(resp_data)

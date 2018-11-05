@@ -27,26 +27,24 @@ import math
 
 def is_prime(num):
 
-	if num == 1:
-		return (' is Unit = ', False)
+    if num == 1:
+        return (' is Unit = ', False)
 
-	# check is is even and not 2 then its nt prime
-	if num == 2:
-		return ('Yes is prime = ', True)
-	if num > 2 and num % 2 == 0:
-		return (' No prime = ', False)
-	
-	max_divition = math.floor(math.sqrt(num))
+    # check is is even and not 2 then its nt prime
+    if num == 2:
+        return ('Yes is prime = ', True)
+    if num > 2 and num % 2 == 0:
+        return (' No prime = ', False)
 
-	
-	
-	for x in range(3, 1 + max_divition, 2):
-		if num % x == 0:
-			return 'No prime = ', False
-	return ' Yes prime = ', True
+    max_divition = math.floor(math.sqrt(num))
+
+    for x in range(3, 1 + max_divition, 2):
+        if num % x == 0:
+            return 'No prime = ', False
+    return ' Yes prime = ', True
 
 start_time = time.time()
 for num in range(1, 30000):
-	print(num, is_prime(num))
+    print(num, is_prime(num))
 end_time = time.time()
 print('The time is: ', end_time - start_time)

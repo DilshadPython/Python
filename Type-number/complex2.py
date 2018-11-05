@@ -1,5 +1,5 @@
 
-a = 3 +5.7j
+a = 3 + 5.7j
 
 print('The type of a is: ', type(a))
 ''' Testint
@@ -23,7 +23,7 @@ AttributeError: 'complex' object has no attribute 'img'
 5.7
 >>> 
 '''
-i = 1.5687 
+i = 1.5687
 j = 1.5687 + 0j
 print(j)
 

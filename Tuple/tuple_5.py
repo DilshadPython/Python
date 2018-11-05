@@ -1,5 +1,7 @@
-storage = ('Arsenal', 'Southampton' ,'Man Utd', 'Liverpool', 'Man City' ,55.687 , 5, 'Chelsea' ,-12, 'Tottenham')
-# In tuple you can not change the content or add any more but in the list you can change and add more content
+storage = ('Arsenal', 'Southampton', 'Man Utd', 'Liverpool',
+           'Man City', 55.687, 5, 'Chelsea', -12, 'Tottenham')
+# In tuple you can not change the content or add any more but in the list
+# you can change and add more content
 print(storage)
 
 # added item to the storage

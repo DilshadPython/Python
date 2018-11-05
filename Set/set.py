@@ -24,6 +24,6 @@ print(set(x))
 
 i = 7
 for i in x:
-	if i == 7:
-		print(i)
-	print(False)
+    if i == 7:
+        print(i)
+    print(False)

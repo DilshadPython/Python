@@ -27,21 +27,20 @@ import math
 
 def is_prime(num):
 
-	if num == 1:
-		return (' is Unit = ', False)
+    if num == 1:
+        return (' is Unit = ', False)
 
-	max_divition = math.floor(math.sqrt(num))
+    max_divition = math.floor(math.sqrt(num))
 
-	for x in range(2, 1 + max_divition):
-		if num % x == 0:
-			return (' Not prime = ', False)
-	return (' Yes is Prime = ', True) 
-
+    for x in range(2, 1 + max_divition):
+        if num % x == 0:
+            return (' Not prime = ', False)
+    return (' Yes is Prime = ', True)
 
 
 start_time = time.time()
 for num in range(1, 401):
-	print(num, is_prime(num))
+    print(num, is_prime(num))
 
 end_time = time.time()
 print('The time is: ', end_time - start_time)

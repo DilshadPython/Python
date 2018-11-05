@@ -1,8 +1,10 @@
 #  What we try to achive here is to collecte the data but not the duplecate
 
-drinks_top = { 'Beer', 'Milk', 'Whiskey', 'Vodka', 'Beer', 'Whiskey', 'Rum', 'Cider', 'Milk' }
+drinks_top = {'Beer', 'Milk', 'Whiskey', 'Vodka',
+              'Beer', 'Whiskey', 'Rum', 'Cider', 'Milk'}
 
-drinks_bottom = { 'Water', 'Orange', 'Whiskey', 'Heinken', 'Wine', 'Rum', 'White Wine'}
+drinks_bottom = {'Water', 'Orange', 'Whiskey',
+                 'Heinken', 'Wine', 'Rum', 'White Wine'}
 
 
 print('\n - Display the drinks are available in both. \n')

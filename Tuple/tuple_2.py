@@ -12,12 +12,13 @@ if not storage:
 
 input('\nPlease enter to continue: ')
 
-#add items to storage
-storage = ('Arsenal', 'Southampton' ,'Man Utd', 'Liverpool', 'Man City' ,55.687 , 5, 'Chelsea' ,-12, 'Tottenham')
+# add items to storage
+storage = ('Arsenal', 'Southampton', 'Man Utd', 'Liverpool',
+           'Man City', 55.687, 5, 'Chelsea', -12, 'Tottenham')
 
 print(storage[:])
 
-#display
+# display
 index = int(input('Enter the number in your storage\n'))
 
 print('In inex', index, 'is', storage[index])

@@ -3,7 +3,7 @@
 
 
 import sys
-a = -sys.maxint -1
+a = -sys.maxint - 1
 print('Here is the a: ', type(a))
 print(a)
 

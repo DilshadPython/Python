@@ -11,6 +11,6 @@ print(example(*collection))
 def example2(**more):
     print(more)
 
-person1 = {'Alan':32, 'Fabio':29, 'Amanda':28}
+person1 = {'Alan': 32, 'Fabio': 29, 'Amanda': 28}
 
 example2(**person1)

@@ -1,6 +1,5 @@
 '''
 Set is unordered collection of unique elements.
-
 '''
 
 a = {81, 41, 11, 77}

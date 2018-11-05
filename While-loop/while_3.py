@@ -6,5 +6,5 @@ while True:
         print('Well done 49 % 7 == 0 : ')
         break
     else:
-    	print('The number not remind 0 please continue.')
-    	continue
+        print('The number not remind 0 please continue.')
+        continue
