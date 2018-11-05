@@ -17,7 +17,8 @@ print(data_frame_1.head())
 # If you want to download from url
 import urllib.request
 
-url_json = urllib.request.urlopen('http://json-schema.org/example/geo.json').read()
+url_json = urllib.request.urlopen(
+    'http://json-schema.org/example/geo.json').read()
 
 depth_data_frame = pd.read_json(url_json)
 

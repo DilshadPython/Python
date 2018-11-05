@@ -9,7 +9,6 @@ import logging
 import students_handler
 
 
-
 logger = logging.getLogger(__name__)
 logger.setLevel(logging.DEBUG)
 
@@ -30,20 +29,24 @@ logger.addHandler(file_handler)
 
 # first use debug
 # second use info
+
+
 def full_name():
-	fname = 'Tom'
-	lname = 'Alan'
-	logger.debug('Full name: ' + fname + ' ' + lname)
+    fname = 'Tom'
+    lname = 'Alan'
+    logger.debug('Full name: ' + fname + ' ' + lname)
+
 
 def address(street, city, postcode):
-	return logger.debug('Street: {} \nCity: {} \nPost Code: {}'.format(
-																	street, 
-																	city, 
-																	postcode)
-																)
+    return logger.debug('Street: {} \nCity: {} \nPost Code: {}'.format(
+        street,
+        city,
+        postcode)
+    )
+
 
 def contact(phone, email):
-	logger.debug('Phone: {} \nEmail: {}'.format(phone, email))
+    logger.debug('Phone: {} \nEmail: {}'.format(phone, email))
 
 
 full_name()

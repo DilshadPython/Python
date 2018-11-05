@@ -1,7 +1,7 @@
 
 
 def myfunction(data):
-	print(data) 
+    print(data)
 
 
 myfunction('Hello data')

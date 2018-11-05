@@ -3,10 +3,10 @@ import random
 
 print(dir(random))
 print()
-# display 10 random number between [0, 1) 
+# display 10 random number between [0, 1)
 
 for x in range(10):
-	print(random.random())
+    print(random.random())
 
 
 # generate random number between 3, 7
@@ -15,10 +15,12 @@ for x in range(10):
 # 3. shift number (add3) in [3, 7)
 
 print()
-print(10*'###')
+print(10 * '###')
+
+
 def my_random():
-	# random, scale, shift , return ..
-	return 4 * random.random() + 3
+    # random, scale, shift , return ..
+    return 4 * random.random() + 3
 
 for x in range(10):
-	print(my_random())
+    print(my_random())

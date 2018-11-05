@@ -1,6 +1,6 @@
 import using_skipif
 # to run pytest -v -rxs test_calculate.py
-# if I want to run only one function like divid as an example we run 
+# if I want to run only one function like divid as an example we run
 # pytest -k divid or pytest -k multiply
 # we import the pytest to used as decorator
 import pytest
@@ -9,14 +9,17 @@ import sys
 
 # we change skip to skipif and tell if the python version is < (3,5) than not working to test
 # change the python to sys.version_info < (3,5) it will passed
-@pytest.mark.skipif(sys.version_info > (3,5), reason="This test will skip because of python version")
+
+
+@pytest.mark.skipif(sys.version_info > (3, 5), reason="This test will skip because of python version")
 def test_divide():
-	total = using_skipif.divide(64, 8)
-	assert total == 8
+    total = using_skipif.divide(64, 8)
+    assert total == 8
+
 
 def test_multiply():
-	output = using_skipif.multiply(8, 7)
-	assert output == 56
+    output = using_skipif.multiply(8, 7)
+    assert output == 56
 
 ''' Notce 
 if I run this command pytest -v -rxs test_calculate_1.py all passed and skip doesn't work

@@ -9,4 +9,3 @@ print
 
 b = 81
 print(math.sqrt(b))
-

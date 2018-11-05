@@ -1,11 +1,13 @@
 import sample
 
+
 def test_myfunc():
-	y = 7 + 2
-	assert y == 9
+    y = 7 + 2
+    assert y == 9
+
 
 def test_hello():
-	assert True
+    assert True
 
 ''''
 I test only function contain myfunc

@@ -14,24 +14,28 @@ import students_handler
     which is different than logging.DEBUG() , method which used logging.DEBUG(something)    
 '''
 logging.basicConfig(filename='output_handler.log', level=logging.DEBUG,
-					format='%(asctime)s:%(name)s:%(message)s')
+                    format='%(asctime)s:%(name)s:%(message)s')
 
 # first use debug
 # second use info
+
+
 def full_name():
-	fname = 'Tom'
-	lname = 'Alan'
-	logging.info('Full name: ' + fname + ' ' + lname)
+    fname = 'Tom'
+    lname = 'Alan'
+    logging.info('Full name: ' + fname + ' ' + lname)
+
 
 def address(street, city, postcode):
-	return logging.info('Street: {} \nCity: {} \nPost Code: {}'.format(
-																	street, 
-																	city, 
-																	postcode)
-																)
+    return logging.info('Street: {} \nCity: {} \nPost Code: {}'.format(
+        street,
+        city,
+        postcode)
+    )
+
 
 def contact(phone, email):
-	logging.info('Phone: {} \nEmail: {}'.format(phone, email))
+    logging.info('Phone: {} \nEmail: {}'.format(phone, email))
 
 
 full_name()

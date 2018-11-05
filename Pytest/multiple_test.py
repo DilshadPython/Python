@@ -2,4 +2,4 @@
 
 def collect_sqr(num):
 
-	return num * num
+    return num * num

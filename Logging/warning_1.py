@@ -7,16 +7,19 @@ import logging
 '''
 logging.basicConfig(filename='result.log', level=logging.DEBUG)
 
+
 def full_name():
-	fname = 'Tom'
-	lname = 'Alan'
-	logging.warning('Full name: ' + fname + ' ' + lname)
+    fname = 'Tom'
+    lname = 'Alan'
+    logging.warning('Full name: ' + fname + ' ' + lname)
+
 
 def address(street, city, postcode):
-	return logging.warning('Street: {} \nCity: {} \nPost Code: {}'.format(street, city, postcode))
+    return logging.warning('Street: {} \nCity: {} \nPost Code: {}'.format(street, city, postcode))
+
 
 def contact(phone, email):
-	logging.warning('Phone: {} \nEmail: {}'.format(phone, email))
+    logging.warning('Phone: {} \nEmail: {}'.format(phone, email))
 
 
 full_name()

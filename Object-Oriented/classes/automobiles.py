@@ -1,26 +1,24 @@
 # clas variables
 class Car:
-	#class veriable
-	profit = 1.09
-	number_in_the_store = 0
+    # class veriable
+    profit = 1.09
+    number_in_the_store = 0
 
-	def __init__(self, name, model, color, types, price):
-		self.name = name
-		self.model = model
-		self.color = color
-		self.types = types 
-		self.price = price
+    def __init__(self, name, model, color, types, price):
+        self.name = name
+        self.model = model
+        self.color = color
+        self.types = types
+        self.price = price
 
-		# instance variable
-		Car.number_in_the_store += 1
+        # instance variable
+        Car.number_in_the_store += 1
 
+    def car_detail(self):
+        return '{}, {}, {}, {}'.format(self.name, self.model, self.color, self.types, self.price)
 
-	def car_detail(self):
-		return '{}, {}, {}, {}'.format(self.name, self.model, self.color, self.types, self.price)
-
-
-	def payment(self):
-		self.price = float(self.price * self.profit)
+    def payment(self):
+        self.price = float(self.price * self.profit)
 
 instance_audi = Car('Audi', 2017, 'Black', 'S3', 33.000)
 instance_bmw = Car('BMW', 2016, 'Gray', 'Z3', 28.500)
@@ -49,4 +47,3 @@ print(instance_audi.__dict__)
 
 # now we try to find how many car are in the strore?
 print('We have {} numbers of cars in the strore'.format(Car.number_in_the_store))
-

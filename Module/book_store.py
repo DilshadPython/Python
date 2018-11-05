@@ -1,7 +1,8 @@
-import search_books #as search
+import search_books  # as search
 # or you can say from search_book import find_book
 
-library = ['Data Science', 'Biology', 'Chimiches', 'Python Tutorials', 'Django projects']
+library = ['Data Science', 'Biology', 'Chimiches',
+           'Python Tutorials', 'Django projects']
 
 print('\n Import search function for books!')
 

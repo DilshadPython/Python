@@ -1,5 +1,5 @@
 class User:
-	pass
+    pass
 
 user_1 = User()
 

@@ -3,35 +3,34 @@ Inheritance allowed us to inheritace a attribute and method in the parent class
 '''
 
 # clas variables
+
+
 class Parent:
 
-	def __init__(self, first_name, last_name, age):
-		self.first_name = first_name
-		self.last_name = last_name
-		self.age = age
+    def __init__(self, first_name, last_name, age):
+        self.first_name = first_name
+        self.last_name = last_name
+        self.age = age
 
+    def parent_detail(self):
+        return '{}, {}, {}, {}'.format(self.name, self.last_name, self.age)
 
-	def parent_detail(self):
-		return '{}, {}, {}, {}'.format(self.name, self.last_name, self.age)
+    def fullname(self, first_name, last_name):
+        return '{} {}'.format(self.first_name, self.last_name)
 
-	def fullname(self, first_name, last_name):
-		return '{} {}'.format(self.first_name, self.last_name)
-
-
-
-	def email_address(self):
-		return '{}.{}'.format(self.first_name, self.last_name) + '@' + 'gmail.com'
+    def email_address(self):
+        return '{}.{}'.format(self.first_name, self.last_name) + '@' + 'gmail.com'
 
 obj = Parent('Tim', 'Alan', '44')
 print(obj.first_name + ' ' + obj.last_name + ' ' + obj.age)
 
 
-
 class Son(Parent):
-	pass
+    pass
+
 
 class Daughter(Parent):
-	pass
+    pass
 
 
 obj_1 = Daughter('Adam', 'Sophia', '25')

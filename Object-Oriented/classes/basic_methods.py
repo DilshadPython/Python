@@ -3,37 +3,37 @@ regular method and class method will taken the instance as first argument which
 is self in the car_detail or payment method in this example
 '''
 
-# class variables are variable that are shared amound all instance in the class, were 
-# instance variable can be unique for each instance like our name and address in the class. 
+# class variables are variable that are shared amound all instance in the class, were
+# instance variable can be unique for each instance like our name and
+# address in the class.
+
+
 class Car:
 
-	profit = 1.09
-	number_in_the_store = 0
+    profit = 1.09
+    number_in_the_store = 0
 
-	def __init__(self, name, model, color, types, price):
-		self.name = name
-		self.model = model
-		self.color = color
-		self.types = types 
-		self.price = price
+    def __init__(self, name, model, color, types, price):
+        self.name = name
+        self.model = model
+        self.color = color
+        self.types = types
+        self.price = price
 
+        Car.number_in_the_store += 1
 
-		Car.number_in_the_store += 1
+    def car_detail(self):
+        return '{}, {}, {}, {}'.format(self.name, self.model, self.color, self.types, self.price)
 
+    def payment(self):
+        self.price = float(self.price * self.profit)
 
-	def car_detail(self):
-		return '{}, {}, {}, {}'.format(self.name, self.model, self.color, self.types, self.price)
-
-
-	def payment(self):
-		self.price = float(self.price * self.profit)
-
-	'''
+    '''
 	create class method
 	'''
-	@classmethod
-	def set_payment(cls, value):
-		cls.profit = value
+    @classmethod
+    def set_payment(cls, value):
+        cls.profit = value
 
 
 obj_audi = Car('Audi', 2017, 'Black', 'S3', 33.000)

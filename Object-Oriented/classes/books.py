@@ -1,7 +1,8 @@
 # coding: utf8
 
+
 class Book:
-	pass
+    pass
 
 
 obj_1 = Book()

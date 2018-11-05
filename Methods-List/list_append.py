@@ -1,7 +1,7 @@
 animals = ['cat', 'dog', 'walf']
 
 for name in animals:
-	print(name)
+    print(name)
 
 print('########')
 print(animals[1])
@@ -22,7 +22,7 @@ print(animals)
 
 print('======================')
 for name in animals:
-	print(name, end=' ')
+    print(name, end=' ')
 
 print('\n We remove tiger in the list')
 animals.remove(name_2)

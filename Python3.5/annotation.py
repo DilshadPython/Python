@@ -3,23 +3,26 @@
  used with tools like Mypy to write statically typed Python:
 '''
 
+
 def add_item(a: int, b: int) -> int:
 
-	return a + b 
+    return a + b
 
-print(add_item(2, 3))	
+print(add_item(2, 3))
 
 print()
-print(add_item(2, 3.3))	
+print(add_item(2, 3.3))
 
 
 print()
 print(add_item(2.9, 3.3))
 
 print()
+
+
 def add_me(a: float, b: float) -> float:
 
-	return a + b 
+    return a + b
 
 
 print(add_me(2.9, 5.8))

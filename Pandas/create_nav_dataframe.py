@@ -1,11 +1,11 @@
-import pandas as pd 
+import pandas as pd
 
-automobils = { 'Audi': ['A1', 'A2', 'A3', 'S3', 'A4', 'A5'],
-			   'BMW': ['F06', 'F20', 'F24', 'F30', 'F35', 'F40'],
-			   'MSD': ['MB-SLS', 'MB-CLA', 'MB-GLA', 'MB-SL', 'MB-R231', 'MB-G63'],
-			   'Ford': ['F150', 'Ranger', 'Transit', 'SuperDuty', 'Expedition', 'Edge'],
-			   'Nums': [44, 56, 72, 98, 2, 76],
-			}
+automobils = {'Audi': ['A1', 'A2', 'A3', 'S3', 'A4', 'A5'],
+              'BMW': ['F06', 'F20', 'F24', 'F30', 'F35', 'F40'],
+              'MSD': ['MB-SLS', 'MB-CLA', 'MB-GLA', 'MB-SL', 'MB-R231', 'MB-G63'],
+              'Ford': ['F150', 'Ranger', 'Transit', 'SuperDuty', 'Expedition', 'Edge'],
+              'Nums': [44, 56, 72, 98, 2, 76],
+              }
 
 data_frame = pd.DataFrame(automobils)
 

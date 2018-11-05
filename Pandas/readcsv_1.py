@@ -13,7 +13,7 @@ print('\n+++++++++++++++++++++++++++++==========++++++++++++++++++++++++++')
 print('\n+++++++++++++++++++++++++++++==========++++++++++++++++++++++++++')
 print(one_row.head())
 
-two_row = data_frame.set_index('date', inplace = True)
+two_row = data_frame.set_index('date', inplace=True)
 print('#####################################################################')
 print(two_row)
 

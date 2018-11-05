@@ -1,13 +1,14 @@
 # coding: utf8
 
-class Student:
-	# initialse methode or constracture methods
-	def __init__(self, first_name, last_name, id_num):
-		self.first_name = first_name
-		self.last_name = last_name
-		self.id_num = id_num 
-		self.email = first_name + '.' + last_name + '@anglia.edu'
 
+class Student:
+    # initialse methode or constracture methods
+
+    def __init__(self, first_name, last_name, id_num):
+        self.first_name = first_name
+        self.last_name = last_name
+        self.id_num = id_num
+        self.email = first_name + '.' + last_name + '@anglia.edu'
 
 
 obj_1 = Student('Dilshad', 'Abdulla', '0814747')
@@ -30,7 +31,7 @@ obj_2.id_num = '8798765'
 
 print(obj_2.first_name + ' << | >> ' + obj_2.id_num)
 
-print('###'*20)
+print('###' * 20)
 
 obj_3 = Student('Tilly', 'Raffi', 67)
 

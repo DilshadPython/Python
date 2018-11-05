@@ -3,10 +3,11 @@ Local, Enclosing, Global, Built-in (LEGB)
 """
 a = 'I am gloabal variable: a'
 
+
 def search_variable():
-	b = 'I am Local variable (b) only access in my function search_variable'
-	print('\n', b)
-	print('\n', a)
+    b = 'I am Local variable (b) only access in my function search_variable'
+    print('\n', b)
+    print('\n', a)
 
 search_variable()
 

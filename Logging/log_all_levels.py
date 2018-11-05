@@ -2,9 +2,10 @@ import logging
 
 
 LOG_FORMAT = '%(levelname)s %(asctime)s - %(message)s'
-## Notce when you change level=logging.INFO to any other level the number will change with output
+# Notce when you change level=logging.INFO to any other level the number
+# will change with output
 logging.basicConfig(filename='log_all_levels.log', level=logging.DEBUG,
-					format=LOG_FORMAT, filemode='w')
+                    format=LOG_FORMAT, filemode='w')
 logger = logging.getLogger()
 
 # test it here

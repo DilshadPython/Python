@@ -2,7 +2,7 @@ from __future__ import division
 import numpy as np
 
 
-z = 5/2
+z = 5 / 2
 print(z)
 
 print('==========================')

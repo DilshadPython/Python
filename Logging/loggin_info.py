@@ -40,4 +40,3 @@ but it will be empty file
 logger.info('First message')
 
 print(logger.level)		# result it will be 30
-

@@ -1,7 +1,7 @@
 
 
 def myfunction(data):
-	print(data) 
+    print(data)
 
 
 myfunction('Calling the function with current message')

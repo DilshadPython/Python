@@ -3,28 +3,29 @@ Inheritance allowed us to inheritace a attribute and method in the parent class
 '''
 
 # clas variables
+
+
 class Parent:
 
-	increse_pay = 0.07
+    increse_pay = 0.07
 
-	def __init__(self, first_name, last_name, age, salary):
-		self.first_name = first_name
-		self.last_name = last_name
-		self.age = age
-		self.salary = salary
+    def __init__(self, first_name, last_name, age, salary):
+        self.first_name = first_name
+        self.last_name = last_name
+        self.age = age
+        self.salary = salary
 
+    def parent_detail(self):
+        return '{}, {}, {}, {}'.format(self.name, self.last_name, self.age)
 
-	def parent_detail(self):
-		return '{}, {}, {}, {}'.format(self.name, self.last_name, self.age)
+    def fullname(self, first_name, last_name):
+        return '{} {}'.format(self.first_name, self.last_name)
 
-	def fullname(self, first_name, last_name):
-		return '{} {}'.format(self.first_name, self.last_name)
+    def email_address(self):
+        return '{}.{}'.format(self.first_name, self.last_name) + '@' + 'gmail.com'
 
-	def email_address(self):
-		return '{}.{}'.format(self.first_name, self.last_name) + '@' + 'gmail.com'
-
-	def pay_raise(self):
-		self.salary = int(self.salary * self.increse_pay + self.salary)
+    def pay_raise(self):
+        self.salary = int(self.salary * self.increse_pay + self.salary)
 
 
 obj = Parent('Tim', 'Alan', '44', 39000)
@@ -36,11 +37,13 @@ print(obj.salary)
 
 print('#################################################')
 
+
 class Son(Parent):
-	increse_pay = 0.15
+    increse_pay = 0.15
+
 
 class Daughter(Parent):
-	increse_pay = 0.25
+    increse_pay = 0.25
 
 
 daughter_1 = Daughter('Adam', 'Sophia', '25', 25000)

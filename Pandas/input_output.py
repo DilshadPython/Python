@@ -1,4 +1,4 @@
-import pandas as pd 
+import pandas as pd
 
 data_frame = pd.read_csv('WIKI-PRICES.csv')
 

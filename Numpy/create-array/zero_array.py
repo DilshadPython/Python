@@ -19,7 +19,7 @@ three_d_array = np.array(all_list)
 
 print('\n')
 print('Below is two dimienstion')
-print(three_d_array) 
+print(three_d_array)
 
 print('\nNow we try to display the shape what is look like')
 print(three_d_array.shape)

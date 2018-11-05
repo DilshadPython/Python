@@ -6,12 +6,13 @@ import pytest
 
 @pytest.mark.skip(reason="I do not wat to run this test function for now")
 def test_divide():
-	total = calculate.divide(64, 8)
-	assert total == 8
+    total = calculate.divide(64, 8)
+    assert total == 8
+
 
 def test_multiply():
-	output = calculate.multiply(8, 7)
-	assert output == 56
+    output = calculate.multiply(8, 7)
+    assert output == 56
 
 '''
 OUTPUT
