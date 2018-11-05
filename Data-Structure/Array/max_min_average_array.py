@@ -12,14 +12,12 @@ maximum = numbers[0]
 minimum = numbers[0]
 
 for num in numbers:
-	if num > maximum:
-		maximum = num
-	elif num < minimum:
-		minimum = num
-	
+    if num > maximum:
+        maximum = num
+    elif num < minimum:
+        minimum = num
+
 
 print('The maximum number is: ', maximum)
 print()
 print('The minimum number is: ', minimum)
-
-

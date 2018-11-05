@@ -1,7 +1,6 @@
-from html.parser import HTMLParser  
-from urllib.request import urlopen  
+from html.parser import HTMLParser
+from urllib.request import urlopen
 from urllib import parse
-
 
 
 # We are going to create a class called LinkParser that inherits some
@@ -40,7 +39,7 @@ class LinkParser(HTMLParser):
         # Make sure that we are looking at HTML and not other things that
         # are floating around on the internet (such as
         # JavaScript files, CSS, or .PDFs for example)
-        if response.getheader('Content-Type')=='text/html':
+        if response.getheader('Content-Type') == 'text/html':
             htmlBytes = response.read()
             # Note that feed() handles Strings well, but not bytes
             # (A change from Python 2.x to Python 3.x)
@@ -48,11 +47,13 @@ class LinkParser(HTMLParser):
             self.feed(htmlString)
             return htmlString, self.links
         else:
-            return "",[]
+            return "", []
 
 # And finally here is our spider. It takes in an URL, a word to find,
 # and the number of pages to search through before giving up
-def spider(url, word, maxPages):  
+
+
+def spider(url, word, maxPages):
     pagesToVisit = [url]
     numberVisited = 0
     foundWord = False
@@ -63,7 +64,7 @@ def spider(url, word, maxPages):
     # and we return a set of links from that web page
     # (this is useful for where to go next)
     while numberVisited < maxPages and pagesToVisit != [] and not foundWord:
-        numberVisited = numberVisited +1
+        numberVisited = numberVisited + 1
         # Start from the beginning of our collection of pages to visit:
         url = pagesToVisit[0]
         pagesToVisit = pagesToVisit[1:]
@@ -71,7 +72,7 @@ def spider(url, word, maxPages):
             print(numberVisited, "Visiting:", url)
             parser = LinkParser()
             data, links = parser.getLinks(url)
-            if data.find(word)>-1:
+            if data.find(word) > -1:
                 foundWord = True
                 # Add the pages that we visited to the end of our collection
                 # of pages to visit:
@@ -83,4 +84,3 @@ def spider(url, word, maxPages):
         print("The word", word, "was found at", url)
     else:
         print("Word never found")
-

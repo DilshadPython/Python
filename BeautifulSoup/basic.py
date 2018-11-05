@@ -36,7 +36,7 @@ input = """<html>
 		</html>"""
 
 soup = BeautifulSoup(input, 'lxml')
-titleTage = soup.html.head.title 
+titleTage = soup.html.head.title
 print(titleTage)
 
 print(titleTage.string)
@@ -52,10 +52,9 @@ print(soup('p')[2].small.string)
 print(soup('p')[0].small.string)
 
 titleTage['id'] = 'AngularJs'
-#overwritten the title
+# overwritten the title
 titleTage.string = 'Django Framework'
 
 print('=== Title & Content ===')
 print(soup.html.head.title)
 print(soup.html.head.title.contents)
-

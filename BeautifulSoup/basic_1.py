@@ -47,7 +47,7 @@ print(soup.body.small)
 print(soup.body.p.a)
 
 print('\n')
-print('####'*30)
+print('####' * 30)
 print(soup.find_all('p'))
 print(soup.find_all('a'))
 print(soup.find_all('small'))

@@ -65,9 +65,9 @@ print(len(soup.contents))
 print('')
 print('Looping')
 for sub in head_tag.descendants:
-	print(sub)
+    print(sub)
 
-title_tag = soup.title 
+title_tag = soup.title
 print(' parent titile')
 print(title_tag.parent)
 print(' ==== Display the top title ====')
@@ -87,16 +87,15 @@ print(' ==== soup.parent ==== ')
 print(soup.parent)
 
 print('')
-link_tag = soup.a 
-small_tag = soup.small 
+link_tag = soup.a
+small_tag = soup.small
 print(' ==== find a tage and script tag ==== ')
 print(link_tag)
 print(small_tag)
 
 print(' ==== name of all tags has been used in the html ==== ')
 for parent in link_tag.parents:
-	if parent is None:
-		print(parent)
-	else:
-		print(parent.name)
-
+    if parent is None:
+        print(parent)
+    else:
+        print(parent.name)

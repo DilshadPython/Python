@@ -6,9 +6,8 @@ import csv
 '''
 
 with open('created/new_file.csv', 'r') as csvfile:
-	spamreader = csv.reader(csvfile, delimiter='\t')
-	
-	for row in spamreader:
-		# to read the index in one line use following
-		print(row)
+    spamreader = csv.reader(csvfile, delimiter='\t')
 
+    for row in spamreader:
+        # to read the index in one line use following
+        print(row)

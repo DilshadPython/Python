@@ -1,6 +1,6 @@
 import csv
 
-# we need to add the import datetime after come to line 38 
+# we need to add the import datetime after come to line 38
 from datetime import datetime
 
 '''
@@ -20,12 +20,11 @@ csvfile = open('google_stock_data.csv', newline='')
 reader = csv.reader(csvfile)
 
 # we read the header first
-header = next(reader) 
+header = next(reader)
 
-read the body 
-body = [row for row in reader ]
+read the body
+body = [row for row in reader]
 
 print(header)
-print(50*'==')
+print(50 * '==')
 print(body[0])
-

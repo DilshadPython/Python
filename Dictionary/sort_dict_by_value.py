@@ -13,4 +13,3 @@ second = sorted(text.items(), key=operator.itemgetter(1))
 
 print('')
 print('Second: ', second)
-

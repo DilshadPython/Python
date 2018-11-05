@@ -7,18 +7,20 @@ Everyting above yield function is equlvent to the class method __enter__ functio
 Everyting after yield function is equlvent to the class method __exit__ function 
 
 '''
+
+
 @contextmanager
 def open_text_file(filename, mode):
-	try:
-		file = open(filename, mode)
-		yield file
-	finally:
-		file.close()
+    try:
+        file = open(filename, mode)
+        yield file
+    finally:
+        file.close()
 
 
-# if you use with function you don't need to close the file 
+# if you use with function you don't need to close the file
 with open_text_file('context_manager_update.txt', 'w') as file:
-	file.write('We have import the contextlib to use contextmanager as decorator to decorate\
+    file.write('We have import the contextlib to use contextmanager as decorator to decorate\
 				a generator function. Its like the privouse file just updated with new idea.')
 
 # to make sure that the file is close run the print line

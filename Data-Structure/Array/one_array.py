@@ -1,7 +1,8 @@
 
 mylist = [3, 5, 7, 9, 11, 13, 15]
 
-# this is one d array the index of the item in my list wisll display the location
+# this is one d array the index of the item in my list wisll display the
+# location
 print(mylist[3])
 
 # If I want to ad a new item to my list will automatically added to the end:
@@ -26,12 +27,12 @@ print(mylist)
 print()
 
 for num in mylist:
-	print(num, ' : ', type(num))
+    print(num, ' : ', type(num))
 
 print()
 print('###################')
 for x in range(len(mylist)):
-	print(mylist[x])
+    print(mylist[x])
 
 print()
 print('###################')
@@ -60,10 +61,9 @@ print('Maximum:')
 numbers = [3, 5, 22, 7, 9, 11, 13, 15, 'str']
 maximum = numbers[0]
 for num in numbers:
-	if num == str(num):
-		pass
-	elif num > maximum:
-		maximum = num
+    if num == str(num):
+        pass
+    elif num > maximum:
+        maximum = num
 
 print(maximum)
-

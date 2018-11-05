@@ -29,8 +29,8 @@ print('\n Weekday means Monday = 0 and Sunday = 6')
 print('\n IsoWeekday means Monday = 1 and Sunday = 7')
 
 for day in range(current_date.weekday()):
-	print(day)
+    print(day)
 
 print('\n####')
 for day in range(current_date.isoweekday()):
-	print(day)
+    print(day)

@@ -1,6 +1,8 @@
 import random
-# this programm will rerandon every team name and ask you to input in the correct way as in the tuple
-Teams = ('arsenal', 'southampton', 'manutd', 'liverpool', 'mancity', 'chelsea', 'tottenham', 'everton', 'astonvilla', 'fullham')
+# this programm will rerandon every team name and ask you to input in the
+# correct way as in the tuple
+Teams = ('arsenal', 'southampton', 'manutd', 'liverpool', 'mancity',
+         'chelsea', 'tottenham', 'everton', 'astonvilla', 'fullham')
 
 team = random.choice(Teams)
 
@@ -27,4 +29,3 @@ while (enter != correct) and (enter != ''):
 
 if enter == correct:
     print('Well done you win :)')
-

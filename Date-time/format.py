@@ -33,4 +33,3 @@ print(launch_time.hour, launch_time.minute, launch_time.second)
 print('')
 
 print(launch_datetime.year, launch_datetime.month, launch_datetime.day)
-

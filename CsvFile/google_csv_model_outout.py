@@ -1,6 +1,6 @@
 import csv
 
-# we need to add the import datetime after come to line 38 
+# we need to add the import datetime after come to line 38
 from datetime import datetime
 
 '''
@@ -20,30 +20,29 @@ csvfile = open('google_stock_data.csv', newline='')
 reader = csv.reader(csvfile)
 
 # we read the header first
-header = next(reader) 
+header = next(reader)
 
 print(' We need to find a solution how to saperate date float and int in the body')
 
 
-
-print(50*'##')
+print(50 * '##')
 # create empty list
 data = []
 
 for row in reader:
-	# row = [Date, open, high, low, close, volum, adj. close]
-	date = datetime.strptime(row[0], '%m/%d/%Y')
-	open_price = float(row[1])  # open alone is a function
-	high = float(row[2])
-	low = float(row[3])
-	close = float(row[4])
-	volume = int(row[5])
-	adj_close = float(row[6])
+    # row = [Date, open, high, low, close, volum, adj. close]
+    date = datetime.strptime(row[0], '%m/%d/%Y')
+    open_price = float(row[1])  # open alone is a function
+    high = float(row[2])
+    low = float(row[3])
+    close = float(row[4])
+    volume = int(row[5])
+    adj_close = float(row[6])
 
-	# now we add all to the empty list created before the for loop
-	data.append([date, open_price, high, low, close, volume, adj_close])
+    # now we add all to the empty list created before the for loop
+    data.append([date, open_price, high, low, close, volume, adj_close])
 
-	# data.save()
+    # data.save()
 print(data[0])
 
 # stored data daily
@@ -54,12 +53,12 @@ writer = csv.writer(file)
 writer.writerow(['Date', 'Return'])
 
 for x in range(len(data) - 1):
-	today_row = data[x]
-	today_date = today_row[0]
-	today_price = today_row[-1]
-	yesterday_row = data[x+1]
-	yesterday_price = yesterday_row[-1]
+    today_row = data[x]
+    today_date = today_row[0]
+    today_price = today_row[-1]
+    yesterday_row = data[x + 1]
+    yesterday_price = yesterday_row[-1]
 
-	daily_return = (today_price - yesterday_price) / yesterday_price
-	formatted_date = today_date.strftime('%m/%d/%Y')
-	writer.writerow([formatted_date, '\t\t', daily_return])
+    daily_return = (today_price - yesterday_price) / yesterday_price
+    formatted_date = today_date.strftime('%m/%d/%Y')
+    writer.writerow([formatted_date, '\t\t', daily_return])

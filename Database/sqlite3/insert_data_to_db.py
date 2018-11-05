@@ -11,21 +11,31 @@ con = connentc_db.cursor()
 # TEXT is a long string or characters
 
 # create table
+
+
 def create_table():
-	con.execute('CREATE TABLE Car(Name VARCHAR, Model VARCHAR, Version REAL,\
+    con.execute('CREATE TABLE Car(Name VARCHAR, Model VARCHAR, Version REAL,\
 				Description TEXT)')
 
+
 def insert_data():
-	con.execute("INSERT INTO Car VALUES('Audi', 'A5', 2017, 'Brand new zero miles')")
-	con.execute("INSERT INTO Car VALUES('Audi', 'A3', 2015, 'Used 160 000 miles')")
-	con.execute("INSERT INTO Car VALUES('Audi', 'A7', 2016, 'New 35 000 miles')")
-	con.execute("INSERT INTO Car VALUES('Audi', 'A2', 2005, 'Used 61 233 miles')")
-	con.execute("INSERT INTO Car VALUES('BMW', 'XZ', 2010, 'Brand new zero miles')")
-	con.execute("INSERT INTO Car VALUES('Porsche', 'P10', 2014, 'New been used 10 000 miles')")
-	con.execute("INSERT INTO Car VALUES('Mercedes', 'ML', 2017, 'Brand new 1000 miles')")
-	con.execute("INSERT INTO Car VALUES('Ford', 'F16', 2018, 'Newe test only 15 000 miles')")
-	# we make sure to save the data into db 
-	connentc_db.commit()
+    con.execute(
+        "INSERT INTO Car VALUES('Audi', 'A5', 2017, 'Brand new zero miles')")
+    con.execute(
+        "INSERT INTO Car VALUES('Audi', 'A3', 2015, 'Used 160 000 miles')")
+    con.execute("INSERT INTO Car VALUES('Audi', 'A7', 2016, 'New 35 000 miles')")
+    con.execute(
+        "INSERT INTO Car VALUES('Audi', 'A2', 2005, 'Used 61 233 miles')")
+    con.execute(
+        "INSERT INTO Car VALUES('BMW', 'XZ', 2010, 'Brand new zero miles')")
+    con.execute(
+        "INSERT INTO Car VALUES('Porsche', 'P10', 2014, 'New been used 10 000 miles')")
+    con.execute(
+        "INSERT INTO Car VALUES('Mercedes', 'ML', 2017, 'Brand new 1000 miles')")
+    con.execute(
+        "INSERT INTO Car VALUES('Ford', 'F16', 2018, 'Newe test only 15 000 miles')")
+    # we make sure to save the data into db
+    connentc_db.commit()
 
 # to insert the data we need the insert_data function
 

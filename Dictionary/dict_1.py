@@ -4,7 +4,8 @@ Dictionaries in python are mapping, the mapping is collection of objects are sor
 
 defin_dict = {'key': 'value'}
 
-details = {'name': 'Dilshad', 'last_name': 'Abdulla', 'age': 44, 'languages': ['English', 'German', 'Kurdish', 'Arabic']}
+details = {'name': 'Dilshad', 'last_name': 'Abdulla', 'age': 44,
+           'languages': ['English', 'German', 'Kurdish', 'Arabic']}
 
 details['email'] = 'dilshad.abdulla@gmail.com'
 

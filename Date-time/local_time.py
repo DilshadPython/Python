@@ -19,4 +19,3 @@ local_usa_time = uas_time.localize(date_time_now)
 usa_east_time = local_usa_time.astimezone(pytz.timezone('US/Eastern'))
 
 print('\n - Localize East USA now: ', usa_east_time)
-

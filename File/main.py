@@ -2,6 +2,7 @@ from urllib import request
 
 goog_ulr = 'http://real-chart.finance.yahoo.com/table.csv?s=GOOG&d=2&e=15&f=2015&g=d&a=2&b=27&c=2014&ignore=.csv'
 
+
 def download_file_from_internet(csv_url):
     response = request.urlopen(csv_url)
     csv = response.read()

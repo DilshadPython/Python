@@ -14,4 +14,4 @@ print(cwd, ' << second way')
 os.chdir(dir_path)
 
 for file in glob.glob('*.py'):
-	print(file)
+    print(file)

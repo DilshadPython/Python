@@ -12,4 +12,4 @@ date_time_paris = date_time_utcnow.astimezone(pytz.timezone('Europe/Paris'))
 print('\n - Europe Paris: ', date_time_paris)
 
 for tz in pytz.all_timezones:
-	print(tz)
+    print(tz)

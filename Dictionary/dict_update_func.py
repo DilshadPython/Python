@@ -1,9 +1,11 @@
 
-details = {'name': 'Dilshad', 'last_name': 'Abdulla', 'age': 44, 'languages': ['English', 'German', 'Kurdish', 'Arabic']}
+details = {'name': 'Dilshad', 'last_name': 'Abdulla', 'age': 44,
+           'languages': ['English', 'German', 'Kurdish', 'Arabic']}
 
 print('\n', details)
 
-details.update({'email': 'dilshad.abdulla@gmail.com', 'age': 45, 'website': 'https://dilshadabdulla.net'})
+details.update({'email': 'dilshad.abdulla@gmail.com', 'age': 45,
+                'website': 'https://dilshadabdulla.net'})
 
 print('\n Update the dictionary details. \n')
 print(details)
@@ -25,4 +27,4 @@ print(details.items())
 
 print('\n - Display another way yje key and the value: \n')
 for key, value in enumerate(details.items()):
-	print(key, value)
+    print(key, value)

@@ -1,4 +1,4 @@
-#How to open file to read and closed
+# How to open file to read and closed
 import os
 # getcwd Return a string representing the current working directory
 print(os.getcwd())

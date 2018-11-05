@@ -6,9 +6,8 @@ import csv
 '''
 
 with open('property-data.csv', 'r') as csvfile:
-	spamreader = csv.DictReader(csvfile)
-	
-	for row in spamreader:
-		# to read the index in one line use following
-		print(row)
+    spamreader = csv.DictReader(csvfile)
 
+    for row in spamreader:
+        # to read the index in one line use following
+        print(row)
