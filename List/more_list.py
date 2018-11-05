@@ -1,5 +1,5 @@
-team1 =['Arsenal', 'Southampton' ,'Man Utd']
-team2 = ['Liverpool', 'Man City', 'Chelsea' , 'Tottenham']
+team1 = ['Arsenal', 'Southampton', 'Man Utd']
+team2 = ['Liverpool', 'Man City', 'Chelsea', 'Tottenham']
 print('Team1: ', team1)
 print('\n')
 print('Team2: ', team2)
@@ -11,10 +11,11 @@ team1 += team2
 print(team1)
 print('\n')
 
-# we change the 0 position to ManUnited in team1 and in team2 change position-2 to Arsenal
+# we change the 0 position to ManUnited in team1 and in team2 change
+# position-2 to Arsenal
 print('\tWe change the 0 position to ManUnited in team1 and in team2 change position-2 to Arsenal')
-team1[0]='ManUnited'
-team2[-2]='Arsenal'
+team1[0] = 'ManUnited'
+team2[-2] = 'Arsenal'
 print(team1)
 print('\n')
 print(team2)

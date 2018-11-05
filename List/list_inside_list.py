@@ -8,10 +8,12 @@ print(a)
 print(b)
 print(c)
 
-print; print;
+print
+print
 print(d)
 
-print; print;
+print
+print
 print(d[0])
 print(d[0][2])
 

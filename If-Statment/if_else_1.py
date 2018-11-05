@@ -3,7 +3,7 @@ import os
 print(os.getcwd())
 print('\n')
 
-print('--'*30)
+print('--' * 30)
 print(os, '<<<')
 
 h = 42

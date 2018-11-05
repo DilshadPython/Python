@@ -1,5 +1,6 @@
 a = 12
 
+
 def test():
     global a
     a += 1

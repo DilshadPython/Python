@@ -1,22 +1,22 @@
 mylist = [2, 4, 6, 8]
 
 print(mylist)
-print;
+print
 
 mylist.append('Some text')
 print(mylist)
 
-print;
+print
 
 # remove the last element
 mylist.pop()
 print(mylist)
 
-print; 
+print
 mylist.pop()
 print(mylist)
 
-print;
+print
 newlist = [9, 3, 4, 6, 0, 11, 23]
 print(newlist)
 

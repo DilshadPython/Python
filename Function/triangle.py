@@ -3,12 +3,13 @@
 
 ''' a = 1/2 * b*h '''
 
+
 def triangle():
-	print('We will calculte the are of the triangle')
-	b = int(input('Please enter the base: '))
-	h = int(input('Please enter the hight: '))
-	area = 0.5 * b*h 
-	return print(area)
+    print('We will calculte the are of the triangle')
+    b = int(input('Please enter the base: '))
+    h = int(input('Please enter the hight: '))
+    area = 0.5 * b * h
+    return print(area)
 
 
 triangle()

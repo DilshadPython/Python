@@ -1,6 +1,7 @@
 # global variables
 x = 'Dilshad'
 
+
 def func():
     y = 'Abdulla'
     print(y)

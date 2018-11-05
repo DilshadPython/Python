@@ -1,7 +1,7 @@
 # lambda is a small function with unknown name
 
 # Please enter a number
-num = int(input('Enter a number: ' ))
+num = int(input('Enter a number: '))
 
 # lambda take the num and calculate
 result = lambda num: num + 8

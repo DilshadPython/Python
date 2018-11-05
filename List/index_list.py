@@ -1,4 +1,5 @@
-books = ['Data Science', 'Biology', 'Chimiches', 'Python Programming', 'Django Frameworks', 'Designing']
+books = ['Data Science', 'Biology', 'Chimiches',
+         'Python Programming', 'Django Frameworks', 'Designing']
 
 print(books.index('Python Programming'))
 
@@ -11,14 +12,14 @@ print('Physics' in books)
 print('\n')
 
 for item in books:
-	print(item)
+    print(item)
 
 print('\n - Display the book with numeric. \n')
 
 for num, item in enumerate(books):
-	print(num, item)
+    print(num, item)
 
 print('\n - Display the book with numeric. \n')
 
 for num, item in enumerate(books, start=1):
-	print(num, item)
+    print(num, item)

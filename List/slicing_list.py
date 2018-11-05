@@ -49,10 +49,12 @@ print('')
 print('Index from right -2 to the end right: ', num[-2:], ' ****** [-2:]')
 
 print('')
-print('Index start from 2 each time -2 to the end: ', num[2:-2:2], ' ****** [2:-2:2]')
+print('Index start from 2 each time -2 to the end: ',
+      num[2:-2:2], ' ****** [2:-2:2]')
 
 print('')
-print('Index start from 1 each time -2 to the 3 index: ', num[1:-2:3], ' ****** [1:-2:3]')
+print('Index start from 1 each time -2 to the 3 index: ',
+      num[1:-2:3], ' ****** [1:-2:3]')
 
 print('')
 print('Index >>: ', num[-1:2:-1], ' ****** [-1:2:-1]')
@@ -61,4 +63,5 @@ print('')
 print('Index ==>>: ', num[-2:1:-1], ' ****** [-2:1:-2]')
 
 print('')
-print('Index start from -1 right to the beginning left -->>: ', num[::-1], ' ****** [::-1]')
+print('Index start from -1 right to the beginning left -->>: ',
+      num[::-1], ' ****** [::-1]')

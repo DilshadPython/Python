@@ -1,20 +1,22 @@
 days = [0, 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
 
+
 def is_leap(year):
-	''' Check the years if is leap year then return True, if not leap year then False '''
-	return year % 4 == 0 and (year % 100 !=0 or year % 400 == 0)
+    ''' Check the years if is leap year then return True, if not leap year then False '''
+    return year % 4 == 0 and (year % 100 != 0 or year % 400 == 0)
+
 
 def days_in_month(year, month):
-	''' Return how many days in that month for this year '''
-	# The if will check iif the month is between 1-12 
-	# if not then there is no month greater than 12
-	if not 1 <= month <= 12:
-		return 'Invalid month'
+    ''' Return how many days in that month for this year '''
+    # The if will check iif the month is between 1-12
+    # if not then there is no month greater than 12
+    if not 1 <= month <= 12:
+        return 'Invalid month'
 
-	if month == 2 and is_leap(year):
-		return 29
+    if month == 2 and is_leap(year):
+        return 29
 
-	return days[month]
+    return days[month]
 
 print(is_leap(2015))
 print(is_leap(2012))

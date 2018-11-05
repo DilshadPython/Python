@@ -1,6 +1,6 @@
 a = 'The new manager of Manchester united his name is '
 b = a.split()
-print 
+print
 print(a)
 print(b)
 

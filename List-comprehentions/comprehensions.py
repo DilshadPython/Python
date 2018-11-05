@@ -11,27 +11,27 @@ len(p_remiders) = p+1/2
 '''
 
 premier_league = [
-					'AFC Bournemouth',
-					'Arsenal',
-					'Brighton & Hove Albion',
-					'Burnley',
-					'Chelsea',
-					'Crystal Palace',
-					'Everton',
-					'Huddersfield Town',
-					'Leicester City',
-					'Liverpool',
-					'Manchester City',
-					'Manchester United',
-					'Newcastle United',
-					'Southampton',
-					'Stoke City',
-					'Swansea City',
-					'Tottenham Hotspur',
-					'Watford',
-					'West Bromwich Albion',
-					'West Ham United'
-				]
+    'AFC Bournemouth',
+    'Arsenal',
+    'Brighton & Hove Albion',
+    'Burnley',
+    'Chelsea',
+    'Crystal Palace',
+    'Everton',
+    'Huddersfield Town',
+    'Leicester City',
+    'Liverpool',
+    'Manchester City',
+    'Manchester United',
+    'Newcastle United',
+    'Southampton',
+    'Stoke City',
+    'Swansea City',
+    'Tottenham Hotspur',
+    'Watford',
+    'West Bromwich Albion',
+    'West Ham United'
+]
 
 football_team = []
 

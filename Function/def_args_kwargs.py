@@ -1,9 +1,10 @@
 
 def view(*args, **kwargs):
-	print(args)
-	print(kwargs)
+    print(args)
+    print(kwargs)
 
-view('Dilshad', 'Mohammed', stID=814747, age=45, university='Anglia Ruskin University')
+view('Dilshad', 'Mohammed', stID=814747, age=45,
+     university='Anglia Ruskin University')
 
 print('\n##################################')
 fullname = ['Shvan', 'Mohammed']

@@ -11,13 +11,14 @@ d = [a, b, c]
 # print; print;
 # print(d)
 
-print; print;
+print
+print
 
 first_colum = [row[0] for row in d]
 
 print(first_colum)
 
-print;
+print
 mylist = [1, 3, [9, 6]]
 
 print(mylist[2][1])

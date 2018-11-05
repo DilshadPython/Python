@@ -6,4 +6,4 @@ if a > 60:
 elif a < 10 and a > 0:
     print('\nThe number {} Yes a is between 0 and 10'.format(a))
 else:
-	print('\nThe number {} is not between any of above condition'.format(a))
+    print('\nThe number {} is not between any of above condition'.format(a))

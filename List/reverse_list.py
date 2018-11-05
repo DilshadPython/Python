@@ -11,7 +11,7 @@ foods.sort(reverse=True)
 print(foods)
 
 print('\n')
-team = ['Liverpool', 'Man City', 'Chelsea' , 'Tottenham']
+team = ['Liverpool', 'Man City', 'Chelsea', 'Tottenham']
 
 print(team)
 

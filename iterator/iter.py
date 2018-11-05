@@ -5,7 +5,7 @@ Etarator means you are repeating some elements in your list you have created one
 message = ['Welcome', ' to', ' Python', ' tutorials', ' in', ' London']
 
 for msg in message:
-	print(msg)
+    print(msg)
 
 print('=============================================================')
 
@@ -19,4 +19,3 @@ print(message[2])
 print(message[3])
 print(message[4])
 print(message[5])
-

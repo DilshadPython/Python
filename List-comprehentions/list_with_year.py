@@ -11,27 +11,27 @@ len(p_remiders) = p+1/2
 '''
 
 premier_league = [
-					('AFC Bournemouth', 1980),
-					('Arsenal', 1944),
-					('Brighton & Hove Albion', 1985),
-					('Burnley', 1983),
-					('Chelsea', 1990),
-					('Crystal Palace', 1991),
-					('Everton', 1960),
-					('Huddersfield Town', 1995),
-					('Leicester City', 1989),
-					('Liverpool', 1941),
-					('Manchester City', 1991),
-					('Manchester United', 1940),
-					('Newcastle United', 1988),
-					('Southampton', 1985),
-					('Stoke City', 1986),
-					('Swansea City', 1987),
-					('Tottenham Hotspur', 1977),
-					('Watford', 1995),
-					('West Bromwich Albion', 1970),
-					('West Ham United', 1978)
-				]
+    ('AFC Bournemouth', 1980),
+    ('Arsenal', 1944),
+    ('Brighton & Hove Albion', 1985),
+    ('Burnley', 1983),
+    ('Chelsea', 1990),
+    ('Crystal Palace', 1991),
+    ('Everton', 1960),
+    ('Huddersfield Town', 1995),
+    ('Leicester City', 1989),
+    ('Liverpool', 1941),
+    ('Manchester City', 1991),
+    ('Manchester United', 1940),
+    ('Newcastle United', 1988),
+    ('Southampton', 1985),
+    ('Stoke City', 1986),
+    ('Swansea City', 1987),
+    ('Tottenham Hotspur', 1977),
+    ('Watford', 1995),
+    ('West Bromwich Albion', 1970),
+    ('West Ham United', 1978)
+]
 
 football_team = []
 

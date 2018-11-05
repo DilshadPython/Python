@@ -9,12 +9,12 @@ list comprehensions
 my_list = []
 
 for x in range(1, 221):
-	my_list.append(x**2)
+    my_list.append(x**2)
 
 
 print(my_list)
 
-## list comprehenstion way
+# list comprehenstion way
 print('====================================================')
 print('====================================================')
 result = [x**2 for x in range(1, 121)]

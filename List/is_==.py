@@ -22,6 +22,6 @@ print('\n "==" evaluate to True if the objects referred to by the var are equal 
 print('That is correct: ', names == newlist)
 print('names: ', names)
 
-print('That is not true: ', names is newlist) 
+print('That is not true: ', names is newlist)
 
 print('Result', names)

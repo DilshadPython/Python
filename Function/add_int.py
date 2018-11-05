@@ -3,8 +3,9 @@
 import random
 from random import randint
 
+
 def my_add(a: int, b: int) -> int:
-	return a + b
+    return a + b
 
 print(my_add(4, 56))
 
@@ -16,12 +17,14 @@ print(my_add(4, 56))
 
 # print(str_add(4, 56))
 
+
 def add_me(x: int, y: int) -> int:
-	return random.randint
+    return random.randint
 
 print(add_me(7, 3))
 
+
 def add_me(x: int, y: int) -> int:
-	return 10
+    return 10
 
 print(add_me(7, 3))

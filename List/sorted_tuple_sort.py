@@ -25,5 +25,5 @@ print()
 print('We will sorted the string below start first with empty space than capital character and all\
  lower character but alpabetically.')
 
-print('===='*30)
+print('====' * 30)
 print(sorted('Manchster United'))

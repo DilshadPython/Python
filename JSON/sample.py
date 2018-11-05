@@ -10,20 +10,19 @@ import io
 '__spec__', '__version__', '_default_decoder', '_default_encoder', 'decoder', 'dump', 'dumps', 
 'encoder', 'load', 'loads', 'scanner']
 '''
-#INFO
-# we add this encoding='utf-8' if there a character not available in english alphabet 
+# INFO
+# we add this encoding='utf-8' if there a character not available in
+# english alphabet
 
 with open('data_1.txt') as jsonfile:
-	# try:
-	load_data = json.load(jsonfile)
-	print(load_data, 'Loading')
-	output_data = json.dump(load_data)
-	print(output_data)
-	# except ValueError: #json.decoder.JSONDecoder:
+    # try:
+    load_data = json.load(jsonfile)
+    print(load_data, 'Loading')
+    output_data = json.dump(load_data)
+    print(output_data)
+    # except ValueError: #json.decoder.JSONDecoder:
 
-	# 	print('Decoding JSON has faild')
-
-	
+    # 	print('Decoding JSON has faild')
 
 
 # with io.open(path, 'data_1.txt', 'r') as jsonfile:

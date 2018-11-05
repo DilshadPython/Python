@@ -1,4 +1,5 @@
-books = ['Data Science', 'Biology', 'Chimiches', 'Python Programming', 'Django Frameworks', 'Designing']
+books = ['Data Science', 'Biology', 'Chimiches',
+         'Python Programming', 'Django Frameworks', 'Designing']
 
 print(books)
 
@@ -12,4 +13,3 @@ print('\n - Return the books to list using split. \n')
 
 old_books = books_str.split(', ')
 print(old_books)
-

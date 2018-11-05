@@ -12,8 +12,9 @@ To test remove #. The a is a keyword argument which is come first we get and syn
 # 	return a + b
 # func(a, 10)
 
-def myfunc(a, b = 1):
-	return a + b 
+
+def myfunc(a, b=1):
+    return a + b
 
 print(myfunc(4))
 ''' in the above function a is required argument which is come first, to call the function you
