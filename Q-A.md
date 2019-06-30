@@ -35,3 +35,17 @@
 
 ### What are generators in Python?
 #### The way of implementing iterators are known as generators.  It is a normal function except that it yields expression in the function.
+
+### The Top 10 Python libraries to know for data science are:
+##### 1. Pandas 
+##### 2. NumPy
+##### 3. Scipy 
+##### 4. Scikit-learn 
+##### 5. Statesmodels 
+##### 6. NLTK
+##### 7. Seaborn
+##### 8. Matplotlib
+##### 9. Tensorflow
+##### 10. Keras
+
+##### 1. 
