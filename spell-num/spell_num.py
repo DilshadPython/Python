@@ -1,7 +1,7 @@
-# How to spelling number using inflect 
+# How to spelling number using inflect
 
 # pip3 install inflect # (VN)
-# sudo apt-get install python-inflect  # in the terminal 
+# sudo apt-get install python-inflect  # in the terminal
 
 import inflect
 
