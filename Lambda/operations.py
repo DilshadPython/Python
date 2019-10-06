@@ -1,6 +1,7 @@
 
 
 ops = {
+#	key: value
     '+': lambda a, b: a + b,
     '-': lambda a, b: a - b,
     '/': lambda a, b: a / b,
