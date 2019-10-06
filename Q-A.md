@@ -51,6 +51,7 @@ Type "help", "copyright", "credits" or "license" for more information.
 >>> 12 / 3
 4.0
 >>> 
+### Input in python3 the output is string not an number, but it's different in pyhthon2  
 
 ### The Top 10 Python libraries to know for data science are:
 ##### 1. Pandas 
