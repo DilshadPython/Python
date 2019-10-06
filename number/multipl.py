@@ -16,3 +16,13 @@ num1 = 2
 for _ in range(5):
     num1 <<= 2  # *= 3
     print(num1)
+
+print('**************************')
+num2 = 20
+num2 <<= 4  # multiply by 9 using shift
+
+print(num2)
+num2 = 3
+for _ in range(5):
+    num2 <<= 3  # *= 3
+    print(num2)
