@@ -16,16 +16,17 @@ result = f_array * f_array
 
 print(result)
 
-print('==========================')
+print('============= sub =============')
 
 sub = f_array - f_array
 print(sub)
 
-print('==========================')
+print('============ division ==============')
 
 test = 1 / f_array
 print(test)
-print('==========================')
+
+print('============ power ==============')
 
 my_power = f_array ** 3
 print(my_power)
