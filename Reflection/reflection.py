@@ -1,3 +1,5 @@
+# How to reverse words and number 
+
 def reflect(seq):
     ftype = type(seq)
     emptyseq = ftype()

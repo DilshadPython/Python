@@ -35,3 +35,34 @@
 
 ### What are generators in Python?
 #### The way of implementing iterators are known as generators.  It is a normal function except that it yields expression in the function.
+
+### In Python 2 if we divid 9/2 return 4
+Python 2.7.15+ (default, Jul  9 2019, 16:51:35) 
+[GCC 7.4.0] on linux2
+Type "help", "copyright", "credits" or "license" for more information.
+>>> 9/2
+4
+### Where in Python 3 you have always float return 
+Python 3.6.8 (default, May  7 2019, 14:58:50) 
+[GCC 8.3.0] on linux
+Type "help", "copyright", "credits" or "license" for more information.
+>>> 9/2
+4.5
+>>> 12 / 3
+4.0
+>>> 
+### Input in python3 the output is string not an number, but it's different in pyhthon2  
+
+### The Top 10 Python libraries to know for data science are:
+##### 1. Pandas 
+##### 2. NumPy
+##### 3. Scipy 
+##### 4. Scikit-learn 
+##### 5. Statesmodels 
+##### 6. NLTK
+##### 7. Seaborn
+##### 8. Matplotlib
+##### 9. Tensorflow
+##### 10. Keras
+
+##### 1. 

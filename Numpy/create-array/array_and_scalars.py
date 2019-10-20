@@ -1,15 +1,16 @@
-import numpy as np
+from __future__ import division
+
 
 x = 5 / 2
-print(x)
+print('x = ', x)
 
 print('=============================')
 
 y = 5.0 / 2
-print(y)
+print('y = ', y)
 print('=============================')
+
 print('After import __future__ division')
 
-from __future__ import division
 z = 5 / 2
-print(z)
+print('z = ', z)
