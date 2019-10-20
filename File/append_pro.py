@@ -1,1 +1,1 @@
-append_to_file = 'Add this line to the file created, by Dilshad'# ad stand for appendmyFile = open('appendfile.txt', 'a')myFile.write('\n')myFile.write(append_to_file)myFile.close()
+import datetimeTODAY = datetime.datetime.now()'''create variable named today to show any time you run added the date and time of the currentdate'''LINE_APPEND_TO_FILE = 'Add this line to the file created, by Dilshad' + ' ' + str(TODAY)'''Add the above message to the file'''MYFILE = open('appendfile.txt', 'a')MYFILE.write('\n')MYFILE.write(LINE_APPEND_TO_FILE)MYFILE.close()
