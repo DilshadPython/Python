@@ -2,7 +2,6 @@
 post = dict(stid='0814747', fullname='Dilshad Abdulla', university='Anglia Ruskin University',
             location='44.2658974, -102.5586589', language='English')
 
-
 print(post)
 
 print('')

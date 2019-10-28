@@ -1,8 +1,6 @@
 '''
 Dictionaries in python are mapping, the mapping is collection of objects are sorted by key
 '''
-
-
 dic_1 = {'animal': {'bird': {'car': 'Audi'}}}
 
 print(dic_1)
