@@ -2,7 +2,7 @@ import sqlite3
 # do not named the file sqlite3.py
 
 # first create to the database but we need to connect
-connentc_db = sqlite3.connect('mydatabase.db')
+connentc_db = sqlite3.connect('mydatabase.sqlite')
 
 # the coursore is tell the mouse where to go and what to do it will be the same for
 # sqlite3 and myssql and postgresql
