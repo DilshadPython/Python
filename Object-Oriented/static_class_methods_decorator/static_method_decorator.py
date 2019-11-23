@@ -19,6 +19,7 @@ class InstanceCounter(object):
     bound method.
     '''
     print('Decorator is a processor that modifies a function')
+
     @staticmethod
     def filterint(value):
         if not isinstance(value, int):
