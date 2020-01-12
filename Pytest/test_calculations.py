@@ -1,7 +1,9 @@
 # importing the file I want to test
 import calculations
 # run the test py.test -v -rxs test_calculations.py
-# python -m pytest # or python -m pytest filename.py
+# python -m pytest >> This command go to the project run test all the
+# functions or file start with ( test_NameOfTheFunction() )
+# or python -m pytest filename.py
 
 # created the same function in the other file included test_ in front
 

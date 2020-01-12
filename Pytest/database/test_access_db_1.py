@@ -1,4 +1,13 @@
+"""Update how to access to db with lese codes, create setup_module."""
 from access_db import University
+
+
+conn = None
+cur = None
+
+"""
+We create setup_module() method to avoid repetion of codes
+"""
 
 
 def setup_module(module):
@@ -8,13 +17,16 @@ def setup_module(module):
     db = University()
     conn = db.access('server')
     cur = conn.cursor()
+
+
 '''
-# when the setup_module run which connect to the db we need to run another 
-# method to close curs and close conn
+when the setup_module run which connect to the db we need to run another 
+method to close curs and close conn
 '''
 
 
 def teardown_module(module):
+    # cur.close()
     conn.close()
 
 

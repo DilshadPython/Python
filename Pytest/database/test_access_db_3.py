@@ -6,8 +6,9 @@ import pytest
 To run and print setting up display on terminal use
 pytest -v -rxs --capture=no
 '''
-# we use module to run the print one time when is second version will run
-# tweice
+
+"""we use module to run the print one time when is second version will run tweice
+use scope equal to module to avoid duplication of printing settingup."""
 
 
 @pytest.fixture(scope='module')

@@ -4,3 +4,5 @@
 ### fixtures (Recommende)
 
 ## Fixtures leverage a concept of dependancy injection
+
+## python -m pytes >> test all the function start with test_NameOfTheFunction()

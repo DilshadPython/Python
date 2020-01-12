@@ -21,6 +21,7 @@ def test_multiply():
     output = using_skipif.multiply(8, 7)
     assert output == 56
 
+
 ''' Notce 
 if I run this command pytest -v -rxs test_calculate_1.py all passed and skip doesn't work
 but if I run pytest -v -rxs  here is the layout

@@ -11,3 +11,8 @@ def divide(first, second):
 def multiply(first, second):
     output = first * second
     return output
+
+
+def substruct_method(first, second):
+    output = first - second
+    return output

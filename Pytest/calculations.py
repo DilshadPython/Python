@@ -14,3 +14,7 @@ def substracting(firstnumber, secondnumber):
 def multiply(firstnumber, secondnumber):
     output = firstnumber * secondnumber
     return output
+
+
+def func_fake():
+    return True

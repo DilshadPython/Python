@@ -9,6 +9,7 @@ def test_myfunc():
 def test_hello():
     assert True
 
+
 ''''
 I test only function contain myfunc
 dilmac@dilmac-ViB ~/DevOP/tutorials/Python/Pytest $ pytest -k myfunc -v
