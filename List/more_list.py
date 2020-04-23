@@ -35,3 +35,10 @@ team3 = team2.pop(1)
 
 print(team3)
 print(team2)
+
+new_teams = team1 + team2
+print(new_teams)
+
+# add two list in new list but saperatly
+not_join = [team1, team2]
+print(not_join)
