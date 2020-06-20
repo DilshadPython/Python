@@ -1,4 +1,10 @@
+
 import pytest
+'''
+The two line below to make the pytest run with python3 only
+'''
+# import sys
+# py3 = sys.version_info[0] >= 3
 
 
 @pytest.mark.windows
