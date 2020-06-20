@@ -4,11 +4,11 @@ print(mylist)
 print
 
 mylist.append('Some text')
-print(mylist)
+print(mylist,  ' << Adding message to the list')
 
 print
 
-# remove the last element
+# pop remove the last element in this case is Some text because we added
 mylist.pop()
 print(mylist)
 
