@@ -1,7 +1,7 @@
 """Walrus Operater"""
 
 name = 'Dilshad'
-print(name)
+print('String: ', name)
 
 # Walrus operater
 
