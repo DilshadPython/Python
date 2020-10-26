@@ -20,3 +20,18 @@ This repo is only my training time to starting learning python from beginning un
 #### /> 3/2
 #### /> 1.5
 
+## create virtualenv with python version
+mkvirtualenv xmlenv --python=/usr/bin/python3.5
+mkvirtualenv xmlenv --python=/usr/bin/python3.6
+mkvirtualenv xmlenv --python=/usr/bin/python3.7
+
+## Install venv with specific python version
+sudo apt install python3.7 python3.7-dev python3.7-venv -y
+sudo apt install python3.6 python3.6-dev python3.6-venv -y
+sudo apt install python3.5 python3.5-dev python3.5-venv -y
+
+
+sudo apt-get install build-essential libssl-dev libffi-dev python-dev
+sudo apt-get install build-essential libssl-dev libffi-dev python3-dev
+
+sudo apt-get install build-essential checkinstall 
