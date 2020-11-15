@@ -1,5 +1,5 @@
-INFO 2018-03-13 12:27:17,152 - First level info 10
-DEBUG 2018-03-13 12:27:17,152 - Second level debug 10
-WARNING 2018-03-13 12:27:17,152 - Third level warning 10
-ERROR 2018-03-13 12:27:17,152 - Fourth level error 10
-CRITICAL 2018-03-13 12:27:17,152 - Fifth level Critical 10
+INFO 2020-11-07 21:53:37,151 - First level info 10
+DEBUG 2020-11-07 21:53:37,151 - Second level debug 10
+WARNING 2020-11-07 21:53:37,151 - Third level warning 10
+ERROR 2020-11-07 21:53:37,151 - Fourth level error 10
+CRITICAL 2020-11-07 21:53:37,151 - Fifth level Critical 10
