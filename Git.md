@@ -27,6 +27,11 @@
 	## This will add the file and commit them in short way instead of using add then commit
 	git commit -a -m 'Add the file'
 
+	## If you change your mind you can use:
+	git reset --soft HEAD^
+
+	The above will reset the last commit and bring the file to saging area
+
 # Create new branch 
 
 ## git branch branchname is to create new branch and git checkout branchname is to move to
