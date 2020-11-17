@@ -30,8 +30,41 @@
 	## If you change your mind you can use:
 	git reset --soft HEAD^
 
+	## --amend add the message to last commit and 
+	git add file.txt
+	git commit --amend -m 'Modify read and add file.txt'
+
 	The above will reset the last commit and bring the file to saging area
 
+	## Undo last commits and all changes
+	git reset --hard HEAD^
+
+	## Undo last 2 commits and all changes
+	git reset --hard HEAD^^
+
+	## add first time to the link using following
+	git remote add origin https://github.com/DilshadGit/python/Git.md
+
+	git push -u origin master
+
+	## add new remotes
+	git remote add (name) (https://address.com)
+
+	## to remove remotes
+	git remote rm (name
+
+	## -u help to not use next time the branch name
+	git push -u (name) (branch)
+
+	## heroku create
+	git remote -v
+
+	heroku git@heroku.com: dev-server-1234.git (fetch)
+	heroku git@heroku.com: dev-server-1234.git (push)
+	origin https://github.com/Dilshadgit/git-test.git (fetch)
+	origin https://github.com/Dilshadgit/git-test.git (push)
+
+	git push heroku master
 # Create new branch 
 
 ## git branch branchname is to create new branch and git checkout branchname is to move to
