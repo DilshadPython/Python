@@ -24,6 +24,9 @@
 
 	HEAD refers to the last commit on the current branch we are on.
 
+	## This will add the file and commit them in short way instead of using add then commit
+	git commit -a -m 'Add the file'
+
 # Create new branch 
 
 ## git branch branchname is to create new branch and git checkout branchname is to move to
