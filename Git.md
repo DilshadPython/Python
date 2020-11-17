@@ -13,6 +13,17 @@
 
 ### $ git commit -m 'Adding change message'
 
+## If add the file to staged area and change your mind to get out from staging area use
+	git reset HEAD filename 
+## Example
+	touch newfile
+	git add newfile
+	
+	- Now we take out from staged branch
+	git reset HEAD newfile
+
+	HEAD refers to the last commit on the current branch we are on.
+
 # Create new branch 
 
 ## git branch branchname is to create new branch and git checkout branchname is to move to
@@ -50,6 +61,11 @@ origin	git@bitbucket.org:DilMac/ecomma.git (push)
 ## To know what been changed use diff
 
 ### $ git diff filename
+
+## If you added the file to staging area and you write git diff filename nothing
+	display to check what has been change in stage area enter (git diff --staged)
+
+
 
 # git pull origin respository branch
 
