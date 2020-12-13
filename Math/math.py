@@ -2,7 +2,9 @@
 import math
 
 # from math import *
-
+'''
+Floor remconvert floot to int number
+'''
 print(math.floor(2.7))
 
 print('')

@@ -1,4 +1,7 @@
 a = 2
 b = 3
 
-print a ** b
+'''
+This is power **
+'''
+print(a ** b)
