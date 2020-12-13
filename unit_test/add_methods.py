@@ -18,3 +18,9 @@ def add_num(num1, num2):
 
 
 print(add_num(3, 8))
+
+def multiply_num(x, y):
+	return x * y
+
+
+print(multiply_num(4, 11))

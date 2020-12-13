@@ -1,6 +1,6 @@
 import unittest
 
-from add_methods import add_num
+from add_methods import add_num, multiply_num
 
 def test_add_num():
 	assert add_num(8, 9) == 17
@@ -9,3 +9,6 @@ def test_add_num():
 		pass
 	else:
 		print('Error check the code ')
+
+def test_multiply_num():
+	assert multiply_num(4, 11) != 43

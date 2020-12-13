@@ -1,5 +1,6 @@
 '''
-Etarator means you are repeating some elements in your list you have created one by one
+Etarator means you are repeating some elements in your list you have created one 
+by one
 '''
 
 
@@ -33,3 +34,7 @@ print(next(myiter))
 print(next(myiter))
 print(next(myiter))
 print(next(myiter))
+
+print('=============================================================')
+for itr in myiter:
+    print(itr)
