@@ -6,5 +6,8 @@ def test_var_kwargs(word, **kwargs):
     print('Start test word', word)
     for key in kwargs:
         print('Inside for loop format is: {} {}'.format(key, kwargs[key]))
+        print('\n==============')
+        print(f'Using f string now. Inside for looop format is: {key} {kwargs[key]}')
+
 
 test_var_kwargs(word=8, myword='Hello', kwars=27)

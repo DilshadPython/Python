@@ -7,4 +7,5 @@ def test_var_args(frag, *args):
     for arg in args:
         print('Here is arg', arg)
 
+
 test_var_args(2, 9, 3)
