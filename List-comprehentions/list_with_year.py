@@ -36,10 +36,10 @@ premier_league = [
 football_team = []
 
 print('Team before 1990')
-team_before_1990 = [team for (team, year) in premier_league if year < 1990]
+team_before_1990 = [ team for (team, year) in premier_league if year < 1990 ]
 print(team_before_1990)
 
 print(0)
 print('Team after 1989')
-team_after_1989 = [team for (team, year) in premier_league if year > 1989]
+team_after_1989 = [ team for (team, year) in premier_league if year > 1989 ]
 print(team_after_1989)
