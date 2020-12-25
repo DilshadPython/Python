@@ -11,7 +11,7 @@ def time_test():
 
 time_test()
 
-print()
+print('=======================')
 
 
 def time_list():
@@ -21,7 +21,7 @@ def time_list():
 
 time_list()
 
-print()
+print('#######################')
 
 
 def time_map():
