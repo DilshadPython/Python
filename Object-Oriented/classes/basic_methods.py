@@ -23,7 +23,11 @@ class Car:
         Car.number_in_the_store += 1
 
     def car_detail(self):
-        return '{}, {}, {}, {}'.format(self.name, self.model, self.color, self.types, self.price)
+        return '{}, {}, {}, {}'.format(self.name, 
+                                        self.model,
+                                        self.color,
+                                        self.types,
+                                        self.price)
 
     def payment(self):
         self.price = float(self.price * self.profit)

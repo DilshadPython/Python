@@ -18,13 +18,13 @@ print(my_add(4, 56))
 # print(str_add(4, 56))
 
 
-def add_me(x: int, y: int) -> int:
+def add_num(x: int, y: int) -> int:
     return random.randint
 
-print(add_me(7, 3))
+print(add_num(7, 3))
 
 
 def add_me(x: int, y: int) -> int:
     return 10
 
-print(add_me(7, 3))
+print(add_me(7, 9))
