@@ -16,3 +16,7 @@ print(empt_two)
 print('=============================================')
 print('Identity matrix')
 print(np.eye(5))
+
+
+numpylib = dir(np) 
+print(numpylib)
