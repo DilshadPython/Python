@@ -18,5 +18,6 @@ print('Identity matrix')
 print(np.eye(5))
 
 
+# list of all function are exisit in the numpy
 numpylib = dir(np) 
 print(numpylib)
