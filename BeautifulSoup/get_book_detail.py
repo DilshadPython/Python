@@ -2,6 +2,7 @@
 from urllib.request import urlopen
 from bs4 import BeautifulSoup
 
+# pip install requests
 import requests as rq
 
 url = 'https://bookdepository.com/search?searchTerm=python&search=Find+book'
