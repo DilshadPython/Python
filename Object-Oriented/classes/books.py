@@ -1,10 +1,13 @@
 # coding: utf8
 
-
+# Class is a blueprint for an instance
+# Type: Indectats the class the instance belong to
+# Attribute: Any object value
+# Method: A callable attribute define in the class
 class Book:
     pass
 
-
+# obj_1 is instance: A constructed object of the class
 obj_1 = Book()
 obj_2 = Book()
 
