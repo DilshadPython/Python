@@ -6,7 +6,7 @@ from pygame import mixer
 
 mixer.init()
 
-mixer.music.load("beeps.wav")
+mixer.music.load("beep.wav")
 
 # create an object named camera to open or catch the camera zero stand for one
 # camera on the machine I am using now
