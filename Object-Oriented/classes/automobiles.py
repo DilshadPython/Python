@@ -1,4 +1,4 @@
-# clas variables
+# class variables
 class Car:
     # class veriable
     profit = 1.09

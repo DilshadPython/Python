@@ -12,7 +12,7 @@ print()
 
 user_2 = User()
 
-user_2.firstname = 'Domnic'
+user_2.firstname = 'Daniel'
 user_2.lastname = 'Edward'
 
 print(user_2.firstname, ' ', user_2.lastname)

@@ -24,6 +24,7 @@ print(obj_2.item_name, obj_2.item_color, obj_2.item_num)
 
 print('**' * 30)
 print('Item details one')
+
 # here doesn't need to add the self in the method because it knows
 # automatically
 print(obj_1.item_detail())
