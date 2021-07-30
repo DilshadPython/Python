@@ -11,11 +11,13 @@ class Car:
 
 
 obj = Car()
+# Here we call the number_in_the_store before instance method set_price
+print('\nCalling class variable: ', obj.class_var)
+print('\nthe number in the store is: ', obj.number_in_the_store)
+
 # To access the instance variable or attribute we must call the set_price() method first
-# to call instance_var otherwise display an error
+# to access instance_var otherwise display an error
 obj.set_price()
 
-print('Calling class variable: ', obj.class_var)
-print('the number in the store is: ', obj.number_in_the_store)
-
-print('Calling instance variable: ', obj.instance_var)
+print('\nCalling instance variable: ', obj.instance_var)
+print('\nThe number in the store is: ', obj.number_in_the_store)
