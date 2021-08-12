@@ -4,7 +4,7 @@ from bs4 import BeautifulSoup
 
 url = 'http://www.bbc.co.uk/sport/football/tables'
 
-file = open('football_team.txt', 'w')
+file = open('football_team1.txt', 'w')
 
 
 i = 0
