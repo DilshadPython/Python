@@ -12,3 +12,5 @@ a + 0j
 when you try float(3.14 + 0j) get an error because you can,t convert float to complex therefore:
 floats are narrow than complex numbers
 complex are winder that float
+
+# round() This will make a number to closet e.x 3.6 = 4
