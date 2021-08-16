@@ -4,6 +4,7 @@ for name in animals:
     print(name)
 
 print('########')
+# we print the first name in the animals list
 print(animals[1])
 name_1 = 'Lion'
 name_2 = 'tiger'
