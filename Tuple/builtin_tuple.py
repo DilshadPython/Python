@@ -24,3 +24,6 @@ print('\n')
 
 print('We can index the place of a number in tuple index[] >> ', nums[2])
 print('\n')
+
+print('We can use index to find place number 17 in tuple index() >> ', nums.index(17))
+print('\n')
