@@ -1,15 +1,18 @@
 animals = ['cat', 'dog', 'walf']
 
+# we display the list of animales
 for name in animals:
     print(name)
 
 print('########')
 # we print the first name in the animals list
 print(animals[1])
+
 name_1 = 'Lion'
 name_2 = 'tiger'
 name_3 = 'elephant'
 
+# we add the new name to the list
 animals.append(name_1)
 print(animals)
 
