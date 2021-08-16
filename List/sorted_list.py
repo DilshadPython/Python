@@ -1,4 +1,5 @@
-sentence = 'To better understand how functions work, line lets create one. To Type this program into line work the file editor and save it as hello on mu function and so on'
+sentence = 'To better understand how functions work, line lets create one. To type this program\
+             into line work the file editor and save it as hello on mu function and so on'
 
 sentence += ' The first line is a def To statement line'
 
