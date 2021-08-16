@@ -14,3 +14,19 @@ floats are narrow than complex numbers
 complex are winder that float
 
 # round() This will make a number to closet e.x 3.6 = 4
+# ceil() take the number to the highest
+# floor() take the number to lowest
+
+>>> from math import *
+>>> ceil(3.6)
+4
+>>> ceil(3.5)
+4
+>>> ceil(3.4)
+4
+>>> floor(3.4)
+3
+>>> floor(3.5)
+3
+>>> floor(3.7)
+3
