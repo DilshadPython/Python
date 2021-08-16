@@ -30,3 +30,9 @@ complex are winder that float
 3
 >>> floor(3.7)
 3
+>>> round(3.7)
+4
+>>> round(3.5)
+4
+>>> round(3.4)
+3
