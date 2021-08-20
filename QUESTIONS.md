@@ -49,15 +49,67 @@
   >>> books[2] = 'Mathmatics'
   >>> books
   ['Biology', 'Chimiches', 'Mathmatics', 'Django projects', 'Java']
-#
-#
-#
-#
-#
-#
-#
-#
-#
+
+# The is the three piller of OO in Python?
+- Encapsulation
+- Inheritance
+- Polymorphism
+
+# What makes Python object oriented?
+- Encapsulation
+- Abstracction
+- Inheritance
+- Polymorphism
+- Data hiding
+
+# How many types of objects Python support?
+-    There are two types Mutable objects like[] List and Immutable object like Tupe()
+
+# What is the different between single underscore _ and double underscroe __ in python?
+
+# What is Genarator?
+
+# What is Iterator?
+
+# What is the difference between .pyc and .py file?
+
+# How can you declare a multiple assignments in one statment?
+- Option one:
+  - >>> a, b, c, d = 3, 6, 11, 9
+    >>> a
+    3
+    >>> b
+    6
+    >>> c
+    11
+    >>> d 
+    9
+- Option two:
+- >>> a = b = c = 77
+    >>> a
+    77
+    >>> b
+    77
+    >>> c
+    77
+
+# How many arguments can used in range() function?
+- range() function can take up to 3 arguments:
+  - Range with one argument:
+    >>> list(range(7))
+    [0, 1, 2, 3, 4, 5, 6]
+    >>> tuple(range(8))
+    (0, 1, 2, 3, 4, 5, 6, 7)
+  - Range with two arguments: The first argument is where started the second is where finished.
+    - >>> tuple(range(2, 10))
+    (2, 3, 4, 5, 6, 7, 8, 9)
+    >>> list(range(1, 10))
+    [1, 2, 3, 4, 5, 6, 7, 8, 9]
+  - Range with three arguments: First argument start, second ended and the third is the step value.
+    - >>> list(range(1, 10, 2))
+   [1, 3, 5, 7, 9]
+   >>> tuple(range(2, 10, 3))
+   (2, 5, 8)
 #
 #
 #
