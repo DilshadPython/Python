@@ -10,3 +10,8 @@
 ## cl >> stand for clear all break points
 ## cl[int] >> stand for clear break point at line number (eg.cl24)
 ## p stand for print 
+
+'''
+when you import pdb and use set_trace() you don't need to use python -m pdb filanme.py
+you can ru this way python filename.py
+'''
