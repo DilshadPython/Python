@@ -110,12 +110,42 @@
    [1, 3, 5, 7, 9]
    >>> tuple(range(2, 10, 3))
    (2, 5, 8)
-#
-#
-#
-#
-#
-#
+
+# What is PEP 8?
+
+# How do you display firstname & surname of all university students, which data type more useful to use?
+- The data type to use is dictionary here is some examples:
+  - >>> stdn_names = {'fname': 'Thomas', 'sname': 'Andrew'}
+  >>> print(stdn_names)
+  {'fname': 'Thomas', 'sname': 'Andrew'}
+  >>> print(stdn_names.keys(), ' = ', stdn_names.values())
+  dict_keys(['fname', 'sname'])  =  dict_values(['Thomas', 'Andrew'])
+
+# Create a list of number string convert to list of number as integer? 
+- >>> numbers = ['2', '76', '14', '9', '25']
+  >>> numbers
+  ['2', '76', '14', '9', '25']
+  >>> [int(x) for x in numbers]
+  [2, 76, 14, 9, 25]
+
+# What is swapcase() does in python?
+- swapcase() is a method can swap upper and lower char in string example:
+  - >>> full_name = 'Dilshad Abdulla'
+  >>> full_name.swapcase()
+  'dILSHAD aBDULLA'
+
+# How to find out the values in the dictionary or how to test it?
+- >>> stdn_names = {'fname': 'Thomas', 'sname': 'Andrew', 'fname': 'Julie', 'sname': 'Smith'}
+  >>> 'sname' in stdn_names.values()
+  False
+  >>> 'Julie' in stdn_names.values()
+  True
+
+# What is the list Comprehension in Python?
+- It's one line of codes use for loop and list example:
+  - >>> [x for x in range(1, 21, 3)]
+   [1, 4, 7, 10, 13, 16, 19]
+
 #
 #
 #
