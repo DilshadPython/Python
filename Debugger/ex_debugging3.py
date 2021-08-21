@@ -1,5 +1,5 @@
 '''
-If you using PyCharm there is a debug small button next to run show the issues what is wrong
+If you using PyCharm there is a debug small icon next to run icon show the issues what is wrong
 Down to the shell you have debug and Console
 '''
 def add_num(num1, num2):
