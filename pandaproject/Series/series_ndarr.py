@@ -7,3 +7,8 @@ sample = pd.Series(data)
 
 
 print(sample)
+
+print('\n##################################\n')
+
+new = pd.Series()
+print(new)

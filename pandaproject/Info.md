@@ -14,3 +14,8 @@ DataFrame				2				2D labeled , size-mutable tabular structure with potentially h
 										typed colums
 
 Panel					3				3D labeled , size-mutable array
+
+Key Points:
+-	Heterogeneous data
+-	Size Mutable
+- 	Data Mutable
