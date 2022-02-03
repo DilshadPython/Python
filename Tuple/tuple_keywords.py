@@ -11,3 +11,5 @@ print("\n You can't use index as adding extra name to the tuple because immutabl
 tpl[0] = 'MySQL'
 print(tpl)
 """
+print()
+print(dir(tpl))
