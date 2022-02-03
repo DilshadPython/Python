@@ -1,7 +1,7 @@
 print('Please enter a number that the reminder will be 0: ')
 
 while True:
-    response = input()
+    response = int(input())
     if int(response) % 7 == 0:
         print('Well done 49 % 7 == 0 : ')
         break

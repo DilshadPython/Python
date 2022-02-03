@@ -6,7 +6,7 @@
 
 
 while True:
-    print("Please end a name?")
+    print("Please enter a name to end a name?")
     answer = input(" ")
     if answer == "Raffi":
         print("You guessed it!")
