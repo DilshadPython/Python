@@ -1,3 +1,26 @@
+# How this work i python:
+## x = 3 + 5 * 6 - 9 / 5 ** 8
+### 5 * 6
+#### 5 ** 8
+##### 9 / (5 ** 8)
+##  Parenthesis are always respected as first
+## Power, Multiplication, Addition, Substraction left to right 
+## x = 3 + 2 ** 4 / 2 * 8
+## x = 3 + 16 / 2 * 8
+## x = 3 + 8 * 8
+## x = 3 + 64
+## x = 67
+>>> x = 3 + 2 ** 4 / 2 * 8
+>>> print(x)
+67.0
+>>> 
+
+# This is Exilator
+num = input('Enter the floot you want to go')
+moving_up = int(num) + 1
+print('You are going up to floor number ', moving_up)
+
+
 ## What is Encapsulation?
 
 
