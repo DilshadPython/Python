@@ -3,13 +3,13 @@ books = ['Data Science', 'Biology', 'Chimiches',
 
 print(books)
 
-print('\n - Get all books out from the list and display as normal names and sperate by , . \n')
+print('\n - Get all books out from the list and display as normal names and separate by , . \n')
 
-books_str = ', '.join(books)
+books_str = ' - '.join(books)
 
 print(books_str)
 
-print('\n - Return the books to list using split. \n')
+print('\n - Return the books to list using split like before (, ). \n')
 
-old_books = books_str.split(', ')
+old_books = books_str.split(' - ')
 print(old_books)
