@@ -13,3 +13,10 @@ new_name = ''
 text = 'Hello, ' + input("Enter a name: ")
 
 print(text + f"{new_name}")
+
+my_name = 'Azad'
+print()
+print(f"Hello, {my_name.upper()}")
+
+print("\n Display all methods use with string: \n")
+print(dir(my_name))
