@@ -146,7 +146,45 @@
   - >>> [x for x in range(1, 21, 3)]
    [1, 4, 7, 10, 13, 16, 19]
 
-#
+# Python reserved keywords
+  Flase,
+  True,
+  Class,
+  return,
+  is,
+  in,
+  finally,
+  None,
+  if,
+  elif,
+  else,
+  for,
+  lambda,
+  continue,
+  def,
+  from,
+  while,
+  nonlocal,
+  and,
+  del,
+  global,
+  not,
+  with,
+  as,
+  try,
+  or,
+  yield,
+  assert,
+  import,
+  pass,
+  break,
+  except,
+  raise
+
+# INFO
+  x = 4      Assignment statment
+  x = x + 7  Assignment with expression
+
 #
 #
 #
