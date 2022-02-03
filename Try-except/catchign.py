@@ -4,7 +4,7 @@
 '''
 c = 0  # This is counter
 
-print("Press crtl and c")
+print("Press crtl and c: ")
 
 try:
     while 1:  # infinite loop
