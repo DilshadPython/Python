@@ -1,4 +1,5 @@
 names = ['Tom', 'Chris', 'Julia', 'Rob', 'Claudio', 'Sarah', 'Amanda']
+print(names, '\n')
 
 for name in names:
     print(name)
@@ -10,7 +11,6 @@ for name in names:
         print('\n The name found')
         break
     print(name)
-
 
 print('###########################')
 for name in names:
