@@ -1,10 +1,9 @@
-for x in range(1, 15):
+for x in range(1, 25):
 	for y in range(x):
 		print('#', end=' ')
-	print('----------')
-print('=========')
+	print()
 
-# for x in range(15, -1):
-# 	for y in range(y):
-# 		print('#', end=' ')
-# 	print()
+print('=========')
+for a in range(25, -1):
+	for b in range(a):
+		print('#', end=' ')
