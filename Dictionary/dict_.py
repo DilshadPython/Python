@@ -13,9 +13,9 @@ numbers = {
     'j': 15
 }
 
-print(numbers)
+print(numbers, ' >> All dictionary')
 print()
-print()
+print('####################################################################################\n')
 
 print(' First we will use lamda function to dort the dictionary from small to highest number.')
 print('1. We will sorteded the dictionary from smallest number to highest: ')
