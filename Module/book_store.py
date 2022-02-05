@@ -1,5 +1,5 @@
-import search_books  # as search
-# or you can say from search_book import find_book
+import search_books  # as search 
+# or you can say from search_book import find_book like import model
 
 library = ['Data Science', 'Biology', 'Chimiches',
            'Python Tutorials', 'Django projects']
