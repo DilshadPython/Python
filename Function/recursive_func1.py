@@ -10,10 +10,10 @@ This is very importantce Factorial or recursive function use for only Posative n
 def factorial_recur(num):
     # num = input('Please enter a number: ')
     if num == 1:
-        print('\nBefore else: ', num)
+        print('\n Before else: ', num)
         return 1
     else:
-        print('\nAfter else: ', num)
+        print('\n After else: ', num)
         return num * factorial_recur(num - 1)
 
 print('The results: ',factorial_recur(4))

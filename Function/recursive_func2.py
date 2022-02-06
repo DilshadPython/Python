@@ -13,10 +13,10 @@ return -7 * factorial_recur(6)   << -36
 def factorial_recur(num):
     # num = input('Please enter a number: ')
     if num == 1:
-        print('\nBefore else: ', num)
+        print('\n Before else: ', num)
         return 1
     else:
-        print(' After else : ', num)
+        print('\n After else : ', num)
         return num * factorial_recur(num + 1)
 
 print(factorial_recur(-7))
