@@ -127,6 +127,12 @@ origin	git@bitbucket.org:DilMac/ecomma.git (push)
 ### $ 3. git pull origin master # this used to make surer if anyone has mage changes and 
 ###		 pushed to master branch
 ### $ 4. git branch --merged
+
+''' This graph display all changes has been made between the orginal branch and the new branch
+after merged to the master branch.
+'''
+### $ - git log --graph
+
 ### $ 5. git merge feature/new_branch
 ### $ 6. git push origin master
 ### $ 7. git branch --merged to make sure is up to date before using delete branch
@@ -137,7 +143,9 @@ origin	git@bitbucket.org:DilMac/ecomma.git (push)
 	to delete from remote repository use 
 ### $ git push origin --delete feature/new_branch
 
-#
+# Delete branch name remotley and localy
+## git branch -d (branch name localy)
+## git push origin --delete (the remote branch name)
 
 ##
 
