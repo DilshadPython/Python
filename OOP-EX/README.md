@@ -21,3 +21,6 @@ def __init__(self, name: str, price: float, quantity=0):
 # if we add -5 or -7 it will automatically tell must be posative
 assert price >= 0, f'Price {price} is not greater than or equal to 0 !'
 assert quantity >= 0, f'Quantity {quantity} is not greater than or equal to 0 !'
+
+# Adding __dict__ to the class display all attribute of this model and use the same method
+# __dict__ for object or instance display all attribiute for instance level.
