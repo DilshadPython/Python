@@ -1,12 +1,16 @@
 class Product:
-    # We use assert as validations method which is show the number must be posative always
-    # if we add -5 or -7 it will automatically tell must be posative
-    assert price >= 0, f'Price {price} is not greater than or equal to 0 !'
-    assert quantity >= 0, f'Quantity {quantity} is not greater than or equal to 0 !'
+    # we create attribute for the class
+    discount = 0.7
 
     # we initionalise the class by creating __init__ method or constractor
     # we can also give the quantity to each product in init method directly and removed from created obj
+
     def __init__(self, name: str, price: float, quantity=0):
+         # We use assert as validations method which is show the number must be posative always
+        # if we add -5 or -7 it will automatically tell must be posative
+        assert price >= 0, f'Price {price} is not greater than or equal to 0 !'
+        assert quantity >= 0, f'Quantity {quantity} is not greater than or equal to 0 !'
+
         print(f'We initialized the class by created an instance: {name}, {price}, {quantity}')
         # we assigned the class to each attribute
         self.name = name
@@ -26,6 +30,8 @@ class Product:
 # now we add the name directly to the class
 # obj = Product('Mobile', 49.99, 44)
 obj = Product('Mobile', 49.99, 17)
+
+print(Product.discount)
 
 # obj.name = str('Mobile')
 # obj.price = float(49.99)
@@ -54,3 +60,11 @@ print(obj1.calculate_total_price())
 # print(type(obj.name))
 # print(type(obj.price))
 # print(type(obj.quantity))
+
+# This will display all attributes for class level
+print(Product.__dict__)
+
+# This will display all attributes for instance level
+print(obj.__dict__)
+
+# stopped in 36 minute
