@@ -1,6 +1,7 @@
 class Product:
     # we create attribute for the class attribute, this is if the payment more then 25% discount
     pay_discount = 0.73
+    all = []
 
     # we initionalise the class by creating __init__ method or constractor
     # we can also give the quantity to each product in init method directly and removed from created obj
@@ -16,6 +17,9 @@ class Product:
         self.name = name
         self.price = price
         self.quantity = quantity
+
+        # Actions to execute
+        Product.all.append(self)
 
     # def calculate_total_price(self, i, j):
     #     return i * j
@@ -33,6 +37,9 @@ class Product:
         '''
         # self.price = self.price * Product.pay_discount
         self.price = self.price * self.pay_discount
+
+    def __repr__(self):
+        return f"Product('{self.name}', {self.price}, {self.quantity})"
 
 
 # Create an object of the class
@@ -94,3 +101,21 @@ obj1 = Product('Mobile', 49.99, 4)
 obj1.pay_discount = 0.623
 obj1.get_discount()
 print('After update the pay desicount it will be 0.623 : ', obj1.price)
+
+print()
+
+obj2 = Product('Desktop', 450.99, 17)
+obj3 = Product('Samsung', 399.99, 12)
+obj4 = Product('IPad 10', 689.99, 22)
+obj5 = Product('Iphone 13', 799.59, 34)
+obj6 = Product('Ausus Laptop 15', 500.48, 11)
+
+print()
+print('Product.all', ' \t Here all use __repr__ method ')
+print(Product.all)
+
+print()
+print('Use for loops:')
+# print(Product.all)
+for obj in Product.all:
+    print(obj.name, '\t', obj.price, '\t', obj.quantity)
