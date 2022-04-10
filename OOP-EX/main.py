@@ -1,3 +1,6 @@
+import csv
+
+
 class Product:
     # we create attribute for the class attribute, this is if the payment more then 25% discount
     pay_discount = 0.73
@@ -37,6 +40,22 @@ class Product:
         '''
         # self.price = self.price * Product.pay_discount
         self.price = self.price * self.pay_discount
+
+    # Read data from csv file
+    @classmethod
+    def read_instance_date_from_csv_file(cls):
+        # we will convert instance method to klass method instead of self use cls
+        with open('csv_files.csv', 'r') as f:
+            reader = csv.DictReader(f)
+            products = list(reader)
+
+        for product in products:
+            # print(product)
+            Product(
+                name=product.get('name'),
+                price=float(product.get('price')),
+                quantity=int(product.get('quantity')),
+            )
 
     def __repr__(self):
         return f"Product('{self.name}', {self.price}, {self.quantity})"
@@ -102,20 +121,26 @@ obj1.pay_discount = 0.623
 obj1.get_discount()
 print('After update the pay desicount it will be 0.623 : ', obj1.price)
 
-print()
-
-obj2 = Product('Desktop', 450.99, 17)
-obj3 = Product('Samsung', 399.99, 12)
-obj4 = Product('IPad 10', 689.99, 22)
-obj5 = Product('Iphone 13', 799.59, 34)
-obj6 = Product('Ausus Laptop 15', 500.48, 11)
 
 print()
 print('Product.all', ' \t Here all use __repr__ method ')
-print(Product.all)
+print(Product.all)s
+
+# print()
+# obj2 = Product('Desktop', 450.99, 17)
+# obj3 = Product('Samsung', 399.99, 12)
+# obj4 = Product('IPad 10', 689.99, 22)
+# obj5 = Product('Iphone 13', 799.59, 34)
+# obj6 = Product('Ausus Laptop 15', 500.48, 11)
+
+# print('Use for loops:')
+# # print(Product.all)
+# for obj in Product.all:
+#     print(obj.name, '\t', obj.price, '\t', obj.quantity)
 
 print()
-print('Use for loops:')
-# print(Product.all)
-for obj in Product.all:
-    print(obj.name, '\t', obj.price, '\t', obj.quantity)
+print('Here we use read_instance_date_from_csv_file() as classmethod to display all date from csv file:')
+Product.read_instance_date_from_csv_file()
+print(Product.all)
+
+# stopped at 1:03 minutes and the float dispaly an error NoneType line 56 and 143

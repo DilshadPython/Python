@@ -38,3 +38,5 @@ to different numbers
 
 # Create CSV file :
 Installed some csv file from sublime text to show the tables in csv file better
+
+# To read the use magic method __repr__()
