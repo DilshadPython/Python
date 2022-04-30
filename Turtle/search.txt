@@ -2,3 +2,9 @@ https://docs.python.org/3/library/turtle.html
 https://pythonforfun.in/codes/
 
 https://pythonforfun.in/turtle-codes/
+
+python --version 
+$ python3.9
+
+brew update
+brew install python-tk@3.9 
