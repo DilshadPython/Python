@@ -26,4 +26,3 @@ print(type(d), ' d')
 print('Are the c and d same data type?')
 if type(c) == type(d):
 	print(True)
-
