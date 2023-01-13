@@ -5,4 +5,4 @@ while x >= 0:
 	print(x)
 	x = x - 1
 
-print('\nThe decreased x ended here!')
+print('\nThe decrease x ended here!')
