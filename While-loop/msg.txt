@@ -1,0 +1,6 @@
+Welcome to Python
+Welcome to C++
+Welcome to Google
+Welcome to Apple
+Welcome to Java
+Welcome to the end.
