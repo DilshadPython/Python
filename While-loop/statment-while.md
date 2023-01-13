@@ -7,7 +7,7 @@ evend-control
 # This is while loop continue structer 
 
 while relationalExpression: 
-    statment
+    statments
     # continue means some kind of if statment
     continue
     # example of continue
@@ -15,3 +15,12 @@ while relationalExpression:
     #	continue
 
     statment
+
+# This is how while loop break working
+
+while relationalExpression:
+    statments
+    if relastionalExpression:
+        break
+    statments
+# the brack transfer while loop control here to get exiqute.
