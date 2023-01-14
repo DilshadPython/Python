@@ -1,4 +1,4 @@
-# 5! = 5*4*3*2*1
+# 5! = 5*4*3*2*1 = 120
 # 6! = 6 * 5!
 # Factorial computation iteratively
 
