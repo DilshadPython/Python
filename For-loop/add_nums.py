@@ -16,4 +16,3 @@ for num in nums:
         output = sum(int(num))
         print(output)
 
-
