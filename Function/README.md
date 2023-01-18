@@ -26,3 +26,5 @@
 
 def nameof_function(var):
     return the_job_of_function_body
+
+# Recursive function means the function call itself at the end also used as factorial.
