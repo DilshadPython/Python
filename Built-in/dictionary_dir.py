@@ -2,6 +2,7 @@ my_dict = dict()
 
 dir(my_dict)
 print(dir(my_dict))
+
 '''
 ['__class__', '__cmp__', '__contains__', '__delattr__', '__delitem__', 
 '__doc__', '__eq__', '__format__', '__ge__', '__getattribute__', 

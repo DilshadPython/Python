@@ -6,13 +6,13 @@
 
 
 while True:
-    print("Please enter a name to end a name?")
+    print("Please enter a name of your pets start with R and ended with i ?")
     answer = input(" ")
     if answer == "Raffi":
         print("You guessed it!")
         break
     else:
-        print("No, not that word...")
+        print("No, wrong name...")
         continue
 
 '''
