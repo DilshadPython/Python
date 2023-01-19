@@ -7,7 +7,7 @@ print(grades)
 print('****************************************************')
 # to remove the \n 
 for i in range(len(grades)):
-	# rstrip() remove the \n
+	# rstrip() --> remove the \n
 	grades[i] = grades[i].rstrip()
 print(grades)
 

@@ -7,7 +7,7 @@ print(listcomp)
 
 print('=====================================================')
 file = open('numbers.txt')
-# rstrip() remove \n
+# rstrip() --> remove \n
 comp = [x.rstrip() for x in file]
 
 print(comp)
