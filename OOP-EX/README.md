@@ -6,10 +6,11 @@
 # which is repersents the instance of this class, by using self keyword we can access the
 # attribute s and methods of this class in python.
 
-def calcuate_total_price(self)
+def calcuate_total_price(self):
 
 # create constractor method __init__ and added the attribute to the constructor, next assignedall
-# attribute in constructor method by using self and we can access to each attribut in second method
+# attribute in constructor method by using self and we can access to each attribut in second
+# method
 # using self whithout given any parameter in th calculate_total_price method.
 
 # def __init__(self, name, price, quantity=0):
