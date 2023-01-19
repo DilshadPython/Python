@@ -1,0 +1,34 @@
+# Base class
+class Shape:
+	def __init__(self, xcor, ycor):
+		self.x = xcor
+		self.y = ycor
+
+
+	def __str__(self):
+		return ' x: ' + str(self.x) + ', y: ' + str(self.y)
+
+
+	def move(self, x1, y1):
+		self.x = self.x + x1
+		self.y = self.y + y1
+
+# this is a drive class inheriate from base class
+class Rectangle(Shape):
+	def __init__(self, xcor, ycor, height, width):
+		Shape.__init__(self, xcor, ycor)
+		self.height = height
+		self.width = width
+
+
+	def __str__(self):
+		return_str = Shape.__str__(self)
+		return_str += ', height: ' + str(self.height) + ', width: ' + str(self.width)
+		return return_str
+
+# rec = Rectangle(xcor, ycor, height, width)
+rec = Rectangle(6, 18, 9, 12)
+print(rec)
+print()
+rec.move(7, 11)
+print(rec)
