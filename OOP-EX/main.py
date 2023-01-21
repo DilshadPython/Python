@@ -124,7 +124,7 @@ print('After update the pay desicount it will be 0.623 : ', obj1.price)
 
 print()
 print('Product.all', ' \t Here all use __repr__ method ')
-print(Product.all)s
+print(Product.all)
 
 # print()
 # obj2 = Product('Desktop', 450.99, 17)
@@ -140,7 +140,7 @@ print(Product.all)s
 
 print()
 print('Here we use read_instance_date_from_csv_file() as classmethod to display all date from csv file:')
-Product.read_instance_date_from_csv_file()
+# Product.read_instance_date_from_csv_file()
 print(Product.all)
 
 # stopped at 1:03 minutes and the float dispaly an error NoneType line 56 and 143
