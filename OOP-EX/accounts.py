@@ -19,7 +19,7 @@ class Checking(Account):
 
 
 	def __str__(self):
-		# the_acc = "Account type: Checking\t"
+		# the_acc = "Account typeI: Checking\t"
 		# the_acc += Account.__str__(self)
 		# or
 		the_acc = "Account type: Checking\t" + Account.__str__(self)
@@ -46,4 +46,3 @@ print(cal)
 
 cal.deposit(500)
 print(cal)
-
