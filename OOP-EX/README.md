@@ -25,3 +25,19 @@ assert quantity >= 0, f'Quantity {quantity} is not greater than or equal to 0 !'
 
 # Adding __dict__ to the class display all attribute of this model and use the same method
 # __dict__ for object or instance display all attribiute for instance level.
+
+# Create a Class attribute:
+Use __dict__ to shows the attribute for both class attribut and instance attribute saperate pay_discount
+belong to class attribut from instance attribute. next we created get_discount() method to showing how
+the class attribute works when we use Product.pay_discount and self.pay_discount and explain the
+different when the pay_discount updated to different numbers.'
+class-attribute a003e0a] Use __dict__ to shows the attribute for both class attribut and instance
+attribute saperate pay_discount belong to class attribut from instance attribute.
+Next we created get_discount() method to showing how the class attribute works when we use
+Product.pay_discount and self.pay_discount and explain the different when the pay_discount updated
+to different numbers
+
+# Create CSV file :
+Installed some csv file from sublime text to show the tables in csv file better
+
+# To read the use magic method __repr__()
