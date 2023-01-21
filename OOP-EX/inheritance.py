@@ -22,9 +22,10 @@ class Rectangle(Shape):
 
 
 	def __str__(self):
-		return_str = Shape.__str__(self)
-		return_str += ', height: ' + str(self.height) + ', width: ' + str(self.width)
-		return return_str
+		# we bring the shape of Shape class below as a new line assigned to the_shape
+		the_shape = Shape.__str__(self) + ', height: ' + str(self.height) + \
+					', width: ' + str(self.width)
+		return the_shape
 
 # rec = Rectangle(xcor, ycor, height, width)
 rec = Rectangle(6, 18, 9, 12)

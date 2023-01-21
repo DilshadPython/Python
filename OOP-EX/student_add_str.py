@@ -21,7 +21,7 @@ class Student:
 	# we added as exersices realted to str
 	def __str__(self):
 		return "Name: " + self.name + '\n' + "Id: " + self.id + '\n' \
-				+ "Grade: " + self.display_grade()
+				+ "Grades list: " + self.display_grade()
 
 	# how to use recursive func in class
 	def average_grade(self):
@@ -47,5 +47,3 @@ print(std.display_grade())
 print('The grade list: ', std)
 
 print('The average of the grades are: ', str(std.average_grade()))
-
-

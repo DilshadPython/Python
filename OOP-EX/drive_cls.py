@@ -17,9 +17,9 @@ class Manager(Employee):
 		self.salaried = isSalaried
 
 	def __str__(self):
-		rtn_str = Employee.__str__(self)
-		rtn_str += " salaried: " + str(self.salaried)
-		return rtn_str
+		the_empl = Employee.__str__(self)
+		the_empl += " salaried: " + str(self.salaried)
+		return the_empl
 
 	def to_pay(self, hours_work):
 		if self.salaried:
