@@ -16,4 +16,5 @@ print('\nCalling instance attribute: ', obj.class_name)
 # next we delete the class_name which is select the instance attribute not class attribute
 
 del obj.class_name
-print('\nWe have deleted the instance attribut here. ', obj.class_name)
+print('\nWe have deleted the instance attribut here not class attribute automatically return to class attr')
+print(obj.class_name)
