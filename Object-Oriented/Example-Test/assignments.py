@@ -1,3 +1,6 @@
+'''
+This way is not be encapsulation or instance data, this is class data which not deliver what we want. 
+'''
 class MaxSizeList:
 
 	names = []
