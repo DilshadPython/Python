@@ -5,6 +5,7 @@ to the obj = Number() because it display an error two arguments is given where
 we define only self argument in init method.
 '''
 class Number(object):
+	# __init__ is like setter method set the valu or number to present
 	def __init__(self):
 		print('Call __init__ automatically from instance obj')
 		self.num = 0

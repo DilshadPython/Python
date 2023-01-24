@@ -28,3 +28,11 @@ print('\nThe result is 0 because we set number to 0 if the argument is string:\n
 obj = Number('Welcome')
 
 print(obj.num)
+
+print('\nThis is only to avoide the error between str and int that is why use try:')
+try:
+    obj.num = 'Python'
+    obj.increament()
+    print(obj)
+except TypeError:
+    print('TypeError: can not concatenate str with int objects!')
