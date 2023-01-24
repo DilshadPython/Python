@@ -1,4 +1,4 @@
-
+# self is an instance of TheIntegeror self is instance of which methods will be called
 # Encapsulation class
 
 class TheInteger(object):

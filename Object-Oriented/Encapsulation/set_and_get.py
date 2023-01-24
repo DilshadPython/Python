@@ -2,10 +2,12 @@
 # This is example of Encapsulation class
 
 class House:
+	# the work process in setter methos is almost like __init__ define the argument
 	def set_price(self, price):
 		print('\nSETTER METHODS: set_price is set the house price')
 		self.price = price
-
+	
+	# getter mothos i call the argument define in setter method one argument will be given it is self.
 	def get_price(self):
 		print('\nGETTER METHODS: get_price is get the price of the house has been set or given.')
 		return self.price
