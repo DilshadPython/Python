@@ -1,10 +1,11 @@
 # class variables or class attribute and instance attribute
 class Car:
-    # class veriable
+    # class attribute or calss variable
     class_var = 20
     number_in_the_store = 0
 
     def set_price(self):
+        # is attribute is set in instance_var
         self.instance_var = 25
         self.number_in_the_store = 3
 
