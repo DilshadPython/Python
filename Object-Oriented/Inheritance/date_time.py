@@ -25,3 +25,7 @@ time_obj = Time()
 print(time_obj.get_time())
 ''' The object in child class can access and call the method in parent class '''
 print(time_obj.get_date())
+
+# the instance of the base class cannot call the methods of drive class look at below
+# print('\nDate instance call time or instance base calle drive method from drive class')
+# print(date_obj.get_())

@@ -1,4 +1,5 @@
 '''
+Animal are inheiate from object 
 '''
 class Animal(object):
 	"""docstring for Animal"""
