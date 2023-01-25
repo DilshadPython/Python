@@ -19,7 +19,6 @@ class InstanceCounter(object):
     '''
     This is the static method
     '''
-
     def get_val(self):
         return self.val
 
