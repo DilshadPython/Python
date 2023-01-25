@@ -1,5 +1,5 @@
 # Abstract Base Classes
- ## Abstruct class is kind of (model) ofr other classes to be defined. It is not desiged to 
+ ## Abstruct class is kind of (model) for other classes to be defined. It is not desiged to 
  ## construct instance but can be subclasses by regular classes
 
  ## Abstruct classes can define an interface, or methods that must be implemented by its subclsses.
