@@ -1,4 +1,8 @@
 '''
+Polymophism: means two classes has both the same functions with the same name but when we call
+from instance object of each class, the instance saperate this two functions with the same name
+by the name of this instance object of the class.
+Example : def show_affection()
 '''
 
 
