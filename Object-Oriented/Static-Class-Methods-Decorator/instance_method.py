@@ -15,16 +15,14 @@ class InstanceCounter(object):
         self.val = new_val
 
     '''
-    This is the static method
+    This is the static method working independecy with the class or the instance
     '''
-
     def get_val(self):
         return self.val
 
     '''
-    This is the class method
+    This is the class method working with the class
     '''
-
     def get_count(self):
         return InstanceCounter.count
 
