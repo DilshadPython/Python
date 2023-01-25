@@ -1,7 +1,7 @@
 '''
 This is shows how the class methods work
 A clas method takes the class not instance as argument and
-works with class object
+works with class object (Class method is bound method)
 '''
 
 
@@ -26,7 +26,7 @@ class InstanceCounter(object):
     This is the class method to explain better is to change self to cls
     and to make it works need to add on the top of the method @classmethod 
     to avoid error with cls it's exactly the same like instance method but
-    it will explain better called bound method.
+    it will explain better called bound method. or Class method
     '''
     @classmethod
     def get_count(cls):

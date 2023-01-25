@@ -4,24 +4,26 @@ Static method requires no argument and does not work with
 class or instance, but stull belongs in the class cod
 '''
 
-
 class InstanceCounter(object):
     """docstring for InstanceCount"""
     count = 0
 
     def __init__(self, val):
+        # filterint() required an integer
         self.val = self.filterint(val)
         InstanceCounter.count += 1
 
     '''
     This is the static method to explain better don't use self use
-    directly the argument which is value called static method or not
+    directly the argument which is value called static method not
     bound method.
+    Static method is not Bound method
     '''
     print('Decorator is a processor that modifies a function')
 
     @staticmethod
     def filterint(value):
+        # here if the value is not an integer than return 0
         if not isinstance(value, int):
             return 0
         else:
