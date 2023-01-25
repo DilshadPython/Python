@@ -5,7 +5,7 @@ Inheritance Hierachy
 3. Inheritance promotes code collaboration and reuse
 4. Code not need to be appear twice.
 
-# Object.attribute lookup hierarchy
+# Object.attribute lookup hierarchy [Inheriting Attribute look up]
 1. the instance
 2. the class
 3. and class from which this class inherits 
@@ -21,3 +21,6 @@ class Car(object)
  # Base class
  # Parent class
  # superclass 
+
+ # Inheritance Attribute:
+ ## 

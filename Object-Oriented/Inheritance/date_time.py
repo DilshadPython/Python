@@ -1,5 +1,5 @@
 '''
-Date and Time
+Date and Time, Date inherite from object and Time inherited from Date
 '''
 class Date(object):
 	def get_date(self):
