@@ -15,7 +15,7 @@ class InstanceCounter(object):
 
     '''
     This is the static method to explain better don't use self use
-    directly the argument which is value called static method or none
+    directly the argument which is value called static method or not
     bound method.
     '''
     print('Decorator is a processor that modifies a function')
