@@ -17,16 +17,12 @@ class GetSetParent(object):
         self.val = 0
 
     def set_val(self, value):
-        '''
-                Set a value in the instance
-        '''
+        ''' Set a value in the instance '''
         self.val = value
         return
 
     def get_val(self):
-        '''
-                Get and return a value from the instance
-        '''
+        ''' Get and return a value from the instance '''
         return self.val
 
     @abc.abstractmethod
