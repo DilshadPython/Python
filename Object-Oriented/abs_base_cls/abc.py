@@ -13,16 +13,12 @@ class GetterSetter(object):
 
     @abc.abstractmethod
     def set_val(self, input):
-        '''
-        Set a value in the instance
-        '''
+        ''' Set a value in the instance '''
         return
 
     @abc.abstractmethod
     def get_val(self):
-        '''
-        Get and return a value from the instance
-        '''
+        ''' Get and return a value from the instance '''
         return
 
 
