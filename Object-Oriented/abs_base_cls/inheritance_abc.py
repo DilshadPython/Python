@@ -9,7 +9,6 @@ The abstract class not designed to contruct instance but can be subclassed
 by regular classes
 '''
 
-
 class GetSetParent(object):
     __metaclass__ = abc.ABCMeta
 
@@ -29,6 +28,15 @@ class GetSetParent(object):
     def show_docs(self):
         return
 
+'''
+We can't instanceated abstruct class very important
+
+myob = GetSetParent()
+print(' myob', myob)
+Display an error
+myob = GetSetParent()
+TypeError: GetSetParent.__init__() missing 1 required positional argument: 'value'
+'''
 
 class GetSetInt(GetSetParent):
     def set_val(self, value):
@@ -37,7 +45,7 @@ class GetSetInt(GetSetParent):
         super(GetSetInt, self).set_val(value)
 
     def show_docs(self):
-        print('GetSetInt object ({}), only accepts integer values'.format(id(self)))
+        print('\nGetSetInt object ({0}), only accepts integer values'.format(id(self)))
 
 
 class GetSetList(GetSetParent):
@@ -55,7 +63,7 @@ class GetSetList(GetSetParent):
 
 
     def show_docs(self):
-        print('GetSetList object, len {0} history of values set'.format(
+        print('\nGetSetList object, len {0} history of values set'.format(
             len(self.vallist)))
 
 obj = GetSetInt(9)
@@ -65,6 +73,8 @@ print(obj.get_val())
 obj.show_docs()
 
 print('\n ############################################################## \n')
+print('\nHere we set the set_val 4 times (6, 99, 3, 49 ) the get_val will take the last one which is overloading \
+       the other valuse and return the last one which is 49\n')
 gsl = GetSetList(6)
 gsl.set_val(99)
 gsl.set_val(3)
