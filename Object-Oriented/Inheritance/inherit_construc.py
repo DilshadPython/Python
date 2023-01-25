@@ -1,6 +1,12 @@
 import random
-
-
+'''
+# __init__ is like any other method; it can be inherited 
+if the class doesn't have __init__ constructor, Python will check its parent class
+to see if can fine one
+# As soon as it findes one, Python calls it and stops looking
+# We use the super()function to call methods in the parents class
+# We may want to intialize in the parents as well as our own class
+'''
 class University(object):
     def __init__(self, name):
         self.name = name
