@@ -33,7 +33,9 @@ class MyClass(GetterSetter):
         return self.val
 
 '''
-You can't instationate the Abstract class only the Subclass
+You can't instationate the Abstract class only the Subclass I mean (x = GetterSetter())
 '''
 obj = MyClass()
 print(obj)
+
+
