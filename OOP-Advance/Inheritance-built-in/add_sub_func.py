@@ -19,6 +19,8 @@ class SumList:
             new_list.append(x[0] - x[1])
         return SumList(new_list)
 
+    # repr method is an instance method, it take the string function to placing the interenal list
+    # which is mylist which is the list that sumlist holding and rendering as string
     def __repr__(self):
         return str(self.mylist)
 
