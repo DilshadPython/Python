@@ -29,3 +29,12 @@ __slots__ can define allowable attributes
  - Private attribute or variables (intended to be use by the importer of this module or user of the class): _single leading underscore
  - Private attribute's that shouldn't be subclassed: __double leading underscore
  - Magic attributes: __double_underscore (use them, don't create them) 
+
+ # Style of old and new classes
+ - Inherit from 'object'
+ - Can be constructed with default attribute form 'metaclass' constructors
+ - Allow the subclassing of built-ins
+ - Allow the use of 'slots' define instance attributes
+ - Use the 'C3' MRO (method resolution order)
+ - Support 'descriptors'
+ - Are the only style of class in Python3
