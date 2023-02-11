@@ -15,7 +15,7 @@ class Monitor:
     @var.deleter
     def var(self):
         print('Deleting the "var" attribute')
-        self.value = 0
+        self.value = 0 # or you can say self.value = None
 
 
 obj1 = Monitor(18)

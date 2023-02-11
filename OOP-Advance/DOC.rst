@@ -14,3 +14,18 @@ The names are linked to the attribute name-the methods, and setter and deleter m
 __slots__ can define allowable attributes
  - Saves memory by defining attributes ahead of the time
  - Should not be used to limit attribute - unPythonic!
+
+ # PEP8 stand for Python Enhancement Proposal 8, or PEP 8, is a style guide for Python code. In 2001, Guido van Rossum, Barry Warsaw, and Nick Coghlan created PEP 8 to help Python programmers write consistent and readable code.
+
+ PEP8 rules:
+ - Module names: all lower case (file_name.py)
+ - Class names and exception name CarName
+ - Globals and locals: all lower case 
+ - Functions and methods all lower case. def car_name():
+ - Constants: ALL CAPS or all upper case
+
+ Public and Private Variable nameing:
+ - Public attribute or variables (intended to be use by the importer of this module or user of the class): regular lower case
+ - Private attribute or variables (intended to be use by the importer of this module or user of the class): _single leading underscore
+ - Private attribute's that shouldn't be subclassed: __double leading underscore
+ - Magic attributes: __double_underscore (use them, don't create them) 
