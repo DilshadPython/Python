@@ -1,7 +1,7 @@
 import urllib.request
 
-url = input("https://w3.yesmovies123.me/movies/queen-of-hearts/ \n")
-name = input("Queen of Heart \n")
+url = input("https://www.youtube.com/watch?v=lnvmsohuTss \n")
+name = input("My Baby Love \n")
 name=name+".mp4"
 
 try:

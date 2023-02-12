@@ -6,7 +6,7 @@ Refe:>> https://dev.to/stokry/download-youtube-video-to-mp3-with-python-26p
 
 import youtube_dl
 
-url = ['https://www.youtube.com/nameofvideo']
+url = ['https://www.youtube.com/watch?v=lnvmsohuTss']
 
 with youtube_dl.YoutubeDL() as ydl:
     ydl.download(url)
