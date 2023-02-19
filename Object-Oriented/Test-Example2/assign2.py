@@ -1,6 +1,7 @@
 
 from datetime import datetime
 
+
 class WriteFile:
 	def __init__(self, filename, writer):
 		self.fh = open(filename, 'w')
@@ -31,5 +32,5 @@ class CSVFormatter:
 class LogFormatter:
 	def format(self, this_line):
 		dt = datetime.now()
-		date_str = dt.starftime("%Y-%m-%d %H:%M"
-			return "{0}   {1}".format(date_str, this_line)
+		date_str = dt.starftime("%Y-%m-%d %H:%M")
+		return "{0}   {1}".format(date_str, this_line)
