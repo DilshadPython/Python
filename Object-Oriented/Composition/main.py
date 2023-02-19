@@ -22,5 +22,3 @@ write_msg1.write()
 
 print('\nFile object: ', open('test.txt', 'r').read())
 print('\bStrindIO object: ', str_h.get_val())
-
-		'
