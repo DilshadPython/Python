@@ -1,0 +1,15 @@
+[[package]]
+name = "pickle-mixin"
+version = "1.0.2"
+description = "Makes un-pickle-able objects pick-able."
+category = "main"
+optional = false
+python-versions = "*"
+
+[metadata]
+lock-version = "1.1"
+python-versions = "^3.10"
+content-hash = "8c09838936958e76bcdbbefc459e0b616cf98e48650eb9bebef1d15e30c9d39f"
+
+[metadata.files]
+pickle-mixin = []
