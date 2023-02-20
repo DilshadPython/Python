@@ -1,8 +1,10 @@
 import json
 
 
-with open('data_1.txt') as me:
-	data = json.load(me)
+with open('my_data.txt') as readme:
+    js_data = json.load(readme)
 
-	for x in data:
-		print(x[''], '-', x[''])
+print(js_data)
+
+    # for x in data:
+    #     print(x[''], '-', x[''])

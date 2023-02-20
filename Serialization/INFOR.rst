@@ -12,3 +12,7 @@
 - Uses the pickle protocol which changes between versions of Python
 - cPickle is a faster, C-compiles implementation
  
+# What is Python Pickle
+
+- Its serialize and de-serialize python module from byte-stream to binary-byte 
+- and back again 

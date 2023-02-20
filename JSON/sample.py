@@ -14,7 +14,7 @@ import io
 # we add this encoding='utf-8' if there a character not available in
 # english alphabet
 
-with open('data_1.txt') as jsonfile:
+with open('my_data.txt') as jsonfile:
     # try:
     load_data = json.load(jsonfile)
     print(load_data, 'Loading')

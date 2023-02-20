@@ -8,6 +8,7 @@ license = "DA"
 [tool.poetry.dependencies]
 python = "^3.10"
 pickle-mixin = "^1.0.2"
+jsonlib-python3 = "^1.6.1"
 
 [tool.poetry.dev-dependencies]
 
