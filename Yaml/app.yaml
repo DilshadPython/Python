@@ -1,0 +1,29 @@
+application: djangoapp
+version: 3
+runtime: python3.10
+api_version: 2
+threadsafe: true
+
+handlers:
+  - url: /
+    script: index.app
+  
+  - url: /index\.html
+    script: index.app
+
+  - url: /stylesheets
+    static_dir: sheets
+
+  - url: /webmaster/.*
+    static_files: webmaster.app
+    login: static/.*\.(gif|png|jpg)$
+
+  - url: /webmaster/.*
+    script: webmaster.app
+    login: webmaster
+
+  - url: /.*
+    script: not_found.app
+
+  - url: /.*
+    script: 404.app
