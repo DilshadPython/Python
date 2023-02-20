@@ -11,3 +11,6 @@ Inatll poetry for python tutorials to avoid using virtualenv or virtualenwrapper
 - installing third-party package for each lessons need to run this:
 	poetry add package_name ex. poetry add pickle-mixin for Serialization
 - each package installed going to /poetry-pkg/pyproject.toml 
+
+# Serialization:
+ - Require to install pickle poetry add pickle-mixin
