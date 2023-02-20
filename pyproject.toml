@@ -1,0 +1,18 @@
+[tool.poetry]
+name = "python"
+version = "0.1.0"
+description = ""
+authors = ["DilshadGit <dilshad.a73@gmail.com>"]
+license = "DILL"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+tabula-py = "^2.6.0"
+youtube-dl = "^2021.12.17"
+moviepy = "^1.0.3"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
