@@ -1,3 +1,8 @@
+# In python that is how math works
+1. exponentaition 3 ** 3   << called power
+2. multiplication 2 * 3  or division
+3. addition or subtraction
+
 longs are narrow than floats
 float are wider than longs
 you can convert int to long
