@@ -1,3 +1,5 @@
+https://docs.python.org/3/library/math.html
+
 # In python that is how math works
 1. exponentaition 3 ** 3   << called power
 2. multiplication 2 * 3  or division

@@ -7,7 +7,7 @@
 # Less or Equal <=
 
 
-print('\n Absolute value of -7: ')
+print('\n Absolute value of -7: always return posative number' )
 print(abs(-7))
 
 print('\n Round value of 3.71: ')
