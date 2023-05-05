@@ -12,3 +12,4 @@ del_name = str(input('Enter name: '))
 delattr(cars, del_name)
 
 del cars.name
+print(cars)
