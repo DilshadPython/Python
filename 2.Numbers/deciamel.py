@@ -1,0 +1,10 @@
+num1 = int(input('Enter num1 as decimal: '))
+num2 = int(input('Enter num2 as decimal: '))
+
+print('Sum ', num1 + num2)
+print('Sub ', num1 - num2)
+print('Multi ', num1 * num2)
+print('Divid ', num1 / num2)
+print(' ', num1 // num2)
+print('Sum ', num1 ** num2)
+print('Moduls ', num1 % num2)

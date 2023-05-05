@@ -1,0 +1,10 @@
+num1 = int(input('Enter num1: '))
+num2 = int(input('Enter num2: '))
+
+print('Sum ', num1 + num2)
+print('Sub ', num1 - num2)
+print('Multi ', num1 * num2)
+print('Divid ', num1 / num2)
+print('Division with no reminder ', num1 // num2)
+print('Power ', num1 ** num2)
+print('Moduls reminder', num1 % num2)
