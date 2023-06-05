@@ -1,5 +1,5 @@
 # using end="" inside print use for keep the both words in the same line tobe printed
-
+# the end='' will remove the new line in first print()
 print('Hello', end='')
 print(' Python !')
 
