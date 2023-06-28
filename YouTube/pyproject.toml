@@ -1,0 +1,17 @@
+[tool.poetry]
+name = "youtube"
+version = "0.1.0"
+description = ""
+authors = ["DilshadGit <dilshad.a73@gmail.com>"]
+license = "DILPY"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+youtube-dl = "^2021.12.17"
+update = "^0.0.1"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

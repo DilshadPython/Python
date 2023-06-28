@@ -9,3 +9,5 @@ print(result)
 # Enter the x: 22.56
 # Enter the y: 15.09
 # 38
+z = round(x + y)
+print(f"{z:,}")
