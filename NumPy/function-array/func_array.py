@@ -1,5 +1,5 @@
 # universal array functions
-import numpy as np 
+import numpy as np
 '''
 numpy.exp(x, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, s
 ubok=True[, signature, extobj]) = <ufunc 'exp'>¶
@@ -33,7 +33,7 @@ print('\nPower')
 pow_array = np.exp(my_array)
 print(pow_array)
 
-## random
+# random
 print('=======================================================================')
 print('Randon')
 x = np.random.randn(10)
@@ -46,13 +46,13 @@ print(y)
 
 # Binary functions
 print('\n')
-result = np.add(x,y)
+result = np.add(x, y)
 print(result)
 
 print('\nMaximum')
-maxim = np.maximum(x,y)
+maxim = np.maximum(x, y)
 print(maxim)
 
 print('\nMinmun')
-mini = np.minimum(x,y)
+mini = np.minimum(x, y)
 print(mini)
