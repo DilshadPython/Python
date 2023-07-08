@@ -1,6 +1,6 @@
 import numpy as np
 
-a = np.array(([2,4,6,8,10], [1,3,5,7,9]))
+a = np.array(([2, 4, 6, 8, 10], [1, 3, 5, 7, 9]))
 xx = np.full_like(a.shape, 4)
 print(xx)
 

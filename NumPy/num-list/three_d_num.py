@@ -21,6 +21,6 @@ print(type_a, ' << data-type of a')
 ntype_a = a.nbytes
 print(ntype_a, ' << total size of a')
 # get specific element [row, colum] start from 0 in python
-print(a[0, 3]) # first list colm 3 which is 8
-print(a[1, 4]) # second list colm 3 which is 9
-print(a[2, 1]) # third list colm 2 which is 0
+print(a[0, 3])  # first list colm 3 which is 8
+print(a[1, 4])  # second list colm 3 which is 9
+print(a[2, 1])  # third list colm 2 which is 0

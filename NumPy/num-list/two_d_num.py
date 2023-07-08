@@ -21,5 +21,5 @@ print(type_a, ' << data-type of a')
 ntype_a = a.nbytes
 print(ntype_a, ' << total size of a')
 
-print(a[0, 4]) # first list colm 3 which is 10
-print(a[1, 2]) # secnd list colm 2 which is 5
+print(a[0, 4])  # first list colm 3 which is 10
+print(a[1, 2])  # secnd list colm 2 which is 5

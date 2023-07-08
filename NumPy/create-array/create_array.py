@@ -18,11 +18,11 @@ print('All: ', all_list)
 three_d_array = np.array(all_list)
 
 print('\n')
-print('Below is two dimienstion')
+print('Two dimienstions')
 print(three_d_array)
 
-print('\nNow we try to display the shape what is look like')
+print('\nNow try to show a shape:')
 print(three_d_array.shape)
 
-print('\nNow display the data type')
+print('\nShow data-type:')
 print(three_d_array.dtype)

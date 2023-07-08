@@ -21,4 +21,3 @@ ntype_a = a.nbytes
 print(ntype_a, ' << total size of a')
 # get specific element [row, colum] start from 0 in python
 print(a[3])
-

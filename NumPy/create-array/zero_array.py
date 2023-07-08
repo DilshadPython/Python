@@ -1,16 +1,16 @@
 import numpy as np
 
-list_num = [22, 17, 9, 18, 33, 81, 50]
 
-first_list = np.array(list_num)
+alist = [22, 17, 9, 18, 33, 81, 50]
+np_list = np.array(alist)
 
 print('First: ', first_list)
 
-second_list = [21, 19, 4, 30, 66, 6, 17]
+new_list = [21, 19, 4, 30, 66, 6, 17]
 
-print('Second: ', second_list)
+print('Second: ', new_list)
 
-all_list = [first_list, second_list]
+all_lists = [alist, new_list]
 
 print('All: ', all_list)
 
@@ -21,10 +21,10 @@ print('\n')
 print('Below is two dimienstion')
 print(three_d_array)
 
-print('\nNow we try to display the shape what is look like')
+print('\nShow a shape:')
 print(three_d_array.shape)
 
-print('\nNow display the data type')
+print('\nShow data type')
 print(three_d_array.dtype)
 
 print(np.zeros(15))

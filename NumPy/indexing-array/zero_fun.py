@@ -1,4 +1,4 @@
-import numpy as np 
+import numpy as np
 
 first_2_by_5 = np.zeros((2, 5))
 print(first_2_by_5)
@@ -17,5 +17,5 @@ third_shape[:] = 5
 print(third_shape)
 
 print()
-xx = np.zeros((2,3,4,6))
+xx = np.zeros((2, 3, 4, 6))
 print(xx)

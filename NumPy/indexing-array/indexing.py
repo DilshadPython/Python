@@ -1,4 +1,4 @@
-import numpy as np 
+import numpy as np
 
 num_array = np.arange(20, 40)
 print(num_array)
