@@ -124,19 +124,3 @@ postgres=# \l
  testme    | postgres | UTF8     | en_GB.UTF-8 | en_GB.UTF-8 | 
 (5 rows)
 
-##
-##
-##
-##
-##
-##
-##
-##
-##
-##
-##
-##
-##
-##
-##
-##
