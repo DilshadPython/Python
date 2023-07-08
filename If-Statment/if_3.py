@@ -5,9 +5,8 @@ large = 15
 
 
 if num < small:
-	print(num, ' the size is S = ', small)
+    print(num, ' the size is S = ', small)
 elif num < medium:
-	print(num, ' the size is M = ', medium)
+    print(num, ' the size is M = ', medium)
 else:
-	print(num, ' the size is L ', large)
-
+    print(num, ' the size is L ', large)

@@ -1,5 +1,4 @@
 
-
 first = int(input('The length of the side first = '))
 second = int(input('The length of the side second = '))
 third = int(input('The length of the side third = '))

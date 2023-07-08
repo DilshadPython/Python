@@ -13,7 +13,7 @@ print('\n ')
 print(id(student_name))
 print(id(student))
 
-print('\n====================================')
+print('\n')
 
 mylist = ['Python', 3.6, 2018]
 yourlist = ['Python', 3.6, 2018]
@@ -29,7 +29,7 @@ print(id(mylist))
 print(id(yourlist))
 
 print('\n ')
-print('\n==================================')
+print()
 mylist = yourlist
 print(mylist == yourlist)
 
