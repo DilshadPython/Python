@@ -12,5 +12,8 @@ name = name.strip().title()
 
 print(f"Hi, {name}")
 
-
+# end stop new line
 print(f"Hi, {name}", end=' << ')
+
+print('Azad', ' ', end='')
+print('Tome')

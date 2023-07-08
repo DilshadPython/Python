@@ -2,15 +2,14 @@ name = input('Please enter your full name. ')
 
 
 print('Hi, ', name)
-print('----------------------------')
+print()
 
 # remove all empty or whitespace around the message
 name = name.strip()
 
 print(f"Hi, {name}")
 
-print('============================')
-
+print()
 # remove all empty or whitespace around the message
 name = name.strip()
 
@@ -19,8 +18,7 @@ name = name.capitalize()
 
 print(f"Hi, {name}")
 
-
-print('#############################')
+print()
 # remove all empty or whitespace around the message
 name = name.strip()
 

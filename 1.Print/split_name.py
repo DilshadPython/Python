@@ -1,11 +1,9 @@
 name = input('Please enter your full name. ').strip().title()
 
-fname, lname = name.split(' ')
+fname, lname = name
 
-print(f"Hi, {fname}")
+print(f"Hi, {fname}\n")
 
-print(f"Hi, {lname}")
+print(f"Hi, {lname}\n")
 
-print('===============================')
-
-print(f"Hi, {fname} {lname}")
+print(f"Hello, {fname} {lname}")
