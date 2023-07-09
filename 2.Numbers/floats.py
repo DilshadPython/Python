@@ -1,5 +1,5 @@
-num1 = int(input('Enter num1: '))
-num2 = int(input('Enter num2: '))
+num1 = float(input('Enter num1: '))
+num2 = float(input('Enter num2: '))
 
 print('Sum ', num1 + num2)
 print('Sub ', num1 - num2)
