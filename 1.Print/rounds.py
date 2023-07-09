@@ -1,3 +1,4 @@
+print('Enter a float numbers')
 x = float(input('Enter the x: '))
 y = float(input('Enter the y: '))
 
@@ -11,3 +12,6 @@ print('Result: ', result)
 # 38
 z = round(x + y)
 print('Z: ', f"{z:,}")
+
+total = round(float(input('Enter the a: ')) + float(input('Enter the b: ')))
+print('Total: ', total)
