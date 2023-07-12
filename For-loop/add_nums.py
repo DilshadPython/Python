@@ -7,7 +7,7 @@ total = 0
 
 total = sum(nums)
 print(total)
-print('##################\n')
+print('======\n')
 
 output = set()
 
@@ -15,3 +15,4 @@ for num in nums:
     if num not in nums:
         output = sum(int(num))
         print(output)
+
