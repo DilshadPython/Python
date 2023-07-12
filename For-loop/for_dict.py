@@ -52,12 +52,12 @@ for user in user_1, user_2, user_3, user_4:
         if user['twetter'] == user_has_twetter:
             twetter_user = user
         else:
-        	user
+            user
     elif 'linkedin' in user:
         if user['linkedin'] == user_has_linkedin:
             linkedin_user = user
         else:
-        	user
+            user
     else:
         pass
 
@@ -69,6 +69,6 @@ print('=========================================\n')
 print('We search throw is numbers all the user has the id in the list of numbers')
 
 for x in range(0, 10):
-	for user in user_1, user_2, user_3, user_4:
-		if user['id'] == x:
-			print(user)
+    for user in user_1, user_2, user_3, user_4:
+        if user['id'] == x:
+            print(user)

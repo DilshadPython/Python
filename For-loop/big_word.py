@@ -1,19 +1,19 @@
-name 	= input()
-handle 	= open('words.txt', 'r')
+name = input()
+handle = open('words.txt', 'r')
 
 counts = dict()
 
 for line in handle:
-	words = line.split()
-	for word in words:
-		counts[word] = counts.get(word, 0) + 1
+    words = line.split()
+    for word in words:
+        counts[word] = counts.get(word, 0) + 1
 
-bigcount 	= None
-bigword 	= None
+bigcount = None
+bigword = None
 
 for word, count in counts.items():
-	if bigcount is None or count > bigcount:
-		bigword = word
-		bigcount = count
+    if bigcount is None or count > bigcount:
+        bigword = word
+        bigcount = count
 
 print(bigword, bigcount)

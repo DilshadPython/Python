@@ -11,4 +11,3 @@ for name in names:
 
     for index, num in enumerate(alphas):
         print(index, name, num)
-

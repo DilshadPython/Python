@@ -15,4 +15,3 @@ for num in nums:
     if num not in nums:
         output = sum(int(num))
         print(output)
-
