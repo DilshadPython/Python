@@ -1,7 +1,5 @@
 import calendar
 
-
-
 print(calendar.MONDAY)
 print(calendar.TUESDAY)
 print(calendar.WEDNESDAY)
