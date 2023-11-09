@@ -19,9 +19,7 @@ False           or          True         True
 False           or          False        False 
 
 
-
 # not
-
 relation1    Result
 ---------------------
 not True   ==   False 

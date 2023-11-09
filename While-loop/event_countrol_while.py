@@ -9,7 +9,7 @@ print('If you want to quit please enter grade (-1): ')
 grade = int(input(' Enter a grade: '))
 # while the year is less than 20 years
 while grade != -1:
-    # calculate the total with the grade entered 
+    # calculate the total with the grade entered
     total = total + grade
     count = count + 1
     # if we want to continue we will ask the user to enter another grade

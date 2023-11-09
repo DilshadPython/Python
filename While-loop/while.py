@@ -3,16 +3,14 @@
 
 # count-controlled
 # event-controlled
-
-
 while True:
-    print("Please enter a name of your pets start with R and ended with i ?")
+    print("Please enter a name of the pets start with R ended with i ?")
     answer = input(" ")
     if answer == "Raffi":
-        print("You guessed it!")
+        print("True this is correct!")
         break
     else:
-        print("No, wrong name...")
+        print("False, wrong name...")
         continue
 
 '''

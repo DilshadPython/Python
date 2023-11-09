@@ -1,7 +1,7 @@
 
-student_name = 'Dilshad Abdulla'
+student_name = 'Tom Smith'
 
-student = 'Dilshad Abdulla'
+student = 'Tom Smith'
 
 print(student_name == student)
 

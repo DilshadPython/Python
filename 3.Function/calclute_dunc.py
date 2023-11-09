@@ -1,8 +1,7 @@
 import math
 
 ''' Create function do some calculation or cercle '''
-print('We will looking for pi function in math module')
-print(dir(math))
+print('We will looking for pi function in math module\n')
 
 print('The pi value is :', math.pi)
 

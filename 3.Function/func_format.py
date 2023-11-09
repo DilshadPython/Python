@@ -1,13 +1,16 @@
 
 def welcome_msg(greeting, name=' Dilshad'):
-	return '{}, {}'.format(greeting, name)
+    return '{}, {}'.format(greeting, name)
+
 
 print(welcome_msg('Hello, '))
 
 print()
+
+
 def user_details(*args, **kwargs):
-	print(args)
-	print(kwargs)
+    print(args)
+    print(kwargs)
 
 
 user_details('Dilshad', 'dilshad@gmail.com', age=41, sex='Male')

@@ -1,4 +1,6 @@
-def welcome(msg, name):
-    return f'{msg} {name}'
+def welcome(msg):
+    name = str(input('Enter your name: '))
+    return f'{msg}, {name}'
 
-print(welcome('Hello', name=' Raffi'))
+
+print(welcome('Hello '))
