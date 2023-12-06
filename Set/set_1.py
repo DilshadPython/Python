@@ -3,6 +3,9 @@
 alcohol_list = {'Beer', 'Whiskey', 'Milk', 'Vodka',
                 'Beer', 'Whiskey', 'Rum', 'Cider', 'Milk'}
 
+for x in alcohol_list:
+    print(x)
+
 print('Display only one time the items: ')
 print(alcohol_list)
 

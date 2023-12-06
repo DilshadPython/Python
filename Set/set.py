@@ -27,3 +27,9 @@ for i in x:
     if i == 7:
         print(i)
     print(False)
+print('##############################')
+y = 9
+for y in x:
+    if y == 9:
+        print(y)
+    print('NO')
