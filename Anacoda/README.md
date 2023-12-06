@@ -179,5 +179,131 @@ env27                    /home/dilmac/anaconda3/envs/env27
 env310                   /home/dilmac/anaconda3/envs/env310
 pandaenv                 /home/dilmac/anaconda3/envs/pandaenv
 
+# Update packages already installed:
+~ conda activate env310
+~ conda update pytorch
+
+# Update conda itself:
+~ conda update conda
+
+# Some packages or tools can installed with pip instead of conda itself.
+
+(env310)~ pip install sty
+
+~ conda install django=3.2
+Channels:
+ - defaults
+ - pytorch
+Platform: linux-64
+Collecting package metadata (repodata.json): done
+Solving environment: done
+
+## Package Plan ##
+
+  environment location: /home/dilmac/anaconda3/envs/env310
+
+  added / updated specs:
+    - django=3.2
 
 
+The following packages will be downloaded:
+
+    package                    |            build
+    ---------------------------|-----------------
+    asgiref-3.5.2              |  py310h06a4308_0          38 KB
+    django-3.2.15              |  py310h06a4308_0         4.1 MB
+    psycopg2-2.9.3             |  py310h5eee18b_1         186 KB
+    pytz-2023.3.post1          |  py310h06a4308_0         210 KB
+    sqlparse-0.4.4             |  py310h06a4308_0          75 KB
+    ------------------------------------------------------------
+                                           Total:         4.6 MB
+
+The following NEW packages will be INSTALLED:
+
+  asgiref            pkgs/main/linux-64::asgiref-3.5.2-py310h06a4308_0 
+  django             pkgs/main/linux-64::django-3.2.15-py310h06a4308_0 
+  krb5               pkgs/main/linux-64::krb5-1.20.1-h143b758_1 
+  libedit            pkgs/main/linux-64::libedit-3.1.20221030-h5eee18b_0 
+  libpq              pkgs/main/linux-64::libpq-12.15-hdbd6064_1 
+  psycopg2           pkgs/main/linux-64::psycopg2-2.9.3-py310h5eee18b_1 
+  pytz               pkgs/main/linux-64::pytz-2023.3.post1-py310h06a4308_0 
+  sqlparse           pkgs/main/linux-64::sqlparse-0.4.4-py310h06a4308_0 
+
+
+Proceed ([y]/n)? y
+
+
+Downloading and Extracting Packages:
+                                                                                                                                            
+Preparing transaction: done                                                                                                                 
+Verifying transaction: |                                                                                                                    
+SafetyError: The package for libedit located at /home/dilmac/anaconda3/pkgs/libedit-3.1.20221030-h5eee18b_0                                 
+appears to be corrupted. The path 'lib/libedit.a'                                                                                           
+has an incorrect size.
+  reported size: 480170 bytes
+  actual size: 245760 bytes
+
+
+done
+Executing transaction: done
+
+(env310) linux@linux:~$ conda list
+# packages in environment at /home/dilmac/anaconda3/envs/env310:
+#
+# Name                    Version                   Build  Channel
+_libgcc_mutex             0.1                        main  
+_openmp_mutex             5.1                       1_gnu  
+asgiref                   3.5.2           py310h06a4308_0  
+blas                      1.0                         mkl  
+bzip2                     1.0.8                h7b6447c_0  
+ca-certificates           2023.08.22           h06a4308_0  
+django                    3.2.15          py310h06a4308_0  
+filelock                  3.13.1          py310h06a4308_0  
+gmp                       6.2.1                h295c915_3  
+gmpy2                     2.1.2           py310heeb90bb_0  
+intel-openmp              2023.1.0         hdb19cb5_46306  
+jinja2                    3.1.2           py310h06a4308_0  
+krb5                      1.20.1               h143b758_1  
+ld_impl_linux-64          2.38                 h1181459_1  
+libedit                   3.1.20221030         h5eee18b_0  
+libffi                    3.4.4                h6a678d5_0  
+libgcc-ng                 11.2.0               h1234567_1  
+libgomp                   11.2.0               h1234567_1  
+libpq                     12.15                hdbd6064_1  
+libstdcxx-ng              11.2.0               h1234567_1  
+libuuid                   1.41.5               h5eee18b_0  
+llvm-openmp               14.0.6               h9e868ea_0  
+markupsafe                2.1.1           py310h7f8727e_0  
+mkl                       2023.1.0         h213fc3f_46344  
+mpc                       1.1.0                h10f8cd9_1  
+mpfr                      4.0.2                hb69a4c5_1  
+mpmath                    1.3.0           py310h06a4308_0  
+ncurses                   6.4                  h6a678d5_0  
+networkx                  3.1             py310h06a4308_0  
+openssl                   3.0.12               h7f8727e_0  
+pip                       23.3.1          py310h06a4308_0  
+psycopg2                  2.9.3           py310h5eee18b_1  
+python                    3.10.13              h955ad1f_0  
+pytorch                   2.1.1              py3.10_cpu_0    pytorch
+pytorch-mutex             1.0                         cpu    pytorch
+pytz                      2023.3.post1    py310h06a4308_0  
+pyyaml                    6.0.1           py310h5eee18b_0  
+readline                  8.2                  h5eee18b_0  
+setuptools                68.0.0          py310h06a4308_0  
+sqlite                    3.41.2               h5eee18b_0  
+sqlparse                  0.4.4           py310h06a4308_0  
+sympy                     1.12            py310h06a4308_0  
+tbb                       2021.8.0             hdb19cb5_0  
+tk                        8.6.12               h1ccaba5_0  
+typing_extensions         4.7.1           py310h06a4308_0  
+tzdata                    2023c                h04d1e81_0  
+wheel                     0.41.2          py310h06a4308_0  
+xz                        5.4.5                h5eee18b_0  
+yaml                      0.2.5                h7b6447c_0  
+zlib                      1.2.13               h5eee18b_0  
+
+
+~ conda install -c anaconda jupyter
+
+# To open jupyter run:
+~ jupyter notebook
