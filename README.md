@@ -1,6 +1,46 @@
 # Python-Tutorials
 This repo is only my training time to starting learning python from beginning until now, it can be updated anytimes and add new code for training purpose.
 
+CPython --> written in C
+
+# Python Implementations
+Jython --> written in Java
+IronPython --> written in .NET
+pypy --> written in RPython 
+
+
+# Why Python is so Powerful because using in following technologies:
+1. Web Frameworks
+2. Scientific Computing
+3. Image Processing
+4. Databases
+5. Build Systems
+6. Documentation
+7. Persistence
+8. Math
+9. Operating System
+10. Crypotography
+11. Concurrency
+12. Web Protocols
+
+- Open Source
+- Popular
+- EveryWhere
+- Accessible
+
+# Course Overview 
+1. Getting Started
+2. Strings and Collections
+3. Modularity
+4. Built-in Types and the Object Model
+5. Collection Types
+6. Handling Exceptions
+7. Comperhensions, Iterables, and Generators
+8. Defining New Types with Classes
+9. Files and Resource management
+10. Shipping Working and Maintainable Code
+
+
 ## Note:
 ### In Python2.7 :
 ###  print 'Something'
