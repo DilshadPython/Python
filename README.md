@@ -55,7 +55,7 @@ pypy --> written in RPython
 ### In Python3+ : 
 ### print('Something')
 ### input()
-=============================
+# =============================
 #### / called single division
 #### /> 3/2
 #### /> 1.5
@@ -74,4 +74,4 @@ sudo apt install python3.5 python3.5-dev python3.5-venv -y
 sudo apt-get install build-essential libssl-dev libffi-dev python-dev
 sudo apt-get install build-essential libssl-dev libffi-dev python3-dev
 
-sudo apt-get install build-essential checkinstall 
+sudo apt-get install build-essential checkinstall
