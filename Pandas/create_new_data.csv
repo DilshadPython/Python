@@ -1,0 +1,18 @@
+,Unnamed: 0,Data Store,Unnamed: 2,Unnamed: 3,Unnamed: 4,Unnamed: 5
+0,Year,date,country,company,currency,Variable_code
+1,2021,Level 1,USA,Google,Dollars (millions),H01
+2,2022,Level 1,German,Mercides,Euro (millions),H04
+3,2018,Level 1,USA,Facebook,Dollars (millions),H05
+4,2021,Level 1,UK,PHP,Pound (millions),H07
+5,2023,Level 1,USA,.NET,Dollars (millions),H08
+6,2021,Level 1,UK,NHS,Dollars (millions),H09
+7,2022,Level 1,Italy,Instagram,Euro (millions),H10
+8,2021,Level 1,Holland,WhatsApp,Dollars (millions),H11
+9,2021,Level 1,99999,Windows 11,Dollars (millions),H12
+10,2021,Level 1,South Korea,Samsung,Dollars (millions),H13
+11,2023,Level 1,USA,HP,Dollars (millions),H14
+12,2022,Level 1,Japan,Honda,Yan (millions),H19
+13,2017,Level 1,Germany,BMW,Dollars (millions),H20
+14,2021,Level 1,Germany,Audi,Pound (millions),H21
+15,2011,Level 1,Germany,Volx Wagen,Dollars (millions),H22
+16,2020,Level 1,France,Ford,Yan (millions),H23
