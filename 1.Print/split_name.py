@@ -1,3 +1,4 @@
+# print('objects', sep=' ', end='\n')')
 name = input('Please enter your full name. ').strip().title()
 
 fname, lname = name
