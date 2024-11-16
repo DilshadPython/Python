@@ -1,0 +1,32 @@
+# Python Standard Library
+# https://docs.python.org/3/library/index.html
+
+- string
+- difflib
+- textwrap
+- struct
+- codecs
+- datetime
+- heapq
+- weakref
+- copy
+- pprint
+- numbers
+- fraction
+- random
+- itertools
+- operator
+- functools
+- filecmp
+- tempfile
+- glob
+- linecache
+- pickle
+- marshal
+- configparser
+- hashlib
+- logging
+- time
+- threading
+- concurrent
+- email
