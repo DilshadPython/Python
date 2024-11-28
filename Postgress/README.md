@@ -76,8 +76,6 @@ postgres=# \du
  user_one  |                                                            | {}
 
 
-
-
 ## To get some commands how to use in postgres
 ## psql --help 
 
