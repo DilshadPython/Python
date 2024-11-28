@@ -1,4 +1,3 @@
-
 # we create function to use return function and how to use it
 
 def triangle(x, y, z):

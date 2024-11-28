@@ -1,6 +1,5 @@
-
-
 empty_tuple = ()
+
 tuple_1 = ('a')
 tuple_2 = (2)
 tuple_3 = ('a', 'b', 'c')
@@ -23,11 +22,14 @@ print('#######################')
 tuple_1 = 1,
 tuple_2 = 1, 2, 3
 tuple_3 = 1, 2, 3, 4
+tuple_7 = ('f',)
 
 print(tuple_1)
 print(tuple_2)
 print(tuple_3)
+print(tuple_7)
 
 print(type(tuple_1))
 print(type(tuple_2))
 print(type(tuple_3))
+print(type(tuple_7))
