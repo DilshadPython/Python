@@ -4,4 +4,4 @@ year = int(input('Enter the Year: '))
 
 display = calendar(year)
 
-print(display)
+print(display.upper())
