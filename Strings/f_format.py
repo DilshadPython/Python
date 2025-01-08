@@ -1,7 +1,7 @@
 hight = 22.367453
 width = 778.98763
 
-print(f'{hight}', ' and ', f'{width}' )
+print(f'{hight}', ' and ', f'{width}')
 
 '''
 Now we replace the float to two dight after dot or one dight or 3 dight
