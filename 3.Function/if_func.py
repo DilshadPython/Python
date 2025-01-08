@@ -10,5 +10,9 @@ def main():
 def is_even(n):
     return(n % 2 == 0)
 
+# or
+
+def is_even(m):
+    return True if m % 2 == 0 else False
 
 main()
