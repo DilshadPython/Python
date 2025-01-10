@@ -16,3 +16,5 @@ for num in nums:
         output = sum(int(num))
         print(output)
 
+x = set(nums)
+print('Set remove all duplicates number in the nums list and change the list to set: ', x, '\n')
