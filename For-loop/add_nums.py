@@ -12,9 +12,7 @@ print('======\n')
 output = set()
 
 for num in nums:
-    if num not in nums:
-        output = sum(int(num))
-        print(output)
-
+    print(num)
+print('********\n')
 x = set(nums)
 print('Set remove all duplicates number in the nums list and change the list to set: ', x, '\n')
