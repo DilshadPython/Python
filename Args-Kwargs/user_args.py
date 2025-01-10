@@ -17,7 +17,7 @@ def collect(*hello):
 	total = 0
 
 	for x in hello:
-		total += x
+		total -= x
 	return total
 
 
