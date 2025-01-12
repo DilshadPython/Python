@@ -9,5 +9,6 @@ print("Press crtl and c: ")
 try:
     while 1:  # infinite loop
         c += 1
+        # print(c)
 except KeyboardInterrupt:
     print(f'The counter is {c} now')
