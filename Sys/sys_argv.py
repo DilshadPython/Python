@@ -23,5 +23,4 @@ python sys_argv.py Java Python
 Welcome to tutorials of  sys_argv.py
 Welcome to tutorials of  Java
 Welcome to tutorials of  Python
-
 '''
