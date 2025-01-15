@@ -13,6 +13,7 @@ print(20 * '##')
 
 
 test = ''.join([random.choice(string.ascii_letters + string.digits)
-                for n in range(1, 6)])
+
+for n in range(1, 6)])
 
 print(test)
