@@ -18,3 +18,7 @@ collected 1 item
 test_example.py .                                                                                                                                                                                         [100%]
 
 =============================================================================================== 1 passed in 0.01s ===============================================================================================
+
+# We have create folder named test and create another test_message.py with some small change
+# to testing with pytest we can run pytest test because we create __init__.py this folder now
+# is package we can tested with the test folder name
