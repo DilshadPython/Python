@@ -1,0 +1,1 @@
+from squares import square
