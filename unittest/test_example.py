@@ -1,6 +1,6 @@
 # We using pytest for this test but first need to make sure is installed
 # pytest test_number.py
-from number import square
+from example import square
 
 def main():
     test_square()
