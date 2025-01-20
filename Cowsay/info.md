@@ -1,5 +1,9 @@
 https://github.com/VaasuDevanS/cowsay-python/tree/main
 
+https://github.com/VaasuDevanS/cowsay-python/blob/main/CONTRIBUTING.md
+
+https://www.asciiart.eu/animals
+
 Installation process:
 
 # This package is one of the examples of python packages for some understanding we have to follow the 
