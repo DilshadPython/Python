@@ -1,7 +1,7 @@
 import itertools
 import math
 
-#create empty list
+# create empty list
 data = []
 
 with open('math.txt') as mf:

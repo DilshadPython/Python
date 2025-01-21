@@ -1,0 +1,6 @@
+city Berlin
+city Paris
+city Roma
+city New Yourk
+city London
+city Stockholm

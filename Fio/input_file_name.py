@@ -1,5 +1,6 @@
 '''
 You enter sample.txt file because we search for Hello word
+if the file exist will scan and read the content in the file
 '''
 enter_file = input('Enter file name: ')
 
