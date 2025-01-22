@@ -4,6 +4,8 @@ name = input('Please enter your full name. ')
 name = name.strip()
 name = name.title()
 
+print('Hi, {name}')
+
 print(f"Hi, {name}")
 
 print('===============================')
