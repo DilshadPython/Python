@@ -4,6 +4,8 @@ https://github.com/VaasuDevanS/cowsay-python/blob/main/CONTRIBUTING.md
 
 https://www.asciiart.eu/animals
 
+https://archlinux.org/packages/extra/any/cowsay/files/
+
 Installation process:
 
 # This package is one of the examples of python packages for some understanding we have to follow the 
