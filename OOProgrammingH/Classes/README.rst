@@ -43,4 +43,5 @@ Traceback (most recent call last):
     raise ValueError("First name and last name cannot be empty")
 ValueError: First name and last name cannot be empty
 
+You can create or changed your own error like DillError instead of ValueError
 #################################################################
