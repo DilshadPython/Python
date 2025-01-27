@@ -27,3 +27,14 @@ class dict(**kwargs)
 
 
 for more details look at all https://docs.python.org/3/library/stdtypes.html
+
+py type.py
+<class 'int'>
+<class 'float'>
+<class 'bool'>
+<class 'bool'>
+<class 'NoneType'>
+<class 'str'>
+<class 'list'>
+<class 'tuple'>
+<class 'dict'>
