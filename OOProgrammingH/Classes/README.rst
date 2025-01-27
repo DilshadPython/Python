@@ -194,3 +194,35 @@ ValueError: Invalid fullname cannot be empty
 We delete the if statement after define tw properties method setter and getter for both args and run the code testing
 in correct way and wrong ways see the restluts.
 
+################################################################
+
+We have entered the correct name but we will print the line 45
+user._city = f"The city {user._city} you entered is not valid"
+in the output
+py user_3.py
+Enter your full name: Dilshad
+Enter your city: Cologne
+
+# output
+Dilshad from The city Cologne you entered is not valid
+
+But if you enter invalid city name this is what happen:
+ py user_3.py
+Enter your full name: Dilshad
+Enter your city: London
+Traceback (most recent call last):
+  File "/home/OOProgrammingH/Classes/user_3.py", line 57, in <module>
+    main()
+  File "/home/OOProgrammingH/Classes/user_3.py", line 44, in main
+    user = get_user()
+           ^^^^^^^^^^
+  File "/home/OOProgrammingH/Classes/user_3.py", line 53, in get_user
+    return User(fullname, city)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/home/OOProgrammingH/Classes/user_3.py", line 6, in __init__
+    self.city = city
+    ^^^^^^^^^
+  File "/home/OOProgrammingH/Classes/user_3.py", line 39, in city
+    raise ValueError("Invalid city which is not in the list")
+ValueError: Invalid city which is not in the list
+
