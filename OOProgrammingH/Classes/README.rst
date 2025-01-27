@@ -31,15 +31,15 @@ Enter your first name:
 Enter your last name:
 Enter your age: 23
 Traceback (most recent call last):
-  File "/home/dilmac/Dev/Python/OOProgrammingH/Classes/example_2.py", line 27, in <module>
+  File "/home/OOProgrammingH/Classes/example_2.py", line 27, in <module>
     main()
-  File "/home/dilmac/Dev/Python/OOProgrammingH/Classes/example_2.py", line 14, in main
+  File "/home/OOProgrammingH/Classes/example_2.py", line 14, in main
     user = get_user()
            ^^^^^^^^^^
-  File "/home/dilmac/Dev/Python/OOProgrammingH/Classes/example_2.py", line 23, in get_user
+  File "/home/OOProgrammingH/Classes/example_2.py", line 23, in get_user
     return User(first_name, last_name, age)
            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/dilmac/Dev/Python/OOProgrammingH/Classes/example_2.py", line 6, in __init__
+  File "/home/OOProgrammingH/Classes/example_2.py", line 6, in __init__
     raise ValueError("First name and last name cannot be empty")
 ValueError: First name and last name cannot be empty
 
@@ -55,15 +55,15 @@ py example_3.py
 Enter your first name: Dilshad
 Enter your last name: Adam
 Traceback (most recent call last):
-  File "/home/dilmac/Dev/Python/OOProgrammingH/Classes/example_3.py", line 31, in <module>
+  File "/home/OOProgrammingH/Classes/example_3.py", line 31, in <module>
     main()
-  File "/home/dilmac/Dev/Python/OOProgrammingH/Classes/example_3.py", line 18, in main
+  File "/home/OOProgrammingH/Classes/example_3.py", line 18, in main
     user = get_user()
            ^^^^^^^^^^
-  File "/home/dilmac/Dev/Python/OOProgrammingH/Classes/example_3.py", line 27, in get_user
+  File "/home/OOProgrammingH/Classes/example_3.py", line 27, in get_user
     return User(first_name, last_name)
            ^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/dilmac/Dev/Python/OOProgrammingH/Classes/example_3.py", line 8, in __init__
+  File "/home/OOProgrammingH/Classes/example_3.py", line 8, in __init__
     raise ValueError("The last name is not in the list")
 ValueError: The last name is not in the list
 
@@ -106,4 +106,64 @@ Enter your job:
 Dilshad Abdulla
 Work status
 /
+
+################################################################
+This is before we create setter and getter method when we run this is the output
+py user.py
+Enter your full name: Dilshad Abdulla
+Enter your city: Cologne
+Dilshad Abdulla from Greenwood, London
+
+################################################################
+
+Now we define city() methods twice as setter and getter method user_1.py
+which is called property write like  @property() called decorator
+To run and show the error before we change everything
+py user_1.py
+Enter your full name: Dilshad
+Enter your city: London
+Traceback (most recent call last):
+  File "/home/OOProgrammingH/Classes/user_1.py", line 49, in <module>
+    main()
+  File "/home/OOProgrammingH/Classes/user_1.py", line 36, in main
+    user = get_user()
+           ^^^^^^^^^^
+  File "/home/OOProgrammingH/Classes/user_1.py", line 45, in get_user
+    return User(fullname, city)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/home/OOProgrammingH/Classes/user_1.py", line 12, in __init__
+    self.city = city
+    ^^^^^^^^^
+  File "/home/OOProgrammingH/Classes/user_1.py", line 31, in city
+    raise ValueError("Invalid city which is not in the list")
+ValueError: Invalid city which is not in the list
+
+This error is happed because we use self.city in line 37 we have deleted because it is not required
+we try one way correct as in the code :
+ py user_1.py
+Enter your full name: Dilshad
+Enter your city: Cologne
+Dilshad from Cologne
+
+We try not correctly we still get the error like below:
+ py user_1.py
+Enter your full name: Dilshad
+Enter your city: London
+Traceback (most recent call last):
+  File "/home/OOProgrammingH/Classes/user_1.py", line 49, in <module>
+    main()
+  File "/home/OOProgrammingH/Classes/user_1.py", line 36, in main
+    user = get_user()
+           ^^^^^^^^^^
+  File "/home/OOProgrammingH/Classes/user_1.py", line 45, in get_user
+    return User(fullname, city)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/home/OOProgrammingH/Classes/user_1.py", line 12, in __init__
+    self.city = city
+    ^^^^^^^^^
+  File "/home/OOProgrammingH/Classes/user_1.py", line 31, in city
+    raise ValueError("Invalid city which is not in the list")
+ValueError: Invalid city which is not in the list
+
+
 
