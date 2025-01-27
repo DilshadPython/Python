@@ -48,4 +48,10 @@ Data Type in Python
 <class 'dict'>
 <class 'dict'>
 
+# Class methods https://docs.python.org/3/library/stdtypes.html#methods
+class C:
+    def method(self):
+        pass
+
+@classmethods this class methods has not access to self args in the class but it knows what is in the class
 
