@@ -1,6 +1,7 @@
 class User:
 
-    # This is the initialization of the class
+    # This is the initialization of the class we run if statment can't leave empty fname and lname
+    # because we called in line 24 User(first_name, last_name, age)
     def __init__(self, first_name, last_name, age):
         if not first_name and not last_name:
             raise ValueError("First name and last name cannot be empty")
@@ -19,7 +20,7 @@ def get_user():
     first_name = input("Enter your first name: ")
     last_name = input("Enter your last name: ")
     age = input("Enter your age: ")
-    # we created structor here from the User class and adding the tow data in the structor class
+    # we created structor here from the User class and adding the two data in the structor class
     return User(first_name, last_name, age)
 
 

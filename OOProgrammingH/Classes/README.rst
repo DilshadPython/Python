@@ -20,4 +20,27 @@ Enter your last name: Abdulla
 Enter your age: 51
 Full name is: Dilshad Abdulla 51 years old
 
+py example_2.py
+Enter your first name: Dill
+Enter your last name: Abdulla
+Enter your age: 52
+Full name is: Dill Abdulla 52 years old
+
+py example_2.py
+Enter your first name:
+Enter your last name:
+Enter your age: 23
+Traceback (most recent call last):
+  File "/home/dilmac/Dev/Python/OOProgrammingH/Classes/example_2.py", line 27, in <module>
+    main()
+  File "/home/dilmac/Dev/Python/OOProgrammingH/Classes/example_2.py", line 14, in main
+    user = get_user()
+           ^^^^^^^^^^
+  File "/home/dilmac/Dev/Python/OOProgrammingH/Classes/example_2.py", line 23, in get_user
+    return User(first_name, last_name, age)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dilmac/Dev/Python/OOProgrammingH/Classes/example_2.py", line 6, in __init__
+    raise ValueError("First name and last name cannot be empty")
+ValueError: First name and last name cannot be empty
+
 #################################################################
