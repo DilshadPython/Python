@@ -44,4 +44,30 @@ Traceback (most recent call last):
 ValueError: First name and last name cannot be empty
 
 You can create or changed your own error like DillError instead of ValueError
+
 #################################################################
+We are create __str__() method to be able to print the data in the class object like
+user = User(first_name, last_name)
+print(user)
+
+testing:
+py example_3.py
+Enter your first name: Dilshad
+Enter your last name: Adam
+Traceback (most recent call last):
+  File "/home/dilmac/Dev/Python/OOProgrammingH/Classes/example_3.py", line 31, in <module>
+    main()
+  File "/home/dilmac/Dev/Python/OOProgrammingH/Classes/example_3.py", line 18, in main
+    user = get_user()
+           ^^^^^^^^^^
+  File "/home/dilmac/Dev/Python/OOProgrammingH/Classes/example_3.py", line 27, in get_user
+    return User(first_name, last_name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dilmac/Dev/Python/OOProgrammingH/Classes/example_3.py", line 8, in __init__
+    raise ValueError("The last name is not in the list")
+ValueError: The last name is not in the list
+
+ py example_3.py
+Enter your first name: Adam
+Enter your last name: Aron
+Fname is Adam Lname is Aron

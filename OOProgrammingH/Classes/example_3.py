@@ -12,7 +12,7 @@ class User:
 
 
     def __str__(self):
-        return f"{self.first_name} {self.last_name}"
+        return f"Fname is {self.first_name} Lname is {self.last_name}"
 
 def main():
     user = get_user()
