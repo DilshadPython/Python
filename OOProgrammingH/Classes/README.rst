@@ -82,3 +82,28 @@ Enter your last name: Abdulla
 Enter your job: Developer
 Dill Abdulla
 
+################################################################
+
+In example_5.py we create extra methods called my_work() for the third args job
+and we printed and called this method in line 32 and 33 but not define in __str__()
+
+Testing:
+ py example_5.py
+Enter your first name: Dilshad
+Enter your last name: Abdulla
+Enter your job: Developer
+
+# output
+Dilshad Abdulla
+Work status
+JavaScript
+
+ py example_5.py
+Enter your first name: Dilshad
+Enter your last name: Abdulla
+Enter your job:
+~ output
+Dilshad Abdulla
+Work status
+/
+

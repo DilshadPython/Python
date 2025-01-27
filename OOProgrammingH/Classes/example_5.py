@@ -9,27 +9,29 @@ class User:
 
         self.first_name = first_name
         self.last_name = last_name
-        # self.job = job
+        self.job = job
 
 
     def __str__(self):
+        # here we not define the third args job
         return f"{self.first_name} {self.last_name}"
 
-    # def my_work(self):
-    #     match self.job:
-    #         case "Developer":
-    #             return "JavaScript"
-    #         case "Webapps":
-    #             return "Bootstrap"
-    #         case _:
-    #             return "/"
+    # we create this method for the third args job
+    def my_work(self):
+        match self.job:
+            case "Developer":
+                return "JavaScript"
+            case "Webapps":
+                return "Bootstrap"
+            case _:
+                return "/"
 
 
 def main():
     user = get_user()
     print(user)
-    # print('Work status')
-    # print(user.my_work())
+    print('Work status')
+    print(user.my_work())
 
 def get_user():
     # we create data
