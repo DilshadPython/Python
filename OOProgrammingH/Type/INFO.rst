@@ -53,5 +53,13 @@ class C:
     def method(self):
         pass
 
-@classmethods this class methods has not access to self args in the class but it knows what is in the class
+@classmethod this class methods has not access to self args in the class but it knows what is in the class
+
+when we use @classmethod we have to remove the __init__() and change all self in the class to cls look at this example
+classmethods.py  for training purpose
+
+ py clssmethods.py
+This full name is Tony  is live in  London
+/home/OOProgrammingH/Type$ py clssmethods.py
+This full name is Tony  is live in  New York
 
