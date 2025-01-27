@@ -191,5 +191,6 @@ Traceback (most recent call last):
     raise ValueError("Invalid fullname cannot be empty")
 ValueError: Invalid fullname cannot be empty
 
-
+We delete the if statement after define tw properties method setter and getter for both args and run the code testing
+in correct way and wrong ways see the restluts.
 
