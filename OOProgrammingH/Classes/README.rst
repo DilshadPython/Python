@@ -165,5 +165,31 @@ Traceback (most recent call last):
     raise ValueError("Invalid city which is not in the list")
 ValueError: Invalid city which is not in the list
 
+# After we create two getter and setter we will delete both if statement in the __init__ method
+
+try to test:
+ py user_2.py
+Enter your full name: Dilshad
+Enter your city: Cologne
+Dilshad from Cologne
+/Dev/OOProgrammingH/Classes$ py user_2.py
+Enter your full name:
+Enter your city: Cologne
+Traceback (most recent call last):
+  File "/home/OOProgrammingH/Classes/user_2.py", line 61, in <module>
+    main()
+  File "/home/OOProgrammingH/Classes/user_2.py", line 48, in main
+    user = get_user()
+           ^^^^^^^^^^
+  File "/home/OOProgrammingH/Classes/user_2.py", line 57, in get_user
+    return User(fullname, city)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/home/OOProgrammingH/Classes/user_2.py", line 9, in __init__
+    self.fullname = fullname
+    ^^^^^^^^^^^^^
+  File "/home/OOProgrammingH/Classes/user_2.py", line 27, in fullname
+    raise ValueError("Invalid fullname cannot be empty")
+ValueError: Invalid fullname cannot be empty
+
 
 

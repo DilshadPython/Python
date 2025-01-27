@@ -1,21 +1,31 @@
 class User:
     # This is the initialization of the class
     def __init__(self, fullname, city):
-        # when we define second getter and setter method in user_2.py we will delete the both if
-        # statments in the __init__
-        if not fullname:
-            raise ValueError("Fullname cannot be empty")
+        # we have to remove this if statement after we define the new method as setter and getter
+        # if not fullname:
+        #     raise ValueError("First name cannot be empty")
 
-        # After we defined setter and getter method this method below is not required anymore
-        # if city not in ['Cologne', 'Brentwood']:
-        #     raise ValueError("The city is not in the list")
         # we use self to access to the args
         self.fullname = fullname
         self.city = city
 
-# this method will be called as soon we create user = User() and print(user)
+    # this method will be called as soon we create user = User() and print(user)
     def __str__(self):
         return f"{self.fullname} from {self.city}"
+
+    @property
+    def fullname(self):
+        return self._fullname
+    """
+    # we can change the first argo in the method to value like: def fullname(self, value)
+    # instead of fullname still work but we have to add _ after the setter method created
+    _fullname 
+    """
+    @fullname.setter
+    def fullname(self, fullname):
+        if not fullname:
+            raise ValueError("Invalid fullname cannot be empty")
+        self._fullname = fullname
 
     # Getter without define any args except self but has to be exactly like in the setter _city
     @property
