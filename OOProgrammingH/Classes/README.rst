@@ -71,3 +71,14 @@ ValueError: The last name is not in the list
 Enter your first name: Adam
 Enter your last name: Aron
 Fname is Adam Lname is Aron
+
+#################################################################
+
+In the example_4.py we added the third args job without define in the __str__() method
+running again still work but don't print the job in line 21 see the test:
+py example_4.py
+Enter your first name: Dill
+Enter your last name: Abdulla
+Enter your job: Developer
+Dill Abdulla
+

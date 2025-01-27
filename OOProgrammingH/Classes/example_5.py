@@ -15,11 +15,21 @@ class User:
     def __str__(self):
         return f"{self.first_name} {self.last_name}"
 
+    # def my_work(self):
+    #     match self.job:
+    #         case "Developer":
+    #             return "JavaScript"
+    #         case "Webapps":
+    #             return "Bootstrap"
+    #         case _:
+    #             return "/"
+
 
 def main():
     user = get_user()
     print(user)
-
+    # print('Work status')
+    # print(user.my_work())
 
 def get_user():
     # we create data
