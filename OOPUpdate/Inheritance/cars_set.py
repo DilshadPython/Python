@@ -15,13 +15,11 @@ cars = [
 ]
 
 # we creat an empty list and we add all the name and models including years
-# to the list but we adding as set because set doesn't duplicate name, models, years
-# we don't use set() methods here using own idea how to add to the list without any
-# duplication
+# to the list but we use set method to remove all duplicate name, model and year
 # cars = {}
-names = []
-models = []
-years = []
+names = set()
+models = set()
+years = set()
 
 for car in cars:
     if car['name'] not in names:
