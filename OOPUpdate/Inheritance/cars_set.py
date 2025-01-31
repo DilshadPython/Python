@@ -23,8 +23,6 @@ names = []
 models = []
 years = []
 
-# we use append for
-
 for car in cars:
     if car['name'] not in names:
         names.append(car['name'])
