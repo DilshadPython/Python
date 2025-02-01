@@ -9,7 +9,7 @@ cars = [
     {'name': 'Audi', 'model': 'Q5', 'year': 2011},
     {'name': 'WV', 'model': 'Polo', 'year': 2010},
     {'name': 'Mercedes', 'model': 'AMG 4x4', 'year': 2010},
-    {'name': 'Volvo', 'model': 'XV 4x4', 'year': 2012},
+    {'name': 'Volvo', 'model': 'XC60', 'year': 2012},
     {'name': 'Audi', 'model': 'Q8', 'year': 2015},
     {'name': 'Audi', 'model': 'Q3', 'year': 2023},
 ]

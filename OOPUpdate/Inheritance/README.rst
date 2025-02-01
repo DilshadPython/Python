@@ -28,3 +28,8 @@ In  cars.py we created a list of dictionary and made some difference for loops
 first one display all list of dictionary without repeat any duplicated name
 The other for loops display names except duplicate than models and years this is without using set()
 
+https://docs.python.org/3/howto/
+
+using set in OOP https://docs.python.org/3/library/stdtypes.html#set
+
+append() is used for a list where add() is used for a set

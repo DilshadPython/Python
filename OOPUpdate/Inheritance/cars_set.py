@@ -9,29 +9,27 @@ cars = [
     {'name': 'Audi', 'model': 'Q5', 'year': 2011},
     {'name': 'WV', 'model': 'Polo', 'year': 2010},
     {'name': 'Mercedes', 'model': 'AMG 4x4', 'year': 2010},
-    {'name': 'Volvo', 'model': 'XV 4x4', 'year': 2012},
+    {'name': 'Volvo', 'model': 'XC60', 'year': 2012},
     {'name': 'Audi', 'model': 'Q8', 'year': 2015},
     {'name': 'Audi', 'model': 'Q3', 'year': 2023},
 ]
 
-# we creat an empty list and we add all the name and models including years
+# we creat an empty set and we add all the name and models including years
 # to the list but we use set method to remove all duplicate name, model and year
-# cars = {}
+
 names = set()
 models = set()
 years = set()
 
 for car in cars:
-    if car['name'] not in names:
-        names.append(car['name'])
-    if car['model'] not in models:
-        models.append(car['model'])
-    if car['year'] not in years:
-        years.append(car['year'])
+    names.add(car['name'])
+    models.add(car['model'])
+    years.add(car['year'])
 
-# all in one for loop
+# all in one for loop this is display one list in each dict where the select only on dict
+# because don't dplicate any name or model and year
 for (name, model, year) in zip(names, models, years):
-    print(name, ' ', model, ' ', year)
+    print('Name: ', name, ' | ', 'Model: ', model, ' | ', 'Year', year)
 
 # Names only
 print('\n####################################')
