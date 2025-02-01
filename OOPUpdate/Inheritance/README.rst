@@ -33,3 +33,4 @@ https://docs.python.org/3/howto/
 using set in OOP https://docs.python.org/3/library/stdtypes.html#set
 
 append() is used for a list where add() is used for a set
+Using set in the list of dict but it take only thoes not are not duplicate in the name model and year but when we use zip() is only to collect all on one in this case each models of the car doesn't match the current car. Only for experiences how zip work.
