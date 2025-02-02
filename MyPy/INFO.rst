@@ -30,3 +30,30 @@ hint: See PEP 668 for the detailed specification.
 # To resolve the issue you have to install python3-xyz where xyz is the package you are trying to install
 
 pip3 install --break-system-packages mypy
+
+# testing example.py
+py example.py
+Enter a number: 4
+Traceback (most recent call last):
+  File "/home/MyPy/example.py", line 14, in <module>
+    number(num)
+  File "/home/MyPy/example.py", line 8, in number
+    for _ in range(n):
+             ^^^^^^^^
+TypeError: 'str' object cannot be interpreted as an integer
+
+to resolve the issue it should be int(input('Enter an num: '))
+mypy example.py
+Success: no issues found in 1 source file
+/MyPy$ py example.py
+Enter a number: 9
+Hello Python mypy
+Hello Python mypy
+Hello Python mypy
+Hello Python mypy
+Hello Python mypy
+Hello Python mypy
+Hello Python mypy
+Hello Python mypy
+Hello Python mypy
+
