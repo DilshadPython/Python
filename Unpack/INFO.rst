@@ -2,6 +2,8 @@
 # it shows me an error because it has to be two value but if I enter both display
 # the fname because this is what requested in print
 
+'We introduce _, *, ** in Unpacking for string use _ and * for list and for dict ** that is how we can use unpacking
+
 Testing:
 py unpack.py
 What is your name? Dilshad Abdulla
