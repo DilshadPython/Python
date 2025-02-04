@@ -1,4 +1,4 @@
-keyword = input("Enter the keywords? ")
+keyword = input("Enter the keywords available in Python? ")
 
 match keyword:
     case 'print':
