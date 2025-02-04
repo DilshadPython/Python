@@ -4,8 +4,9 @@ def main():
     for i in range(n):
         print(fly(i))
 
+
 def fly(n):
-    return '*' * n
+    return ' <3 ' * n
 
 if __name__ == '__main__':
     main()
