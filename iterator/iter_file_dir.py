@@ -10,8 +10,8 @@ fileitr = iter(files)
 
 print(next(fileitr))
 
-# for file in files:
-# 	print(file)
+for file in files:
+	print(file)
 
 
  # There is an error this file not working because of the version of python.!
