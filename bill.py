@@ -1,6 +1,6 @@
 import datetime
 
 
-def solution(S):
+def solution(s):
     # write your code in Python 3.6
     pass

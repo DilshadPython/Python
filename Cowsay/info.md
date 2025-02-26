@@ -12,7 +12,10 @@ Installation process:
 # the installation and don't need virtualenv for this files in current dir
 # pip is a package manager pip is a program generally come with python which allow you to install any
 # packages with python
-pip install cowsay
+pip install cowsay 
+# if not work you have to run
+pip3 install --break-system-packages cowsay
+pip3 install --break-system-packages pyttsx3
 
 # find list of cow packages installed go to cd /usr/share/cowsay/cow in your computer
 cd /usr/share/cowsay/cows$ ls

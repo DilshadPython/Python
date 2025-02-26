@@ -69,3 +69,7 @@ py users.py
 Enter your first name: Dilshad
 Enter your last name: Abdulla
 This full name is Dilshad and last name Abdulla
+
+# Inherited
+https://docs.python.org/3/library/exceptions.html
+
