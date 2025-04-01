@@ -1,6 +1,4 @@
-import os
+import pandas as pd
+import quandl
 
-import matplotlib.pyplot as plt
-import matplotlib.image as mpimg
-
-print(os.getcwd())
+df = quandl.get('EOD/GOOGLE', authtoken='...')
