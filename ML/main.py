@@ -1,4 +1,5 @@
-import pandas as pd
 import quandl
+import pandas as pd
 
-df = quandl.get('EOD/GOOGLE', authtoken='...')
+
+df = quandl.get('WIKI/Google', authtoken='...')
