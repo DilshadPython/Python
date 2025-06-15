@@ -9,7 +9,7 @@ myname()
 year = 1978
 
 def myage():
-    year = 1978
+    year = 1975
     print('My age is ', year)
     print('My age is ' + str(year))
 
