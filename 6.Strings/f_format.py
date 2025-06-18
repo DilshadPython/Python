@@ -33,3 +33,7 @@ print('{:.3f}'.format(hight))
 print('\n############ << .2f')
 number = 232.45678231
 print(format(number, '.2f'))
+
+print('==========\n')
+msg = f'To multiply tow number in the string { 4 * 7} '
+print(msg)
