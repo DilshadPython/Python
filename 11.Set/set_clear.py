@@ -15,6 +15,7 @@ primes = set([2, 3, 5, 7])
 
 composites = set([4, 6, 8, 9, 10])
 
+# use union() methods to joining two sets also update()
 resutls = odds.union(evens)
 
 print(resutls)
