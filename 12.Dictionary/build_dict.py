@@ -16,6 +16,15 @@ print('\n')
 print('Display the values')
 print(create_dict.values())
 
+print('=====================\n')
+# create new dict from the above keys and values in one dict
+new_dict = {}
+print(new_dict)
+for key, value in create_dict.items():
+    new_dict[key] = value
+print(new_dict)
+print('#####################\n')
+
 
 print('\n')
 print('Display keys and values as a Tuple')
@@ -31,3 +40,4 @@ print('\n')
 print('')
 for index, value in enumerate(create_dict):
     print(index, value, create_dict[value])
+
