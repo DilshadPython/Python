@@ -1,4 +1,4 @@
-
+# Getter and setter method
 class Employee:
 
     # we use the __init__() function to assign values for name and access to it
