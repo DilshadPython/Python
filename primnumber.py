@@ -1,8 +1,6 @@
 import sys
-
 import os
 import math
-
 
 def number(input):
     n = input
@@ -12,7 +10,7 @@ def number(input):
     if n == 2:
         print('Yes')
 
-    if n > 2 and n % 2 == 0:
+    if int(n) > 2 or int(n) % 2 == 0:
         return print('No')  # False
 
     cal = math.floor(math.sqrt(n))
