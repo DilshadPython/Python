@@ -5,7 +5,7 @@ import os
 def reproducesString(input):
     alpha = []
     text = str(input('Enter a test: '))
-    for i in range(str(text)):
+    for i in str(text):
         if i == 'a' or 'A':
             return False
         elif i == 'e' or 'E':
@@ -17,8 +17,8 @@ def reproducesString(input):
         elif i == 'u' or 'U':
             return False
         else:
-            return print(str(i))
+            print(str(i))
 
-    # return print(testme)
+    # return print(text)
 
 reproducesString(input)

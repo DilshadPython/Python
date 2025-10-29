@@ -1,8 +1,16 @@
 from matplotlib import pyplot as plt
 
-books = ['Data Science', 'Biology', 'Chimiches', 'Python Tutorials', 'Django projects']
-
-more_read = [12, 45, 73, 23, 42]
+experiens = [
+    'Data Science',
+    'Java',
+    'PHP',
+    'Python Tutorials',
+    'Django FW',
+    'JavaScript',
+    'Flask'
+]
+7481 
+more_read = [45, 10, 30, 75, 85, 55, 69]
 
 plt.bar(books, more_read, color = 'green')
 
