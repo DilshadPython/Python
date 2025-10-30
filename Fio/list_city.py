@@ -1,5 +1,3 @@
-import os
-
 from pathlib import Path
 
 '''
@@ -23,22 +21,3 @@ txt_file = Path(create_dir, "cities.txt")
 with open(txt_file, 'r') as f:
     for line in f:
         print('Hello,', line.rstrip())
-
-
-# file = open(test_folder / 'cities.txt', 'r')
-
-
-# with open(enter_folder(file, 'r')) as f:
-#     content = f.read()
-#     print(content)
-
-# file.close()
-
-# cities = str(input("Enter the cities you want: "))
-
-# read_cities = open(test_folder, 'r')
-
-# # When you use with automatically open and  closed
-# with open(enter_folder, 'r') as f:
-# with open('cities.txt', 'a') as f:
-#     f.write(f'{cities}\n')
