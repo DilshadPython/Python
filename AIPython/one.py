@@ -1,4 +1,4 @@
-import tensorflow as tf
+# import tensorflow as tf
 from tensorflow.keras.datasets import mnist
 from tensorflow.keras.layers import Dense
 from tensorflow.keras.models import Sequential
