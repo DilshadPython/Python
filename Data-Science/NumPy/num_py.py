@@ -1,1 +1,5 @@
-print('Welcome to NumPy :)')
+# Welcome to Data Since 
+
+# Start with NumPy
+
+print('Start:')
