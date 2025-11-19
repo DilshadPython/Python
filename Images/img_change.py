@@ -1,7 +1,4 @@
-
 import cv2
-import numpy as np
-
 
 # reading image
 img = cv2.imread('dilshad.jpg')
@@ -10,8 +7,8 @@ img = cv2.imread('dilshad.jpg')
 gray = cv2.cvtColor(img, cv2.COLOR_RGB2GRAY)
 gray = cv2.medianBlur(gray, 5)
 edges = cv2.adaptiveThreshold(gray, 255,
-	cv2.ADAPTIVE_THRESH_MEAN_C,
-	cv2.THRESH_BINARY, 9, 9)
+                              cv2.ADAPTIVE_THRESH_MEAN_C,
+                              cv2.THRESH_BINARY, 9, 9)
 
 # Cartoonization
 color = cv2.bilateralFilter(img, 9, 250, 250)
@@ -23,4 +20,6 @@ cv2.imshow('Cartoon', cartoon)
 cv2.waitKey(0)
 cd2.destroyAllWindows()
 
+'''
 _Az19AD$ShvaN.73E
+'''

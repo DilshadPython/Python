@@ -1,5 +1,4 @@
+mkvirtualenv imgchangenv or python3 -m venv imgenv
 
-
-mkvirtualenv imgchangenv
 pip install numpy
 pip install opencv-python
