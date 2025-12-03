@@ -14,7 +14,15 @@ print(str_obj)
 print('***' * 14)
 
 # list inside list
-example_objects = np.array([[1, 2], [3, 4], [5, 6], [7, 8], [9, 10]])
+example_objects = np.array(
+    [
+        [1, 2],
+        [3, 4],
+        [5, 6],
+        [7, 8],
+        [9, 10]
+    ]
+)
 print('Print two num in one list')
 print(example_objects)
 
@@ -26,7 +34,33 @@ print(example_obj)
 
 print('#####' * 14)
 
-example_obj = np.array([[1, 2], [3, 3, 5], [4, 5, 6, 7], [
-                       7, 8, 9], ['a', 'b'], ['c', 'd', 'e']])
+example_obj = np.array([[1, 2, 1], [3, 3, 5], [4, 5, 6], [7, 8, 9], ['a', 'b', 'f'], ['c', 'd', 'e']])
 print('Print three and more num in one list')
 print(example_obj)
+
+mult_obj = np.array(
+    [
+        [
+            [1, 2],
+            [3, 4],
+            [5, 6],
+        ],
+        [
+            [7, 8],
+            [9, 10],
+            [11, 12],
+        ],
+        [
+            [14, 12],
+            [13, 41],
+            [15, 66],
+        ],
+        [
+            [17, 18],
+            [19, 0],
+            [21, 13],
+        ]
+    ]
+)
+
+print(mult_obj)
