@@ -31,4 +31,4 @@ scipy==1.15.3
 sympy==1.14.0
 tifffile==2025.6.11
 tqdm==4.67.1
-urllib3==2.5.0
+urllib3==2.6.3
