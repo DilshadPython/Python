@@ -8,7 +8,7 @@ num = '0123456789'
 symbole = '!"£$%^&*()-_=+~#@?\\<>/[]}{'
 all_together = lower_char + upper_char + num + symbole
 
-length = 20
+length = 24
 
 password = ''.join(random.sample(all_together, length))
 
