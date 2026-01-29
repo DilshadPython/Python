@@ -7,3 +7,7 @@ print(numbers[2:10:2])
 # start from 0 to the end and 3 steps
 print(numbers[0::3])
 print(numbers[::-1])
+### start from index 3
+print(numbers[4:])
+###
+print(numbers[-8:-2])
