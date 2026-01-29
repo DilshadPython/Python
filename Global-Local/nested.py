@@ -1,6 +1,6 @@
 # create function with 2 arguments and doing the calculation by another function
-# create inside the function itself, the idea of nested varable is the second 
-# function has access to the two varables are created in first function or main
+# create inside the function itself, the idea of nested variable is the second
+# function has access to the two variables are created in first function or main
 # function
 
 # first import math for calculation sqrt()

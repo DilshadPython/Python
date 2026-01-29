@@ -1,5 +1,5 @@
 # when we create global var outside the method we will not be able to access but
-# to access the global var which is balance here we have to use global word in each methods
+# to access the global var which is balance here we have to use global word in each method
 balance = 0
 
 def main():
