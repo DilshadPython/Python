@@ -60,10 +60,21 @@ students = [
         'languages': 'English',
     },
 ]
-
+print()
 names = [
     student['name'] for student in students if student['languages'] == 'English'
 ]
 
+print('\t', names)
+
+print()
+name_a = list(map(lambda x: x['last_name'], students))
+print('\t', name_a)
+
+print()
+name_a = list(map(lambda x: x, students))
+print('\t', name_a[0:2])
+
+print()
 for name in sorted(names):
-    print(name)
+    print('\t', name)
