@@ -3,7 +3,7 @@ lnx_list = {
     'alias': 'You can create your own command or change the command',
     'cat': 'Short for concatenate, display the content of the file or concatenate files and print on the standard output',
     'cd': 'Change directory',
-    'cd "My File"': 'If you have directory with two words with empty space or use cd "My\ file"',
+    'cd "My File"': 'If you have directory with two words with empty space or use cd "My file"',
     'cat -b file.html': 'Show the content with the number except the empty line',
     'cat -n file.html': 'Add number for the empty line',
     'cat -s file.txt': 'In this file there many empty lines will set the empty lines to one empty line and remove the rest',
@@ -36,7 +36,7 @@ lnx_list = {
     'touch': 'Create file',
     'curl': 'The curl command is a tool to retrieve information and files from Uniform Resource',
     'mkdir -p names/dilmac': 'Create two directories first called name and second dilmac the -p is helpes to create subdirectory in parents directory',
-    'mkdir -p test/{one,two,three}': 'Create test directory and 3 other directories inside test but don\'t put space between the dir names'
+    'mkdir -p test/{one,two,three}': 'Create test directory and 3 other directories inside test but don\'t put space between the dir names',
     'rm': 'Remove the file',
     'rmdir': 'Remove the directory',
     'rm -r': 'Remove the directory if the directory is not empty',

@@ -8,4 +8,4 @@ for key in lnx_list.items():
         print(key, ' : ', lnx_list[key], '\n')
 
     else:
-        print('The key you enterted is not exisit')
+        print('The key you entered is not exist')
