@@ -1,4 +1,4 @@
 import pandas as pd
 
 df = pd.read_csv('data-store.csv', skiprows=1)
-df
+print(df)

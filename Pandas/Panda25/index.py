@@ -9,30 +9,33 @@ automobils = {
     'Names': ['Alan', 'Tom', 'Chris', 'Ema', 'Dave', 'Sam', 'Loren', 'Kaio'],
     'Car4': ['F150', 'Ranger', 'Transit', 'SuperDuty', 'Expedition', 'Edge', 'FT', 'FTT'],
 }
+print('\n')
 
+print('\n=========================Data Frames=============================\n')
 data_frame = pd.DataFrame(automobils)
+print(data_frame, 'Hello')
 
 # In the printif you looked at the dic in the output sorted first Car1-4
 # than name and nums
-print(data_frame)
+# print(data_frame)
 
 # print out (0-7) dtypes=int64
-print('\n=========================index=============================')
+print('\n========================= Index =============================\n')
 print(data_frame.index)
 
 # data_frame as index bring the Names to the front, return the value
-print('\n======================set_index============================')
+print('\n====================== Set_index ============================\n')
 result = data_frame.set_index('Names')
 print(result)
 
 # data_frame as index bring the Car3 to the front, return the value
-print('\n======================set_index============================')
+print('\n====================== set_index ============================\n')
 result = data_frame.set_index('Car3')
 print(result)
 
-print('\n======================index================================')
+print('\n====================== index ================================\n')
 print(data_frame.index)
 
-print('\n=======================Head================================')
+print('\n======================= Head ================================\n')
 print(data_frame.head())
 
