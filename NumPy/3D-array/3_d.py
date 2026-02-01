@@ -6,7 +6,22 @@ txt = np.array([[['aa', 'ss'], ['oo', 'xx'], ['bb', 'uu']]])
 print(txt)
 print('\n#############')
 # first list second ele aa
-print(txt[0, 1, 1])
+print('\n\t A: ', txt[0, 1, 1])
+
+print('\n===========================')
+print('\n\t B: ', txt[0])
+
+print('\n===========================')
+print('\n\t C: ', txt[0, 1])
+
+print('\n===========================')
+print('\n\t D: ', txt[0, 1, 0])
+
+print('\n===========================')
+print('\n\t E: ', txt[0, 0, 0])
+
+print('\n===========================')
+print('\n\t F: ', txt[0, 0, 1])
 
 print('\n#############')
 print(txt[0, 2, 1])
