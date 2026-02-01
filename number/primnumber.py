@@ -24,4 +24,4 @@ for i in range(1, 101):
     print(i)
 
 
-number(input)
+# print(number(input))

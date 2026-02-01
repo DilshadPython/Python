@@ -19,6 +19,6 @@ def reproducesString(input):
         else:
             print(str(i))
 
-    # return print(text)
+    return print(text)
 
 reproducesString(input)
