@@ -22,7 +22,7 @@
             . Smallest instance of the same problem
 
 
-# Defeinision of function 
+# Definition of function 
 
 def nameof_function(var):
     return the_job_of_function_body
