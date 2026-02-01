@@ -1,30 +1,65 @@
-the tale of why and how I re-wrote an ageing Java-based customer & order management system in Python and how the same feature set was implemented using only one 10th of the code base.
+the tale of why and how I re-wrote an aging Java-based customer & order management system in Python and how the
+same feature set was implemented using only one 10th of the code base.
 
-If it ain't broke, don't fix it. During Christmas in the year of our Lord 2007, I wrote a simple customer and order management system using what I found to be cool technology at the time: Java 6, iBatis (persistence framework), Tomcat 6 (application server), MySQL (database), Debian Linux (operating system) and (deep breath) JSP (templating),
+If it ain't broke, don't fix it. During Christmas in the year of our Lord 2007, I wrote a simple customer and order
+management system using what I found to be cool technology at the time: Java 6, iBatis (persistence framework),
+Tomcat 6 (application server), MySQL (database), Debian Linux (operating system) and (deep breath) JSP (templating),
 
-After 1-2 weeks of coding, I had something that was usable and, after some initial bug fixing after going live in January, it ran happily without any maintenance or supervision of any kind for 7 years. The only time it wasn't available, was when there was a power outage in the server room.
+After 1-2 weeks of coding, I had something that was usable and, after some initial bug fixing after going live in
+January, it ran happily without any maintenance or supervision of any kind for 7 years. The only time it wasn't
+available, was when there was a power outage in the server room.
 
-The customer was happy and the story could have ended here. But something made the system to be completely re-written after 7 years of blissful existence. What was it?
+The customer was happy and the story could have ended here. But something made the system to be completely re-written
+ after 7 years of blissful existence. What was it?
 
-Change. The customer wanted new features. Which meant picking up the development and, lo and behold, I discovered how outdated the system had gotten when looking at it again through the goggles of 2014. The architecture was pure RPC over HTTP, JSPs was such an old technology it's wasn't even fun thinking about it, MySQL had gone from being a hip and cool Open Source database to being a crippled step child of Oracle, but worst of all: some of the technology, most notably iBATIS, wasn't supported anymore. Not supported meant no security updates, outdated documentation, a shrinking user base and last but not least: the sad feeling of missing out on all the fun stuff happening in the world.
+Change. The customer wanted new features. Which meant picking up the development and, lo and behold, I discovered how
+outdated the system had gotten when looking at it again through the goggles of 2014. The architecture was pure RPC
+over HTTP, JSPs was such an old technology it's wasn't even fun thinking about it, MySQL had gone from being a hip
+and cool Open Source database to being a crippled step child of Oracle, but worst of all: some of the technology,
+most notably iBATIS, wasn't supported anymore. Not supported meant no security updates, outdated documentation,
+a shrinking user base and last but not least: the sad feeling of missing out on all the fun stuff happening in the
+world.
 
-The obvious choice. There was a fork of iBATIS available called MyBatis but using it meant making changes to both my code and build setup, so I started looking somewhere else. Having used Java as my main programming language at work for more than 10 years, the natural choice seemed to be the now nicely standardised and usable JPA for persistence with the rest of the JEE7 stack for the other building blocks: Java 7, JAX-RS (REST framework) and JSF, Rich Faces or Wicket (templating).
+The obvious choice. There was a fork of iBATIS available called MyBatis but using it meant making changes to both my
+code and build setup, so I started looking somewhere else. Having used Java as my main programming language at work
+for more than 10 years, the natural choice seemed to be the now nicely standardized and usable JPA for persistence
+with the rest of the JEE7 stack for the other building blocks: Java 7, JAX-RS (REST framework) and JSF, Rich Faces
+or Wicket (templating).
 
-After a month or two of hacking away at this evenings and weekends, I had something that worked and was Java wise nicely layered, object oriented, de-coupled, unit testable and so on. It was just not fun.
+After a month or two of hacking away at this evenings and weekends, I had something that worked and was Java wise
+nicely layered, object oriented, de-coupled, unit testable and so on. It was just not fun.
 
 python
 
-And programming should be fun. Especially when working for free on open source projects like this system. So I asked myself, what would I prefer programming in? In which language and on what platform would I have the most fun programming in while at the same time being able to quickly add new features? Although I'm a huge fan of BASH, I did admit that it wasn't ideal for developing a rich web based order management system. My choice was then easy, it had to be Python.
+And programming should be fun. Especially when working for free on open source projects like this system. So I
+asked myself, what would I prefer programming in? In which language and on what platform would I have the most fun
+programming in while at the same time being able to quickly add new features? Although I'm a huge fan of BASH, I did
+admit that it wasn't ideal for developing a rich web based order management system. My choice was then easy,
+it had to be Python.
 
-I've always been very fond of Python ever since learning it in university but I quickly moved away from it in favour of BASH for writing command line programs as BASH is always available on all kinds of UNIX and Linux variants (exception being HP-UX). For larger applications, my work has always been Java related, so Python has continued to sit quietly in my toolbox, waiting for the task at hand being right for it. And now it finally was.
+I've always been very fond of Python ever since learning it in university but I quickly moved away from it in favor
+of BASH for writing command line programs as BASH is always available on all kinds of UNIX and Linux variants
+(exception being HP-UX). For larger applications, my work has always been Java related, so Python has continued to
+sit quietly in my toolbox, waiting for the task at hand being right for it. And now it finally was.
 
 What a joy
-And what a wonderful relief it was to start programming in Python! Just like coming home. I like programming in Python so much because its programming model maps so well with the way I think. There's so many thing that just feels right. Natural.
+And what a wonderful relief it was to start programming in Python! Just like coming home. I like programming in Python
+so much because its programming model maps so well with the way I think. There's so many thing that just feels right.
+Natural.
 
 emacs
 
-Another nice welcome was to find how excellent support Emacs has for Python. There's many Python plugins to choose from. I settled for anaconda-mode, which together with pyflake and other great plugins I already use, like flymake, auto-complete-mode and projectile, give me everything I could ever wish for when coding: auto completion, on the fly syntax checking, code navigation, interactive shell for prototyping and documentation lookup.
+Another nice welcome was to find how excellent support Emacs has for Python. There's many Python plugins to choose from.
+I settled for anaconda-mode, which together with pyflake and other great plugins I already use, like flymake,
+auto-complete-mode and projectile, give me everything I could ever wish for when coding: auto completion, on the fly
+syntax checking, code navigation, interactive shell for prototyping and documentation lookup.
 
-And there was more to be rejoice about. Lots. Like Flask. It's a lightweight web framework which is just wonderful to work with. It's blissfully free of bloat or half thought out ideas, incomplete documentation or patchy libraries that haunt so many other frameworks. You know, the frameworks which let's you easily do mundane tasks, but don't scale up to world applications. Your applications. I cannot recommend you enough to try out Flask. It's strikes an impressive balance between simplicity and feature richness.
+And there was more to be rejoice about. Lots. Like Flask. It's a lightweight web framework which is just wonderful to
+work with. It's blissfully free of bloat or half thought out ideas, incomplete documentation or patchy libraries that
+haunt so many other frameworks. You know, the frameworks which let's you easily do mundane tasks, but don't scale up
+to world applications. Your applications. I cannot recommend you enough to try out Flask. It's strikes an impressive
+balance between simplicity and feature richness.
 
-Another affable acquaintance was that of Jinja. It's templating done right. Again striking a good balance between being easy to use and having all the features you need to cover all your project needs. As an example of how well behaved Jinja is, take a look at this error message after I did something illegal in Jinja.
+Another affable acquaintance was that of Jinja. It's templating done right. Again striking a good balance between
+being easy to use and having all the features you need to cover all your project needs. As an example of how well
+behaved Jinja is, take a look at this error message after I did something illegal in Jinja.

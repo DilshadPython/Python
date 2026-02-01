@@ -1,7 +1,7 @@
 (a, b, c, d, e, f, g) = (
 		'Arsenal',
-		'Man Uniyed',
-		'Chealse',
+		'Man United',
+		'Chelsea',
 		'Tottenham',
 		'Liverpool',
 		'Man City',
