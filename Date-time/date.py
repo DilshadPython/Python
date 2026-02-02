@@ -10,7 +10,9 @@ print(dir(datetime))
 '''
 # class Date(builtins.object):
 # 	date(year, month, day)
-#
+# Monday 0 Sunday 6
+# Monday 1 Sunday 7
+
 dilmac = datetime.date(1973, 3, 28)
 print(dilmac)
 

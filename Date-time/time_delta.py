@@ -1,6 +1,7 @@
 import datetime
 
-
+# Monday 0 Sunday 6
+# Monday 1 Sunday 7
 current_date = datetime.date.today()
 
 weekly_date = datetime.timedelta(days=7)

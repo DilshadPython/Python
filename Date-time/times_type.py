@@ -3,7 +3,7 @@ import datetime
 
 current_local_time = datetime.datetime.today()
 current_date_time = datetime.datetime.now()
-current_date_time_utc = datetime.datetime.utcnow()
+current_date_time_utc = datetime.datetime.now(datetime.UTC)
 
 print('\n - Return current locale datetime with timezone of None: ', current_local_time)
 print('\n - Give us an option passing the timezone: ', current_date_time)
