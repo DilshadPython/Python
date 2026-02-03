@@ -18,5 +18,6 @@ date_time_paris = date_time_utcnow.astimezone(pytz.timezone('Asia/Baghdad'))
 print('\n - Asia Baghdad: ', date_time_paris)
 
 print()
+# timezone of all countries around the world
 for tz in pytz.all_timezones:
     print(tz)

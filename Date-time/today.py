@@ -16,9 +16,9 @@ Module: datetime
 Class: datetime
 Method: strptime()
 '''
-date_of_birth = '28/03/1973'
-my_brithday = datetime.datetime.strptime(date_of_birth, '%d/%m/%Y')
+date_of_birth = '21/05/1973'
+my_bearthday = datetime.datetime.strptime(date_of_birth, '%d/%m/%Y')
 print('')
-print('\n\t My Birthday: ', my_brithday)
+print('\n\t My Birthday: ', my_bearthday )
 
-print('\n\t Type: ', type(my_brithday))
+print('\n\t Type: ', type(my_bearthday))

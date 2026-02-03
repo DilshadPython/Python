@@ -2,7 +2,7 @@ import pytz
 import datetime
 
 
-# To run this file use python3 pytz_datetime.py
+# To run this file use python3 pytz_datetime.py need to install pip install pytz
 
 date_time = datetime.datetime(2017, 10, 21, 19, 18, 56, tzinfo=pytz.UTC)
 
