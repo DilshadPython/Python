@@ -6,7 +6,7 @@ import pytz
 
 eu_time = datetime.datetime.now(tz=pytz.timezone('Europe/Berlin'))
 
-print(eu_time.isoformat())
+print('\n\t Iso format: ', eu_time.isoformat())
 
 print('\n ===============')
 print('\n Convert datetime to string style: ', eu_time.strftime('%B %d, %Y'))
