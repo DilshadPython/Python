@@ -8,6 +8,6 @@ def read_data(fil):
 
 
 fil = tempfile.TemporaryFile()
-fil.write(b'Some temproraly data')  # binary string
+fil.write(b'Some temporarily data')  # binary string
 
 read_data(fil)

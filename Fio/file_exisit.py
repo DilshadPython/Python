@@ -7,10 +7,10 @@ enter_file = input('Enter file name: ')
 try:
 	file_handle = open(enter_file)
 except:
-	print('The file can not be open and not exisit.', enter_file)
+	print('The file can not be open and not exist.', enter_file)
 	'''
 	we have to add quit function otherwise for loop will continue and display Traceback
-	That means stoped Traceback
+	That means stopped Traceback
 	'''
 	quit()
 
