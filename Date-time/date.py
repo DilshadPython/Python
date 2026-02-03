@@ -1,6 +1,9 @@
 import datetime
 
-print(dir(datetime))
+# print(dir(datetime))
+
+for x in dir(datetime):
+    print('\n\t: ', x)
 
 # output
 '''
