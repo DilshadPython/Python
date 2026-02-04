@@ -1,11 +1,11 @@
 import csv
 
 '''
-	to saperate value by using a field in csv file use delilmiter by ,
+	to separate value by using a field in csv file use delimiter by ,
 
 '''
 
-with open('property-data.csv', 'rt') as csvfile:
+with open('csv/property-data.csv', 'rt') as csvfile:
     spamreader = csv.reader(csvfile)
     # next read the 0 index first which is Address on index 6 but not printed
     # out jump to next line

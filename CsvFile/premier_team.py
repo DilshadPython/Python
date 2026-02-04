@@ -22,10 +22,10 @@ teams = [
     'West Bromwich Albion',
 ]
 
-with open('output.txt', 'w') as f:
+with open('txtfile/output.txt', 'w') as f:
     for team in teams:
         print(team, file=f)
 
-with open('output.txt', 'a') as f:
+with open('txtfile/output.txt', 'a') as f:
     print('=' * 30, file=f)
     print('There are 20 teams in the file.', file=f)

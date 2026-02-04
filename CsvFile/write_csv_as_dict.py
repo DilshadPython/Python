@@ -1,11 +1,11 @@
 import csv
 
 '''
-	to saperate value by using a field in csv file use delilmiter by ,
+	to separate value by using a field in csv file use delimiter by ,
 
 '''
 
-with open('property-data.csv', 'r') as csvfile:
+with open('csv/property-data.csv', 'r') as csvfile:
     csv_file_to_read = csv.DictReader(csvfile)
 
     with open('created/new_csv_to_write.csv', 'w') as csv_to_write:

@@ -1,7 +1,7 @@
 import csv
 
 '''
-	to saperate value by using a field in csv file use delilmiter by ,
+	to separate value by using a field in csv file use delimiter by ,
 
 '''
 

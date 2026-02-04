@@ -16,13 +16,13 @@ print(dir(csv))
 '''
 # We will use excel function read and write
 
-csvfile = open('google_stock_data.csv', newline='')
+csvfile = open('csv/google_stock_data.csv', newline='')
 reader = csv.reader(csvfile)
 
 # we read the header first
 header = next(reader)
 
-read the body
+# read the body
 body = [row for row in reader]
 
 print(header)

@@ -16,13 +16,13 @@ print(dir(csv))
 '''
 # We will use excel function read and write
 
-csvfile = open('google_stock_data.csv', newline='')
+csvfile = open('csv/google_stock_data.csv', newline='')
 reader = csv.reader(csvfile)
 
 # we read the header first
 header = next(reader)
 
-print(' We need to find a solution how to saperate date float and int in the body')
+print(' We need to find a solution how to separate date float and int in the body')
 
 
 print(50 * '##')
@@ -46,7 +46,7 @@ for row in reader:
 print(data[0])
 
 # stored data daily
-new_file = ('google_output.csv')
+new_file = ('csv/google_output.csv')
 
 file = open(new_file, 'w')
 writer = csv.writer(file)

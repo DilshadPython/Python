@@ -1,11 +1,11 @@
 import csv
 
 '''
-	to saperate value by using a field in csv file use delilmiter by ,
+	to separate value by using a field in csv file use delimiter by ,
 
 '''
 
-with open('property-data.csv', 'rt') as csvfile:
+with open('csv/property-data.csv', 'rt') as csvfile:
     spamreader = csv.reader(csvfile)
 
     # we rewrite the file to the new csv file separate via #

@@ -1,8 +1,9 @@
 
 try:
-    with open('file_not_exisit.txt') as f:
+    with open('txtfile/file_not_exisit.txt') as f:
         text = f.read()
 except FileNotFoundError:
     text = None
+    print('\n\tFile Not Exist')
 
-print(text)
+print('\t',text)

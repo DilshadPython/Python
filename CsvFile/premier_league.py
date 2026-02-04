@@ -22,6 +22,6 @@ teams = [
     'West Bromwich Albion',
 ]
 
-with open('premier.txt', 'w') as f:
+with open('txtfile/premier.txt', 'w') as f:
     for team in teams:
         print(team, file=f)

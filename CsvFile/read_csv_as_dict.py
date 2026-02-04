@@ -5,7 +5,7 @@ import csv
 
 '''
 
-with open('property-data.csv', 'r') as csvfile:
+with open('csv/property-data.csv', 'r') as csvfile:
     spamreader = csv.DictReader(csvfile)
 
     for row in spamreader:

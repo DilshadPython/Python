@@ -22,7 +22,7 @@ teams = [
     'West Bromwich Albion',
 ]
 
-with open('teams.txt', 'w') as f:
+with open('txtfile/teams.txt', 'w') as f:
     for team in teams:
         f.write(team)
-        f.write('\t')
+        f.write('\n\t')
