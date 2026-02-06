@@ -5,7 +5,7 @@ import csv
 
 '''
 
-with open('csv/property-data.csv', 'rt') as csvfile:
+with open('csv/property_data.csv', 'rt') as csvfile:
     spamreader = csv.reader(csvfile)
     # next read the 0 index first which is Address on index 6 but not printed
     # out jump to next line
