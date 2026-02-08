@@ -23,18 +23,40 @@ Executing standalone Python scripts, e.g., example.py.
 3. uv remove --script: Remove a dependency from a script.
 See the guide on running scripts to get started.
 
-Projects
-Creating and working on Python projects, i.e., with a pyproject.toml.
+uv pip list
+Package           Version
+----------------- -----------
+contourpy         1.3.3
+cycler            0.12.1
+fonttools         4.61.1
+joblib            1.5.3
+kiwisolver        1.4.9
+matplotlib        3.10.8
+matplotlib-inline 0.2.1
+numpy             2.4.2
+packaging         26.0
+pandas            3.0.0
+pillow            12.1.0
+pyparsing         3.3.2
+python-dateutil   2.9.0.post0
+scikit-learn      1.8.0
+scipy             1.17.0
+six               1.17.0
+threadpoolctl     3.6.0
+traitlets         5.14.3
 
-* uv init: Create a new Python project.
-* uv add: Add a dependency to the project.
-* uv remove: Remove a dependency from the project.
-* uv sync: Sync the project's dependencies with the environment.
-* uv lock: Create a lockfile for the project's dependencies.
-* uv run: Run a command in the project environment.
-* uv tree: View the dependency tree for the project.
-* uv build: Build the project into distribution archives.
-* uv publish: Publish the project to a package index.
+
+1. Projects
+Creating and working on Python projects, i.e., with a pyproject.toml.
+uv init: Create a new Python project.
+uv add: Add a dependency to the project.
+uv remove: Remove a dependency from the project.
+uv sync: Sync the project's dependencies with the environment.
+uv lock: Create a lockfile for the project's dependencies.
+uv run: Run a command in the project environment.
+uv tree: View the dependency tree for the project.
+uv build: Build the project into distribution archives.
+uv publish: Publish the project to a package index.
 See the guide on projects to get started.
 
 Tools

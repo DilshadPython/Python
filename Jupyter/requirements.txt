@@ -1,0 +1,26 @@
+jupyter v0.1.0
+├── matplotlib v3.10.8
+│   ├── contourpy v1.3.3
+│   │   └── numpy v2.4.2
+│   ├── cycler v0.12.1
+│   ├── fonttools v4.61.1
+│   ├── kiwisolver v1.4.9
+│   ├── numpy v2.4.2
+│   ├── packaging v26.0
+│   ├── pillow v12.1.0
+│   ├── pyparsing v3.3.2
+│   └── python-dateutil v2.9.0.post0
+│       └── six v1.17.0
+├── matplotlib-inline v0.2.1
+│   └── traitlets v5.14.3
+├── numpy v2.4.2
+├── pandas v3.0.0
+│   ├── numpy v2.4.2
+│   └── python-dateutil v2.9.0.post0 (*)
+└── scikit-learn v1.8.0
+    ├── joblib v1.5.3
+    ├── numpy v2.4.2
+    ├── scipy v1.17.0
+    │   └── numpy v2.4.2
+    └── threadpoolctl v3.6.0
+(*) Package tree already displayed
