@@ -9,5 +9,7 @@ dependencies = [
     "matplotlib-inline>=0.2.1",
     "numpy>=2.4.2",
     "pandas>=3.0.0",
+    "pytz>=2025.2",
     "scikit-learn>=1.8.0",
+    "tzdata>=2025.3",
 ]

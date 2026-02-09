@@ -45,6 +45,9 @@ six               1.17.0
 threadpoolctl     3.6.0
 traitlets         5.14.3
 
+# if you run jupyter notebook with uv run:
+uv run --with jupyter jupyter lab
+
 
 1. Projects
 Creating and working on Python projects, i.e., with a pyproject.toml.
