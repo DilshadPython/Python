@@ -39,6 +39,8 @@ for row in reader:
     volume = int(row[5])
     adj_close = float(row[6])
 
+    print('\n\t row: ', row)
+
     # now we add all to the empty list created before the for loop
     data.append([date, open_price, high, low, close, volume, adj_close])
 
@@ -52,6 +54,7 @@ file = open(new_file, 'w')
 writer = csv.writer(file)
 writer.writerow(['Date', 'Return'])
 
+
 for x in range(len(data) - 1):
     today_row = data[x]
     today_date = today_row[0]
@@ -62,3 +65,5 @@ for x in range(len(data) - 1):
     daily_return = (today_price - yesterday_price) / yesterday_price
     formatted_date = today_date.strftime('%m/%d/%Y')
     writer.writerow([formatted_date, '\t\t', daily_return])
+
+    print('\t Date:', formatted_date)
