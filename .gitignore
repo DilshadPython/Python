@@ -21,6 +21,10 @@ __pycache__/
 *.py[cod]
 *$py.class
 
+# CSV
+.~lock.details.csv#
+.~lock.*
+
 
 # C extensions
 *.so
