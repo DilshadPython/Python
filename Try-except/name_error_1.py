@@ -7,6 +7,6 @@ try:
 except TypeError as t:
     print('Running except ..............')
     print('\nNameError a not define ')
-
+# we add NameError to execute the error from line 4
 except NameError as n:
     print('This is Name error triggered')

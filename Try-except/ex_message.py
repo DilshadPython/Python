@@ -20,4 +20,4 @@ class SomeError(Exception):
 raise SomeError
 
 # here we call with an args
-raise SomeError("Hey, we have a problem!")
+# raise SomeError("Hey, we have a problem!")

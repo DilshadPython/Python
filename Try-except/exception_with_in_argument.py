@@ -1,11 +1,12 @@
+# return an int 18 at line 12
 def temp_convert(var):
     try:
         return int(var)
-    except ValueError, Argument:
-        print('The Argument does not contain numbers\n', Argument)
-# Now we call the above function here
+    except ValueError as argument:
+        print('\n\tThe argument does not contain numbers >>', argument)
+# Now we call the above function here with string
 temp_convert('adb')
 
 print('\n')
 
-print('This is int: ', temp_convert(18))
+print('\tThis is int: ', temp_convert(18))
