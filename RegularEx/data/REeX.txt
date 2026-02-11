@@ -26,7 +26,7 @@ $ matches the end of the string just before the newline at the end of the string
 
 | means or
 A|B either A or B
-(...) a group
+(...) a group example (www) or (https)
 (?:...) mom-capturing version
 
 re.IGNORECASE  = This is use when the user enter uppercase or lowercase will ignored and accept

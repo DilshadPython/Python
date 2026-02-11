@@ -52,3 +52,6 @@ if re.search(r"^(\w|\s)+@\w+\.com$", email):
 # . any char
 # time = 8.55
 start ---> q1 ----@----> q2
+
+# findall() return matches objects with extra functionality
+# finditer()
