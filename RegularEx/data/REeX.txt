@@ -2,6 +2,9 @@ https://docs.python.org/3/library/re.html
 
 https://www.w3schools.com/python/python_regex.asp
 
+{5} Exact number
+{5,9} Range of Numbers (minimum, Maximum)
+# pattern = re.compile(r'\d{5}\d{5}\d{7}')
 . any character except a newline (any characters uppercase or lowercase except newline)
 * 0 or more repetitions (any number from 0 to whatever enter)
 + 1 or more repetitions (number from 1 to whatever enter)

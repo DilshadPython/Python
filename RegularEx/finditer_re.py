@@ -25,6 +25,28 @@ Miss Georgina
 
 line = 'Parking tickets and enforcement. Parking fines and penalty charge notices PCNs'
 
+not_some_txt = '''
+Hi Haliluia
+
+. ^ $ ! £ % & * ( ) + = - # ~ @ $ 
+
+teach-cloud.net
+
+Mr Smith
+Mrs Trump
+Ms Claudia
+Miss Georgina
+
+cat
+bat
+mat
+pat
+sat
+jat
+wat
+
+'''
+
 # words = input('Enter words: ')
 # pattern = re.compile(r'teach-cloud\.net')
 # pattern = re.compile(r'\Dt')
@@ -32,10 +54,15 @@ pattern = re.compile(r'\W')
 # pattern = re.compile(r'\d\d\d')
 pattern = re.compile(r'\d\d\d.\d\d\d')
 
+# display all end with at expect theis one start with b
+pattern = re.compile(r'[^b]at')
+
 matches = pattern.finditer(text_to_find)
 
-# for match in matches:
-#     print('\n\t', match)
+matches = pattern.finditer(not_some_txt)
+
+for match in matches:
+    print('\n\t', match)
 
 
 with open('data/REeX.txt', 'r', encoding='utf-8') as f:
