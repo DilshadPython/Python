@@ -7,3 +7,10 @@ if "," in name:
     name = f"{fname} {lname}"
 
 print(f"Your name is, {name}")
+
+# here we jump one tab forward
+print('\n\tTab')
+
+# when we add r (regular Expression) the tab not work in the print
+print(r'\n\tTab')
+
