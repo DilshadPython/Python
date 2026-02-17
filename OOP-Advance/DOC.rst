@@ -38,3 +38,8 @@ __slots__ can define allowable attributes
  - Use the 'C3' MRO (method resolution order)
  - Support 'descriptors'
  - Are the only style of class in Python3
+
+# Regular method, class method and static method
+    - Regular method use self as first arguments
+    - class method use cls as first arguments
+    - Static method don't use any of self or cls as first arguments
