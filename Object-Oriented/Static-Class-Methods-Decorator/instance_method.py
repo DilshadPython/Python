@@ -15,7 +15,7 @@ class InstanceCounter(object):
         self.val = new_val
 
     '''
-    This is the static method working independecy with the class or the instance
+    This is the static method working independence with the class or the instance
     '''
     def get_val(self):
         return self.val
