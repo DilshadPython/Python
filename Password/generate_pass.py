@@ -6,11 +6,11 @@ lower_char = 'abcdefghijklmnopqrstuvwxyz'
 upper_char = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
 num = '0123456789'
 symbole = '!"£$%^&*()-_=+~#@?\\<>/[]}{'
-all_together = lower_char + upper_char + num + symbole
+mix_together = lower_char + upper_char + num + symbole
 
-length = 24
+length = int(input('Enter length of password: '))
 
-password = ''.join(random.sample(all_together, length))
+password = ''.join(random.sample(mix_together, length))
 
 print('Enter new password: ', password)
 f = open("gmail.txt", "a")
