@@ -38,9 +38,9 @@ print('We will display only 5 items until index 4: ')
 print(numbers[0:4])
 
 
-# print()
-# print(numbers)
-# print('How to randomise the Array: ')
-# for num in numbers:
-# 	num = random.random()
-# 	print(num)
+print()
+print(numbers)
+print('How to randomise the Array: ')
+for num in numbers:
+	num = random.random()
+	print(num)
