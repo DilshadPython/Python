@@ -15,7 +15,7 @@ mylist.append(4)
 print(mylist)
 
 '''
-now we adding a number in knowen index: add number 88 to index 3 which number 9 in the list
+now we adding a number in known index: add number 88 to index 3 which number 9 in the list
 What is happening: will add the number 88 and replace the 9 to 88 when you print there is no 9
 '''
 mylist[3] = 88
