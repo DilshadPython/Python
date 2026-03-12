@@ -4,7 +4,7 @@ It has O(word) basically linear running time  complexity as far as the number of
 like radar, madam, dad, 404, 101
 example radar, madam, dad, 101, 404. the function to check before we swap the word, is_palindrome()
 '''
-def is_palindrom(word):
+def is_palindrome(word):
     real_word = word
     # we will follow the swaping function as another way
 
@@ -36,7 +36,7 @@ def reverse(data):
 
 if __name__ == '__main__':
     word = 'radar'
-    print(is_palindrom(word))
+    print(is_palindrome(word))
     # or
     # print(is_palindrom('python'))
 
