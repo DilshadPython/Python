@@ -11,3 +11,12 @@ hint: See the 'Note about fast-forwards' in 'git push --help' for details.
 
 # Solution
 git push -f -u origin main
+
+# Unstaged changes error or bugs
+git pull
+error: cannot pull with rebase: You have unstaged changes.
+error: Please commit or stash them.
+
+# Solution
+
+git pull --rebase --autostash
