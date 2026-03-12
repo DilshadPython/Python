@@ -2,6 +2,7 @@
 '''
 It has O(word) basically linear running time  complexity as far as the number of letter in the string is concern
 like radar, madam, dad, 404, 101
+example radar, madam, dad, 101, 404. the function to check before we swap the word, is_palindrome()
 '''
 def is_palindrom(word):
     real_word = word
