@@ -1,4 +1,4 @@
-# This is called count controll loop
+# This is called count control loop
 
 balance = 800
 rate = 1.05

@@ -1,4 +1,4 @@
-# This is called event controll loop
+# This is called event control loop
 
 average = 0.0
 total = 0

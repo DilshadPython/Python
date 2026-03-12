@@ -1,4 +1,4 @@
-# This is called count controll loop
+# This is called count control loop
 
 total = 0
 num = 1
