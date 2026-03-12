@@ -1,6 +1,7 @@
 # we create palindrome another way like in python itself
 '''
 It has O(word) basically linear running time  complexity as far as the number of letter in the string is concern
+like radar, madam, dad, 404, 101
 '''
 def is_palindrom(word):
     real_word = word
@@ -9,8 +10,9 @@ def is_palindrom(word):
     reversed_word = reverse(word)
 
     if real_word == reversed_word:
+        # if is correct
         return True
-
+    # else return
     return False
 
 # O(N) linear running time where N is a number of letters in the string word N=len(word)
@@ -22,7 +24,7 @@ def reverse(data):
 
     end_index = len(data) - 1
 
-    while start_index > end_index:
+    while start_index < end_index:
 
         data[start_index], data[end_index] = data[end_index], data[start_index]
         start_index += 1
@@ -32,7 +34,8 @@ def reverse(data):
     return ''.join(data)
 
 if __name__ == '__main__':
-    print(is_palindrom('python'))
+    word = 'radar'
+    print(is_palindrom(word))
     # or
     # print(is_palindrom('python'))
 
