@@ -1,9 +1,10 @@
 # we create palindrome another way like in python itself
 '''
 It has O(word) basically linear running time  complexity as far as the number of letter in the string is concern
-like radar, madam, dad, 404, 101
-example radar, madam, dad, 101, 404. the function to check before we swap the word, is_palindrome()
+like radar, madam, dad, 404, 101, level rotator
+The function to check before we swap the word, is_palindrome()
 '''
+
 def is_palindrome(word):
     real_word = word
     # we will follow the swaping function as another way
@@ -33,11 +34,9 @@ def reverse(data):
 
     # transform the list of letters into a string
     return ''.join(data)
-
+# Examples: radar, madam, dad, 404, 101, level rotator, redder, otto, eye
 if __name__ == '__main__':
-    word = 'radar'
+    word = str(input('Enter a word or numbers: '))
     print(is_palindrome(word))
-    # or
-    # print(is_palindrom('python'))
 
 
