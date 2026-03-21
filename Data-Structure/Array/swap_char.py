@@ -16,6 +16,6 @@ if __name__ == '__main__':
     characters = ['A', 'B', 'C', 'D', 'E', 'F', 'aa', 'bb', 'cc', 'dd', 'ee', 'ff']
     print(characters, '\n')
     # swapped
-    reverse_index(characters)
+    swap_index(characters)
     # display
     print(characters)
