@@ -16,7 +16,7 @@ for x in range(0, len(words)):
 		word_dict[words[x]] = 1
 
 
-print('\nWord list and count: \n')
+print('\nWord listed alphabetic and counted: \n')
 
 for key in word_dict.keys():
 	print(key, word_dict[key])

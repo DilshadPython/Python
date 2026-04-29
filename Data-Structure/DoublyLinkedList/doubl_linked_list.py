@@ -50,7 +50,7 @@ if __name__ == '__main__':
     linked_list.append(4)
     linked_list.append(6)
 
-    # outout must be 1 2 3
+    # output must be 1 2 3
     linked_list.traverse_front()
     print('============')
     # output must be 3 2 1
