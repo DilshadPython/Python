@@ -1,6 +1,6 @@
 Num = range(1, 103)
 
-# What it does loop throw and dispay all even number 
+# What it does loop throw and display all even numbers
 # if number mode by 2 == 0 than display even numbers
 ListNum = [x for x in Num if x % 2 == 0]
 
