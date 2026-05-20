@@ -1,11 +1,11 @@
 '''
-The abc module module enables the reaction of abstract base class
+The abc module enables the reaction of an abstract base class
 '''
 import abc
 
 '''
 Create abstract class which can't create an object to access subclass
-The abstract class not designed to contruct instance but can be subclassed
+The abstract class not designed to contract instance but can be subclassed
 by regular classes
 '''
 
