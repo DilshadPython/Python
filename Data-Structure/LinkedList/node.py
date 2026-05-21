@@ -2,7 +2,6 @@ class Node:
     def __init__(self, data):
         self.data = data
         self.next_node = None
-
     def __repr__(self):
         return str(self.data)
 
@@ -11,7 +10,7 @@ class LinkedList:
         # The head node in the linkedlist call first node, that we can access this node exclusively
         self.head = None
         self.num_of_nodes = 0
-
+        
     # This is 0(1) constant running time
     def insert_start(self, data):
         self.num_of_nodes += 1

@@ -13,7 +13,7 @@ class LinkedList:
 
     def append(self, data, new_node):
         self.size += 1
-        new_node.next_node = self.head
+        new_node.next_node = self.size
         self.new_node = Node(data)
 
         if not self.head:
@@ -29,7 +29,7 @@ if __name__ == "__main__":
     now = time.time()
 
     for i in range(100000):
-        linked_list.append(0, i)
+        linked_list.append(1, i)
 
     print('Appending time into linked list is %ss' % str(time.time() - now))
 

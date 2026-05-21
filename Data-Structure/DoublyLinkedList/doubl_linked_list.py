@@ -1,4 +1,3 @@
-
 class Node:
 
     def __init__(self, data):
@@ -45,10 +44,13 @@ class DoublyLinkedList:
 if __name__ == '__main__':
     linked_list = DoublyLinkedList()
 
-    # item = input('Enter item: ')
-    linked_list.append(2)
-    linked_list.append(4)
-    linked_list.append(6)
+    num = input('Enter a number: ')
+
+    for num in linked_list:
+        linked_list.append(num)
+    # linked_list.append(2)
+    # linked_list.append(4)
+    # linked_list.append(6)
 
     # output must be 1 2 3
     linked_list.traverse_front()
