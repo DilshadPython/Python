@@ -11,4 +11,4 @@ mylink = "https://github.com/DilshadGit/reactjs/"
 qr_code.add_data(mylink)
 qr_code.make(fit=True)
 pic = qr_code.make_image(fill="black", back_color="white")
-pic.save("link_git_qr.png")
+pic.save("link_Dill_qr.png")
