@@ -1,21 +1,51 @@
-name = input('Please enter your full name. ')
+"""
+Demonstration of string stripping, title casing, f-strings, and print end parameter.
+"""
 
-# remove all empty or whitespace around the message
-name = name.strip()
-name = name.title()
+# Notices:
+# 1. strip() removes all leading and trailing whitespace from the string.
+# 2. Without the 'f' prefix, print('Hi, {name}') outputs '{name}' literally as text.
+# 3. Python 3.6+ introduced f-strings (e.g. f"Hi, {name}") for formatted string evaluation.
+# 4. The 'end' parameter in print() specifies what to print at the end instead of the default newline ('\n').
 
-print('Hi, {name}')
 
-print(f"Hi, {name}")
+def demonstrate_strip_and_print(raw_name: str = "   john doe   ") -> None:
+    # -------------------------------------------------------------
+    # 1. Step-by-Step String Cleaning
+    # -------------------------------------------------------------
+    name = raw_name.strip()
+    name = name.title()
 
-print('===============================')
+    # Notice: Standard string literal vs Python 3.6+ f-string
+    print('Literal without f-prefix: Hi, {name}')
+    print(f"Evaluated with f-string:  Hi, {name}")
 
-name = name.strip().title()
+    print('=' * 35)
 
-print(f"Hi, {name}")
+    # -------------------------------------------------------------
+    # 2. Method Chaining (Clean Code Style)
+    # -------------------------------------------------------------
+    # Notice: Chaining strip() and title() in one step
+    name = raw_name.strip().title()
 
-# end stop new line
-print(f"Hi, {name}", end=' << ')
+    # [Old Version / str.format()]
+    # print('Hi, {}'.format(name))
 
-print('Azad', ' ', end='')
-print('Tome')
+    # [New Version / Python 3.6+ f-string]
+    print(f"Hi, {name}")
+
+    # -------------------------------------------------------------
+    # 3. Using the 'end' parameter
+    # -------------------------------------------------------------
+    # Notice: 'end' parameter suppresses the default newline
+    print(f"Hi, {name}", end=' << ')
+    print('Azad', ' ', end='')
+    print('Tome')
+
+
+if __name__ == "__main__":
+    user_input = input("Please enter your full name: ")
+    if user_input.strip():
+        demonstrate_strip_and_print(user_input)
+    else:
+        demonstrate_strip_and_print()
