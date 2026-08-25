@@ -1,49 +1,85 @@
-num1 = float(input('Enter num1: '))
-num2 = float(input('Enter num2: '))
+"""
+Floating Point Operations & Constants (Python 3.3 to Python 3.13 Compatible)
 
-print('Sum: ', num1 + num2)
-print('Sub: ', num1 - num2)
-print('Multi: ', num1 * num2)
-print('Division: ', num1 / num2)
-print('Division with no reminder only digit number: ', num1 // num2)
-print('Power: ', num1 ** num2)
-print('Moduls reminder: ', num1 % num2)
+Python Version Notes:
+- Python 3.3 - 3.13 & Python 2.7: IEEE 754 double-precision floats.
+- Special float literals: float('nan'), float('inf'), float('-inf'), scientific notation (3e8).
+- Math module functions `math.isnan()` and `math.isinf()` check special float conditions.
+"""
 
-print('\n===========================')
+from __future__ import print_function, division
+import math
 
-a = 3e8 # this bring 8 time 0 to front of 3 and change to float
-print(a)
-print(type(a))
+try:
+    get_input = raw_input  # Python 2.7
+except NameError:
+    get_input = input      # Python 3.3 - 3.13
 
-b = float(9)
-print(b)
-print(type(b))
 
-c = float('2548')
-print(c)
-print(type(c))
+def float_operations(num1, num2):
+    """
+    Executes standard floating point arithmetic operations.
+    Returns a dictionary of float operation results.
+    """
+    div_val = (num1 / num2) if num2 != 0.0 else float('inf')
+    floor_div = (num1 // num2) if num2 != 0.0 else float('inf')
+    mod_val = (num1 % num2) if num2 != 0.0 else float('nan')
 
-d = float('nan')
-print(d)
-print(type(d))
+    return {
+        "sum": num1 + num2,
+        "difference": num1 - num2,
+        "multiplication": num1 * num2,
+        "division": div_val,
+        "floor_division": floor_div,
+        "power": num1 ** num2,
+        "modulus": mod_val
+    }
 
-e = float('inf')
-print(e)
-print(type(e))
 
-f = float('-inf')
-print(f)
-print(type(f))
+def inspect_special_floats():
+    """Generates and returns special floating point representation values."""
+    return {
+        "scientific_3e8": 3e8,
+        "float_9": float(9),
+        "from_str_2548": float('2548'),
+        "nan": float('nan'),
+        "inf": float('inf'),
+        "neg_inf": float('-inf'),
+        "scientific_5e3": 5e3,
+        "scientific_12e9": 12e9,
+        "scientific_348e4": 348e4
+    }
 
-print('\n===========')
-x = 5e3
-print(x)
-print(type(x))
-y = 12e9
-print(y)
-print(type(y))
-z = 348e4
-print(z)
-print(type(z))
+
+def main():
+    """Interactive execution and demonstration of float features."""
+    try:
+        n1_str = get_input('Enter num1: ')
+        n2_str = get_input('Enter num2: ')
+        n1 = float(n1_str)
+        n2 = float(n2_str)
+        
+        ops = float_operations(n1, n2)
+        print('Sum: ', ops["sum"])
+        print('Sub: ', ops["difference"])
+        print('Multi: ', ops["multiplication"])
+        print('Division: ', ops["division"])
+        print('Division with no reminder only digit number: ', ops["floor_division"])
+        print('Power: ', ops["power"])
+        print('Modulus reminder: ', ops["modulus"])
+    except (ValueError, TypeError):
+        print("Using default values (10.5, 2.5) for interactive float ops:")
+        ops = float_operations(10.5, 2.5)
+        print('Sum: ', ops["sum"])
+
+    print('\n===========================')
+    specials = inspect_special_floats()
+    for key, val in specials.items():
+        print("{0}: {1} (type: {2})".format(key, val, type(val).__name__))
+
+
+if __name__ == '__main__':
+    main()
+
 
 
