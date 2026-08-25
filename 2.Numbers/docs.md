@@ -354,7 +354,7 @@ A unified test suite (`test_numbers.py`) has been written using Python's standar
 
 ### Running the Unit Tests:
 ```bash
-python -m unittest discover -s /home/monika/PycharmProjects/Devel/Python/2.Numbers -p "test_*.py"
+python -m unittest discover -s ~/PycharmProjects/Devel/Python/2.Numbers -p "test_*.py"
 ```
 
 ### Test Coverage Summary:
