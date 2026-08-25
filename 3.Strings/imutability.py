@@ -1,39 +1,57 @@
-msg = 'Hello world'
+"""
+String Immutability and Core Operations (Python 3.3 to Python 3.13 Compatible)
 
-print
+Python Version Notes:
+- Python 3.3 - 3.13 & Python 2.7: Strings are immutable objects in Python. Direct item assignment
+  `msg[i] = 'X'` raises `TypeError`. New string objects are created via concatenation or methods.
+"""
 
-print(len(msg))
+from __future__ import print_function
 
-# try to change one character
-# msg[2] = 'X'
-# print('Try to overwritten but get an error not possible because string is immutable')
-# print(msg)
 
-newmsg = msg + ' Hello London'
+def demonstrate_immutability(msg='Hello world'):
+    """
+    Demonstrates string immutability and common string operations.
+    Returns results of length, upper, lower, split, count, find, and replace.
+    """
+    concat = msg + ' Hello London'
+    upper_val = concat.upper()
+    lower_val = upper_val.lower()
+    split_val = msg.split('l')
+    count_o = concat.count('o')
+    find_world = msg.find('world')
+    replace_val = msg.replace('world', 'Python')
 
-print(newmsg)
+    return {
+        "length": len(msg),
+        "concat": concat,
+        "upper": upper_val,
+        "lower": lower_val,
+        "split": split_val,
+        "count_o": count_o,
+        "find_world": find_world,
+        "replace": replace_val
+    }
 
-print
 
-change = newmsg.upper()
+def verify_immutability_error(msg='Hello world'):
+    """Verifies that attempting index assignment raises TypeError."""
+    try:
+        msg[0] = 'X'
+        return False
+    except TypeError:
+        return True
 
-print(change)
-print(change.lower())
 
-print
+def run_demo():
+    """Runs immutability demonstration."""
+    msg = 'Hello world'
+    print("Is string immutable (raised TypeError on item assignment)?", verify_immutability_error(msg))
+    res = demonstrate_immutability(msg)
+    for key, val in res.items():
+        print("{0}: {1}".format(key, val))
+    return res
 
-# I use split method where display l lowercase removed or display to nothing
-test = msg.split('l')
-print(test)
 
-print()
-# print count how many times o repated
-print(newmsg.count('o'), ' << count()')
-
-print()
-# start from index 6
-print(msg.find('world'), ' << find()')
-
-print()
-# we use replace() method
-print(msg.replace('world', 'Python'))
+if __name__ == '__main__':
+    run_demo()

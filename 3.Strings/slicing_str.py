@@ -1,20 +1,39 @@
-text = 'The gap between writing basic Python code and developing professional-grade systems is far wider than most devs realize.'
+"""
+String Slicing & Substring Extraction (Python 3.3 to Python 3.13 Compatible)
 
-print('Read from beginning until character number 25.\n')
-print(text[:25])
+Python Version Notes:
+- Python 3.3 - 3.13 & Python 2.7: Slicing `str[start:stop:step]` supports positive and negative indices.
+  Out-of-bound indices do not raise `IndexError`; they truncate cleanly.
+"""
 
-print('==========\n')
-print('Read the last 20 character in the text.\n')
-print(text[-20:])
+from __future__ import print_function
 
-print('==========\n')
-print('Remove the last 15 character in the text.\n')
-print(text[:-15])
+DEFAULT_TEXT = 'The gap between writing basic Python code and developing professional-grade systems is far wider than most devs realize.'
 
-print('==========\n')
-print('Ready from character 11 until character 45 from beginning of the line in the text.\n')
-print(text[11:-45])
 
-print('==========\n')
-print('Ready from the end of line character 45 until character 11 from the end of the line in the text.\n')
-print(text[-45:-11])
+def slice_string(text=DEFAULT_TEXT):
+    """
+    Demonstrates positive, negative, and range string slicing.
+    """
+    return {
+        "first_25": text[:25],
+        "last_20": text[-20:],
+        "except_last_15": text[:-15],
+        "range_11_minus45": text[11:-45],
+        "range_minus45_minus11": text[-45:-11]
+    }
+
+
+def run_demo():
+    """Runs string slicing demonstration."""
+    res = slice_string()
+    print("First 25 chars:", res["first_25"])
+    print("Last 20 chars:", res["last_20"])
+    print("Except last 15 chars:", res["except_last_15"])
+    print("Slice [11:-45]:", res["range_11_minus45"])
+    print("Slice [-45:-11]:", res["range_minus45_minus11"])
+    return res
+
+
+if __name__ == '__main__':
+    run_demo()

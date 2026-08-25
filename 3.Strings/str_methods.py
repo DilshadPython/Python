@@ -1,20 +1,39 @@
-msg = 'How many years you have Python experiences?'
+"""
+Common String Methods Inspection (Python 3.3 to Python 3.13 Compatible)
 
-print('The length of the msg is :', len(msg))
+Python Version Notes:
+- Python 3.3 - 3.13 & Python 2.7: `title()`, `isupper()`, `split()`, `replace()`, `find()` operate
+  identically on standard ASCII strings.
+"""
 
-print(msg.upper())
+from __future__ import print_function
 
-print(msg.lower())
 
-print('\n isupper() >> ', msg.isupper())
+def inspect_string_methods(msg='How many years you have Python experiences?'):
+    """
+    Applies and returns common string method evaluations.
+    """
+    return {
+        "length": len(msg),
+        "upper": msg.upper(),
+        "lower": msg.lower(),
+        "isupper": msg.isupper(),
+        "split_comma": msg.split(','),
+        "replace_js": msg.replace('Python', 'JavaScript'),
+        "find_python": msg.find('Python'),
+        "in_case_sensitive": 'Python' in msg,
+        "in_case_insensitive": 'python' in msg,
+        "title": msg.title()
+    }
 
-print('\n split() >> ', msg.split(','))
 
-print('\n replace() >> ', msg.replace('Python', 'JavaScript'))
+def run_demo():
+    """Runs string methods inspection."""
+    res = inspect_string_methods()
+    for key, val in res.items():
+        print("{0}: {1}".format(key, val))
+    return res
 
-print('\n find() >> ', msg.find('Python'), ' find the word Python from index 24 ')
 
-print('\n in >> ', 'Python' in msg)
-print('\n in >> ', 'python' in msg)
-
-print('\n title() >> ', msg.title(), ' << Change all first char of each words to Upper' )
+if __name__ == '__main__':
+    run_demo()
