@@ -1,9 +1,20 @@
-nums = [19, 11, 2, 6, 7, 13, 33]
+"""
+Demonstrates min(), max(), and sum() on numerical lists.
+"""
 
-print(nums)
+def demo_number_stats():
+    nums = [19, 11, 2, 6, 7, 13, 33]
+    print('Numbers:', nums)
 
-print('\n Display the minum number in the list: ', min(nums))
+    min_val = min(nums)
+    max_val = max(nums)
+    total = sum(nums)
 
-print('\n Display the maximum number in the list: ', max(nums))
+    print('Minimum number:', min_val)
+    print('Maximum number:', max_val)
+    print('Sum of numbers:', total)
 
-print('\n Adding all together: ', sum(nums))
+    return min_val, max_val, total
+
+if __name__ == '__main__':
+    demo_number_stats()

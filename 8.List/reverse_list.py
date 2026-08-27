@@ -1,20 +1,25 @@
-foods = ['Milk', 'Bread', 'Cheese', 'Vegitable']
+"""
+Demonstrates in-place sorting and reversing using sort() and reverse() methods.
+"""
 
-print(foods)
+def demo_reversing():
+    # Fixed spelling: Vegetable
+    foods = ['Milk', 'Bread', 'Cheese', 'Vegetable']
+    print('Original foods:', foods)
 
-print('\n - Sorted the list. \n')
-foods.sort()
-print(foods)
+    foods.sort()
+    print('Sorted foods:', foods)
 
-print('\n - Revered the list. \n')
-foods.sort(reverse=True)
-print(foods)
+    foods.sort(reverse=True)
+    print('Reverse sorted foods:', foods)
 
-print('\n')
-team = ['Liverpool', 'Man City', 'Chelsea', 'Tottenham']
+    teams = ['Liverpool', 'Man City', 'Chelsea', 'Tottenham']
+    print('\nOriginal teams:', teams)
 
-print(team)
+    teams.reverse()
+    print('In-place reversed teams:', teams)
 
-print('\n - Reverse the team. \n')
-team.reverse()
-print(team)
+    return foods, teams
+
+if __name__ == '__main__':
+    demo_reversing()

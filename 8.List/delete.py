@@ -1,11 +1,20 @@
+"""
+Demonstrates removing items or slices from a list using the 'del' statement.
+"""
 
-numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 44, 15, 6, 0]
+def demo_delete():
+    data = [10, 20, 30, 40, 50, 60]
+    print('Original data:', data)
 
-del numbers[3]
-print(numbers)
+    # Delete element at index 2 (30)
+    del data[2]
+    print('After del data[2]:', data)
 
-del numbers[3]
-print(numbers)
+    # Delete slice from index 1 to 3
+    del data[1:3]
+    print('After del data[1:3]:', data)
 
-del numbers[7]
-print(numbers)
+    return data
+
+if __name__ == '__main__':
+    demo_delete()

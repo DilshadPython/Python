@@ -1,21 +1,25 @@
-def take(num, lyst):
-    rlist = []
-    for i in range(0, num):
-        rlist.append(lyst[i])
-    return rlist
+"""
+Demonstrates combination of drop (pop/remove) and add (append/insert) methods.
+"""
 
+def demo_drop_add():
+    queue = ['Customer 1', 'Customer 2', 'Customer 3']
+    print('Initial queue:', queue)
 
-def drop(num, lyst):
-    rlist = []
-    for i in range(num, len(lyst)):
-        rlist.append(lyst[i])
-    return rlist
+    # Remove customer by name
+    queue.remove('Customer 2')
+    print('After remove("Customer 2"):', queue)
 
-names = ['Dilshad', 'Nick', 'Sam', 'David', 'Tim', 'Geoprg', 'Robert']
-somenames = take(3, names)
-print(somenames)
-somenames = take(-3, names)
-print(somenames)
+    # Add VIP customer at head of line
+    queue.insert(0, 'VIP Customer')
+    print('After insert(0, "VIP Customer"):', queue)
 
-names = drop(3, names)
-print(names)
+    # Serve first customer (pop at index 0)
+    served = queue.pop(0)
+    print(f'Served customer: {served}')
+    print('Remaining queue:', queue)
+
+    return queue
+
+if __name__ == '__main__':
+    demo_drop_add()

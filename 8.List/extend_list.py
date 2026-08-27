@@ -1,8 +1,22 @@
-lang_1 = ['C', 'C++', 'Java', 'Python']
-lang_2 = ['C#', 'C', 'C++', 'Ruby']
+"""
+Demonstrates difference between append() and extend() on Python lists.
+"""
 
-lang_1.extend(lang_2)
-print(lang_1)
+def demo_extend():
+    list_a = [1, 2, 3]
+    list_b = [4, 5]
 
-lang_1.insert(0, 'JavaScript')
-print(lang_1)
+    # append adds the argument as a SINGLE nested element
+    appended = list_a.copy()
+    appended.append(list_b)
+    print('Result of append([4, 5]):', appended)
+
+    # extend unpacks elements from the iterable argument
+    extended = list_a.copy()
+    extended.extend(list_b)
+    print('Result of extend([4, 5]):', extended)
+
+    return appended, extended
+
+if __name__ == '__main__':
+    demo_extend()

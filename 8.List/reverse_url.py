@@ -1,14 +1,25 @@
+"""
+Demonstrates sequence reversal techniques: slicing vs reversed() built-in.
+"""
 
-myweb = 'https//google.co.uk'
+def demo_reverse_url():
+    myweb = 'https://google.co.uk'
+    print('Original string:', myweb)
 
-print(myweb[::])
+    # Slicing reversal creates a new string
+    reversed_str = myweb[::-1]
+    print('Reversed via [::-1]:', reversed_str)
 
-print()
-print(myweb[::-1])
-print(myweb[::-2])
+    # reversed() returns a reverse iterator object
+    rev_iterator = reversed(myweb)
+    rev_list = list(reversed(myweb))
+    rev_tuple = tuple(reversed(myweb))
 
-print()
-print(reversed(myweb), ' <<<<')
-print(list(reversed(myweb)), '<< list')
-print(str(reversed(myweb)), '<< string')
-print(tuple(reversed(myweb)), '<< tuple')
+    print('reversed() iterator:', rev_iterator)
+    print('as list:', rev_list)
+    print('as tuple:', rev_tuple)
+
+    return reversed_str, rev_list
+
+if __name__ == '__main__':
+    demo_reverse_url()

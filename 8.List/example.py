@@ -1,12 +1,15 @@
-a = [19, 2, 3, 17, 5, 6, 15, 8, 9, 10, 99, 12]
+"""
+Demonstrates basic list creation, length evaluation, and element access.
+"""
 
-b = []
+def demo_basic():
+    sample_list = ['python', 3.12, True, [1, 2]]
+    print('Sample list:', sample_list)
+    print('Length of list:', len(sample_list))
+    print('First element:', sample_list[0])
+    print('Last element:', sample_list[-1])
 
-for x in a:
-    if len(list(a)) == 1:
-        break
-    else:
-        b += [a.pop(0)]
+    return sample_list
 
-print(a)
-print(b)
+if __name__ == '__main__':
+    demo_basic()

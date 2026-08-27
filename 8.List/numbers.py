@@ -1,37 +1,20 @@
-number = [6, 9, 12, 15, 18, 21, 24, 28]
+"""
+Demonstrates reverse slicing [::-1] and statistical functions on lists.
+"""
 
-print(number)
+def demo_numeric_operations():
+    numbers = [6, 9, 12, 15, 18, 21, 24, 28, 31, 34, 38]
+    print('Original numbers:', numbers)
 
-print('--' * 15)
-print(number[::-1])
+    reversed_slice = numbers[::-1]
+    print('Reversed slice:', reversed_slice)
 
-print('--' * 15)
-num = [6, 9, 12, 15, 18, 21, 24, 28, 31, 34, 38]
-print(num)
-print('\n The minimam number is ', min(num))
+    min_val = min(numbers)
+    max_val = max(numbers)
+    total_sum = sum(numbers)
 
-print('\n The maximum number is ', max(num))
+    print(f'Min: {min_val}, Max: {max_val}, Sum: {total_sum}')
+    return reversed_slice, min_val, max_val, total_sum
 
-print('\n The sum of the numberes are ', sum(num))
-
-
-print('--' * 15)
-print(num[5])
-
-print('--' * 15)
-del num[5]
-print(num)
-
-print('--' * 15)
-print(num[5])
-
-print('--' * 15)
-print(' we add 9 with 38 here: ')
-print(num[1] + num[-1])
-
-print('--' * 15)
-print(' We add 34 with 28 here from right side: ')
-print(num[-2] + num[-4])
-
-print('--' * 15)
-print(num[0:-1])
+if __name__ == '__main__':
+    demo_numeric_operations()

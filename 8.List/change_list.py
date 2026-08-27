@@ -1,14 +1,20 @@
-numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 44, 15, 6, 0]
-print(numbers[:])
+"""
+Demonstrates list mutability by modifying elements by index position.
+"""
 
-numbers[0] = 11
-print(numbers[0])
-print(numbers[:])
+def demo_modify_by_index():
+    colors = ['red', 'green', 'blue']
+    print('Before modification:', colors)
 
-numbers[8] = [16]
+    # Modify single element in-place
+    colors[1] = 'yellow'
+    print('After colors[1] = "yellow":', colors)
 
-print(numbers[:])
+    # Modify slice in-place
+    colors[0:2] = ['purple', 'orange']
+    print('After slice modification colors[0:2]:', colors)
 
-numbers[1] = 'HELLO'
-print(numbers[:])
-print(numbers)
+    return colors
+
+if __name__ == '__main__':
+    demo_modify_by_index()

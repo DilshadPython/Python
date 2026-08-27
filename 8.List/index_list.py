@@ -1,25 +1,27 @@
-books = ['Data Science', 'Biology', 'Chimiches',
-         'Python Programming', 'Django Frameworks', 'Designing']
+"""
+Demonstrates finding element positions using list.index() and error handling.
+"""
 
-print(books.index('Python Programming'))
+def demo_index():
+    items = ['apple', 'banana', 'cherry', 'banana', 'date']
+    print('Items:', items)
 
-print('\n - Find the book by boolean. \n')
-print('Chimiches' in books)
+    # Find index of first occurrence of 'banana'
+    idx_banana = items.index('banana')
+    print('Index of "banana":', idx_banana)
 
-# or
+    # Find index within search range [start, end)
+    idx_banana_2 = items.index('banana', 2)
+    print('Index of "banana" starting from index 2:', idx_banana_2)
 
-print('Physics' in books)
-print('\n')
+    # Handling missing item safely
+    search_item = 'fig'
+    if search_item in items:
+        print('Index of fig:', items.index(search_item))
+    else:
+        print(f'"{search_item}" not found in list.')
 
-for item in books:
-    print(item)
+    return idx_banana, idx_banana_2
 
-print('\n - Display the book with numeric. \n')
-
-for num, item in enumerate(books):
-    print(num, item)
-
-print('\n - Display the book with numeric. \n')
-
-for num, item in enumerate(books, start=1):
-    print(num, item)
+if __name__ == '__main__':
+    demo_index()

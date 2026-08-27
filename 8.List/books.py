@@ -1,30 +1,24 @@
+"""
+Demonstrates managing a collection of books using Python list operations.
+"""
 
-library = [
-    'Data Science',
-    'Biology',
-    'Chimiches',
-    'Python Tutorials',
-    'Django projects'
-]
+def manage_books():
+    books = ['Python Crash Course', 'Clean Code', 'Design Patterns']
+    print('Initial books:', books)
 
-print(library[0])
+    # Adding a book
+    books.append('Fluent Python')
+    print('After append:', books)
 
-print('===' * 26)
+    # Sorting alphabetically
+    books.sort()
+    print('Alphabetical order:', books)
 
-# print all from beginning to the end
-print(library[0:])
-print('' * 26)
+    # Checking existence
+    has_clean_code = 'Clean Code' in books
+    print('Is "Clean Code" in collection?:', has_clean_code)
 
-# reverse all books from the list
-print(library[::-1])
+    return books
 
-
-print('***' * 26)
-# print all from beginning to the end
-for b in library:
-    print('From left to right: ', b)
-
-print('+++' * 15)
-# reverse all books from the list
-for b in library.__reversed__():
-    print('From right to left: ', b)
+if __name__ == '__main__':
+    manage_books()

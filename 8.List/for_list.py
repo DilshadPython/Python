@@ -1,12 +1,17 @@
-import random
+"""
+Demonstrates iterating over list elements using standard 'for' loops.
+"""
 
-my_id_num = [
-	num for num in range(18) if num > 0
-]
+def iterate_list():
+    languages = ['Python', 'JavaScript', 'C++', 'Rust']
+    output = []
+    
+    for lang in languages:
+        msg = f'Language: {lang}'
+        print(msg)
+        output.append(msg)
 
-print(random.choices(my_id_num))
+    return output
 
-
-numbers = [random.randint(1, 16) for _ in range(10)]
-
-print(set(numbers)) # remove duplication
+if __name__ == '__main__':
+    iterate_list()

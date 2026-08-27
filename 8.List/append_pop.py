@@ -1,32 +1,27 @@
-mylist = [2, 4, 6, 8]
+"""
+Demonstrates stack operations using list append() and pop() methods in Python.
+"""
 
-print(mylist)
-print
+def demo_append_pop():
+    # Initialize a empty or populated list acting as a LIFO stack
+    items = ['apple', 'banana', 'cherry']
+    print('Initial items:', items)
 
-mylist.append('Some text')
-print(mylist,  ' << Adding message to the list')
+    # Append adds an item to the end of the list (O(1))
+    items.append('orange')
+    print('After append("orange"):', items)
 
-print
+    # Pop without arguments removes and returns the last item (O(1))
+    last_item = items.pop()
+    print(f'Popped last item: {last_item}')
+    print('List after pop():', items)
 
-# pop remove the last element in this case is Some text because we added
-mylist.pop()
-print(mylist)
+    # Pop with index removes and returns item at specified index (O(N))
+    first_item = items.pop(0)
+    print(f'Popped index 0: {first_item}')
+    print('List after pop(0):', items)
 
-print
-mylist.pop()
-print(mylist)
+    return items
 
-print
-newlist = [9, 3, 4, 6, 0, 11, 23]
-print(newlist)
-
-remove_lst = newlist.pop(-1)
-print(remove_lst)
-
-remove_first = newlist.pop(0)
-print(remove_first)
-
-remove_index_num = newlist.pop(3)
-print(remove_index_num)
-
-print(newlist)
+if __name__ == '__main__':
+    demo_append_pop()

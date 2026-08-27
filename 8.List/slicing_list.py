@@ -1,67 +1,26 @@
+"""
+Comprehensive demonstration of Python list slicing syntax [start:stop:step].
+"""
 
+def demo_slicing():
+    num = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+    print('Original numbers:', num)
 
-num = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
-#  -9, -8, -7, -6, -5, -4, -3, -2, -1
+    slice_first_five = num[:5]
+    slice_from_index_three = num[3:]
+    slice_middle = num[2:7]
+    slice_negative_indices = num[-6:-2]
+    slice_with_step = num[1:-2:2]
+    slice_reversed = num[::-1]
 
-# list[start:end:step]
+    print('First 5 [:5]:', slice_first_five)
+    print('From index 3 [3:]:', slice_from_index_three)
+    print('Middle range [2:7]:', slice_middle)
+    print('Negative indices [-6:-2]:', slice_negative_indices)
+    print('Step slicing [1:-2:2]:', slice_with_step)
+    print('Reversed sequence [::-1]:', slice_reversed)
 
-print(list(reversed(num)))
+    return slice_first_five, slice_reversed
 
-print('')
-print(' ', num, ' ******  just print num')
-
-print('')
-print('Index zero: ', num[0], ' ****** [0] ')
-
-print('')
-print('Index 4 is: ', num[4], ' ****** [4]')
-
-print('')
-print('Index -2 is: ', num[-2], ' ****** [-2]')
-
-print('')
-print('Index -6 is: ', num[-6], ' ****** [-6]')
-
-print('')
-print('Index from 1 to 5 is: ', num[:5], ' ****** [:5] ')
-
-print('############################################')
-
-print('')
-print('All Index: ', num[:], ' ****** [:] ')
-
-print('')
-print('Index from 3 to the end : ', num[3:], ' ****** [3:] ')
-
-print('')
-print('All start from 0 to 2: ', num[:1], ' ******OOO [:1] ')
-
-print('')
-print('Index between -6 to -2: ', num[-6:-2], ' ****** [-2:-3]')
-
-print('')
-print('Index start from 2 to 7: ', num[2:7], ' ****** [2:7]')
-
-print('')
-print('Index from right -5 to the beginning left: ', num[:-5], ' ****** [:-5]')
-
-print('')
-print('Index from right -2 to the end right: ', num[-2:], ' ****** [-2:]')
-
-print('')
-print('Index start from 2 each time -2 to the end: ',
-      num[2:-2:2], ' ****** [2:-2:2]')
-
-print('')
-print('Index start from 1 each time -2 to the 3 index: ',
-      num[1:-2:3], ' ****** [1:-2:3]')
-
-print('')
-print('Index >>: ', num[-1:2:-1], ' ****** [-1:2:-1]')
-
-print('')
-print('Index ==>>: ', num[-2:1:-1], ' ****** [-2:1:-2]')
-
-print('')
-print('Index start from -1 right to the beginning left -->>: ',
-      num[::-1], ' ****** [::-1]')
+if __name__ == '__main__':
+    demo_slicing()

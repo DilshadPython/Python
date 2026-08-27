@@ -1,17 +1,20 @@
-a = 'The new manager of Manchester united his name is '
-b = a.split()
-print
-print(a)
-print(b)
+"""
+Demonstrates inserting elements into specified list positions using insert().
+"""
 
-print('\n#######################\n')
-print(" The total length of all the words in (a) is '{}', you need to find out where do you want to insert the name.".format(len(a)))
+def demo_insert():
+    numbers = [1, 2, 4, 5]
+    print('Original:', numbers)
 
-print('\n#######################\n')
-fruit = ['Apples', 'Orange', 'Bananas', 'Cherry']
-print(fruit)
+    # Insert number 3 at index 2
+    numbers.insert(2, 3)
+    print('After insert(2, 3):', numbers)
 
-print('\n - Add limone to position two in the list. \n')
-# 2 is position in the list
-fruit.insert(2, 'Limone')
-print(fruit)
+    # Insert at beginning
+    numbers.insert(0, 0)
+    print('After insert(0, 0):', numbers)
+
+    return numbers
+
+if __name__ == '__main__':
+    demo_insert()

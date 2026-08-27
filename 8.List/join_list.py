@@ -1,15 +1,20 @@
-books = ['Data Science', 'Biology', 'Chimiches',
-         'Python Programming', 'Django Frameworks', 'Designing']
+"""
+Demonstrates joining string elements of a list into a single delimited string.
+"""
 
-print(books)
+def demo_join():
+    words = ['Python', 'is', 'a', 'versatile', 'language']
+    print('List of words:', words)
 
-print('\n - Get all books out from the list and display as normal names and separate by , . \n')
+    # Join with space separator
+    sentence = ' '.join(words)
+    print('Joined with space:', sentence)
 
-books_str = ' - '.join(books)
+    # Join with comma separator
+    csv_string = ', '.join(words)
+    print('Joined with comma:', csv_string)
 
-print(books_str)
+    return sentence, csv_string
 
-print('\n - Return the books to list using split like before (, ). \n')
-
-old_books = books_str.split(' - ')
-print(old_books)
+if __name__ == '__main__':
+    demo_join()

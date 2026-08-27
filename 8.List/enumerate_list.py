@@ -1,11 +1,17 @@
+"""
+Demonstrates positional indexing during iteration using built-in enumerate().
+"""
 
-for (x, y) in enumerate(["London", "Berlin", "New Yourk", "Paris", 'Rome', 'Oslo', ['a', 'b']]):
-    print(x, y)
-print('\n------\n')
-cities = ["London", "Berlin", "New Yourk", "Paris", 'Rome', 'Oslo']
+def demo_enumerate():
+    fruits = ['Apple', 'Banana', 'Cherry', 'Date']
+    
+    indexed_list = []
+    print('Iterating with enumerate():')
+    for index, fruit in enumerate(fruits, start=1):
+        print(f'Item #{index}: {fruit}')
+        indexed_list.append((index, fruit))
 
-for index, city in enumerate(cities):
-    print(index, city)
-print('\n------\n')
-for index, city in enumerate(cities, start=1):
-    print(index, city)
+    return indexed_list
+
+if __name__ == '__main__':
+    demo_enumerate()

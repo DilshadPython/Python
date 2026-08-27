@@ -1,39 +1,26 @@
-numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 44, 15, 6, 0]
+"""
+Demonstrates built-in aggregation functions: max(), min(), sum(), and len().
+"""
 
-print(' Len of the list ')
-print(len(numbers))
+def demo_list_aggregates():
+    numbers = [15, 82, 3, 44, 99, 21, 6]
+    print('Numbers list:', numbers)
 
-print(' Max number of the list ')
-print(max(numbers))
+    max_val = max(numbers)
+    min_val = min(numbers)
+    total_sum = sum(numbers)
+    count = len(numbers)
 
-print(' Min number of the list ')
-print(min(numbers))
+    print(f'Max value: {max_val}')
+    print(f'Min value: {min_val}')
+    print(f'Sum of values: {total_sum}')
+    print(f'Element count: {count}')
 
-print('---' * 25)
-list('Dilshad')
-print(list('Dilshad'))
+    # Convert string to character list using built-in list() constructor
+    char_list = list('Dilshad')
+    print('list("Dilshad"):', char_list)
 
-print('---' * 25)
-change_list = tuple(list('Dilshad'))
-print(change_list)
+    return max_val, min_val, total_sum, count, char_list
 
-print('---' * 25)
-text = ('Hello Python')
-print(text)
-
-print('---' * 25)
-print(list(text))
-
-print('---' * 25)
-print(tuple(text))
-
-print('###############################################')
-
-print('---' * 25)
-print(tuple(list(text)))
-
-print('---' * 25)
-print(tuple(text))
-
-print('---' * 25)
-print(list(tuple(text)))
+if __name__ == '__main__':
+    demo_list_aggregates()

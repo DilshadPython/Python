@@ -1,29 +1,25 @@
-languages = ['python', 'Java', 'JavaScript', 'Ruby', 'PHP']
+"""
+Demonstrates membership operators (in / not in), enumerate(), and string join.
+"""
 
-print('\n If is exist: ', 'Ruby' in languages)
+def demo_membership_and_iter():
+    languages = ['python', 'Java', 'JavaScript', 'Ruby', 'PHP']
 
-print('\n If not exist: ', 'Postgres' in languages, '\n')
+    has_ruby = 'Ruby' in languages
+    has_postgres = 'Postgres' in languages
 
-for lang in languages:
-    print('\t - ', lang)
+    print('Is "Ruby" in languages?:', has_ruby)
+    print('Is "Postgres" in languages?:', has_postgres)
+    print()
 
-print()
-# Display the position of the language and language
-for index, lang in enumerate(languages):
-    print('\t :', index, lang)
+    print('Enumerating languages:')
+    for index, lang in enumerate(languages):
+        print(f'  [{index}] {lang}')
 
-# Display horizontal and separate by , use join
-print('\n .join(): ', ', '.join(languages))
+    formatted_str = ', '.join(languages)
+    print('\nJoined string:', formatted_str)
 
-# Display horizontal but use split()
-create_list = ' - '.join(languages)
-new_list = create_list.split(' - ')
-# Display to default list
-print('\n .split(): ', new_list)
+    return has_ruby, has_postgres, formatted_str
 
-# Display to default list
-create_list = ' | '.join(languages)
-new_list = create_list.split(' | ')
-print('\n .split(): ', new_list)
-
-print("\n .join(): ", ' | '.join(languages), '\n')
+if __name__ == '__main__':
+    demo_membership_and_iter()

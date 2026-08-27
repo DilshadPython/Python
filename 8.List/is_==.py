@@ -1,27 +1,26 @@
-'''
-The diferent between == and is in python
-'''
+"""
+Demonstrates the fundamental difference between identity 'is' and equality '=='.
+"""
 
-names = ['Dilshad', 'Raffi', 'Tilly', 'Tom']
+def demo_identity_vs_equality():
+    a = [1, 2, 3]
+    b = [1, 2, 3]
+    c = a  # c references the exact same list object as a
 
-test = names
+    print('a:', a)
+    print('b:', b)
+    print('c:', c)
+    print()
 
-print('Test: ', test)
+    # Equality check compares list contents
+    print('a == b (Value equality):', a == b)  # True
+    print('a == c (Value equality):', a == c)  # True
 
-print('\n "is" expressions evaluate to True if two var point to the same object \n')
+    # Identity check compares memory addresses (id())
+    print('a is b (Identity check):', a is b)  # False (different objects in memory)
+    print('a is c (Identity check):', a is c)  # True (same object memory reference)
 
-names is test
+    return (a == b, a is b, a is c)
 
-print('Names: ', names)
-
-newlist = list(names)
-print('Newlist: ', newlist)
-
-print('\n "==" evaluate to True if the objects referred to by the var are equal \n')
-
-print('That is correct: ', names == newlist)
-print('names: ', names)
-
-print('That is not true: ', names is newlist)
-
-print('Result', names)
+if __name__ == '__main__':
+    demo_identity_vs_equality()

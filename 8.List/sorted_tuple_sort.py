@@ -1,29 +1,21 @@
+"""
+Demonstrates sorted() function applied to immutable tuples and strings.
+"""
 
-# print(help(sorted))
-'''
-Help on built-in function sorted in module builtins:
+def demo_sorted_immutable():
+    numbers_tuple = (8, 5, 3, 1, 6, 7, 10, 2, 10, 4, 9)
+    print('Original tuple:', numbers_tuple)
 
-sorted(iterable, key=None, reverse=False)
-    Return a new list containing all items from the iterable in ascending order.
-    
-    A custom key function can be supplied to customise the sort order, and the
-    reverse flag can be set to request the result in descending order.
-(END)
-'''
+    # sorted() takes tuple iterable and returns a sorted list
+    sorted_num_list = sorted(numbers_tuple)
+    print('Sorted tuple returned as list:', sorted_num_list)
+    print('Original tuple intact:', numbers_tuple)
 
-numbers = (8, 5, 3, 1, 6, 7, 10, 2, 10, 4, 9)
+    # Sorting a string sorts characters by ASCII/Unicode value (fixed typo: Manchester)
+    sorted_char_list = sorted('Manchester United')
+    print('\nSorted string characters:', sorted_char_list)
 
-print('We will sorted the tuple in line 14 all in one line')
-data = sorted(numbers)
-print(data)
+    return sorted_num_list, sorted_char_list
 
-print()
-print('This print return the original number in line 14')
-print(numbers)
-
-print()
-print('We will sorted the string below start first with empty space than capital character and all\
- lower character but alpabetically.')
-
-print('====' * 30)
-print(sorted('Manchster United'))
+if __name__ == '__main__':
+    demo_sorted_immutable()

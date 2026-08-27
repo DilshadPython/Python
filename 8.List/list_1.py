@@ -1,11 +1,13 @@
-name = ['Dilshad', 'Raffi', 'Tilly', 'London', ['Sam', 'Paul'], 'Southend']
+"""
+Demonstrates basic list creation and indexing operations.
+"""
 
-print(name)
-print(len(name))
+def demo_list_basics():
+    my_list = [10, 20, 30, 40, 50]
+    print('Full list:', my_list)
+    print('First element [0]:', my_list[0])
+    print('Third element [2]:', my_list[2])
+    return my_list
 
-print('--' * 25)
-print(name[2])
-
-print('--' * 25)
-print(name[0:5])
-
+if __name__ == '__main__':
+    demo_list_basics()

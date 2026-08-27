@@ -1,23 +1,17 @@
-# create an empty list
-print('List icopy or use memory than tuple')
-a = []
-print(a)
-print('-----' * 15)
-a.append(257)
-print(a)
+"""
+Demonstrates dynamic list population using append() inside loops.
+"""
 
-print('-----' * 15)
-a.append(6544)
-print(a)
+def build_number_list(limit=5):
+    # Initialize empty list
+    numbers = []
+    
+    # Dynamically append elements
+    for i in range(1, limit + 1):
+        numbers.append(i * 10)
+        
+    print(f'Generated list up to {limit} items:', numbers)
+    return numbers
 
-print('-----' * 15)
-a.append(-8)
-print(a)
-
-print('-----' * 15)
-a.append('Hello')
-print(a)
-
-print('-----' * 15)
-a.append('Python')
-print(a)
+if __name__ == '__main__':
+    build_number_list()

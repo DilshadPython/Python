@@ -1,26 +1,25 @@
-a = ['s', 'i', 'p']
-b = ['k', 'a', 'g']
-c = ['u', 'o', 'd']
+"""
+Demonstrates multi-dimensional (nested) lists and matrix index access.
+"""
 
-d = [a, b, c]
+def demo_nested_lists():
+    row_a = ['s', 'i', 'p']
+    row_b = ['k', 'a', 'g']
+    row_c = ['u', 'o', 'd']
 
-print(a)
-print(b)
-print(c)
+    matrix = [row_a, row_b, row_c]
 
-print
-print
-print(d)
+    print('Row A:', row_a)
+    print('Row B:', row_b)
+    print('Row C:', row_c)
+    print('Matrix (List of lists):', matrix)
+    print()
 
-print
-print
-print(d[0])
-print(d[0][2])
+    # Access element at row 1, column 2 ('g')
+    element = matrix[1][2]
+    print(f'Element at matrix[1][2]: {element}')
 
-print
-print(d[1])
-print(d[1][0])
+    return matrix, element
 
-print
-print(d[2])
-print(d[2][2])
+if __name__ == '__main__':
+    demo_nested_lists()

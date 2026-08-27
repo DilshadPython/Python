@@ -1,29 +1,23 @@
+"""
+Demonstrates ascending and descending order sorting for numeric lists.
+"""
 
-teams = [
-    'Manchester City',
-    'Manchester United',
-    'Liverpool',
-    'Tottenham Hotspur',
-    'Chelsea',
-    'Arsenal',
-    'Burnley',
-    'Leicester City',
-    'Everton',
-    'AFC Bournemouth',
-    'Watford',
-    'Newcastle United',
-    'Brighton & Hove Albion',
-    'West Ham United',
-    'Swansea City',
-    'Huddersfield Town',
-    'Crystal Palace',
-    'Southhanpton',
-    'Stoke City',
-    'West Bromwich Albion',
-]
+def demo_sorting():
+    numbers = [42, 12, 88, 3, 27, 99, 1]
+    print('Original list:', numbers)
 
-print(teams)
+    # Built-in sorted() returns a new sorted list (O(N log N))
+    asc_sorted = sorted(numbers)
+    print('Ascending sorted (sorted()):', asc_sorted)
 
-print('\n - Ascending order sorted or alphabetical. \n')
-teams.sort()
-print(teams)
+    desc_sorted = sorted(numbers, reverse=True)
+    print('Descending sorted (sorted()):', desc_sorted)
+
+    # In-place sort using .sort() method
+    numbers.sort()
+    print('Original after numbers.sort():', numbers)
+
+    return asc_sorted, desc_sorted
+
+if __name__ == '__main__':
+    demo_sorting()

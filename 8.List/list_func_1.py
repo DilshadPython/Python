@@ -1,33 +1,24 @@
-languages = ['python', 'Java', 'JavaScript', 'Ruby', 'PHP']
-print('\n', languages)
+"""
+Demonstrates adding elements using append() and insert() methods.
+"""
 
-#  Add new language to the end of the list as default!
-languages.append('C language')
-print('\n .append(): ', languages)
+def demo_add_methods():
+    languages = ['python', 'Java', 'JavaScript', 'Ruby', 'PHP']
+    print('Initial languages:', languages)
 
-#  Here add new language in specific position like from beginning!
-languages.insert(0, 'Java')
-print('\n .insert(): ', languages)
+    # Append to end
+    languages.append('C language')
+    print('After append("C language"):', languages)
 
-languages.insert(3, 'Go')
-print('\n .insert(3) : ', languages[3])
+    # Insert at index 0 (front of list)
+    languages.insert(0, 'Java')
+    print('After insert(0, "Java"):', languages)
 
-print('\n Show the list now: ', languages)
+    # Insert at index 3
+    languages.insert(3, 'Go')
+    print('After insert(3, "Go"):', languages)
 
-print('\n .count(): ', languages.count('Java'))
+    return languages
 
-sort_lang = sorted(languages)
-print('\n .sorted() the list alphabetic: ', sort_lang)
-
-languages.sort(reverse=True)
-print('\n sort(reverse=True) ', languages)
-
-print('\n Last item in the list : ', languages[-1] )
-
-databases = ['MySql', 'PostgreSQL', 'SQL']
-languages.extend(databases)
-print('\n .extend(): ', languages)
-
-languages.reverse()
-print('\n .reverse(): ', languages)
-print('\n .sorted() the list alphabetic: ', sorted(languages), '\n')
+if __name__ == '__main__':
+    demo_add_methods()

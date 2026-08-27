@@ -1,22 +1,28 @@
-sentence = 'To better understand how functions work, line lets create one. To type this program\
-             into line work the file editor and save it as hello on mu function and so on'
+"""
+Demonstrates text splitting, word sorting, and frequency counting using a dict.
+"""
 
-sentence += ' The first line is a def To statement line'
+def analyze_sentence():
+    sentence = (
+        'To better understand how functions work, let us create one. '
+        'To type this program into the file editor and save it.'
+    )
 
-words = sentence.split(' ')
-words = sorted(words)
-print('Sentence is sorted order: \n')
-print(words)
+    # Split sentence into list of word tokens
+    words = sentence.split()
+    words_sorted = sorted(words)
+    print('Sorted words:', words_sorted)
 
-numwords = {}
+    # Word count dictionary
+    word_counts = {}
+    for word in words_sorted:
+        word_counts[word] = word_counts.get(word, 0) + 1
 
-for i in range(0, len(words)):
-    if words[i] in numwords:
-        numwords[words[i]] += 1
-    else:
-        numwords[words[i]] = 1
+    print('\nWord frequencies:')
+    for word, count in word_counts.items():
+        print(f'  {word:<15}: {count}')
 
-print('###' * 30)
-print('Word list and count: \n')
-for key in numwords.keys():
-    print(key, '\t\t', numwords[key])
+    return words_sorted, word_counts
+
+if __name__ == '__main__':
+    analyze_sentence()
