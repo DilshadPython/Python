@@ -1,8 +1,15 @@
-def example(a, b, c):
+"""
+Demonstrates passing tuple elements to functions using single asterisk * unpacking.
+"""
+
+def multiply_add(a, b, c):
     return a + b * c
 
-# now we crate a tuple here and passing to the function above
-items = (4, 3, 7)
-# now we call the func and passing items to the func [ one star * stand
-# for tuple ]
-print(example(*items))
+def demo_function_unpacking():
+    items = (4, 3, 7)
+    res = multiply_add(*items)
+    print('Result of multiply_add(*items):', res)
+    return res
+
+if __name__ == '__main__':
+    demo_function_unpacking()

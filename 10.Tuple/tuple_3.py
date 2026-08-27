@@ -1,10 +1,19 @@
-tup1 = ('physics', 'chemistry', 1997, 2000)
-tup2 = (1, 2, 3, 4, 5)
-tup3 = "a", "b", "c", "d"
+"""
+Demonstrates parenthesis-free tuple packing and single element syntax.
+"""
 
-print(tup1)
-print(tup2)
-print(tup3)
+def demo_parenthesis_free_tuples():
+    tup1 = ('physics', 'chemistry', 1997, 2000)
+    tup2 = (1, 2, 3, 4, 5)
+    # Tuple created without parentheses via comma separation
+    tup3 = 'a', 'b', 'c', 'd'
 
-print("Tuple: To write a tuple containing a single value you have to includ a comma,\
-		 even though there is only one value: ")
+    single_val_tuple = ('solo',)
+
+    print('tup3 type:', type(tup3))
+    print('single_val_tuple:', single_val_tuple)
+
+    return type(tup3), single_val_tuple
+
+if __name__ == '__main__':
+    demo_parenthesis_free_tuples()

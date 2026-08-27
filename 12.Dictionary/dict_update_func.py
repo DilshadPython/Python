@@ -1,30 +1,25 @@
+"""
+Demonstrates chaining update operations and dictionary length inspection.
+"""
 
-details = {'name': 'Dilshad', 'last_name': 'Abdulla', 'age': 44,
-           'languages': ['English', 'German', 'Kurdish', 'Arabic']}
+def demo_update_func():
+    details = {
+        'name': 'Dilshad', 'last_name': 'Abdulla', 'age': 44,
+        'languages': ['English', 'German', 'Kurdish', 'Arabic']
+    }
 
-print('\n', details)
+    details.update({
+        'email': 'dilshad.abdulla@gmail.com',
+        'age': 45,
+        'website': 'https://dilshadabdulla.net'
+    })
 
-details.update({'email': 'dilshad.abdulla@gmail.com', 'age': 45,
-                'website': 'https://dilshadabdulla.net'})
+    del details['website']
 
-print('\n Update the dictionary details. \n')
-print(details)
+    print('Final details count:', len(details))
+    print('Keys:', list(details.keys()))
 
-del details['website']
-print('\n', details)
+    return details
 
-print('\n - Collect all keys in the dictionary. \n')
-print(len(details))
-
-print('\n - Display only the keys: \n')
-print(details.keys())
-
-print('\n - Display the value only: \n')
-print(details.values())
-
-print('\n - Display both keys and values together: \n')
-print(details.items())
-
-print('\n - Display another way yje key and the value: \n')
-for key, value in enumerate(details.items()):
-    print(key, value)
+if __name__ == '__main__':
+    demo_update_func()

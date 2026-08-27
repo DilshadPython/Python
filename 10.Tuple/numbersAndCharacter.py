@@ -1,29 +1,18 @@
-(a, b, c, d, (e, f, g, h, (i, j, j, l))) = (
-    12, 11, 10, 9, (8, 7, 6, 5, (4, 3, 2, 1)))
+"""
+Demonstrates nested tuple unpacking syntax.
+"""
 
-print(a)
-print(e)
-print(i)
-print(l)
+def demo_nested_unpacking():
+    nested_tuple = (12, 11, 10, 9, (8, 7, 6, 5, (4, 3, 2, 1)))
 
-print('------')
-print(11)
-print(9)
-print(3)
+    (a, b, c, d, (e, f, g, h, (i, j, k, l))) = nested_tuple
 
-x = 'Xray'
-y = 'Yellow'
+    print('Unpacked a:', a)
+    print('Unpacked e:', e)
+    print('Unpacked i:', i)
+    print('Unpacked l:', l)
 
-print(x)
-print(y)
+    return a, e, i, l
 
-print('-------')
-
-x, y = y, x
-
-print(x)
-print(y)
-
-tuple('Characters')
-
-print(tuple)
+if __name__ == '__main__':
+    demo_nested_unpacking()

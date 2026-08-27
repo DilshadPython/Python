@@ -1,35 +1,20 @@
-# Unordered collection of unique, immutable objects
+"""
+Demonstrates set creation from lists to eliminate duplicates.
+"""
 
-a = {14, 19, 28, 44, 107, 555, 69874}
-print(a)
-print(type(a))
+def demo_set_deduplication():
+    numbers_list = [1, 4, 3, 5, 1, 5, 9, 2, 5, 8]
+    print('Original list with duplicates:', numbers_list)
 
-print
-print(set(a))
-print('--------------------')
-b = {}
+    # Passing list to set() deduplicates items in O(N) time
+    unique_set = set(numbers_list)
+    print('Deduplicated set:', unique_set)
 
-print
-print(type(b))
-print('--------------------')
-c = set()
+    # Convert back to list if ordered indexing is needed
+    dedup_list = list(unique_set)
+    print('Converted back to list:', dedup_list)
 
-print(c)
-print('--------------------')
+    return unique_set, dedup_list
 
-x = [1, 4, 3, 5, 1, 5, 9, 2, 5, 8]
-print('Do not display duplication')
-print(set(x))
-
-
-i = 7
-for i in x:
-    if i == 7:
-        print(i)
-    print(False)
-print('##############################')
-y = 9
-for y in x:
-    if y == 9:
-        print(y)
-    print('NO')
+if __name__ == '__main__':
+    demo_set_deduplication()

@@ -1,15 +1,14 @@
-'''
-Dictionaries in python are mapping, the mapping is collection of objects are sorted by key
-'''
+"""
+Demonstrates empty dictionary instantiation and element insertion.
+"""
 
-defin_dict = {'key': 'value'}
+def demo_empty_dict():
+    vehicles = {}
+    vehicles['Car'] = 'Audi'
+    vehicles['truck'] = 'Lorry'
 
-text = {}
+    print('Vehicles dict:', vehicles)
+    return vehicles
 
-text['Car'] = 'Audi'
-print(text)
-
-print
-text['truck'] = 'Lorry'
-
-print(text)
+if __name__ == '__main__':
+    demo_empty_dict()

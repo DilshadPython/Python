@@ -1,37 +1,23 @@
-'''
-Dictionaries in python are mapping, the mapping is collection of objects are sorted by key
-'''
+"""
+Demonstrates dynamic key assignment and numerical lookup.
+"""
 
+def demo_dynamic_keys():
+    data = {}
+    data['num'] = 22
+    data['num1'] = 47
+    data['num2'] = 10
+    data['num3'] = 84
+    data['num4'] = 65
 
-text = {}
+    total = sum(data.values())
+    max_val = max(data.values())
 
+    print('Built data dict:', data)
+    print('Total sum of values:', total)
+    print('Max value:', max_val)
 
-print(text)
-print('##########################################', '\n')
+    return data, total, max_val
 
-print(' Building dictionary')
-text['num'] = 22
-text['num1'] = 47
-text['num2'] = 10
-text['num3'] = 84
-text['num4'] = 65
-print(text)
-
-print('\n')
-print('##########################################')
-print(' Select only by KEYS      ')
-print('##########################################', '\n')
-
-print(text.keys())
-
-print('\n')
-print('##########################################')
-print(' Select only by VALUES                 ')
-print(text.values())
-
-
-print('\n')
-print('##########################################')
-print(' Changed it to Tuple')
-print('\n')
-print(text.items())
+if __name__ == '__main__':
+    demo_dynamic_keys()

@@ -1,35 +1,21 @@
-empty_tuple = ()
+"""
+Demonstrates single-element tuple comma requirements and tuple instantiation.
+"""
 
-tuple_1 = ('a')
-tuple_2 = (2)
-tuple_3 = ('a', 'b', 'c')
-tuple_4 = ('a', 'b', 'c', 'd')
-tuple_5 = (2, 1, 3, 4)
-tuple_6 = (2,)
-tuple_7 = ('a',)
+def demo_tuple_syntax():
+    empty_tuple = ()
 
-print(empty_tuple)
+    # Note: ('a') is a string, not a tuple! Single element tuples MUST have a trailing comma: ('a',)
+    not_a_tuple = ('a')
+    single_element_tuple = ('a',)
+    multi_element_tuple = ('a', 'b', 'c')
 
-print(tuple_1)
-print(tuple_2)
-print(tuple_3)
-print(tuple_4)
-print(tuple_5)
-print(tuple_6)
-print(tuple_7)
+    print('empty_tuple type:', type(empty_tuple))
+    print('("a") type:', type(not_a_tuple))
+    print('("a",) type:', type(single_element_tuple))
+    print('("a", "b", "c") type:', type(multi_element_tuple))
 
-print('#######################')
-tuple_1 = 1,
-tuple_2 = 1, 2, 3
-tuple_3 = 1, 2, 3, 4
-tuple_7 = ('f',)
+    return type(not_a_tuple), type(single_element_tuple), multi_element_tuple
 
-print(tuple_1)
-print(tuple_2)
-print(tuple_3)
-print(tuple_7)
-
-print(type(tuple_1))
-print(type(tuple_2))
-print(type(tuple_3))
-print(type(tuple_7))
+if __name__ == '__main__':
+    demo_tuple_syntax()

@@ -1,19 +1,18 @@
-#  What we try to achive here is to collecte the data but not the duplecate
+"""
+Demonstrates iterating over sets and checking element membership using 'in'.
+"""
 
-alcohol_list = {'Beer', 'Whiskey', 'Milk', 'Vodka',
-                'Beer', 'Whiskey', 'Rum', 'Cider', 'Milk'}
+def demo_set_membership():
+    alcohol_set = {'Beer', 'Whiskey', 'Milk', 'Vodka', 'Beer', 'Whiskey', 'Rum', 'Cider', 'Milk'}
 
-for x in alcohol_list:
-    print(x)
+    print('Deduplicated beverage count:', len(alcohol_set))
+    has_beer = 'Beer' in alcohol_set
+    has_wine = 'Wine' in alcohol_set
 
-print('Display only one time the items: ')
-print(alcohol_list)
+    print('Is Beer in set?:', has_beer)
+    print('Is Wine in set?:', has_wine)
 
-print(type(alcohol_list))
+    return has_beer, has_wine
 
-print('--' * 20)
-
-if 'Beer' in alcohol_list:
-    print('Yes Milk in the list')
-else:
-    print('No the drink is not in the list please buy it')
+if __name__ == '__main__':
+    demo_set_membership()

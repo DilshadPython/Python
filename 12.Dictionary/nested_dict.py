@@ -1,18 +1,17 @@
-'''
-Dictionaries in python are mapping, the mapping is collection of objects are sorted by key
-'''
-dic_1 = {'animal': {'bird': {'car': 'Audi'}}}
+"""
+Demonstrates nested dictionary lookups and chaining string operations.
+"""
 
-print(dic_1)
+def demo_nested_dict():
+    nested_data = {'animal': {'bird': {'car': 'Audi'}}}
 
-print
-print(dic_1['animal'])
+    car_val = nested_data['animal']['bird']['car']
+    upper_car = car_val.upper()
 
-print
-print(dic_1['animal']['bird'])
+    print('Nested car value:', car_val)
+    print('Upper car value:', upper_car)
 
-print
-print(dic_1['animal']['bird']['car'].upper())
+    return car_val, upper_car
 
-print
-print(dic_1.keys())
+if __name__ == '__main__':
+    demo_nested_dict()

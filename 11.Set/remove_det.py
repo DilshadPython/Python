@@ -1,19 +1,28 @@
-fruites = {'apples', 'oranges', 'cherry', 'bananas'}
-print(fruites)
+"""
+Demonstrates removing items via remove(), discard(), and pop().
+"""
 
-print('=================\n')
-fruites.remove('oranges')
-print(fruites)
+def demo_remove_methods():
+    fruits = {'apples', 'oranges', 'cherry', 'bananas'}
+    print('Initial set:', fruits)
 
-print('=================\n')
-fruites.discard('bananas')
-print(fruites)
+    # remove() raises KeyError if element missing
+    fruits.remove('oranges')
+    print('After remove("oranges"):', fruits)
 
-print('=================\n')
-fruites.add('pineapple')
-print(fruites)
+    # discard() silently succeeds if element missing
+    fruits.discard('bananas')
+    fruits.discard('non_existent_fruit')
+    print('After discard("bananas"):', fruits)
 
-print('=================\n')
-# pop() remove always the first item in the set
-fruites.pop()
-print(fruites)
+    fruits.add('pineapple')
+    
+    # pop() removes and returns an arbitrary element from set
+    popped_item = fruits.pop()
+    print(f'Popped item: {popped_item}')
+    print('Set after pop():', fruits)
+
+    return fruits, popped_item
+
+if __name__ == '__main__':
+    demo_remove_methods()

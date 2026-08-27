@@ -1,42 +1,27 @@
-'''
-Set is unordered collection of unique elements.
-'''
+"""
+Demonstrates adding elements via add() and extending sets via update().
+"""
 
-a = {81, 41, 11, 77}
-print(a)
+def demo_add_to_set():
+    a = {81, 41, 11, 77}
+    print('Initial set:', a)
 
-print('Add 55: ')
-a.add(55)
-print(a)
-print('---------######-----------')
+    # add() inserts a single element (O(1) average complexity)
+    a.add(55)
+    print('After add(55):', a)
 
-print(' Add 105: ')
-a.add(105)
-print(a)
-print('----------xxxxxx----------')
+    a.add(105)
+    print('After add(105):', a)
 
-print('Add 55: ')
-a.add(55)
-print(a)
-print('----------xxxxxx----------')
+    # Adding duplicate element has no effect (sets contain unique elements)
+    a.add(55)
+    print('After re-adding 55:', a)
 
-print('Update the set: ')
-a.update([9, 0, -5, 4444])
-print(a)
-# There are two type of func remove element(of set
-# 1. remove() methods
-# 2. discard() methods
-print('----------____________----------')
-print('Removed 11 : ')
-a.remove(11)
-print(a)
-print('----------+++++++++----------')
+    # update() adds multiple elements from any iterable
+    a.update([9, 0, -5, 4444])
+    print('After update([9, 0, -5, 4444]):', a)
 
-print('Discard -5: ')
-a.discard(-5)
-print(a)
+    return a
 
-print('Copied the set list to another file: ')
-print('----------********----------')
-j = a.copy()
-print('j = ', j)
+if __name__ == '__main__':
+    demo_add_to_set()

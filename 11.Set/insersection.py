@@ -1,36 +1,24 @@
-#  What we try to achive here is to collecte the data but not the duplecate
+"""
+Demonstrates intersection, difference, and union set operations on drink menus.
+"""
 
-drinks_top = {'Beer', 'Milk', 'Whiskey', 'Vodka',
-              'Beer', 'Whiskey', 'Rum', 'Cider', 'Milk'}
+def demo_drink_sets():
+    drinks_top = {'Beer', 'Milk', 'Whiskey', 'Vodka', 'Beer', 'Whiskey', 'Rum', 'Cider', 'Milk'}
+    drinks_bottom = {'Water', 'Orange', 'Whiskey', 'Heineken', 'Wine', 'Rum', 'White Wine'}
 
-drinks_bottom = {'Water', 'Orange', 'Whiskey',
-                 'Heinken', 'Wine', 'Rum', 'White Wine'}
+    # Items present in both sets
+    common_drinks = drinks_top.intersection(drinks_bottom)
+    print('Drinks in both sets:', common_drinks)
 
+    # Items in top menu only
+    top_only = drinks_top.difference(drinks_bottom)
+    print('Drinks only in top menu:', top_only)
 
-print('\n - Display the drinks are available in both. \n')
-print(drinks_top.intersection(drinks_bottom))
+    # All unique drinks combined
+    all_drinks = drinks_top.union(drinks_bottom)
+    print('All unique drinks combined:', all_drinks)
 
-print('\n - Display the drinks are not available in both. \n')
-print(drinks_top.difference(drinks_bottom))
+    return common_drinks, top_only, all_drinks
 
-print('\n - Add the two set together. \n')
-print(drinks_top.union(drinks_bottom))
-
-print('\n - Create empty list tuple and set')
-
-print('\n Empty list. \n')
-empty_list = []
-empty_list = list()
-print(empty_list)
-
-print('\n - Empty tuple.\n')
-empty_tuple = ()
-empty_tuple = tuple()
-print(empty_tuple)
-
-print('\n Empty Set. \n')
-empty_set = {}
-print(empty_set, ' <<< This is dictionary not Set!!!')
-
-empty_set = set()
-print(empty_set)
+if __name__ == '__main__':
+    demo_drink_sets()

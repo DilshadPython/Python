@@ -1,64 +1,26 @@
-fruites = {'apples', 'oranges', 'cherry', 'bananas', 2.7}
-num = {21, 9, 2.7, 0.66 -5, 'oranges'}
-
 """
-The update() method inserts all items from one set into another.
-
-The update() changes the original set, and does not return a new set.
+Demonstrates duplicate elimination and set union / intersection operations.
 """
-print('==== x ====')
-x = fruites.union(num)
-print(x)
 
-print('===================\n')
-## Keep the items that exist in both fruites, and num:
-fruites.intersection_update(num)
-print(fruites)
-print('====================\n')
+def demo_set_duplicates():
+    fruits = {'apples', 'oranges', 'cherry', 'bananas', 2.7}
+    numbers = {21, 9, 2.7, -5, 'oranges'}
 
-first = {'Hello', 22, 'Python', 'Java', 7, 9, True}
-second = {9, 'Java', 22, True, 'Python', 'JavaScript', False}
-last = first.intersection(second)
-print(last)
+    # union returns all unique items across both sets
+    union_set = fruits.union(numbers)
+    print('Union of fruits and numbers:', union_set)
 
-print('====================\n')
-# Keep all items from first that are not in second:
-y = first.difference(second)
-print(y)
+    # intersection returns common elements
+    intersection_set = fruits.intersection(numbers)
+    print('Intersection:', intersection_set)
 
-print('====================\n')
-one = {8, 'Hello', 22, 'Python', 'Java', 7, 9, True}
-two = {9, 'Java', 22, True, 'Python', 'JavaScript', False, 6}
+    # difference returns items in first set but not second
+    first = {'Hello', 22, 'Python', 'Java', 7, 9, True}
+    second = {9, 'Java', 22, True, 'Python', 'JavaScript', False}
+    diff_set = first.difference(second)
+    print('Difference (first - second):', diff_set)
 
-three = one - two
-print(three)
+    return union_set, intersection_set, diff_set
 
-# You can use the - operator instead of the difference() method, and you will get the same result.
-print('====================\n')
-four = two - one
-print(four)
-
-print('====================\n')
-a = {"apple", "banana", "cherry"}
-b = {"google", "microsoft", "apple"}
-a.difference_update(b)
-print(a)
-
-# The symmetric_difference() method will keep only the elements that are NOT present in both sets.
-print('====================\n')
-ab = {"apple", "banana", "cherry"}
-ac = {"google", "microsoft", "apple"}
-dd = ab.symmetric_difference(ac)
-print(dd)
-
-# Use ^ to join two sets:
-print('====================\n')
-cc = ab ^ ac
-print(cc)
-
-#Use the symmetric_difference_update() method to keep the items that are not present in both sets:
-print('====================\n')
-aa = {"apple", "banana", "cherry", "orange"}
-bb = {"google", "microsoft", "apple", "yahoo"}
-aa.symmetric_difference_update(bb)
-print(aa)
+if __name__ == '__main__':
+    demo_set_duplicates()

@@ -1,43 +1,23 @@
-create_dict = dict()  # or create_dict = {}
+"""
+Demonstrates constructing dictionaries key-by-key and inspecting keys/values.
+"""
 
-# add the keys and values to the dictionary
-create_dict['Hello'] = 219
-create_dict['Hi'] = 90
-create_dict['Hey'] = 1
-create_dict['Merci'] = 87
+def demo_build_dict():
+    create_dict = {}
 
-print(create_dict)
+    create_dict['Hello'] = 219
+    create_dict['Hi'] = 90
+    create_dict['Hey'] = 1
+    create_dict['Merci'] = 87
 
-print('\n')
-print('Display the keys')
-print(create_dict.keys())
+    keys_view = list(create_dict.keys())
+    values_view = list(create_dict.values())
 
-print('\n')
-print('Display the values')
-print(create_dict.values())
+    print('Built dictionary:', create_dict)
+    print('Keys:', keys_view)
+    print('Values:', values_view)
 
-print('=====================\n')
-# create new dict from the above keys and values in one dict
-new_dict = {}
-print(new_dict)
-for key, value in create_dict.items():
-    new_dict[key] = value
-print(new_dict)
-print('#####################\n')
+    return create_dict, keys_view, values_view
 
-
-print('\n')
-print('Display keys and values as a Tuple')
-print(create_dict.items())
-
-print('\n')
-print('Create dictionary from the above keys and values using for loops')
-for x in create_dict:
-    new_dict = '%s %d' % (x, create_dict[x])
-    print(new_dict)
-
-print('\n')
-print('')
-for index, value in enumerate(create_dict):
-    print(index, value, create_dict[value])
-
+if __name__ == '__main__':
+    demo_build_dict()

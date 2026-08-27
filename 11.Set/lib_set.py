@@ -1,16 +1,18 @@
-fruites = {'apples', 'oranges', 'cherry', 'bananas'}
-print(fruites)
+"""
+Demonstrates set.update() and introspection of set attributes.
+"""
 
-new = {'mango', 'pinapple'}
+def demo_set_update_and_dir():
+    fruits = {'apples', 'oranges', 'cherry', 'bananas'}
+    new_fruits = {'mango', 'pineapple'}
 
-print('=============\n')
-print(new)
+    fruits.update(new_fruits)
+    print('Updated fruits set:', fruits)
 
-print('==============\n')
-print('Update the first set')
-fruites.update(new)
-print(fruites)
+    public_methods = [m for m in dir(fruits) if not m.startswith('_')]
+    print('Set public methods count:', len(public_methods))
 
-print('==============\n')
-for fruit in dir(fruites):
-    print(fruit)
+    return fruits, public_methods
+
+if __name__ == '__main__':
+    demo_set_update_and_dir()

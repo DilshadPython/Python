@@ -1,19 +1,23 @@
-'''
-Tupe is immutable can not been change
-'''
+"""
+Demonstrates tuple index lookup and count methods.
+"""
 
-tup = ('England', 24, 'USA', 'France', 24,
-       'Germany', 'Spain', 24, -10, 'Italy', 16, 24)
+def demo_tuple_lookup():
+    tup = ('England', 24, 'USA', 'France', 24, 'Germany', 'Spain', 24, -10, 'Italy', 16, 24)
 
-print(tup)
+    idx_france = tup.index('France')
+    idx_spain = tup.index('Spain')
+    idx_neg = tup.index(-10)
 
-print
-print('Using index')
-print('France is index: ', tup.index('France'))
-print('Spain is index: ', tup.index('Spain'))
-print('The value -10 is index: ', tup.index(-10))
+    count_24 = tup.count(24)
+    count_france = tup.count('France')
 
-print('################')
-print
-print('The number 24 has been repeated ', tup.count(24))
-print('The France has been repeated ', tup.count('France'))
+    print('France index:', idx_france)
+    print('Spain index:', idx_spain)
+    print('-10 index:', idx_neg)
+    print('Count of 24:', count_24)
+
+    return idx_france, count_24
+
+if __name__ == '__main__':
+    demo_tuple_lookup()

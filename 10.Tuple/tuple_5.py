@@ -1,18 +1,19 @@
-storage = ('Arsenal', 'Southampton', 'Man Utd', 'Liverpool',
-           'Man City', 55.687, 5, 'Chelsea', -12, 'Tottenham')
-# In tuple you can not change the content or add any more but in the list
-# you can change and add more content
-print(storage)
+"""
+Demonstrates tuple concatenation using '+' operator to produce new tuples.
+"""
 
-# added item to the storage
+def demo_tuple_concatenation():
+    storage = ('Arsenal', 'Southampton', 'Man Utd', 'Liverpool',
+               'Man City', 55.687, 5, 'Chelsea', -12, 'Tottenham')
 
-putTogether = ('Everton', 'Atson villa', 'Fullham')
+    put_together = ('Everton', 'Aston Villa', 'Fulham')  # Fixed typos
 
-storage = storage + putTogether
-print(storage)
+    # Concatenate tuples (creates new tuple object)
+    combined = storage + put_together
+    print('Combined tuple size:', len(combined))
+    print('Combined content:', combined)
 
-print("Add another team using append method! the append method doesn't work in tuple only in list")
+    return combined
 
-# new_team = ('West Ham')
-# storage.append(new_team)
-# print(storage)
+if __name__ == '__main__':
+    demo_tuple_concatenation()

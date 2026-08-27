@@ -1,20 +1,23 @@
-# create empty set list and tuple 
+"""
+Demonstrates set instantiation rules vs dictionary creation.
+"""
 
-empty_set_1 = {}
-print('\n create empty_set_1 : ', empty_set_1, 
-		' >> This is wrong create empty dictionary not empty set very important!')
+def demo_empty_instantiations():
+    # CRITICAL: {} creates an empty dictionary, NOT an empty set!
+    empty_dict = {}
+    dict_type = type(empty_dict)
 
-empty_set_2 = set()
-print('\n create empty_set_2 : ', empty_set_2)
+    # Correct way to instantiate empty set: set()
+    empty_set = set()
+    set_type = type(empty_set)
 
-empty_list_1 = []
-print('\n create empty_list_1 : ', empty_list_1)
+    empty_list = list()
+    empty_tuple = tuple()
 
-empty_list_2 = list()
-print('\n create empty_list_2 : ', empty_list_2)
+    print('{} type:', dict_type)
+    print('set() type:', set_type)
 
-empty_tuple_1 = ()
-print('\n create empty_tuple_1 : ', empty_tuple_1)
+    return dict_type, set_type
 
-empty_tuple_2 = tuple()
-print('\n create empty_tuple_2 : ', empty_tuple_2)
+if __name__ == '__main__':
+    demo_empty_instantiations()

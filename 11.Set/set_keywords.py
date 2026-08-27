@@ -1,17 +1,22 @@
-languge_1 = {'Python', 'Java', 'PHP', 'JavaScript'}
-languge_2 = {'Java', 'C++', 'PHP', '.Net', 'C#'}
+"""
+Demonstrates set algebraic operations: intersection, difference, union.
+"""
 
-print('\n Use intersection to display duplicated languages are in both sets.')
-print(languge_1.intersection(languge_2))
+def demo_set_algebra():
+    language_1 = {'Python', 'Java', 'PHP', 'JavaScript'}
+    language_2 = {'Java', 'C++', 'PHP', '.Net', 'C#'}
 
-print('\n Use difference to display which languages are new in the second set.')
-print(languge_1.difference(languge_2))
+    common = language_1.intersection(language_2)
+    only_in_1 = language_1.difference(language_2)
+    only_in_2 = language_2.difference(language_1)
+    all_langs = language_1.union(language_2)
 
-print('\n Use difference to display which languages are new in the first set.')
-print(languge_2.difference(languge_1))
+    print('Common languages:', common)
+    print('Only in set 1:', only_in_1)
+    print('Only in set 2:', only_in_2)
+    print('All languages:', all_langs)
 
-print('\n Use union to display all languages are in both sets with no duplication.')
-print(languge_1.union(languge_2))
+    return common, only_in_1, only_in_2, all_langs
 
-print()
-print(dir(languge_1))
+if __name__ == '__main__':
+    demo_set_algebra()

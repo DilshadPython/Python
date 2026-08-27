@@ -1,29 +1,23 @@
-a = (11, 25, 1, 67, -9, 99, 654, 35, 7, 8, 56)
-
+"""
+Demonstrates calculating minimum and maximum values from tuples and lists.
+"""
 
 def minmax(numbers):
     return min(numbers), max(numbers)
 
-print('Using min and max method to display lowerst and heighest number from the tuple')
-print(minmax(a))
+def demo_minmax():
+    num_tuple = (11, 25, 1, 67, -9, 99, 654, 35, 7, 8, 56)
+    lower, upper = minmax(num_tuple)
 
-lower, upper = minmax(a)
+    print('Tuple numbers:', num_tuple)
+    print('Lowest number:', lower)
+    print('Highest number:', upper)
 
-print('\n', '#' * 50, '\n')
+    num_list = [11, 25, 1, 67, -9, 99, 654, -7, 35, 7, 8, 56, 715]
+    lst_lower, lst_upper = minmax(num_list)
+    print('\nList lowest:', lst_lower, 'List highest:', lst_upper)
 
-print('Using lower and upper method to display lowerst and heighest number from the tuple')
-print('The lowerst number is :', lower)     # return the smallest numbers
-print('#######')
-print('The heighest number is :', upper)     # return the largerst number
+    return lower, upper, lst_lower, lst_upper
 
-
-b = [11, 25, 1, 67, -9, 99, 654, -7, 35, 7, 8, 56, 715]
-
-def minmax_inthe_list(numbers):
-    return min(numbers), max(numbers)
-
-lower, upper = minmax_inthe_list(b)
-
-print('The lowerst number is :', lower)     # return the smallest numbers
-print('#######')
-print('The heighest number is :', upper)     # return the largerst number
+if __name__ == '__main__':
+    demo_minmax()

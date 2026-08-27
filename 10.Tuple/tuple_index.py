@@ -1,24 +1,19 @@
-student = (29, 814747, 'Dilshad Abdulla', 'Python Developer')
+"""
+Demonstrates sequence unpacking vs element indexing on structured tuples.
+"""
 
-age = student[0]
-st_id = student[1]
-fullname = student[2]
-title = student[3]
+def demo_tuple_unpacking():
+    student = (29, 814747, 'Dilshad Abdulla', 'Python Developer')
+    age, st_id, fullname, title = student
 
-print('Age = ', age)
-print('Student ID = ', st_id)
-print('Fulle name = ', fullname)
-print('Title = ', title)
+    print(f'Student: {fullname}, Age: {age}, ID: {st_id}, Title: {title}')
 
-print()
-player = (7, 814747, 'Daivd beckham', 'Manchester United')
+    player = (7, 814747, 'David Beckham', 'Manchester United')  # Fixed typo
+    number, player_id, name, team = player
 
-number, id, name, team = player
+    print(f'Player: {name}, No: {number}, Team: {team}')
 
-print('Number = ', number)
-print('Id = ', id)
-print('Name = ', name)
-print('Team = ', team)
+    return student, player
 
-a, b, c = 1, 2, 3
-print(a, b, c)
+if __name__ == '__main__':
+    demo_tuple_unpacking()

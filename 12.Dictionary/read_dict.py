@@ -1,17 +1,21 @@
+"""
+Demonstrates iterating over dictionary keys and key-value pairs via items().
+"""
 
-post = dict(stid='0814747', fullname='Dilshad Abdulla', university='Anglia Ruskin University',
-            location='44.2658974, -102.5586589', language='English')
+def demo_read_dict():
+    post = dict(
+        stid='0814747', fullname='Dilshad Abdulla',
+        university='Anglia Ruskin University', location='44.2658974, -102.5586589',
+        language='English'
+    )
 
-print(post)
+    keys_list = list(post.keys())
+    items_list = list(post.items())
 
-print('')
-print('####################################')
-for key in post.keys():
-    value = post[key]
-    print(key, ' = ', value)
+    print('Keys:', keys_list)
+    print('Items:', items_list)
 
-print()
-print('####################################')
-print()
-for key, value in post.items():
-    print(key, ' = ', value)
+    return keys_list, items_list
+
+if __name__ == '__main__':
+    demo_read_dict()

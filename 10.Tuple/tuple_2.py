@@ -1,31 +1,25 @@
-# Crate  a tuple
-# Display it how it will work
+"""
+Demonstrates empty tuple initialization and sub-slicing.
+"""
 
-# Notice: input is raw_input in python version 2.7.12
+try:
+    input = raw_input
+except NameError:
+    pass
 
-# Crate a tuple
-print('Create empty tuple store which is empty')
-storage = ()
+def demo_storage_tuple(interactive=False):
+    storage = ()
+    is_empty = len(storage) == 0
+    print('Is storage empty?:', is_empty)
 
-if not storage:
-    print('Your storage is empty')
+    if interactive:
+        input('\nPlease press Enter to continue...')
 
-input('\nPlease enter to continue: ')
+    storage = ('Arsenal', 'Southampton', 'Man Utd', 'Liverpool',
+               'Man City', 55.687, 5, 'Chelsea', -12, 'Tottenham')
 
-# add items to storage
-storage = ('Arsenal', 'Southampton', 'Man Utd', 'Liverpool',
-           'Man City', 55.687, 5, 'Chelsea', -12, 'Tottenham')
+    print('Full storage slice:', storage[:])
+    return is_empty, storage
 
-print(storage[:])
-
-# display
-index = int(input('Enter the number in your storage\n'))
-
-print('In inex', index, 'is', storage[index])
-
-start = int(input('\nEnter start number in index: '))
-finish = int(input('\nEnter finish number in index: '))
-
-print('storage[', start, ':', finish, ']')
-print(storage[start:finish])
-input('\nEnter any key to exit: ')
+if __name__ == '__main__':
+    demo_storage_tuple()

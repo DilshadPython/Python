@@ -1,16 +1,25 @@
-def example(one, two, three, four, five):
+"""
+Demonstrates tuple parameter unpacking (*args) and dict unpacking (**kwargs).
+"""
+
+def calculate(one, two, three, four, five):
     return one + two - three * four / five
-# tuple know before the element hast *
 
-collection = (6, 54, 8, 3, 7)
+def print_kwargs(**kwargs):
+    print('Keyword arguments received:', kwargs)
+    return kwargs
 
-print(example(*collection))
+def demo_star_unpacking():
+    collection = (6, 54, 8, 3, 7)
 
+    # Unpack tuple as positional function arguments
+    result = calculate(*collection)
+    print('Result of calculate(*collection):', result)
 
-# **more is like **kwargs
-def example2(**more):
-    print(more)
+    person1 = {'Alan': 32, 'Fabio': 29, 'Amanda': 28}
+    kw_res = print_kwargs(**person1)
 
-person1 = {'Alan': 32, 'Fabio': 29, 'Amanda': 28}
+    return result, kw_res
 
-example2(**person1)
+if __name__ == '__main__':
+    demo_star_unpacking()

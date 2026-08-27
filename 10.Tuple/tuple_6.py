@@ -1,17 +1,22 @@
-a = ('England', 'USA', 'France', 'Germany', 'Spain', 24, -10)
+"""
+Demonstrates tuple iteration and non-destructive concatenation.
+"""
 
-print(a)
-print(a[3])
+def demo_tuple_iteration():
+    a = ('England', 'USA', 'France', 'Germany', 'Spain', 24, -10)
+    print('Original tuple:', a)
 
-print('-' * 50)
+    # Iteration
+    elements = [item for item in a]
 
-for name in a:
-    print(name)
-print('-' * 50)
-print('\n Adding some number to above tuple \n')
-print(a + (0, 221.364, 246e5))
+    # Non-destructive concatenation
+    expanded = a + (0, 221.364, 246e5)
+    print('Expanded tuple:', expanded)
 
+    # Original remains unmodified due to immutability
+    print('Original tuple after expansion intact:', a)
 
-print('\n Now when come back to original tuple the number not been added! \n')
-print(a)
-print(type(a))
+    return elements, expanded
+
+if __name__ == '__main__':
+    demo_tuple_iteration()

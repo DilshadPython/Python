@@ -1,39 +1,19 @@
-elements = set(['hello', 23, 'A', 2.36, 'Hello world'])
+"""
+Demonstrates clear() method and union operations on mathematical sets.
+"""
 
-print(elements)
+def demo_set_clear_math():
+    elements = set(['hello', 23, 'A', 2.36, 'Hello world'])
+    elements.clear()
+    print('Set after clear():', elements)
 
-elements.clear()
+    odds = {1, 3, 5, 7, 9, 11, 13, 15, 17, 19, 21}
+    evens = {2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22}
 
-print('')
-print(elements)
+    combined_numbers = odds.union(evens)
+    print('Combined odds and evens count:', len(combined_numbers))
 
-odds = set([11, 13, 15, 17, 19, 21, 1, 3, 5, 7, 9])
+    return elements, combined_numbers
 
-evens = set([22, 20, 18, 16, 14, 12, 10, 2, 4, 6, 8])
-
-primes = set([2, 3, 5, 7])
-
-composites = set([4, 6, 8, 9, 10])
-
-# use union() methods to joining two sets also update()
-resutls = odds.union(evens)
-
-print(resutls)
-print('')
-print(evens)
-print('')
-print(odds)
-
-print('')
-print(odds.intersection(primes))
-
-print('')
-print(primes.intersection(evens))
-
-print('')
-evens.intersection(odds)
-
-print('')
-primes.union(composites)
-
-dir(primes)
+if __name__ == '__main__':
+    demo_set_clear_math()

@@ -1,37 +1,23 @@
-'''
-Dictionaries in python are mapping, the mapping is collection of objects are sorted by key
-'''
+"""
+Demonstrates dictionary creation, key addition, and value indexing.
+"""
 
-defin_dict = {'key': 'value'}
+def demo_dict_mapping():
+    details = {
+        'name': 'Dilshad',
+        'last_name': 'Abdulla',
+        'age': 44,
+        'languages': ['English', 'German', 'Kurdish', 'Arabic']
+    }
 
-details = {'name': 'Dilshad', 'last_name': 'Abdulla', 'age': 44,
-           'languages': ['English', 'German', 'Kurdish', 'Arabic']}
+    # Add email key
+    details['email'] = 'dilshad.abdulla@gmail.com'
 
-details['email'] = 'dilshad.abdulla@gmail.com'
+    print('Name:', details['name'])
+    print('Last name:', details['last_name'])
+    print('First letter of last name:', details['last_name'][0])
 
-print(details['name'])
-print(details['last_name'])
-print(details['age'])
+    return details
 
-print('\n#####################')
-print(details['last_name'][0])
-print(details['last_name'][1:])
-print
-print(details['last_name'][:2])
-print(details['last_name'][::-1])
-
-print('\n#####################')
-print(details['name'].upper())
-
-print('\n#####################')
-print(details['languages'])
-
-print('\n#####################')
-print(details.get('addrees'), ' <<< yes that is correct there is no address')
-
-print('\n#####################')
-print(details.get('email', ' Not Found'))
-print(details.get('website', ' Not Found'))
-
-print('\n#####################')
-print(details)
+if __name__ == '__main__':
+    demo_dict_mapping()

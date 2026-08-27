@@ -1,22 +1,21 @@
-mydictionary = dict()
+"""
+Demonstrates dict.items() tuple pairs and lexicographical comparison of tuples.
+"""
 
-mydictionary['Hello'] = 7
-mydictionary['Python'] = 9
+def demo_tuple_comparison():
+    my_dict = {'Hello': 7, 'Python': 9}
 
-for k,v in mydictionary.items():
-	print(k, v)
+    items_tuples = list(my_dict.items())
+    print('dict.items() tuples:', items_tuples)
 
-# change the dictionary to tuple
-tup = mydictionary.items()
-print(tup)
+    # Lexicographical comparison of tuples
+    comp1 = (0, 3, 7) < (1, 3, 7)  # True (0 < 1)
+    comp2 = (0, 3, 17) < (0, 3, 7) # False (17 not < 7)
 
-# this will check the first
-(0, 3, 7) <  (1, 3, 7)
-print((0, 3, 7) <  (1, 3, 7))
+    print('(0, 3, 7) < (1, 3, 7):', comp1)
+    print('(0, 3, 17) < (0, 3, 7):', comp2)
 
-(0, 3, 17) <  (0, 3, 7)
-print((0, 3, 17) <  (0, 3, 7))
+    return items_tuples, comp1, comp2
 
-# here check only the len of the string 
-('Azad', 'Dilsad', 'Shvan') > ('Ali', 'Alphabet', 'Tom')
-print(('Azad', 'Dilsad', 'Shvan') > ('Ali', 'Alphabet', 'Tom'))
+if __name__ == '__main__':
+    demo_tuple_comparison()
