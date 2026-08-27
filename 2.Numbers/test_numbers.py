@@ -1,7 +1,7 @@
 """
-Unit Test Suite for All 14 Modules in 2.Numbers (Python 3.3 to Python 3.13 & Python 2.7 Compatible)
+Unit Test Suite for All 17 Modules in 2.Numbers (Python 3.3 to Python 3.13 & Python 2.7 Compatible)
 
-Executes test coverage using Python's standard `unittest` framework across all 14 number scripts:
+Executes test coverage using Python's standard `unittest` framework across all 17 number scripts:
 1. bin_hex_oct_num.py
 2. calculator.py
 3. complex_num.py
@@ -9,20 +9,23 @@ Executes test coverage using Python's standard `unittest` framework across all 1
 5. example.py
 6. f_num.py
 7. floats.py
-8. inte.py
-9. is_prime_v.py
-10. is_prime_v2.py
-11. is_prime_v3.py
-12. nearst_number.py
-13. none_bool.py
-14. random_num.py
+8. get_average.py
+9. inte.py
+10. is_prime_v.py
+11. is_prime_v2.py
+12. is_prime_v3.py
+13. multipl.py
+14. nearst_number.py
+15. none_bool.py
+16. primnumber.py
+17. random_num.py
 """
 
 from __future__ import print_function
 import unittest
 import math
 
-# Import all 14 modules from 2.Numbers
+# Import all 17 modules from 2.Numbers
 import bin_hex_oct_num
 import calculator
 import complex_num
@@ -30,12 +33,15 @@ import deciamel
 import example
 import f_num
 import floats
+import get_average
 import inte
 import is_prime_v
 import is_prime_v2
 import is_prime_v3
+import multipl
 import nearst_number
 import none_bool
+import primnumber
 import random_num
 
 
@@ -121,7 +127,18 @@ class TestNumbersSuite(unittest.TestCase):
         self.assertTrue(math.isinf(specials["inf"]))
         self.assertEqual(specials["scientific_3e8"], 300000000.0)
 
-    # 8. Test inte.py
+    # 8. Test get_average.py
+    def test_get_average(self):
+        numbers = [10, 20, 30, 40]
+        self.assertEqual(get_average.calculate_average(numbers), 25.0)
+        
+        demo_avg = get_average.run_average_demo()
+        self.assertAlmostEqual(demo_avg, 35.166666666666664, places=5)
+
+        with self.assertRaises(ValueError):
+            get_average.calculate_average([])
+
+    # 9. Test inte.py
     def test_inte(self):
         res = inte.integer_operations(20, 6)
         self.assertEqual(res["sum"], 26)
@@ -130,7 +147,7 @@ class TestNumbersSuite(unittest.TestCase):
         self.assertEqual(res["floor_division"], 3)
         self.assertEqual(res["modulus"], 2)
 
-    # 9. Test is_prime_v.py
+    # 10. Test is_prime_v.py
     def test_is_prime_v(self):
         self.assertFalse(is_prime_v.is_prime_v(-5))
         self.assertFalse(is_prime_v.is_prime_v(0))
@@ -140,7 +157,7 @@ class TestNumbersSuite(unittest.TestCase):
         self.assertFalse(is_prime_v.is_prime_v(4))
         self.assertTrue(is_prime_v.is_prime_v(29))
 
-    # 10. Test is_prime_v2.py
+    # 11. Test is_prime_v2.py
     def test_is_prime_v2(self):
         self.assertFalse(is_prime_v2.is_prime_v2(-5))
         self.assertFalse(is_prime_v2.is_prime_v2(0))
@@ -150,7 +167,7 @@ class TestNumbersSuite(unittest.TestCase):
         self.assertFalse(is_prime_v2.is_prime_v2(4))
         self.assertTrue(is_prime_v2.is_prime_v2(29))
 
-    # 11. Test is_prime_v3.py
+    # 12. Test is_prime_v3.py
     def test_is_prime_v3(self):
         self.assertFalse(is_prime_v3.is_prime_v3(-5))
         self.assertFalse(is_prime_v3.is_prime_v3(0))
@@ -160,7 +177,19 @@ class TestNumbersSuite(unittest.TestCase):
         self.assertFalse(is_prime_v3.is_prime_v3(4))
         self.assertTrue(is_prime_v3.is_prime_v3(29))
 
-    # 12. Test nearst_number.py
+    # 13. Test multipl.py
+    def test_multipl(self):
+        self.assertEqual(multipl.shift_multiply(10, 2), 40)
+        self.assertEqual(multipl.shift_multiply(15, 3), 120)
+        self.assertEqual(multipl.shift_multiply(20, 4), 320)
+        
+        seq = multipl.shift_sequence(1, 1, steps=5)
+        self.assertEqual(seq, [2, 4, 8, 16, 32])
+
+        demo_res = multipl.run_bitwise_demo()
+        self.assertEqual(demo_res["section1"]["single"], 40)
+
+    # 14. Test nearst_number.py
     def test_nearst_number(self):
         res = nearst_number.format_and_round(888.0, 112.0)
         self.assertEqual(res["rounded_sum"], 1000)
@@ -168,7 +197,7 @@ class TestNumbersSuite(unittest.TestCase):
         self.assertEqual(res["rounded_div"], 8)
         self.assertEqual(res["rounded_div_2dec"], 7.93)
 
-    # 13. Test none_bool.py
+    # 15. Test none_bool.py
     def test_none_bool(self):
         self.assertFalse(none_bool.evaluate_truthiness(0))
         self.assertFalse(none_bool.evaluate_truthiness(0.0))
@@ -182,7 +211,18 @@ class TestNumbersSuite(unittest.TestCase):
         self.assertTrue(none_bool.evaluate_truthiness([3]))
         self.assertTrue(none_bool.evaluate_truthiness('Hello'))
 
-    # 14. Test random_num.py
+    # 16. Test primnumber.py
+    def test_primnumber(self):
+        self.assertFalse(primnumber.is_prime_number(-10))
+        self.assertFalse(primnumber.is_prime_number(0))
+        self.assertFalse(primnumber.is_prime_number(1))
+        self.assertTrue(primnumber.is_prime_number(2))
+        self.assertTrue(primnumber.is_prime_number(3))
+        self.assertFalse(primnumber.is_prime_number(4))
+        self.assertTrue(primnumber.is_prime_number(29))
+        self.assertEqual(primnumber.number(7), True)
+
+    # 17. Test random_num.py
     def test_random_num(self):
         val = random_num.get_random_single(1, 12)
         self.assertTrue(1 <= val < 12)

@@ -1,26 +1,29 @@
 # Workspace Task Summary: Modernizing `2.Numbers` (Python 3.3 – 3.13 & Python 2.7 Comparison)
 
-All 14 scripts in `~/PycharmProjects/Devel/Python/2.Numbers` have been audited, refactored, modernized, and covered with automated unit tests.
+All 17 scripts in `~/PycharmProjects/Devel/Python/2.Numbers` have been audited, refactored, modernized, and covered with automated unit tests.
 
 Detailed documentation and side-by-side version comparison diffs have been saved to [docs.md](~/PycharmProjects/Devel/Python/2.Numbers/docs.md).
 
 ---
 
-## 🚀 Key Improvements Across All 14 Files
+## 🚀 Key Improvements Across All 17 Files
 
 1. **Python 3.3 – 3.13 Standardized Code**:
    - Standardized `print()` function syntax across all scripts (`from __future__ import print_function`).
    - Standardized true float division `/` vs explicit integer floor division `//` (`from __future__ import division`).
-   - Extracted pure, reusable functions (`calculate()`, `decimal_operations()`, `is_prime_v()`, `evaluate_truthiness()`, etc.) so logic can be imported directly into test runners without side-effects.
+   - Extracted pure, reusable functions (`calculate()`, `decimal_operations()`, `is_prime_v()`, `is_prime_number()`, `shift_multiply()`, `calculate_average()`, etc.) so logic can be imported directly into test runners without side-effects.
 
 2. **Fixed Bugs & Cross-Version Issues**:
+   - **`primnumber.py`**: Refactored logic to fix broken return statements (`return print('No')`), zero-division error in step loop (`n / i == 0`), and added `is_prime_number(num)` pure function.
+   - **`multipl.py`**: Extracted modular bitwise multiplication functions `shift_multiply()` and `shift_sequence()`, demonstrating left-shift (`<<=`) power-of-two multiplication.
+   - **`get_average.py`**: Refactored with `calculate_average()` and `from __future__ import division` for true float division across Py2.7 and Py3.3-3.13.
    - **`calculator.py`**: Fixed a critical default argument bug where `num1=int(input(...))` evaluated input at module load time.
    - **`is_prime_v2.py` / `is_prime_v3.py`**: Wrapped `math.floor()` in `int()` (`int(math.floor(math.sqrt(num)))`) to prevent `TypeError` when passing floating-point range limits in legacy Python versions.
    - **`f_num.py` & `nearst_number.py`**: Converted unescaped f-strings to `str.format()` where universal version support was needed, while documenting f-string evolution from 3.6 to 3.13.
    - **`random_num.py`**: Wrapped ranges in `list(range(...))` to handle sequence sampling safely across version iterators.
 
 3. **Added Comprehensive Unit Tests (`test_numbers.py`)**:
-   - Created [test_numbers.py](~/PycharmProjects/Devel/Python/2.Numbers/test_numbers.py) using Python's standard `unittest` framework. Covers all 14 modules with 14 test cases testing assertions, edge cases, exceptions (`ZeroDivisionError`, `ValueError`), boundary conditions, and random bounds.
+   - Created [test_numbers.py](~/PycharmProjects/Devel/Python/2.Numbers/test_numbers.py) using Python's standard `unittest` framework. Covers all 17 modules with test cases testing assertions, edge cases, exceptions (`ZeroDivisionError`, `ValueError`), boundary conditions, bitwise shifts, averages, and prime limits.
 
 ---
 
@@ -35,12 +38,15 @@ Detailed documentation and side-by-side version comparison diffs have been saved
 | **`example.py`** | Extracted `parse_base_string(val_str, base)` | Positional radix parsing (Base 2, 3, 4) |
 | **`f_num.py`** | Replaced Py3.6+ f-strings with `str.format()`; extracted `add_constant_to_list()` | Grants universal Py2.7 - Py3.13 compatibility |
 | **`floats.py`** | Added `float_operations()` and `inspect_special_floats()` | Tests IEEE 754 `nan`, `inf`, `-inf`, `3e8` |
+| **`get_average.py`** | Extracted `calculate_average()` and `run_average_demo()` | Ensures true division float return across Py2.7 & Py3 |
 | **`inte.py`** | Extracted `integer_operations(num1, num2)` | Documents Py3 `int` arbitrary precision |
 | **`is_prime_v.py`** | Added $num \le 1$ edge case handling; extracted `benchmark_prime_v()` | $O(N)$ trial division benchmark |
 | **`is_prime_v2.py`** | Wrapped `math.floor()` in `int()` cast for range bounds | Fixed `TypeError` on float limits |
 | **`is_prime_v3.py`** | Added `int(math.floor(...))` cast & even number skip logic | Optimized $O(\sqrt{N}/2)$ prime check |
+| **`multipl.py`** | Extracted `shift_multiply()` & `shift_sequence()` | Bitwise left-shift power-of-two multiplication |
 | **`nearst_number.py`** | Extracted `format_and_round()`; added comma formatting `"{:,}".format()` | Documents Banker's Rounding vs Round-Half-Away |
 | **`none_bool.py`** | Extracted `evaluate_truthiness()`; fixed typo (`o os` $\rightarrow$ `o is`) | Standardized truthiness testing for 15 types |
+| **`primnumber.py`** | Fixed return statements & trial division modulo bug; added `is_prime_number()` | Clean $O(\sqrt{N}/2)$ trial division prime checker |
 | **`random_num.py`** | Extracted `get_random_single()` and `get_random_sample()` | Safe range sampling across Python 3.3-3.13 |
 
 ---
