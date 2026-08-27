@@ -1,7 +1,13 @@
+"""
+Demonstrates string method invocation inside list comprehensions.
+"""
 
-cars = ['AUDI', 'BMW', 'TOYOTA', 'VOLVO', 'VOLXWAGEN', 'FORD']
+def demo_string_case_conversion():
+    cars = ['AUDI', 'BMW', 'TOYOTA', 'VOLVO', 'VOLKSWAGEN', 'FORD']
+    lowercase_cars = [car.lower() for car in cars]
+    print('Original cars:', cars)
+    print('Lowercase cars:', lowercase_cars)
+    return lowercase_cars
 
-print(cars)
-carcomp = [car.lower() for car in cars]
-
-print(carcomp)
+if __name__ == '__main__':
+    demo_string_case_conversion()

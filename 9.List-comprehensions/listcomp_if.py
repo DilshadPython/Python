@@ -1,21 +1,22 @@
-Num = range(1, 103)
+"""
+Demonstrates multi-condition filtering and tuple pair building with comprehensions.
+"""
 
-# What it does loop throw and display all even numbers
-# if number mode by 2 == 0 than display even numbers
-ListNum = [x for x in Num if x % 2 == 0]
+def demo_multi_condition_comp():
+    # Filter even numbers from 1 to 102
+    even_numbers = [x for x in range(1, 103) if x % 2 == 0]
 
-print(ListNum)
+    sentence = (
+        'Hello welcome to the party next week on '
+        'Wednesday at 18:30 in London'
+    )
+    words = sentence.split()
+    word_lengths = [(word, len(word)) for word in words]
 
-print('&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&\n')
-sentence = 'Hello welcome to the party next week on '
-sentence += 'Wednesday at 18:30 in London'
+    print(f'Count of even numbers: {len(even_numbers)}')
+    print('Word length pairs (first 4):', word_lengths[:4])
 
-# we click this two sentence together using list comperhenseion
-words = sentence.split(' ')
+    return even_numbers, word_lengths
 
-wordlen = [(word, len(word)) for word in words]
-print(wordlen)
-
-print('==============')
-for x in wordlen:
-	print(x)
+if __name__ == '__main__':
+    demo_multi_condition_comp()

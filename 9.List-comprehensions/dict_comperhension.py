@@ -1,8 +1,14 @@
-users = ['John', 'Mike', 'Cludia', 'George', 'Kim', 'Elena']
+"""
+Demonstrates dictionary comprehension syntax: {key_expr: value_expr for item in iterable}.
+"""
 
-# using dictionary comprehension instead of list comprehension
-sort_dict = {user: 'Berlin' for user in sorted(users) }
+def demo_dict_comprehension():
+    users = ['John', 'Mike', 'Claudia', 'George', 'Kim', 'Elena']
 
-print(sort_dict)
+    # Map each sorted username to a city
+    user_city_map = {user: 'Berlin' for user in sorted(users)}
+    print('Dictionary comprehension output:', user_city_map)
+    return user_city_map
 
-print('\n#################################################################\n')
+if __name__ == '__main__':
+    demo_dict_comprehension()

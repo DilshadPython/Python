@@ -1,37 +1,17 @@
-'''
-list comprehensions
+"""
+Demonstrates performance and syntax of computing mathematical series via comprehensions.
+"""
 
-[expr for val in collection]
-[expr for val in collection if <test>]
-[expr for val in collection if <test> and <test>]
-'''
+def demo_math_series():
+    # Square calculation using list comprehension
+    squares = [x**2 for x in range(1, 21)]
+    print('First 20 squares:', squares)
 
-my_list = []
+    # Conditional mathematical filter: squares of multiples of 5
+    squares_mult_5 = [x**2 for x in range(1, 21) if x % 5 == 0]
+    print('Squares of multiples of 5:', squares_mult_5)
 
-for x in range(1, 221):
-    my_list.append(x**2)
+    return squares, squares_mult_5
 
-
-print(my_list)
-
-# list comprehenstion way
-print('====================================================')
-print('====================================================')
-result = [x**2 for x in range(1, 121)]
-
-print(result)
-
-print('====================================================')
-print('====================================================')
-
-reminders5 = [x**2 % 5 for x in range(1, 51)]
-print(reminders5)
-
-print('====================================================')
-print('====================================================')
-
-reminders5 = [x**2 % 7 for x in range(1, 51)]
-print(reminders5)
-
-reminders5 = [x**2 % 12 for x in range(1, 51)]
-print(reminders5)
+if __name__ == '__main__':
+    demo_math_series()

@@ -1,43 +1,25 @@
-'''
-list comprehensions
+"""
+Demonstrates filtering string lists using string method predicates in comprehensions.
+"""
 
-[expr for val in collection]
-[expr for val in collection if <test>]
-[expr for val in collection if <test> and <test>]
-'''
-'''
-GAUSS
-len(p_remiders) = p+1/2
-'''
+def demo_string_comprehensions():
+    premier_league = [
+        'AFC Bournemouth', 'Arsenal', 'Brighton & Hove Albion', 'Burnley',
+        'Chelsea', 'Crystal Palace', 'Everton', 'Huddersfield Town',
+        'Leicester City', 'Liverpool', 'Manchester City', 'Manchester United',
+        'Newcastle United', 'Southampton', 'Stoke City', 'Swansea City',
+        'Tottenham Hotspur', 'Watford', 'West Bromwich Albion', 'West Ham United'
+    ]
 
-premier_league = [
-    'AFC Bournemouth',
-    'Arsenal',
-    'Brighton & Hove Albion',
-    'Burnley',
-    'Chelsea',
-    'Crystal Palace',
-    'Everton',
-    'Huddersfield Town',
-    'Leicester City',
-    'Liverpool',
-    'Manchester City',
-    'Manchester United',
-    'Newcastle United',
-    'Southampton',
-    'Stoke City',
-    'Swansea City',
-    'Tottenham Hotspur',
-    'Watford',
-    'West Bromwich Albion',
-    'West Ham United'
-]
+    # Filter teams starting with 'M'
+    m_teams = [team for team in premier_league if team.startswith('M')]
+    print('Teams starting with M:', m_teams)
 
-football_team = []
+    # Filter teams starting with 'S'
+    s_teams = [team for team in premier_league if team.startswith('S')]
+    print('Teams starting with S:', s_teams)
 
-test = [team for team in premier_league if team.startswith('M')]
-print(test)
+    return m_teams, s_teams
 
-print()
-start_with_s = [team for team in premier_league if team.startswith('S')]
-print(start_with_s)
+if __name__ == '__main__':
+    demo_string_comprehensions()

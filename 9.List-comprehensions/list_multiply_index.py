@@ -1,24 +1,22 @@
-vector = [2, 9, 4, -6, 1, 5.1, -7.9]
+"""
+Demonstrates scalar multiplication and Cartesian product calculation via nested comprehensions.
+"""
 
-# we want to multiply 6 to each value in the list
+def demo_cartesian_product():
+    vector = [2, 9, 4, -6, 1, 5.1, -7.9]
 
-multiply = [4 * x for x in vector]
+    # Multiply each element by 4
+    scaled_vector = [4 * x for x in vector]
+    print('Scaled vector (4 * x):', scaled_vector)
 
-print(multiply)
+    list_a = [2, 4, 6]
+    list_b = [1, 3, 5]
 
-print()
+    # Cartesian Product: A x B = {(a, b) for a in A for b in B}
+    cartesian_product = [(a, b) for a in list_a for b in list_b]
+    print('Cartesian Product A x B:', cartesian_product)
 
-# Cartesian Product
-'''
-a = {1, 2}
-b = {i, j}
+    return scaled_vector, cartesian_product
 
-a*b = {(1,i), (1, j), (2, i), (2, j)}
-'''
-
-A = [2, 4, 6, 8, 10]
-B = [1, 3, 5, 7, 9]
-
-cart_pro = [(a, b) for a in A for b in B]
-
-print(cart_pro)
+if __name__ == '__main__':
+    demo_cartesian_product()

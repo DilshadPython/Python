@@ -1,18 +1,26 @@
-users = ['John', 'Mike', 'Cludia', 'George', 'Kim', 'Elena']
+"""
+Demonstrates constructing lists of dictionaries using list comprehensions.
+"""
 
-mylist = []
-for user in users:
-    mylist.append({'name': user})
+def demo_dict_list_creation():
+    users = ['John', 'Mike', 'Claudia', 'George', 'Kim', 'Elena']
 
-print(mylist)
-print('\n#################################################################\n')
-# using list comprehension instead of for
-yourlist = [{'name': user, 'city': 'Brentwood'} for user in users]
+    # Imperative approach with for-loop
+    user_dicts_loop = []
+    for user in users:
+        user_dicts_loop.append({'name': user})
 
-print(yourlist)
+    # Declarative list comprehension approach
+    user_dicts_comp = [{'name': user, 'city': 'Brentwood'} for user in users]
 
-print('\n#################################################################\n')
-# using list comprehension instead of for
-sort_list = [{'name': user, 'city': 'Brentwood'} for user in sorted(users)]
+    # Comprehension with sorted iterable
+    sorted_user_dicts = [{'name': user, 'city': 'Brentwood'} for user in sorted(users)]
 
-print(sort_list)
+    print('Loop approach:', user_dicts_loop[:2])
+    print('Comprehension approach:', user_dicts_comp[:2])
+    print('Sorted comprehension approach:', sorted_user_dicts[:2])
+
+    return user_dicts_loop, user_dicts_comp, sorted_user_dicts
+
+if __name__ == '__main__':
+    demo_dict_list_creation()

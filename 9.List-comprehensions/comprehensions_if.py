@@ -1,12 +1,12 @@
-'''
-vals = [experession for value in collection if condition]
+"""
+Demonstrates list comprehension with even number calculations and squarings.
+"""
 
-values = []
-for value in collection:
-	if condition:
-		values.append(experession)
-'''
+def demo_even_squares():
+    # Compute squares of even numbers in range 0-23
+    even_squares = [num * num for num in range(24) if not (num % 2)]
+    print('Squares of even numbers < 24:', even_squares)
+    return even_squares
 
-some_sqrt = [num * num for num in range(24) if not num % 2]
-
-print(some_sqrt)
+if __name__ == '__main__':
+    demo_even_squares()

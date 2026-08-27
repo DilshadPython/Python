@@ -1,22 +1,19 @@
-print()
-users = ['John', 'Mike', 'Cludia', 'George', 'Kim', 'Elena']
+"""
+Demonstrates index mapping and string analysis inside comprehensions.
+"""
 
-print('\t', users)
+def demo_index_and_lengths():
+    users = ['John', 'Mike', 'Claudia', 'George', 'Kim', 'Elena']
 
-print()
-for user in range(len(users)):
-    print('\t',user + 1, users[user])
+    # List of tuples containing positional index (1-based) and name
+    indexed_users = [(idx + 1, name) for idx, name in enumerate(sorted(users))]
+    print('Indexed & sorted users:', indexed_users)
 
-print()
-# Now we will sorted the user alphabetically with number
-for user in sorted(users):
-    print('\t',user)
+    # Dictionary mapping name to character length
+    name_lengths = {name: len(name) for name in users}
+    print('Name character lengths:', name_lengths)
 
-print()
-for user in range(len(users)):
-    print('\t', user + 1, sorted(users[user]))
+    return indexed_users, name_lengths
 
-print()
-# print how many character each name in the list
-for user in range(len(users)):
-    print('\t', len(users[user]), ' = ', users[user])
+if __name__ == '__main__':
+    demo_index_and_lengths()

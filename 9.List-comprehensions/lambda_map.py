@@ -1,35 +1,26 @@
-print()
-numbers = [1, 3, 5, 7, 9, 11]
-print(numbers)
+"""
+Demonstrates functional map() + lambda vs Pythonic list comprehensions.
+"""
 
-print()
-new_list = list(map(lambda x: x * 2, numbers))
-print(new_list)
+def demo_map_vs_comprehension():
+    numbers = [1, 3, 5, 7, 9, 11]
 
-print()
+    # Functional approach using map() and lambda
+    doubled_map = list(map(lambda x: x * 2, numbers))
+    squared_map = list(map(lambda x: x * x, numbers))
 
-# print mod numbers
-a_list = list(map(lambda x: x * x, numbers))
-print(a_list)
+    # Pythonic list comprehension alternative
+    doubled_comp = [x * 2 for x in numbers]
+    squared_comp = [x * x for x in numbers]
 
-print()
+    # Filter even numbers using list comprehension
+    evens_comp = [x for x in range(30) if x % 2 == 0]
 
-# display even number
-b_list = [x for x in range(30) if x % 2 == 0]
-print(b_list)
+    print('Doubled (map):', doubled_map)
+    print('Doubled (comp):', doubled_comp)
+    print('Evens (comp):', evens_comp[:5])
 
-print()
+    return doubled_comp, squared_comp, evens_comp
 
-# use filter
-c_list = list(filter(lambda x: x % 2 == 0, range(20)))
-print(c_list)
-
-print()
-
-d_list = list((letter, x) for letter in 'AbCdE' for x in range(3))
-print(d_list)
-
-print()
-
-e_list = [(letter, x) for letter in 'AbCdE' for x in range(2)]
-print(e_list)
+if __name__ == '__main__':
+    demo_map_vs_comprehension()

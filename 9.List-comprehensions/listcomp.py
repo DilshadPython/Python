@@ -1,20 +1,23 @@
+"""
+Demonstrates element mutation via list comprehensions vs imperative loops.
+"""
 
-grades = [22, 44, 55, 33, 77, 12, 85, 17]
+def demo_grade_boosting():
+    grades = [22, 44, 55, 33, 77, 12, 85, 17]
+    print('Original grades:', grades)
 
-# only reading the list
-for i in grades:
-	print(i, ' ', end='')
+    # Imperative element mutation
+    boosted_loop = grades.copy()
+    for i in range(len(boosted_loop)):
+        boosted_loop[i] += 8
 
-# this is simmiler like list comperhensions but another way using for loops
-for x in range(len(grades)):
-	grades[x] = grades[x] + 8
+    # Declarative list comprehension
+    boosted_comp = [x + 8 for x in grades]
 
-print('\n', grades, end='')
+    print('Boosted via loop:', boosted_loop)
+    print('Boosted via comprehension:', boosted_comp)
 
-print('\n#################################################')
+    return boosted_loop, boosted_comp
 
-print('This is a list comperhensions example all in one line')
-
-listcomp = [x + 5 for x in grades]
-print(listcomp)
-
+if __name__ == '__main__':
+    demo_grade_boosting()
