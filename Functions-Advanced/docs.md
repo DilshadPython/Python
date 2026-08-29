@@ -5,7 +5,30 @@ This technical documentation details advanced function mechanics in CPython, foc
 
 ---
 
-## 2. Parameter Binding & Argument Unpacking Lifecycle
+## 2. Structural Comparison: `*args` vs `**kwargs`
+
+| Feature / Dimension | Positional Variadic Parameter (`*args`) | Keyword Variadic Parameter (`**kwargs`) |
+| :--- | :--- | :--- |
+| **Prefix Syntax** | Single asterisk `*` (e.g. `*args`) | Double asterisk `**` (e.g. `**kwargs`) |
+| **Internal Data Structure** | Immutable `tuple` | Mutable `dict` |
+| **Input Invocation Syntax** | Pass comma-separated values (`func(1, 2, 3)`) | Pass key=value pairs (`func(a=1, b=2)`) |
+| **Parameter Ordering** | Must appear before `**kwargs` in signature | Must appear last in function signature |
+| **Access & Iteration** | Sequential index or value iteration (`for arg in args`) | Key-value dictionary iteration (`for k, v in kwargs.items()`) |
+| **Primary Use Case** | Variable numeric inputs, unknown positional list sizes | Dynamic options, configuration dictionaries, optional attributes |
+
+```python
+def compare_args_and_kwargs(*args: Any, **kwargs: Any) -> Dict[str, Any]:
+    # *args collects positional values into a tuple: (10, 'Python', 3.13)
+    # **kwargs collects key=value pairs into a dict: {'user': 'Dilshad', 'role': 'Developer'}
+    return {
+        "args_type": type(args).__name__,    # 'tuple'
+        "kwargs_type": type(kwargs).__name__  # 'dict'
+    }
+```
+
+---
+
+## 3. Parameter Binding & Argument Unpacking Lifecycle
 
 ```mermaid
 flowchart TD
@@ -19,7 +42,7 @@ flowchart TD
 
 ---
 
-## 3. Advanced Function Attributes & Reflection Matrix (`dir()`)
+## 4. Advanced Function Attributes & Reflection Matrix (`dir()`)
 
 Every function object in Python is an instance of `types.FunctionType`. Calling `dir(func)` exposes the following introspection dunder attributes:
 
@@ -40,7 +63,7 @@ Every function object in Python is an instance of `types.FunctionType`. Calling 
 
 ---
 
-## 4. `import` vs `from ... import ...` Namespace Mechanics
+## 5. `import` vs `from ... import ...` Namespace Mechanics
 
 ### 1. `import module_name`
 - **Behavior**: Imports the entire module into Python's internal `sys.modules` registry and binds the module object to `module_name` in the caller's namespace.
@@ -56,7 +79,7 @@ Every function object in Python is an instance of `types.FunctionType`. Calling 
 
 ---
 
-## 5. Cross-Version Architectural Evolutions (Python 2.7 ➔ Python 3.3 ➔ Python 3.13)
+## 6. Cross-Version Architectural Evolutions (Python 2.7 ➔ Python 3.3 ➔ Python 3.13)
 
 ### Python 2.7 Legacy Mechanics
 - **Syntax**: `print` was a statement (`print "Text"`, `print >>sys.stderr`).
@@ -80,18 +103,6 @@ def legacy_func(heading, *args):
 - **Positional-Only Parameters (PEP 570 - Python 3.8)**: Syntax using `/` separator (`def func(pos_only, /, standard, *, kw_only):`).
 - **Structural Pattern Matching (PEP 634 - Python 3.10)**: Introduced `match...case` construct for branch selection inside variadic functions.
 - **CPython 3.13 Bytecode JUMP & Call Optimizations**: Modernized interpreter opcodes replacing generic jumps with specialized `TO_BOOL`, `POP_JUMP_IF_FALSE`, and zero-overhead inline call frames.
-
----
-
-## 6. If-Statement & Branching Evolutions inside Advanced Functions
-
-Inside variadic and dispatch functions, conditional branching has evolved significantly across CPython versions:
-
-| CPython Version | Branching Bytecode / Optimization | Functional Impact |
-| :--- | :--- | :--- |
-| **Python 2.7 - 3.3** | `JUMP_IF_FALSE_OR_POP` / `JUMP_IF_TRUE_OR_POP` | Stack-based boolean evaluation with intermediate allocation. |
-| **Python 3.10+** | Structural Pattern Matching (`match...case`) | Declarative branching over argument structures and type guards. |
-| **Python 3.13** | `TO_BOOL`, `POP_JUMP_IF_FALSE`, JUMP specialization | Direct opcode-level evaluation without boolean object instantiation. |
 
 ---
 

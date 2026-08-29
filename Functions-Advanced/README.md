@@ -25,6 +25,12 @@ The `Functions-Advanced/` tutorial module demonstrates advanced Python function 
 - **Module**: `variadic_sum_subtract.py`
 - Implements flexible mathematical operations (summation `calculate_variadic_sum` and subtraction `calculate_variadic_subtraction`) across arbitrary numbers.
 
+### 5. Advanced Comparison Analysis (`*args` vs `**kwargs`)
+- **Module**: `advanced_args_kwargs_comparison.py`
+- `compare_args_and_kwargs(*args, **kwargs)` performs structural comparison:
+  - `*args`: Captured into an ordered, immutable `tuple`.
+  - `**kwargs`: Captured into a key-value mapped `dict`.
+
 ---
 
 ## Standardized Module Index
@@ -35,6 +41,7 @@ The `Functions-Advanced/` tutorial module demonstrates advanced Python function 
 | `keyword_varargs.py` | Keyword varargs dictionary unpacking | `process_keyword_args(word, **kwargs)` |
 | `combined_args_kwargs.py` | Combining `*args` and `**kwargs` | `print_args_details(*args, **kwargs)`<br>`print_kwargs_details(*args, **kwargs)`<br>`print_combined_user_details(*args, **kwargs)` |
 | `variadic_sum_subtract.py` | Variadic math computations | `calculate_variadic_sum(*args)`<br>`calculate_variadic_subtraction(*numbers)` |
+| `advanced_args_kwargs_comparison.py` | Structural comparison of `*args` and `**kwargs` | `compare_args_and_kwargs(*args, **kwargs)` |
 
 ---
 
@@ -46,4 +53,4 @@ Execute the comprehensive test suite from the repository root:
 python3 -m unittest discover Functions-Advanced
 ```
 
-All 9 test cases verify parameter unpacking, type annotations, and edge cases (such as empty inputs).
+All 11 test cases verify parameter unpacking, type annotations, edge cases, and comparative structural analysis.

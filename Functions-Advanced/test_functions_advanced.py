@@ -1,7 +1,7 @@
 """
 Comprehensive Unit Test Suite for Advanced Python Function Modules.
 Tests variable positional (*args) and keyword (**kwargs) argument handling,
-combining positional and keyword inputs, and variadic calculations.
+combining positional and keyword inputs, variadic calculations, and comparison analysis.
 """
 
 import sys
@@ -22,6 +22,7 @@ from variadic_sum_subtract import (
     calculate_variadic_sum,
     calculate_variadic_subtraction
 )
+from advanced_args_kwargs_comparison import compare_args_and_kwargs
 
 
 class TestPositionalVarargs(unittest.TestCase):
@@ -82,6 +83,28 @@ class TestVariadicSumSubtract(unittest.TestCase):
         self.assertEqual(calculate_variadic_subtraction(22, 3, -4, 8), -29)
         self.assertEqual(calculate_variadic_subtraction(141, 24, 83, -99, -34), -115)
         self.assertEqual(calculate_variadic_subtraction(), 0)
+
+
+class TestArgsKwargsComparison(unittest.TestCase):
+    """Test advanced *args vs **kwargs comparison analysis module."""
+
+    def test_compare_args_and_kwargs(self):
+        res = compare_args_and_kwargs(10, "Python", user="Dilshad", role="Dev")
+        self.assertEqual(res["args_summary"]["type"], "tuple")
+        self.assertEqual(res["args_summary"]["count"], 2)
+        self.assertEqual(res["args_summary"]["values_list"], [10, "Python"])
+
+        self.assertEqual(res["kwargs_summary"]["type"], "dict")
+        self.assertEqual(res["kwargs_summary"]["count"], 2)
+        self.assertEqual(res["kwargs_summary"]["values_dict"], {"user": "Dilshad", "role": "Dev"})
+
+        self.assertFalse(res["is_args_empty"])
+        self.assertFalse(res["is_kwargs_empty"])
+
+    def test_compare_args_and_kwargs_empty(self):
+        res = compare_args_and_kwargs()
+        self.assertTrue(res["is_args_empty"])
+        self.assertTrue(res["is_kwargs_empty"])
 
 
 if __name__ == '__main__':
