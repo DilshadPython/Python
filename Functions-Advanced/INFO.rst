@@ -1,5 +1,21 @@
-The different between args and kwars is in args you can use list tuple and set
-but in kwargs we can use list, tuple, set and dict but we can not use dict and
-list with kwargs in one methods but use separetley.
+======================================
+Advanced Function Arguments Reference
+======================================
 
-print(*objects, sep=' ', end='\n', file=sys.stdout, flush=False)
+Differences Between *args and **kwargs
+---------------------------------------
+
+* **args (Positional Variable Arguments):**
+  Unpacks non-keyworded variable-length arguments into a `tuple`. You can pass positional iterables (lists, tuples, sets) using the `*` operator.
+
+* **kwargs (Keyword Variable Arguments):**
+  Unpacks keyworded variable-length arguments into a `dict`. You can pass mappings using the `**` operator.
+
+* **Usage Syntax:**
+  Positionals (`*args`) must precede keyword arguments (`**kwargs`) in function signatures.
+
+Standard Print Signature Reference:
+-----------------------------------
+.. code-block:: python
+
+    print(*objects, sep=' ', end='\n', file=sys.stdout, flush=False)
