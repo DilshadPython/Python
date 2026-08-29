@@ -7,18 +7,18 @@ from typing import Tuple
 x: str = 'Global x'
 
 
-def out_side() -> Tuple[str, str]:
+def outer_scope_shadowing() -> Tuple[str, str]:
     """Demonstrate local variable shadowing inside nested function scope."""
     x_outer = 'out side x'
     x_inner = ''
-    def in_side() -> str:
+    def inner_scope_shadowing() -> str:
         nonlocal x_inner
         x_inner = 'in side x'
         return x_inner
-    in_side()
+    inner_scope_shadowing()
     return x_inner, x_outer
 
 
 if __name__ == '__main__':
-    inner_val, outer_val = out_side()
+    inner_val, outer_val = outer_scope_shadowing()
     print(f"Inner: {inner_val} | Outer: {outer_val} | Global: {x}")

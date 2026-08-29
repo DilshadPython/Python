@@ -5,28 +5,16 @@ Demonstrates function calls, return values, and mathematical exponents.
 from typing import Union
 
 
-def square(n: Union[int, float]) -> Union[int, float]:
-    """Calculate square of a number."""
+def calculate_exponent_square(n: Union[int, float]) -> Union[int, float]:
+    """Return the square of a given number."""
     return n * n
 
 
-def power(n: Union[int, float], exp: int = 3) -> Union[int, float]:
-    """Calculate nth power of a number."""
+def power(n: Union[int, float], exp: int) -> Union[int, float]:
+    """Return n raised to the power of exp."""
     return n ** exp
 
 
-def main() -> None:
-    """Execute main interactive workflow."""
-    try:
-        num = int(input('Enter a number: '))
-        print(f'The square of num: {square(num)}')
-        num1 = int(input('Enter second number: '))
-        print(f'The power of second number: {power(num1)}')
-        num2 = int(input('Enter third number: '))
-        print(f'The power of num2: {power(num2)}')
-    except ValueError:
-        print("Invalid number input")
-
-
 if __name__ == '__main__':
-    main()
+    print("4 squared:", calculate_exponent_square(4))
+    print("2 to power 3:", power(2, 3))

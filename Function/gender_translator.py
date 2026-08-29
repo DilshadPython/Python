@@ -1,12 +1,11 @@
 """
 Demonstrates gender code translation function with default parameter handling.
 """
-# "from module import name" imports specific type hint symbols directly into local scope.
 from typing import Optional
 
 
-def get_gender(sex: Optional[str] = None) -> str:
-    """Translate gender character code to descriptive string."""
+def translate_gender_code(sex: Optional[str] = None) -> str:
+    """Translate gender character code ('m'/'f') to descriptive string."""
     if sex == 'm':
         return 'Male'
     elif sex == 'f':
@@ -18,6 +17,6 @@ def get_gender(sex: Optional[str] = None) -> str:
 
 
 if __name__ == '__main__':
-    print("Gender 'm':", get_gender('m'))
-    print("Gender 'f':", get_gender('f'))
-    print("Gender None:", get_gender(None))
+    print("Gender 'm':", translate_gender_code('m'))
+    print("Gender 'f':", translate_gender_code('f'))
+    print("Gender None:", translate_gender_code(None))

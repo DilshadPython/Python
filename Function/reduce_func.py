@@ -1,20 +1,20 @@
 """
 Demonstrates `functools.reduce()` for accumulating sequence results.
 """
-# "import module" imports the full standard library "functools" module into local scope.
 import functools
-# "from module import name" imports specific type hint symbols directly into local scope.
-from typing import List
+from typing import List, Union
 
-def add(x: int, y: int) -> int:
-    """Add two numbers together."""
+
+def add_pair(x: Union[int, float], y: Union[int, float]) -> Union[int, float]:
+    """Add two numeric values together."""
     return x + y
 
-def sum_sequence(numbers: List[int]) -> int:
-    """Sum a list of numbers using functools.reduce()."""
-    return functools.reduce(add, numbers, 0)
+
+def sum_sequence(sequence: List[Union[int, float]]) -> Union[int, float]:
+    """Reduce sequence elements to a single cumulative sum."""
+    return functools.reduce(add_pair, sequence)
+
 
 if __name__ == '__main__':
-    nums = list(range(1, 11))
-    print("Sequence:", nums)
-    print("Sum via reduce():", sum_sequence(nums))
+    numbers = [1, 2, 3, 4, 5]
+    print(f"Cumulative sum of {numbers}: {sum_sequence(numbers)}")

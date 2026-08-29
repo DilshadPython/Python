@@ -1,16 +1,16 @@
 """
-Demonstrates standard script entry point pattern ( function).
+Demonstrates standard script entry point pattern (`main()` function).
 """
 
 
-def hello(to: str = 'python') -> str:
+def hello_entry(to: str = 'python') -> str:
     """Return greeting string."""
     return f"Hello, {to}"
 
 
 def main(name: str = 'python') -> str:
     """Main execution function."""
-    return hello(name)
+    return hello_entry(name)
 
 
 if __name__ == '__main__':

@@ -11,8 +11,4 @@ def square(num: Union[int, float]) -> Union[int, float]:
 
 
 if __name__ == '__main__':
-    try:
-        val = int(input('Enter a number: '))
-        print(f"{val} squared is: {square(val)}")
-    except ValueError:
-        print("Invalid number input")
+    print("5 squared is:", square(5))

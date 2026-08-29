@@ -79,48 +79,63 @@ Conditional evaluation inside functions has undergone significant CPython optimi
 
 ---
 
-## 7. Refactored Module Index & Mapping Matrix
+## 7. Refactored Module Index (54 Unique Non-Duplicate Modules)
 
-All Python files in `Function/` are PEP 8 compliant, fully typed, documented, and verified by `test_functions.py`. Standardized descriptive filenames accurately reflect module functionality while legacy alias wrappers maintain backwards compatibility:
+All 54 Python files in `Function/` are PEP 8 compliant, fully typed, documented, and verified by `test_functions.py`. Every function name across the entire directory is guaranteed unique with zero function duplications:
 
-| Primary Descriptive Module | Legacy / Alias File | Functional Responsibility |
+| Primary Descriptive Module | Core Responsibility | Unique Function Name(s) |
 | :--- | :--- | :--- |
-| `number_square.py` | `example_1.py` | Simple number squaring computation |
-| `vowel_counter.py` | `example_2.py` | Vowel counting in input text strings |
-| `cave_navigation.py` | `func.py` | Graph-like cave node navigation data structure |
-| `gender_translator.py` | `func_1.py` | Gender code translation (`m`/`f`) |
-| `gender_mapping.py` | `func_2.py` | Standardized gender mapping with null checks |
-| `profile_formatter.py` | `func_3.py` | User profile string formatting |
-| `user_greeting.py` | `func_4.py` | User greeting function with default values |
-| `calculator_dict.py` | `func_5.py` | Encapsulated arithmetic calculator returning dict |
-| `tuple_arithmetic.py` | `func_6.py` | Sum and difference tuple returns |
-| `absolute_values.py` | `func_abs.py` | Absolute values for int, float, and complex numbers |
-| `nested_scope_shadowing.py` | `func_call_itself.py` | Nested function lexical scope shadowing |
-| `formatted_greeting.py` | `func_format.py` | Dynamic string formatting and `*args`/`**kwargs` |
-| `greeting_welcome.py` | `func_two_args.py` | Multi-argument greeting function |
-| `email_welcome.py` | `func_with_argument.py` | Combining email verification and welcome messages |
-| `default_parameters.py` | `info.py` | Required vs optional default parameter handling |
-| `basic_calculator.py` | `def_cal.py` | Basic arithmetic calculator dictionary |
-| `student_directory.py` | `dict_id.py` | Student ID dictionary lookup table |
-| `metric_conversion.py` | `kwargs_func.py` | Inches and feet to centimeter conversions |
-| `global_keyword.py` | `global.py` | Module-level global state modification via `global` |
-| `global_scope_shadowing.py` | `global_1.py` | Outer scope shadowing without `nonlocal` |
-| `global_scope_access.py` | `global_2.py` | Nested inner access to outer global scope |
-| `global_inner_local.py` | `global_kw.py` | Inner function local scope variable declarations |
-| `nested_function_scope.py` | `in_out_func.py` | Distinct inner vs outer local scope resolution |
-| `nonlocal_scope_read.py` | `local_var.py` | Reading outer scope variables via `nonlocal` |
-| `nonlocal_scope_modify.py` | `no_local.py` | Modifying outer scope variables via `nonlocal` |
-| `script_main_entry.py` | `main.py` | Standard CPython `if __name__ == '__main__':` pattern |
-| `greeting_handler.py` | `main_1.py` | Parameterized greeting handler function |
-| `recursive_factorial.py` | `recursive_func.py` | Recursive factorial computation |
-| `recursive_factorial_v1.py` | `recursive_func1.py` | Factorial base case implementation |
-| `recursive_factorial_v2.py` | `recursive_func2.py` | Recursive factorial handling negative inputs |
-| `recursive_factorial_v3.py` | `recursive_func3.py` | Recursive factorial with validation |
-| `function_references.py` | `recursive_square.py` | Dynamic function object references and invocation |
-| `boolean_func.py` | `boolian_func.py` | Boolean parity and positivity predicate functions |
-| `calculate_func.py` | `calclute_dunc.py` | Tuple calculation results |
-| `closure_function.py` | `clouser_function.py` | Multiplier closure state retention |
-| `def_calendar.py` | `def_calander.py` | Standard library calendar output generator |
-| `global_variable.py` | `global_varaible.py` | Module-level global counter state management |
-| `recursive_duplicate.py` | `recursive_duplecate.py` | Recursive consecutive duplicate character removal |
-| `recursive_explode.py` | `recursive_explod.py` | Recursive string spacing expansion |
+| `absolute_values.py` | Built-in `abs()` for numeric and complex types | `calculate_abs_values` |
+| `add_int.py` | Basic addition operations and type hints | `add_int`, `my_add`, `add_me` |
+| `anonymous_func.py` | Lambda expression usage | `add`, `lambda_square` |
+| `args_unpacking.py` | Positional argument unpacking (`*args`) | `calculate_sum` |
+| `boolean_func.py` | Boolean predicate functions | `is_even_boolean`, `is_positive` |
+| `build_func.py` | Built-in `max()` and `min()` functions | `get_max_and_min` |
+| `calculate_func.py` | Tuple return of arithmetic operations | `calculate` |
+| `calculator_dict.py` | Encapsulated calculator returning dictionary | `calculator` |
+| `call_return.py` | Function return values and exponents | `calculate_exponent_square`, `power` |
+| `cave_navigation.py` | Cave navigation graph data structure | `create_tunnel`, `visit_cave`, `choose_cave` |
+| `closure_function.py` | Closure multiplier state retention | `make_multiplier` |
+| `def_and_global_var.py` | Global variable modification inside function | `bar` |
+| `def_args_kwargs.py` | Handling dynamic `*args` and `**kwargs` | `view` |
+| `def_calendar.py` | Calendar generation using standard library | `get_month_calendar` |
+| `def_str.py` | String case transformation and formatting | `username` |
+| `default_parameters.py` | Required vs optional default parameters | `myfunc` |
+| `dispatch_dict.py` | Dictionary-based switch/case dispatch table | `dispatch_dict` |
+| `dispatch_if.py` | Conditional branching function dispatch | `dispatch_if` |
+| `email_welcome.py` | Email verification and welcome message | `view_email`, `welcome_email` |
+| `factorial_func.py` | Iterative factorial computation | `factorial` |
+| `filter_func.py` | Filtering sequences using predicates | `even_func`, `get_even_numbers` |
+| `formatted_greeting.py` | String formatting and argument tuples | `welcome_msg`, `user_details` |
+| `function_references.py` | Dynamic function object references | `square_function_ref` |
+| `gender_translator.py` | Gender code translation | `translate_gender_code` |
+| `global_inner_local.py` | Local variable declaration in inner scope | `inner_local_scope` |
+| `global_keyword.py` | Modifying global state using `global` keyword | `test_global_modify` |
+| `global_scope_access.py` | Nested reading of outer global scope | `outer_global_access` |
+| `global_scope_shadowing.py` | Nested scope variable shadowing | `outer_scope_shadowing` |
+| `global_variable.py` | Global counter state management | `increment_global_counter`, `get_counter_state` |
+| `greeting_welcome.py` | Multi-argument user greeting | `welcome_user` |
+| `higher_order_func.py` | Higher-order mapping with `map()` | `square_value`, `apply_square` |
+| `if_func.py` | Predicate functions inside conditional blocks | `is_even_number`, `check_number_parity` |
+| `metric_conversion.py` | Length metric conversions (in/ft to cm) | `centimeter` |
+| `multi_args_function.py` | Temperature conversions (F <-> C) | `fahrenheit_temp`, `celsius_temp`, `convert_temp_to` |
+| `nested_function_scope.py` | Inner vs outer local scope inspection | `outer_nested_scope` |
+| `nested_scope_shadowing.py` | Lexical scope shadowing in inner function | `outer_func_shadowing` |
+| `nonlocal_scope_modify.py` | Modifying outer scope variables via `nonlocal` | `outer_nonlocal_modify` |
+| `nonlocal_scope_read.py` | Reading outer scope variables via `nonlocal` | `outer_nonlocal_read` |
+| `number_square.py` | Simple number squaring computation | `square` |
+| `pay_tax.py` | Tax bracket and net pay calculations | `pay_tax`, `neto_pay` |
+| `profile_formatter.py` | User profile summary string formatting | `profile` |
+| `recursive_count_letter.py` | Recursive sequence length calculation | `count_letter` |
+| `recursive_duplicate.py` | Recursive string deduplication | `remove_duplicate` |
+| `recursive_explode.py` | Recursive string expansion | `recursive_explode` |
+| `recursive_factorial.py` | Recursive factorial calculation | `factorial_recur` |
+| `recursive_list_map.py` | Higher-order map applied to list squaring | `square_element`, `map_squares` |
+| `recursive_string.py` | Recursive acronym extraction and transformation | `pick_first_letter`, `extract_acronym`, `extract_acronym_uppercase` |
+| `reduce_func.py` | Sequence reduction via `functools.reduce` | `add_pair`, `sum_sequence` |
+| `script_main_entry.py` | Standard CPython `if __name__ == '__main__':` | `hello_entry`, `main` |
+| `student_directory.py` | Student ID dictionary lookup table | `get_student_name` |
+| `triangle.py` | Triangle area computation | `calculate_triangle_area` |
+| `tuple_arithmetic.py` | Sum and difference tuple returns | `add_and_subtract_three` |
+| `user_greeting.py` | User greeting with default parameters | `greet_user` |
+| `vowel_counter.py` | Vowel counting in text strings | `vowels_count` |

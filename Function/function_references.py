@@ -5,11 +5,11 @@ Demonstrates assigning function references and invoking function objects dynamic
 from typing import Union
 
 
-def square(num: Union[int, float]) -> Union[int, float]:
+def square_function_ref(num: Union[int, float]) -> Union[int, float]:
     """Return the square of a given number."""
     return num * num
 
 
 if __name__ == '__main__':
-    func_ref = square
+    func_ref = square_function_ref
     print("Square via reference:", func_ref(5))

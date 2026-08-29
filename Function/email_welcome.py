@@ -8,10 +8,10 @@ def view_email(email: str) -> str:
     return f"{email} is your email."
 
 
-def welcome(name: str, email: str) -> str:
+def welcome_email(name: str, email: str) -> str:
     """Return full welcome message with email."""
     return f"Hello {name.strip()} welcome to function!. {view_email(email)}"
 
 
 if __name__ == '__main__':
-    print(welcome("Tom", "tom@example.com"))
+    print(welcome_email("Tom", "tom@example.com"))
