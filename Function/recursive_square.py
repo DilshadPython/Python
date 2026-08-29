@@ -1,16 +1,9 @@
-# this is a fuction signed as an object and at the end this function a siged to verables
+"""
+Backwards-compatible wrapper alias for function_references.py (descriptive filename).
+"""
+from Function.function_references import square
 
-def square(num):
-	return num * num
+__all__ = ["square"]
 
-# create number to be entered
-number = int(input('Enter a number: '))
-
-# a signed the function to a varable
-var = square(number)
-
-# created another varable called sqnumber signed to privouse var
-sqnumber = var 
-
-# print the result of the recursive func as varable
-print(sqnumber)
+if __name__ == '__main__':
+    print(square(5))

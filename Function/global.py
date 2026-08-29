@@ -1,11 +1,9 @@
-# global var
-a = 12
+"""
+Backwards-compatible wrapper alias for global_keyword.py (descriptive filename).
+"""
+from Function.global_keyword import test_global_modify
 
+__all__ = ["test_global_modify"]
 
-def test():
-    # call the global var inside the function
-    global a
-    a += 3
-    print('Result of a is : ', a)
-
-test()
+if __name__ == '__main__':
+    print("Modified global a:", test_global_modify())

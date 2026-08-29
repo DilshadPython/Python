@@ -1,15 +1,12 @@
+"""
+Demonstrates area calculation of a triangle given base and height.
+"""
+# "from module import name" imports specific type hint symbols directly into local scope.
+from typing import Union
 
-''' height = h,  base = b area = a '''
+def calculate_triangle_area(base: Union[int, float], height: Union[int, float]) -> float:
+    """Calculate and return the area of a triangle (0.5 * base * height)."""
+    return 0.5 * base * height
 
-''' a = 1/2 * b*h '''
-
-
-def triangle():
-    print('We will calculte the are of the triangle')
-    b = int(input('Please enter the base: '))
-    h = int(input('Please enter the hight: '))
-    area = 0.5 * b * h
-    return print(area)
-
-
-triangle()
+if __name__ == '__main__':
+    print("Triangle area (b=10, h=5):", calculate_triangle_area(10, 5))

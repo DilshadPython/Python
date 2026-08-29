@@ -1,13 +1,9 @@
-# Example of explod ==> explode('Python')-> 'P y t h o n'
+"""
+Backwards-compatible wrapper alias for recursive_duplicate.py (corrected spelling).
+"""
+from Function.recursive_duplicate import remove_duplicate, remove_duplecate
 
-def remove_duplecate(word):
-	print(word)
-	if len(word) <=1 :
-		return word
-	elif word[0] == word[1]:
-				# this is means go to next character and removed duplicated char
-		return remove_duplecate(word[1:])
-	else:
-		return word[0] + remove_duplecate(word[1:])
+__all__ = ["remove_duplicate", "remove_duplecate"]
 
-print(remove_duplecate(str(input('Enter any word: '))))
+if __name__ == "__main__":
+    print(remove_duplicate("Pyythhoon"))

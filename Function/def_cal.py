@@ -1,16 +1,9 @@
-def my_func():
-    lang = 'Python'
-    machine = 'Calculator'
-    return print('Welcome {} {}'.format(lang, machine))
+"""
+Backwards-compatible wrapper alias for basic_calculator.py (descriptive filename).
+"""
+from Function.basic_calculator import calculator
 
-my_func()
+__all__ = ["calculator"]
 
-
-def your_func():
-    x = int(input(' Enter a number: '))
-    y = int(input(' Enter second number: '))
-
-    total = x + y
-    return print(f' We add them together {x} + {y} is: {total}')
-
-your_func()
+if __name__ == '__main__':
+    print(calculator(20, 5))

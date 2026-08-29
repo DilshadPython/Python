@@ -1,26 +1,9 @@
+"""
+Backwards-compatible wrapper alias for formatted_greeting.py (descriptive filename).
+"""
+from Function.formatted_greeting import welcome_msg, user_details
 
-def welcome_msg(greeting, name=' Dilshad'):
-    return '{}, {}'.format(greeting, name)
+__all__ = ["welcome_msg", "user_details"]
 
-
-print(welcome_msg('Hello, '))
-
-print()
-
-
-def user_details(*args, **kwargs):
-    print(args)
-    print(kwargs)
-
-
-user_details('Dilshad', 'dilshad@gmail.com', age=41, sex='Male')
-
-print()
-
-more_info = ['Thom', 'Studnet']
-details = {'Uni': 'Anglia University', 'city': 'Chelmsford', 'build': 2000}
-
-user_details(more_info, details)
-
-print('\n ==================')
-user_details(*more_info, **details)
+if __name__ == '__main__':
+    print(welcome_msg('Hello, '))

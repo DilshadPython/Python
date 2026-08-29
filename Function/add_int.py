@@ -1,34 +1,26 @@
-# Python 3.5+ supports 'type annotations' that can be
-# used with tools like Mypy to write statically typed Python:
-import random
-from random import randint
+"""
+Demonstrates basic function definitions, addition operations, and type annotations in Python.
+"""
+# "from module import name" imports specific type hint symbols directly into local scope.
+from typing import Union
 
 
-def my_add(a: int, b: int) -> int:
+def add_int(a: Union[int, float], b: Union[int, float]) -> Union[int, float]:
+    """Add two numbers and return their sum."""
     return a + b
 
 
-print(my_add(4, 56))
-print()
+def my_add(a: int, b: int) -> int:
+    """Return the sum of two integers."""
+    return a + b
 
 
 def add_me(x: int, y: int) -> int:
-    return 10
+    """Return the sum of two integers."""
+    return x + y
 
 
-print(add_me(7, 9))
-
-
-def add_num(x: int, y: int) -> int:
-    return random.randint
-
-
-print(add_num(7, 3))
-
-# I have installed the following python3 -m pip install mypy to test the error
-# to run  mypy add_int.py
-
-# def str_add(a: int, b: int) -> int:
-#   return 'Welcome'
-
-# print(str_add(4, 56))
+if __name__ == "__main__":
+    print(add_int(10, 20))
+    print(my_add(4, 56))
+    print(add_me(7, 9))

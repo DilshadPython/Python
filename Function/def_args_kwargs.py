@@ -1,17 +1,16 @@
+"""
+Demonstrates handling dynamic positional (*args) and keyword (**kwargs) arguments.
+"""
+# "from module import name" imports specific type hint symbols directly into local scope.
+from typing import Any, Dict, Tuple
 
-def view(*args, **kwargs):
-    print(args)
-    print(kwargs)
 
-view('Dilshad', 'Mohammed', stID=814747, age=45,
-     university='Anglia Ruskin University')
+def view(*args: Any, **kwargs: Any) -> Tuple[Tuple[Any, ...], Dict[str, Any]]:
+    """Return passed positional and keyword arguments as a tuple of (args, kwargs)."""
+    return args, kwargs
 
-print('\n##################################')
-fullname = ['Shvan', 'Mohammed']
-details = {'stID': 819847, 'age': 28, 'university': 'London University'}
 
-view(fullname, details)
-
-print('\n - See the different between this function how change the output:')
-
-view(*fullname, **details)
+if __name__ == "__main__":
+    a, kw = view("Alpha", "Beta", key1="Val1", key2="Val2")
+    print(f"Args: {a}")
+    print(f"Kwargs: {kw}")

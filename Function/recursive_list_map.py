@@ -1,24 +1,17 @@
-# this is a fuction signed as an object and at the end this function a siged to verables
+"""
+Demonstrates map() higher-order function applied to custom functions.
+"""
+# "from module import name" imports specific type hint symbols directly into local scope.
+from typing import List
 
-def square(num):
-	return num * num
+def square(num: int) -> int:
+    """Return the square of an integer."""
+    return num * num
 
-# create number to be entered
-number = int(input('Enter a number: '))
+def map_squares(numbers: List[int]) -> List[int]:
+    """Map square function over sequence of numbers."""
+    return list(map(square, numbers))
 
-# a signed the function to a varable
-var = square(number)
-
-# created another varable called sqnumber signed to privouse var
-sqnumber = var 
-
-# print the result of the recursive func as varable
-print(sqnumber)
-
-print('===========================')
-numbers = range(1, 10)
-
-# map in python means higher-order function
-mapping = list(map(square, numbers))
-
-print(mapping)
+if __name__ == '__main__':
+    nums = list(range(1, 10))
+    print("Mapped squares:", map_squares(nums))

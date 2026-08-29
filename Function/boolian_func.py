@@ -1,11 +1,10 @@
-# if return vowl character then is True
-def is_letter_vowel(let=str(input('Enter a letter: '))):
-    if let == 'a' or let == 'e' or \
-       let == 'i' or let == 'o' or \
-       let == 'u' or let == 'q':
-        return True
-    else:
-        return False
+"""
+Backwards-compatible wrapper alias for boolean_func.py (corrected spelling).
+"""
+from Function.boolean_func import is_even, is_positive
 
+__all__ = ["is_even", "is_positive"]
 
-print(is_letter_vowel())
+if __name__ == "__main__":
+    print(f"Is 10 even? {is_even(10)}")
+    print(f"Is -5 positive? {is_positive(-5)}")

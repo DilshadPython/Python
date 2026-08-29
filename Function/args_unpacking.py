@@ -1,20 +1,17 @@
+"""
+Demonstrates argument unpacking (*args) in Python functions.
+"""
+# "from module import name" imports specific type hint symbols directly into local scope.
+from typing import Union
 
-def unpacking_func(a, b, c):
-    print(a, b, c)
 
-tuple_vec = (1, 0, 1)
-dict_vec = {'a': 1, 'b': 0, 'c': 1}
-list_vec = [2, 0, 2]
+def calculate_sum(*args: Union[int, float]) -> Union[int, float]:
+    """Calculate and return the sum of positional arguments."""
+    return sum(args)
 
-print('Tuple')
-unpacking_func(*tuple_vec)
-print('')
-print('Dictionary')
-unpacking_func(*dict_vec)
-print('')
-print('List ')
-unpacking_func(*list_vec)
-print('')
-print('Using double astrikes only in dict')
-unpacking_func(**dict_vec)
 
+if __name__ == "__main__":
+    numbers = [10, 20, 30]
+    print(f"Sum of list: {calculate_sum(*numbers)}")
+    tup = (5, 15, 25)
+    print(f"Sum of tuple: {calculate_sum(*tup)}")

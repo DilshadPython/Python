@@ -1,16 +1,9 @@
-x = 'cat'
+"""
+Backwards-compatible wrapper alias for nested_scope_shadowing.py (descriptive filename).
+"""
+from Function.nested_scope_shadowing import outer_func
 
+__all__ = ["outer_func"]
 
-def func():
-    x = 'Bird'
-
-    def sub_func():
-        x = 'Dog'
-        y = 'Elephan'
-        print(x)
-    sub_func()
-
-
-func()
-
-# cat, dog, Bird, Elephan
+if __name__ == '__main__':
+    print("Nested inner x value:", outer_func())

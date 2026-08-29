@@ -1,25 +1,23 @@
-# Every one in London not speak english
-# answer will be = EoiLnse
+"""
+Demonstrates extracting and transforming string sequences using map().
+"""
+# "from module import name" imports specific type hint symbols directly into local scope.
+from typing import List
 
-def pick_first_letter(word):
-	return word[0]
+def pick_first_letter(word: str) -> str:
+    """Return the first character of a string."""
+    return word[0] if word else ''
 
-words = ['Every', 'one', 'in', 'London', 'not', 'speak', 'english']
+def extract_acronym(words: List[str]) -> str:
+    """Extract acronym string from list of words."""
+    return ''.join(map(pick_first_letter, words))
 
-to_do = list(map(pick_first_letter, words))
-print(to_do)
+def extract_acronym_uppercase(words: List[str]) -> str:
+    """Extract uppercase acronym string from list of words."""
+    return extract_acronym(words).upper()
 
-another = ''
-another = another.join(list(map(pick_first_letter, words)))
-print(another)
-
-print('===============================')
-
-words = ['Every', 'one', 'in', 'London', 'not', 'speak', 'english']
-def change_to_upper(word):
-	to_upper = ''
-	to_upper = to_upper.join(list(map(pick_first_letter, words))).upper()
-	return to_upper
-
-var = change_to_upper(words)
-print(var)
+if __name__ == '__main__':
+    words = ['Every', 'one', 'in', 'London', 'not', 'speak', 'english']
+    print("First letters:", list(map(pick_first_letter, words)))
+    print("Acronym:", extract_acronym(words))
+    print("Uppercase Acronym:", extract_acronym_uppercase(words))

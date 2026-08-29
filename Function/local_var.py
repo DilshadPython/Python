@@ -1,16 +1,9 @@
+"""
+Backwards-compatible wrapper alias for nonlocal_scope_read.py (descriptive filename).
+"""
+from Function.nonlocal_scope_read import out_side
 
-def out_side():
-    # create local variable
-    x = 'This is local var in out_side() called x'
+__all__ = ["out_side"]
 
-    def in_side():
-        nonlocal x
-        # here print the x in_side function
-        print(x)
-
-    in_side()
-    # here print the x out_side function
-    print(x)
-
-# we call the main function which is out_side()
-out_side()
+if __name__ == '__main__':
+    print(out_side())

@@ -1,12 +1,9 @@
+"""
+Backwards-compatible wrapper alias for email_welcome.py (descriptive filename).
+"""
+from Function.email_welcome import view_email, welcome
 
-def view_email(email):
-    return f'{email} is your email.'
+__all__ = ["view_email", "welcome"]
 
-print(view_email(input('Enter your email address: ')))
-
-
-def welcome(name):
-    return ' Hello {} welcome to function!.'.format(name) + \
-    view_email(input('\n Enter your email: '))
-
-print(welcome(' Tome '))
+if __name__ == '__main__':
+    print(welcome("Tom", "tom@example.com"))

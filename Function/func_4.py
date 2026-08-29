@@ -1,10 +1,9 @@
-#import os
+"""
+Backwards-compatible wrapper alias for user_greeting.py (descriptive filename).
+"""
+from Function.user_greeting import greet_user
 
+__all__ = ["greet_user"]
 
-def func():
-    """ Here is the main function """
-    print('Please enter your name: ')
-    fname = input('First Name: ')
-    print('Your name is ', fname)
-
-func()
+if __name__ == '__main__':
+    print(greet_user("Dilshad"))

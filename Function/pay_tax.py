@@ -1,20 +1,22 @@
-# if tax is 0 - 10000 0%
-# if tax is 11000 - 35000 17% 
-# if tax is > 36000 27%
+"""
+Demonstrates tax bracket calculation functions.
+"""
+# "from module import name" imports specific type hint symbols directly into local scope.
+from typing import Union
 
-def pay_tax(salary):
-	if salary <= 10000:
-		return 0
-	elif salary > 11000 and salary <= 35000:
-		return salary * 0.17
-	else:
-		return salary * 0.27
+def pay_tax(salary: Union[int, float]) -> Union[int, float]:
+    """Calculate annual income tax based on progressive tax brackets."""
+    if salary <= 10000:
+        return 0
+    elif 11000 <= salary <= 35000:
+        return salary * 0.17
+    else:
+        return salary * 0.27
 
+def neto_pay(grosspay: Union[int, float]) -> Union[int, float]:
+    """Calculate net pay after tax deduction."""
+    return grosspay - pay_tax(grosspay)
 
-def neto_pay(grosspay):
-	grosspay = grosspay - pay_tax(grosspay)
-	return grosspay
-
-gp=int(input('Enter your gross pay: '))
-
-print('Your income after tax is: ', neto_pay(gp), '£')
+if __name__ == '__main__':
+    salary = 30000
+    print(f"Gross Pay: {salary} | Tax: {pay_tax(salary)} | Net Pay: {neto_pay(salary)}")

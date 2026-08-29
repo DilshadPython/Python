@@ -1,9 +1,9 @@
-# Example of explod ==> explode('Python')-> 'P y t h o n'
+"""
+Backwards-compatible wrapper alias for recursive_explode.py (corrected spelling).
+"""
+from Function.recursive_explode import recursive_explode
 
-def recursive_explode(word):
-	if len(word) <= 1:
-		return word
-	else:
-		return word[0] + ' ' + recursive_explode(word[1:])
+__all__ = ["recursive_explode"]
 
-print(recursive_explode(str(input('Enter any word: '))))
+if __name__ == "__main__":
+    print(recursive_explode("Python"))

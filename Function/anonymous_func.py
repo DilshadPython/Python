@@ -1,20 +1,12 @@
-# Anonymous function is a function doesn't have a name example lambda
-# structure of lambda function
-# lambda x: x*x 
+"""
+Demonstrates anonymous functions (lambda expressions) for lightweight calculations.
+"""
+# "from module import name" imports specific type hint symbols directly into local scope.
+from typing import Callable
 
-'''
-def sequre(num):
-	return num * num
-This example above is exactly the same like lambda
-'''
+add: Callable[[float, float], float] = lambda x, y: x + y
+square: Callable[[float], float] = lambda x: x ** 2
 
-sq = lambda x: x*x
-
-print(sq(int(input('Enter any number: '))))
-
-print('\n Another anonymous function using list, map lambda:')
-# create another anonymous function using map with lambda
-numbers = range(1, 9)
-sqroot = list(map(lambda x: x*x, numbers))
-
-print(sqroot)
+if __name__ == "__main__":
+    print(f"5 + 3 = {add(5, 3)}")
+    print(f"4^2 = {square(4)}")

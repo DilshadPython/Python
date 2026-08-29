@@ -1,16 +1,10 @@
-import math
+"""
+Backwards-compatible wrapper alias for calculate_func.py (corrected spelling).
+"""
+from Function.calculate_func import calculate
 
-''' Create function do some calculation or cercle '''
-print('We will looking for pi function in math module\n')
+__all__ = ["calculate"]
 
-print('The pi value is :', math.pi)
-
-print('')
-
-
-def cycling(raidus):
-    ''' We calculate raudis of cerciler '''
-    valume = 4.0 / 3.0 * math.pi * raidus**3
-    return valume
-
-print(cycling(5))
+if __name__ == "__main__":
+    add_res, sub_res, mul_res, div_res = calculate(10, 2)
+    print(f"Add: {add_res}, Sub: {sub_res}, Mul: {mul_res}, Div: {div_res}")

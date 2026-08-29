@@ -1,26 +1,10 @@
-def main():
-    name = 'Dilshad Abdulla'
-    address = '301 Hallmark Court'
+"""
+Backwards-compatible wrapper alias for closure_function.py (corrected spelling).
+"""
+from Function.closure_function import make_multiplier
 
-    def submain():
-        print('%s %s' % (name, address))
+__all__ = ["make_multiplier"]
 
-    return submain()
-
-
-main()
-
-print('###################################')
-
-
-def first_func(name, address):
-    detail = name + ' ' + address
-
-    def second_func():
-        print(detail)
-
-    return second_func()
-
-new_func = first_func('Tom Crus', 'London Road 12')
-
-new_func
+if __name__ == "__main__":
+    double = make_multiplier(2)
+    print(f"Double 5: {double(5)}")

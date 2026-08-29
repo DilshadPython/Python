@@ -1,17 +1,21 @@
-# filter is another high order function
-# Filter will take the function and apply to all the sequnize has given and return
-# only those are match to even 
-# % this is moduler means the reminder
+"""
+Demonstrates filtering sequences using higher-order functions.
+"""
+# "from module import name" imports specific type hint symbols directly into local scope.
+from typing import List
 
-def even_func(num):
-	if num % 2 == 0:
-		return True
-	else:
-		return False
 
-numbers = list(range(1, 12))
-print(numbers)
-# filter will apply the function to the number if the reminder is 0 tahn return evens 
-# numbers only
-evens = list(filter(even_func, numbers))
-print(evens)
+def even_func(num: int) -> bool:
+    """Return True if number is even, False otherwise."""
+    return num % 2 == 0
+
+
+def get_even_numbers(numbers: List[int]) -> List[int]:
+    """Filter and return only even numbers from input sequence."""
+    return list(filter(even_func, numbers))
+
+
+if __name__ == "__main__":
+    nums = list(range(1, 12))
+    print(nums)
+    print(get_even_numbers(nums))

@@ -1,21 +1,9 @@
+"""
+Backwards-compatible wrapper alias for gender_mapping.py (descriptive filename).
+"""
+from Function.gender_mapping import get_gender
 
-def get_gender(sex=None):
+__all__ = ["get_gender"]
 
-    print('List of gender m or f and None.')
-    sex = input('Please enter the gender list above: ')
-    if sex is 'm':
-        print('The result is Male')
-    elif sex is 'f':
-        print('the result is Female')
-    elif sex == None:
-        print('There is no gender')
-    else:
-        print('Not in the list above')
-    print(sex)
-
-# print 'Enter the charcter of sex: ',
-# sex = raw_input()
-
-# get_gender('m')
-# get_gender('f')
-get_gender()
+if __name__ == '__main__':
+    print("Input 'm':", get_gender('m'))

@@ -1,15 +1,9 @@
-def calculator():
-    a = 17
-    b = 36
-    print('Add Result', a + b)
-    print('Sub Result', a - b)
-    print('Multiple Result', a * b)
-    print('Divid Result', a / b)
-    print('Reminder Result', a % b)
+"""
+Backwards-compatible wrapper alias for calculator_dict.py (descriptive filename).
+"""
+from Function.calculator_dict import calculator
 
-    if a < b:
-        print('The result is negative because a is {} where b is '.format(a, b))
-
+__all__ = ["calculator"]
 
 if __name__ == '__main__':
-    calculator()
+    print("Calculator results:", calculator(17, 36))

@@ -1,14 +1,9 @@
-number = -2.45
-number_1 = -33
-number_2 = 12.6876759
+"""
+Backwards-compatible wrapper alias for absolute_values.py (descriptive filename).
+"""
+from Function.absolute_values import calculate_abs_values
 
-'''
-returns absolute value of a number
-'''
+__all__ = ["calculate_abs_values"]
 
-print(f'The Abs value of {number}, {number_1} and {number_2} is : ', 
-	abs(number), abs(number_1), abs(number_2))
-
-num = 2 + 3j
-
-print(f'The ABS value of {num} is : ', abs(num))
+if __name__ == '__main__':
+    print(calculate_abs_values(-2.45, -33, 12.68, 2 + 3j))

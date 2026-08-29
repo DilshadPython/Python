@@ -1,8 +1,9 @@
-def add(v, v1, v2):
-    a = v + v1 + v2
-    b = v - v1 - v2
-    return a, ' ',  b
+"""
+Backwards-compatible wrapper alias for tuple_arithmetic.py (descriptive filename).
+"""
+from Function.tuple_arithmetic import add_and_subtract_three
 
-result = add(6, 8, 9)
+__all__ = ["add_and_subtract_three"]
 
-print(result)
+if __name__ == '__main__':
+    print(add_and_subtract_three(6, 8, 9))

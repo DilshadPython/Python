@@ -1,24 +1,10 @@
-# global variables
-x = 'Dilshad'
+"""
+Backwards-compatible wrapper alias for global_variable.py (corrected spelling).
+"""
+from Function.global_variable import increment_global_counter, get_counter_state
 
+__all__ = ["increment_global_counter", "get_counter_state"]
 
-def func():
-    y = 'Abdulla'
-    print(y)
-
-func()
-print(x, ' is my first name')  # This is global variable able to print
-# print(y, ' is my last name'	)	# can't access to local vaiable
-
-
-a = 5
-
-
-def call():
-    b = 10
-    print(b)
-    print(a)
-    c = a + 3
-    print(c)
-
-call()
+if __name__ == "__main__":
+    init_val, new_val = get_counter_state()
+    print(f"Counter initial: {init_val}, updated: {new_val}")

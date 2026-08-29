@@ -1,24 +1,33 @@
-# Python has first class function they can be used to emulate switch/case
-# statements
+"""
+Demonstrates conditional branching (if/elif/else) for function dispatching.
+"""
+# "from module import name" imports specific type hint symbols directly into local scope.
+from typing import Optional, Union
 
 
-def dispatch_if(operator):
-    op = print(['add', 'sub', 'mul', 'div', 'rem'])
-    operator = str(input('Enter the the operator: '))
-    x = int(input('Enter first number: '))
-    y = int(input('Enter second number: '))
-
+def dispatch_if(operator: str, x: Union[int, float], y: Union[int, float]) -> Optional[Union[int, float]]:
+    """Perform operation matching `operator` string using if-elif-else logic."""
     if operator == 'add':
-        return print('Result: ', x + y)
+        return x + y
     elif operator == 'sub':
-        return print('Result: ', x - y)
+        return x - y
     elif operator == 'mul':
-        return print('Result: ', x * y)
+        return x * y
     elif operator == 'div':
-        return print('Result: ', x / y)
+        return x / y if y != 0 else float('nan')
     elif operator == 'rem':
-        return print('Result: ', x % y)
+        return x % y if y != 0 else float('nan')
     else:
-        return print('Unknowen operatoer pleatry again!')
+        return None
 
-print(dispatch_if(input))
+
+if __name__ == '__main__':
+    print("Operators: ['add', 'sub', 'mul', 'div', 'rem']")
+    op = input('Enter operator: ').strip()
+    try:
+        a = float(input('Enter first number: '))
+        b = float(input('Enter second number: '))
+        res = dispatch_if(op, a, b)
+        print(f"Result: {res}")
+    except ValueError:
+        print("Invalid input")
