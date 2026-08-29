@@ -1,70 +1,44 @@
-is_registered = False
+"""Dynamic Value Truthiness and Registration Validation.
 
-if is_registered:
-    print("\n Yes it's True")
-else:
-    print("\n No it's False")
+Demonstrates how dynamic state variables (Booleans, None, Numbers, Containers)
+behave when evaluated directly in conditional statements.
 
-print('\n========================')
-is_registered = None
+Import Notes:
+    - 'from typing import Any, List, Tuple': Standard library typing imports for annotating
+      dynamic data types, list structures, and tuple pairs.
+"""
 
-if is_registered:
-    print("\n Yes it's True")
-else:
-    print("\n No it's False")
+from typing import Any, List, Tuple
 
-print('\n========================')
-is_registered = 0
 
-if is_registered:
-    print("\n Yes it's True")
-else:
-    print("\n No it's False")
+def is_user_registered(registration_state: Any) -> bool:
+    """Return True if registration_state evaluates to Truthy in Python."""
+    if registration_state:
+        return True
+    else:
+        return False
 
-print('\n========================')
-is_registered = 2
 
-if is_registered:
-    print("\n Yes it's True")
-else:
-    print("\n No it's False")
+def demo_more_if() -> None:
+    """Demonstrate state evaluation across diverse types."""
+    test_states: List[Tuple[str, Any]] = [
+        ("Boolean False", False),
+        ("None Object", None),
+        ("Integer Zero", 0),
+        ("Positive Integer", 2),
+        ("Empty String", ""),
+        ("Empty Tuple", ()),
+        ("Empty List", []),
+        ("Empty Dict", {}),
+        ("Empty Set", set()),
+        ("Populated List", ["Alice", "Bob"]),
+    ]
 
-print('\n - Empty sequence like: \n========================')
-is_registered == ''
+    print("--- User Registration State Evaluation ---")
+    for description, state in test_states:
+        registered = is_user_registered(state)
+        print(f"State: {description:18s} | Representation: {repr(state):15s} -> Registered: {registered}")
 
-if is_registered:
-    print("\n Yes it's True")
-else:
-    print("\n No it's False")
 
-print('\n - Empty sequence like: \n========================')
-is_registered = ()
-
-if is_registered:
-    print("\n Yes it's True")
-else:
-    print("\n No it's False")
-
-print('\n - Empty sequence like: \n========================')
-is_registered = []
-
-if is_registered:
-    print("\n Yes it's True")
-else:
-    print("\n No it's False")
-
-print('\n - Empty mapping like: \n========================')
-is_registered = {}
-
-if is_registered:
-    print("\n Yes it's True")
-else:
-    print("\n No it's False")
-
-print('\n - Empty set like: \n========================')
-is_registered = set()
-
-if is_registered:
-    print("\n Yes it's True")
-else:
-    print("\n No it's False")
+if __name__ == "__main__":
+    demo_more_if()

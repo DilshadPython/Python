@@ -1,18 +1,32 @@
+"""Logical 'not' Operator (Boolean Inversion).
 
-user = 'Student'
+Demonstrates using the 'not' operator to invert a truth value:
+- 'not True' evaluates to False
+- 'not False' evaluates to True
 
-is_registered = True
+Import Notes:
+    - 'from typing import Union': Standard library typing import for annotations.
+"""
 
-# the not will change the is)registered to False here
-if not is_registered:
-    print('\n  Yes the user already registered.')
-else:
-    print('\n Not register in the database')
+from typing import Union
 
 
-is_registered = False
-# the not will change the is)registered to True here
-if not is_registered:
-    print('\n  Yes the user already registered.')
-else:
-    print('\n The user is not register in the database')
+def check_registration_status(is_registered: bool) -> str:
+    """Return a message indicating registration status using logical 'not'."""
+    if not is_registered:
+        return "User is NOT registered in the database."
+    else:
+        return "User IS registered in the database."
+
+
+def demo_if_not() -> None:
+    """Demonstrate logical NOT evaluation."""
+    status_flag = True
+    print(f"Status Flag: {status_flag} -> {check_registration_status(status_flag)}")
+
+    status_flag = False
+    print(f"Status Flag: {status_flag} -> {check_registration_status(status_flag)}")
+
+
+if __name__ == "__main__":
+    demo_if_not()

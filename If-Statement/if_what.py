@@ -1,15 +1,27 @@
+"""Direct Evaluation of Literal Booleans (True / False).
 
-if True:
-    print('Yes the condition was True')
+Demonstrates direct boolean control flow with 'if True:' and 'if False:'.
 
-print('\n - If False \n')
+Import Notes:
+    - 'from typing import Union': Standard library typing import for annotations.
+"""
 
-if False:
-    print('The condition not printed!')
+from typing import Union
 
-print('\n - If False Go to Else: \n')
 
-if False:
-    print('The condition not printed!')
-else:
-    print('Good Bye')
+def evaluate_literal_condition(flag: bool) -> str:
+    """Evaluate literal boolean conditions."""
+    if flag:
+        return "Condition evaluated to True: Executing 'if' block."
+    else:
+        return "Condition evaluated to False: Executing 'else' block."
+
+
+def demo_if_what() -> None:
+    """Demonstrate literal boolean evaluation."""
+    print(evaluate_literal_condition(True))
+    print(evaluate_literal_condition(False))
+
+
+if __name__ == "__main__":
+    demo_if_what()

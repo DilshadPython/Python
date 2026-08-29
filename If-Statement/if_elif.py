@@ -1,9 +1,37 @@
+"""Age Bracket Categorization with 'if-elif-else'.
 
-print('Please enter a value: ')
-a = int(input())
-if a > 60:
-    print('\nThe number {} is grater than 60 that is true'.format(a))
-elif a < 10 and a > 0:
-    print('\nThe number {} Yes a is between 0 and 10'.format(a))
-else:
-    print('\nThe number {} is not between any of above condition'.format(a))
+Demonstrates categorizing a person's age into life stage brackets:
+- Minor (< 18)
+- Adult (18 - 64)
+- Senior (65+)
+
+Import Notes:
+    - 'from typing import List': Standard library typing module import to type-annotate
+      lists of sample integer ages.
+"""
+
+from typing import List
+
+
+def categorize_age_stage(age: int) -> str:
+    """Categorize age into life stages: Minor, Adult, or Senior."""
+    if age < 0:
+        raise ValueError("Age cannot be negative.")
+    elif age < 18:
+        return "Minor"
+    elif age < 65:
+        return "Adult"
+    else:
+        return "Senior"
+
+
+def demo_if_elif() -> None:
+    """Demonstrate age categorization."""
+    test_ages: List[int] = [10, 25, 70]
+    for age in test_ages:
+        stage = categorize_age_stage(age)
+        print(f"Age {age:2d} -> Category: {stage}")
+
+
+if __name__ == "__main__":
+    demo_if_elif()
