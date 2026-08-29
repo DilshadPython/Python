@@ -5,7 +5,7 @@ Demonstrates dictionary key-value lookup for student ID mapping.
 from typing import Dict
 
 STUDENT_DIRECTORY: Dict[int, str] = {
-    814747: 'Dilshad Abdulla',
+    814747: 'John Smith',
     814748: 'John Doe',
     814749: 'Jane Smith'
 }

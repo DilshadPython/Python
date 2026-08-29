@@ -19,7 +19,7 @@ This technical documentation details advanced function mechanics in CPython, foc
 ```python
 def compare_args_and_kwargs(*args: Any, **kwargs: Any) -> Dict[str, Any]:
     # *args collects positional values into a tuple: (10, 'Python', 3.13)
-    # **kwargs collects key=value pairs into a dict: {'user': 'Dilshad', 'role': 'Developer'}
+    # **kwargs collects key=value pairs into a dict: {'user': 'John', 'role': 'Developer'}
     return {
         "args_type": type(args).__name__,    # 'tuple'
         "kwargs_type": type(kwargs).__name__  # 'dict'

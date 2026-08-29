@@ -3,7 +3,7 @@ Demonstrates string formatting, case transformation, and user detail composition
 """
 
 
-def username(fname: str = "Dilshad", lname: str = "Abdulla", age: int = 30) -> str:
+def username(fname: str = "John", lname: str = "Smith", age: int = 30) -> str:
     """Return formatted full name in uppercase with age details."""
     details = f"{fname.upper()} {lname.upper()}"
     return f"Your full name is {details} and your age is {age}"

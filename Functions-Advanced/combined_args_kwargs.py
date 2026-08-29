@@ -24,8 +24,8 @@ def print_combined_user_details(*args: Any, **kwargs: Any) -> Tuple[Tuple[Any, .
 
 
 if __name__ == '__main__':
-    print_args_details('Dilshad', 'Abdulla', 'Developer')
-    print_kwargs_details(fname='Dilshad', lname='Abdulla', height=175)
+    print_args_details('John', 'Smith', 'Developer')
+    print_kwargs_details(fname='John', lname='Smith', height=175)
     args_tup, kwargs_dict = print_combined_user_details('Adam', 'Smith', 44, fname='Adam', country='UK')
     print("Args:", args_tup)
     print("Kwargs:", kwargs_dict)

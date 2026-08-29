@@ -57,12 +57,12 @@ class TestCombinedArgsKwargs(unittest.TestCase):
     """Test functions accepting both positional (*args) and keyword (**kwargs) arguments."""
 
     def test_print_args_details(self):
-        args = print_args_details('Dilshad', 'Abdulla', 'Developer')
-        self.assertEqual(args, ('Dilshad', 'Abdulla', 'Developer'))
+        args = print_args_details('John', 'Smith', 'Developer')
+        self.assertEqual(args, ('John', 'Smith', 'Developer'))
 
     def test_print_kwargs_details(self):
-        kwargs = print_kwargs_details(fname='Dilshad', lname='Abdulla', height=175)
-        self.assertEqual(kwargs, {'fname': 'Dilshad', 'lname': 'Abdulla', 'height': 175})
+        kwargs = print_kwargs_details(fname='John', lname='Smith', height=175)
+        self.assertEqual(kwargs, {'fname': 'John', 'lname': 'Smith', 'height': 175})
 
     def test_print_combined_user_details(self):
         args, kwargs = print_combined_user_details('Adam', 'Smith', 44, city='Brentwood', country='UK')
@@ -89,14 +89,14 @@ class TestArgsKwargsComparison(unittest.TestCase):
     """Test advanced *args vs **kwargs comparison analysis module."""
 
     def test_compare_args_and_kwargs(self):
-        res = compare_args_and_kwargs(10, "Python", user="Dilshad", role="Dev")
+        res = compare_args_and_kwargs(10, "Python", user="John", role="Dev")
         self.assertEqual(res["args_summary"]["type"], "tuple")
         self.assertEqual(res["args_summary"]["count"], 2)
         self.assertEqual(res["args_summary"]["values_list"], [10, "Python"])
 
         self.assertEqual(res["kwargs_summary"]["type"], "dict")
         self.assertEqual(res["kwargs_summary"]["count"], 2)
-        self.assertEqual(res["kwargs_summary"]["values_dict"], {"user": "Dilshad", "role": "Dev"})
+        self.assertEqual(res["kwargs_summary"]["values_dict"], {"user": "John", "role": "Dev"})
 
         self.assertFalse(res["is_args_empty"])
         self.assertFalse(res["is_kwargs_empty"])

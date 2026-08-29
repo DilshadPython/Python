@@ -56,7 +56,7 @@ def compare_args_and_kwargs(*args: Any, **kwargs: Any) -> Dict[str, Any]:
 
 
 if __name__ == '__main__':
-    result = compare_args_and_kwargs(10, "Python", 3.13, user="Dilshad", role="Developer", status="Active")
+    result = compare_args_and_kwargs(10, "Python", 3.13, user="John", role="Developer", status="Active")
     print("=== *args vs **kwargs Comparison Analysis ===")
     print("Positional (*args):", result["args_summary"])
     print("Keyword (**kwargs):", result["kwargs_summary"])

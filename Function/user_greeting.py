@@ -9,4 +9,4 @@ def greet_user(first_name: str = "Guest") -> str:
 
 
 if __name__ == '__main__':
-    print(greet_user("Dilshad"))
+    print(greet_user("John"))

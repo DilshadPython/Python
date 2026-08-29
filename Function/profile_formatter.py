@@ -9,5 +9,5 @@ def profile(fname: str, lname: str, address: str, postcode: str, city: str) -> s
 
 
 if __name__ == '__main__':
-    user_prof = profile('Dilshad', 'Abdulla', '6 Ursula Gould Way', 'E14 7FX', 'London')
+    user_prof = profile('John', 'Smith', '6 Ursula Gould Way', 'E14 7FX', 'London')
     print(user_prof)

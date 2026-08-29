@@ -5,7 +5,7 @@ Demonstrates string formatting within functions and variable argument lists (*ar
 from typing import Any, Dict, Tuple
 
 
-def welcome_msg(greeting: str, name: str = 'Dilshad') -> str:
+def welcome_msg(greeting: str, name: str = 'John') -> str:
     """Return formatted greeting string."""
     return f"{greeting}{name}"
 
@@ -17,6 +17,6 @@ def user_details(*args: Any, **kwargs: Any) -> Tuple[Tuple[Any, ...], Dict[str, 
 
 if __name__ == '__main__':
     print(welcome_msg('Hello, '))
-    args, kwargs = user_details('Dilshad', 'dilshad@gmail.com', age=41, sex='Male')
+    args, kwargs = user_details('John', 'john@example.com', age=41, sex='Male')
     print("Args:", args)
     print("Kwargs:", kwargs)

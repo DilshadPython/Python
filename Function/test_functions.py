@@ -108,8 +108,8 @@ class TestFunctionBasics(unittest.TestCase):
         self.assertIn("August 2026", cal)
 
     def test_def_str(self):
-        res = username("Dilshad", "Abdulla", 30)
-        self.assertIn("DILSHAD ABDULLA", res)
+        res = username("John", "Smith", 30)
+        self.assertIn("JOHN SMITH", res)
 
     def test_default_parameters(self):
         self.assertEqual(myfunc(4), 5)
@@ -125,7 +125,7 @@ class TestFunctionBasics(unittest.TestCase):
         self.assertEqual(translate_gender_code(None), 'None')
 
     def test_greeting_welcome(self):
-        self.assertEqual(welcome_user("Hello", "Dilshad"), "Hello, Dilshad")
+        self.assertEqual(welcome_user("Hello", "John"), "Hello, John")
 
     def test_metric_conversion(self):
         self.assertAlmostEqual(centimeter(inches=10, feet=1), 55.88)
@@ -134,11 +134,11 @@ class TestFunctionBasics(unittest.TestCase):
         self.assertEqual(square(5), 25)
 
     def test_profile_formatter(self):
-        prof = profile('Dilshad', 'Abdulla', '6 Ursula Gould Way', 'E14 7FX', 'London')
-        self.assertIn('Dilshad', prof)
+        prof = profile('John', 'Smith', '6 Ursula Gould Way', 'E14 7FX', 'London')
+        self.assertIn('John', prof)
 
     def test_student_directory(self):
-        self.assertEqual(get_student_name(814747), 'Dilshad Abdulla')
+        self.assertEqual(get_student_name(814747), 'John Smith')
 
     def test_triangle(self):
         self.assertEqual(calculate_triangle_area(10, 5), 25.0)
@@ -147,10 +147,10 @@ class TestFunctionBasics(unittest.TestCase):
         self.assertEqual(add_and_subtract_three(6, 8, 9), (23, -11))
 
     def test_user_greeting(self):
-        self.assertEqual(greet_user("Dilshad"), "Your name is Dilshad")
+        self.assertEqual(greet_user("John"), "Your name is John")
 
     def test_vowel_counter(self):
-        self.assertEqual(vowels_count("Dilshad"), 2)
+        self.assertEqual(vowels_count("John"), 1)
 
 
 class TestAdvancedAndScope(unittest.TestCase):
@@ -194,9 +194,9 @@ class TestAdvancedAndScope(unittest.TestCase):
         self.assertEqual(get_even_numbers([1, 2, 3, 4]), [2, 4])
 
     def test_formatted_greeting(self):
-        self.assertEqual(welcome_msg('Hello, ', 'Dilshad'), 'Hello, Dilshad')
-        args, kwargs = user_details('Dilshad', age=41)
-        self.assertEqual(args, ('Dilshad',))
+        self.assertEqual(welcome_msg('Hello, ', 'John'), 'Hello, John')
+        args, kwargs = user_details('John', age=41)
+        self.assertEqual(args, ('John',))
         self.assertEqual(kwargs, {'age': 41})
 
     def test_function_references(self):
