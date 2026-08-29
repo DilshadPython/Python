@@ -59,7 +59,117 @@ Python provides two primary mechanisms for importing modules from the standard l
 
 ---
 
-## 🔄 Loop Constructs & Python Code Evolution (Python 3.3 to Python 3.13) & Python 2.7 Comparison
+### 3. 📌 Script-by-Script Import Purpose Reference Table
+
+The table below explains exactly what each `import` or `from ... import` statement does in every script in the `Loops` folder:
+
+| Script Name | Import Statement(s) | Imported Module / Symbol | Purpose & Role in the Loop Script |
+| :--- | :--- | :--- | :--- |
+| [`_notused.py`](_notused.py) | `from typing import List` | `typing.List` | Type hint for `execute_unused_variable_loop()` returning a list of message strings (`List[str]`). |
+| [`add_nums.py`](add_nums.py) | `from typing import List, Set` | `typing.List`, `typing.Set` | Type hints for iterating through integer lists (`List[int]`) and set deduplication (`Set[int]`). |
+| [`big_word.py`](big_word.py) | `import os`<br>`from typing import Dict, Tuple, Optional` | `os`<br>`typing.Dict`, `Tuple`, `Optional` | `os.path.exists()` checks if dataset `words.txt` exists before loop processing.<br>`Dict`/`Tuple` annotate word frequency dictionary counts and top word result. |
+| [`def_for.py`](def_for.py) | `from typing import List` | `typing.List` | Type hint annotating generated numeric range lists (`List[int]`). |
+| [`def_while_for.py`](def_while_for.py) | `import sys`<br>`from typing import List` | `sys`<br>`typing.List` | `sys.stdin.isatty()` checks whether terminal execution is interactive or non-interactive.<br>`List` annotates output message lists. |
+| [`double_def_for.py`](double_def_for.py) | `from typing import List` | `typing.List` | Type hint annotating repeated greeting string sequences. |
+| [`elevator.py`](elevator.py) | `from typing import List, Tuple` | `typing.List`, `Tuple` | Type hints annotating floor navigation sequence history and status tuples (`Tuple[bool, List[int]]`). |
+| [`end_py.py`](end_py.py) | `from typing import List` | `typing.List` | Type hint annotating formatted horizontal range sequence lists. |
+| [`exculator.py`](exculator.py) | `from typing import List, Tuple`<br>`from elevator import navigate_elevator` | `typing`, `elevator` | Re-exports type annotations and delegates elevator navigation logic to `elevator.py` wrapper. |
+| [`for_bar.py`](for_bar.py) | `import os`<br>`from typing import List, Tuple` | `os`<br>`typing.List`, `Tuple` | `os.path.exists()` verifies dataset file `grade.txt`.<br>`List`/`Tuple` annotate grade line processing and output bar strings. |
+| [`for_dic_key.py`](for_dic_key.py) | `from typing import Dict, List, Tuple, Any` | `typing` module symbols | Type hints for dictionary keys, values, and key-value tuple pairs (`Dict[str, int]`, `List[Any]`). |
+| [`for_dict.py`](for_dict.py) | `from typing import Dict, List, Tuple, Any` | `typing` module symbols | Type hints annotating nested user dictionary data structures, filtered user lists, and ID ranges. |
+| [`for_else.py`](for_else.py) | `from typing import List, Tuple` | `typing.List`, `Tuple` | Type hints annotating technology stack arrays and search status result tuples (`Tuple[bool, str]`). |
+| [`for_enumerate_index.py`](for_enumerate_index.py) | `from typing import List, Tuple` | `typing.List`, `Tuple` | Type hints annotating parallel inputs and enumerated tuple records (`List[Tuple[int, str, int]]`). |
+| [`for_factorial.py`](for_factorial.py) | Built-in integer operations | Built-in types | Annotates positive integer parameters and iterative factorial product calculation. |
+| [`for_factrorial.py`](for_factrorial.py) | `from for_factorial import calculate_factorial` | `for_factorial` module | Imports `calculate_factorial()` from `for_factorial.py` to maintain legacy filename compatibility. |
+| [`for_index.py`](for_index.py) | `from typing import List, Tuple` | `typing.List`, `Tuple` | Type hints annotating car inventory arrays and search result tuples (`Tuple[bool, int]`). |
+| [`for_len.py`](for_len.py) | `from typing import List` | `typing.List` | Type hint annotating Python library string list (`List[str]`). |
+| [`for_list.py`](for_list.py) | `from typing import List, Any, Optional` | `typing` module symbols | Type hints annotating list slicing parameters (`Optional[int]`) and list item sequences. |
+| [`for_loop.py`](for_loop.py) | `from typing import List, Tuple` | `typing.List`, `Tuple` | Type hints annotating name arrays, break/continue targets, and nested loop product pairs (`List[Tuple[str, int]]`). |
+| [`for_print.py`](for_print.py) | `from typing import Tuple` | `typing.Tuple` | Type hint annotating formatted horizontal and vertical string output pairs (`Tuple[str, str]`). |
+| [`for_range.py`](for_range.py) | `from typing import List, Tuple` | `typing.List`, `Tuple` | Type hints annotating single-arg, two-arg, and stepped range sequence arrays (`List[int]`). |
+| [`for_tuple.py`](for_tuple.py) | `from typing import Tuple, List` | `typing.Tuple`, `List` | Type hints annotating tuple sequence inputs, running totals, and longest city name calculations. |
+| [`print_shape_forloop.py`](print_shape_forloop.py) | `from typing import List` | `typing.List` | Type hint annotating generated right-triangle ASCII hash row strings (`List[str]`). |
+| [`shape_code.py`](shape_code.py) | `from typing import List` | `typing.List` | Type hint annotating multi-loop nested numeric pyramid pattern line strings (`List[str]`). |
+| [`stop.py`](stop.py) | `from typing import List, Tuple` | `typing.List`, `Tuple` | Type hints annotating sequence token lists and loop keyword execution state tuples (`Tuple[List[str], str]`). |
+| [`while_for.py`](while_for.py) | `import sys`<br>`from typing import List, Optional` | `sys`<br>`typing` module symbols | `sys.stdin.isatty()` checks interactive terminal status to prevent non-interactive input blockages.<br>`List`/`Optional` annotate loop counts. |
+| [`test_loops.py`](test_loops.py) | `import os, sys, unittest`<br>`from unittest.mock import patch` | `os`, `sys`, `unittest`, `patch` | `os` resolves path to dataset files (`words.txt`, `grade.txt`).<br>`sys` configures `sys.path` for importing local modules.<br>`unittest` provides test case framework.<br>`patch` mocks `builtins.input` for non-interactive test runs. |
+
+---
+
+## 🔄 `for` Loop vs. `while` Loop: Differences & Usage Guide
+
+Understanding when to choose a `for` loop versus a `while` loop is fundamental to writing clean, Pythonic code.
+
+### 1. Key Differences at a Glance
+
+| Feature / Aspect | `for` Loop | `while` Loop |
+| :--- | :--- | :--- |
+| **Iteration Type** | **Definite Iteration** (Bounded) | **Indefinite Iteration** (Unbounded) |
+| **Primary Purpose** | Traversal over collections, sequences, or fixed ranges | Repeating logic until a dynamic boolean condition becomes `False` |
+| **Counter Control** | Managed automatically by Python's iterator protocol | Managed manually by the programmer (initialize & increment) |
+| **Infinite Loop Risk** | Extremely low (bounded by iterable length) | High (if termination condition is missed or counter is not updated) |
+| **Idiomatic Use Cases** | Lists, tuples, dicts, strings, file lines, `range()` | User input validation, server polling, game loops, state machines |
+
+---
+
+### 2. When to Use a `for` Loop
+
+Use a `for` loop when you **know the sequence or number of iterations in advance** or when traversing data structures.
+
+#### Example 1: Sequence Traversal
+```python
+cities = ["Paris", "London", "Brussels", "Tokyo"]
+for city in cities:
+    print(f"Destination: {city}")
+```
+
+#### Example 2: Fixed Repetition via `range()`
+```python
+# Execute an action exactly 5 times
+for step in range(1, 6):
+    print(f"Step {step} completed.")
+```
+
+---
+
+### 3. When to Use a `while` Loop
+
+Use a `while` loop when **iterations depend on a dynamic condition** that could change at runtime (such as user input, network status, or state flags), and the exact number of iterations is unknown in advance.
+
+#### Example 1: User Input Validation (`while True` + `break`)
+```python
+while True:
+    user_input = input("Enter a positive number: ")
+    if user_input.isdigit() and int(user_input) > 0:
+        number = int(user_input)
+        break  # Exit loop when valid input is received
+    print("Invalid entry! Please try again.")
+```
+
+#### Example 2: Condition-Based Accumulation
+```python
+balance = 100
+withdrawal_fee = 15
+
+while balance >= withdrawal_fee:
+    balance -= withdrawal_fee
+    print(f"Fee deducted. Remaining balance: ${balance}")
+```
+
+---
+
+### 4. Selection Guidelines (How to Choose)
+
+1. **Ask: "Do I have a collection or fixed range of items to process?"**
+   - **YES** $\rightarrow$ Use a **`for` loop**.
+2. **Ask: "Am I waiting for an external event, user input, or dynamic condition?"**
+   - **YES** $\rightarrow$ Use a **`while` loop**.
+3. **Avoid mutating collections in `for` loops**: Modifying a list while iterating over it causes skipped elements. Iterate over a slice copy `for item in items[:]:` instead.
+4. **Avoid infinite `while` loops**: Ensure the variable controlling the `while` condition is modified inside the loop body, or provide an explicit `break` mechanism.
+
+---
+
+## ⚡ Loop Constructs & Python Code Evolution (Python 3.3 to Python 3.13) & Python 2.7 Comparison
 
 ### Python 2.7 Legacy Comparison
 
