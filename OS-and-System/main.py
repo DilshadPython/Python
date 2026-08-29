@@ -7,4 +7,4 @@ import os
 
 for filename in dir(os):
     print(filename)
-# To run  python main.py > os_list.txt
+# To run  python models.py > os_list.txt

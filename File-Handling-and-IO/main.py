@@ -20,4 +20,4 @@ download_file_from_internet(goog_ulr)
 
 # Very important note
 # to make it work in your terminal run like below:
-# python3 main.py
+# python3 models.py

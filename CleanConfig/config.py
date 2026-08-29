@@ -2,6 +2,10 @@ from dataclasses import dataclass
 import os
 
 
+SECRET_KEY="$(python -c 'import secrets; print(secrets.token_urlsafe(32))')"
+DATABASE_URL="sqlite:///app.db"
+DEBUG=1
+
 @dataclass(frozen=True)
 class AppConfig:
     # Strict typed settings with immutable guarantees

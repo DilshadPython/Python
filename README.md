@@ -1,77 +1,67 @@
-# Python-Tutorials
-This repo is only my training time to starting learning python from beginning until now, it can be updated anytimes and add new code for training purpose.
+# Python Zero to Hero: Comprehensive Learning Roadmap
 
-CPython --> written in C
+Welcome to the **Python Tutorials Repository**. This repository is structured to guide a learner from **zero knowledge** all the way to **top-level expertise** (Advanced Python, Data Science, System Engineering, and AI).
 
-# Python Implementations
-Jython --> written in Java
-IronPython --> written in .NET
-pypy --> written in RPython 
+---
 
+## 🗺️ Master Curriculum Roadmap (From Zero to Top)
 
-# Why Python is so Powerful because using in following technologies:
-1. Web Frameworks
-2. Scientific Computing
-3. Image Processing
-4. Databases
-5. Build Systems
-6. Documentation
-7. Persistence
-8. Math
-9. Operating System
-10. Crypotography
-11. Concurrency
-12. Web Protocols
+The table below outlines the exact pedagogical sequence for learning Python. Every topic builds upon the concepts mastered in previous steps.
 
-- Open Source
-- Popular
-- EveryWhere
-- Accessible
+| Step | Topic / Subject | Description | Core Concepts Covered | Target Directory |
+| :--- | :--- | :--- | :--- | :--- |
+| **01** | **Print & Console I/O** | Outputting data and reading user input | `print()`, `input()`, f-strings, basic escape sequences | `Print/` |
+| **02** | **Numbers & Data Types** | Working with numeric values | `int`, `float`, `complex`, casting, arithmetic operations | `Numbers/` |
+| **03** | **Operators** | Expressions, comparisons, and logic | Arithmetic (`+`, `-`, `*`), Logical (`and`, `or`, `not`), Bitwise | `Operators/` |
+| **04** | **Strings** | Text processing and formatting | Slicing, string methods (`upper`, `join`, `split`), immutability | `Strings/` |
+| **05** | **If-Statement (Conditionals)** | Control flow and decision making | `if`, `elif`, `else`, ternary operators, `match-case` | `If-Statement/` |
+| **06** | **Loops** | Repeated execution and iteration | `for` loops, `while` loops, `range()`, `enumerate()`, `break`, `continue` | `Loops/` |
+| **07** | **List** | Mutable ordered sequences | Indexing, slicing, `append()`, `extend()`, `pop()`, sorting | `List/` |
+| **08** | **Tuple** | Immutable ordered sequences | Tuple packing/unpacking, memory efficiency, fixed records | `Tuple/` |
+| **09** | **Set** | Unordered collections of unique elements | Deduplication, set math (`union`, `intersection`, `difference`) | `Set/` |
+| **10** | **Dictionary** | Key-value pairs and hash maps | Keys, values, `get()`, dictionary views, nested structures | `Dictionary/` |
+| **11** | **List Comprehensions** | Concise data transformation | List/Set/Dict comprehensions, filtering conditionals | `List-comprehensions/` |
+| **12** | **Function (Basics)** | Modular reusable code blocks | `def`, positional/keyword parameters, `return`, docstrings | `Function/` |
+| **13** | **Functions (Advanced)** | Higher-order functions & variable scope | `*args`, `**kwargs`, `lambda`, `map()`, `filter()`, LEGB scope rule | `Functions-Advanced/` |
+| **14** | **Modules & Packages** | Organizing code across files | `import`, `from ... import`, `__name__ == '__main__'`, custom libs | `Module/` |
+| **15** | **File Handling & I/O** | Reading and writing files | File I/O (`open`), CSV parsing, JSON, XML, Pickling | `InputOutput/` / `Fio/` |
+| **16** | **Exception Handling** | Error management and logging | `try`, `except`, `finally`, `raise`, custom exceptions, logging | `Try-except/` |
+| **17** | **Iterators & Generators** | Lazy evaluation and memory control | `iter()`, `next()`, `yield`, generator functions & expressions | `Generators/` / `iterator/` |
+| **18** | **Context Managers** | Safe resource acquisition & cleanup | `with` statement, `__enter__`, `__exit__`, `contextlib` | `Context-Manager/` |
+| **19** | **Decorators** | Metaprogramming and function wrapping | Wrappers, `@property`, `@classmethod`, `@staticmethod` | `Property-Decorator/` |
+| **20** | **Object-Oriented (OOP)** | Class-based programming | Classes, objects, inheritance, encapsulation, polymorphism | `Object-Oriented/` |
+| **21** | **Type Hints & Static Analysis**| Enforcing type safety | Annotations, `typing` module, `mypy`, `pydantic` | `TypeHints/` |
+| **22** | **Software Testing & QA** | Code verification and unit testing | `unittest` framework, `pytest`, test runners | `Testing/` / `unittest/` |
+| **23** | **Date & Time Utilities** | Date manipulation and formatting | `datetime`, `date`, `time`, `calendar` | `Date-time/` |
+| **24** | **Math & Statistics** | Mathematical algorithms | `math`, `random`, `statistics`, numeric built-ins | `Math/` |
+| **25** | **Regular Expressions** | Advanced pattern matching | `re` module, regex search, substitute, split | `RegularEx/` |
+| **26** | **System & OS Integration** | Interacting with the operating system | `os`, `sys`, `shutil`, `argparse` CLI interfaces | `OS/` / `Sys/` |
+| **27** | **Data Structures & Algorithms**| Advanced data modeling | Stacks, queues, linked lists, graphs, recursion, sorting | `Data-Structure/` |
+| **28** | **Networking & APIs** | HTTP clients and sockets | `requests`, `urllib`, REST APIs, socket programming | `Requests/` / `Socket/` |
+| **29** | **Web Scraping** | Extracting data from web pages | `BeautifulSoup`, `Scrapy`, HTML parsing | `BeautifulSoup/` |
+| **30** | **Databases & SQL** | Data persistence | SQLite, PostgreSQL, SQL queries | `Database/` |
+| **31** | **Data Science & Analysis** | Numerical analysis and visualization | `NumPy`, `Pandas`, `Matplotlib`, `Seaborn` | `Pandas/` / `Data-Analysis/` |
+| **32** | **Machine Learning & AI** | Machine Learning & Artificial Intelligence | ML models, AI pipelines, predictive modeling | `ML/` / `ai/` / `AIPython/` |
+| **33** | **GUI & Practical Projects** | Desktop UI and application building | `Tkinter`, `Turtle`, Desktop games, automation scripts | `Tkinter/` / `Games/` |
 
-# Course Overview 
-1. Getting Started
-2. Strings and Collections
-3. Modularity
-4. Built-in Types and the Object Model
-5. Collection Types
-6. Handling Exceptions
-7. Comperhensions, Iterables, and Generators
-8. Defining New Types with Classes
-9. Files and Resource management
-10. Shipping Working and Maintainable Code
+---
 
+## ❓ Frequently Asked Questions
 
-## Note:
-### In Python2.7 :
-###  print 'Something'
-### raw_input()
-=============================
-##### / called class division
-##### /> 3/2
-##### /> 1
+### What subject comes immediately after Data Structures (List, Tuple, Set, Dict, Comprehensions)?
+👉 **Functions & Scope!** (`Function/` & `Functions-Advanced/`)
+> Once you understand how to store and transform data using lists, tuples, sets, dictionaries, and comprehensions, the next logical step is to package operations into **reusable functions**, manage variable scope, pass dynamic arguments (`*args`, `**kwargs`), and organize functions into **modules**.
 
-************************
+---
 
-### In Python3+ : 
-### print('Something')
-### input()
-# =============================
-#### / called single division
-#### /> 3/2
-#### /> 1.5
+## 🧪 Running Unit Tests Across Core Modules
 
-## create virtualenv with python version
-mkvirtualenv xmlenv --python=/usr/bin/python3.5
-mkvirtualenv xmlenv --python=/usr/bin/python3.6
-mkvirtualenv xmlenv --python=/usr/bin/python3.7
+You can execute the built-in test suites for the core modules:
 
-## Install venv with specific python version
-sudo apt install python3.7 python3.7-dev python3.7-venv -y
-sudo apt install python3.6 python3.6-dev python3.6-venv -y
-sudo apt install python3.5 python3.5-dev python3.5-venv -y
-
-
-sudo apt-get install build-essential libssl-dev libffi-dev python-dev
-sudo apt-get install build-essential libssl-dev libffi-dev python3-dev
-
-sudo apt-get install build-essential checkinstall
+```bash
+python3 -m unittest discover -s List
+python3 -m unittest discover -s Tuple
+python3 -m unittest discover -s Set
+python3 -m unittest discover -s Dictionary
+python3 -m unittest discover -s List-comprehensions
+```

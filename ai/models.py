@@ -1,6 +1,13 @@
 from sentence_transformers import SentenceTransformer
 import numpy as np
 
+# from huggingface_hub import whoami
+#
+# user = whoami(token=...)
+
+from huggingface_hub import login
+
+login()
 
 '''
 This is a sentence-transformers model: It maps sentences & paragraphs to a 384 
