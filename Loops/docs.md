@@ -166,21 +166,39 @@ def search_item(items: list, target: str) -> bool:
 
 ## 🔄 Python Version Evolution: Python 2.7 vs Python 3.3 – 3.13
 
-### 1. Python 2.7 Legacy Differences
+### 1. Python 2.7 Legacy Differences & Code Samples
 
 1. **`xrange()` vs `range()`**: Python 2.7 `range()` created full in-memory lists, while `xrange()` was a lazy generator. Python 3 replaced `xrange()` and made `range()` lazy.
 2. **`print` Statement**: Python 2.7 used statement syntax (`print "Text",`). Python 3 requires function syntax (`print("Text", end=" ")`).
 3. **Dict Traversal**: Python 2.7 used `.iteritems()` for lazy iteration. Python 3 uses lightweight view objects (`.items()`).
 4. **Variable Leaking**: Python 2.7 list comprehensions leaked loop variables into surrounding scope. Python 3 isolates comprehension scope.
+5. **Comma Exception Handling**: Python 2.7 used `except Exception, e:` instead of `except Exception as e:`.
+
+```python
+# Python 2.7 Legacy Loop Example:
+for i in xrange(1, 4):
+    print "Item:", i,
+
+print ""
+
+user_dict = {"a": 1, "b": 2}
+for k, v in user_dict.iteritems():
+    print k, "->", v
+```
 
 ### 2. Python 3 Version Feature Timeline
 
-- **Python 3.3**: Introduced memory-efficient lazy sequence iterators (`range`, `zip`, `map`).
-- **Python 3.5**: Added asynchronous loops (`async for`) and matrix multiplication (`@`).
-- **Python 3.8**: Introduced assignment expressions (Walrus operator `:=`) inside `while` loop conditions.
-- **Python 3.10**: Introduced structural pattern matching (`match-case`) inside loops.
-- **Python 3.11**: Added Specialized Adaptive Interpreter (`FOR_ITER_LIST` / `FOR_ITER_RANGE`), accelerating loops by up to 60%.
-- **Python 3.12 & 3.13**: Added JIT compiler integration and experimental free-threading (`--disable-gil`) for parallel loop execution.
+- **Python 3.3**: Memory-efficient lazy iterators (`range`, `zip`, `map`) & `yield from` sub-generator delegation.
+- **Python 3.4**: `enum.Enum` iteration and `pathlib.Path.glob()` path traversal in loops.
+- **Python 3.5**: Asynchronous loops (`async for` / `aiter`) via PEP 492 and extended iterable unpacking.
+- **Python 3.6**: Guaranteed insertion-order dictionary iteration and async list comprehensions.
+- **Python 3.7**: Dataclass iteration via `dataclasses.asdict()` and `astuple()`.
+- **Python 3.8**: Assignment expressions (Walrus operator `:=`) inside `while` loop conditions.
+- **Python 3.9**: Dictionary merge operator (`|=`) inside loop bodies.
+- **Python 3.10**: Structural pattern matching (`match-case`) inside loops and `zip(strict=True)` length verification.
+- **Python 3.11**: Faster CPython specialized bytecode opcodes (`FOR_ITER_LIST`, `FOR_ITER_RANGE`), yielding 25-60% loop speedups.
+- **Python 3.12**: PEP 709 comprehension scope inlining (up to 2x faster list/dict comprehensions inside loops).
+- **Python 3.13**: Free-threaded parallel loop execution (`--disable-gil`) and Tier-1 JIT compiler integration.
 
 ---
 

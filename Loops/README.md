@@ -171,80 +171,159 @@ while balance >= withdrawal_fee:
 
 ## ⚡ Loop Constructs & Python Code Evolution (Python 3.3 to Python 3.13) & Python 2.7 Comparison
 
-### Python 2.7 Legacy Comparison
+### Python 2.7 Legacy Comparison Examples
 
 In Python 2.7 (deprecated December 31, 2019):
 1. **`xrange()` vs `range()`**: `range()` generated an immediate, in-memory `list` object, consuming memory proportional to range size. `xrange()` generated items lazily on demand. In Python 3, `xrange()` was removed and `range()` became an efficient lazy sequence generator.
 2. **`print` Statement**: `print` was a keyword statement (`print "Hello",`), whereas Python 3 requires the `print()` function with keyword arguments like `end=" "` and `sep=", "`.
 3. **Dictionary Traversal**: Python 2.7 provided `.iteritems()`, `.iterkeys()`, and `.itervalues()` for lazy iterator traversal alongside `.items()`, `.keys()`, `.values()` which returned lists. Python 3 replaced all dict methods with lightweight, dynamic dict view objects (`.items()`, `.keys()`, `.values()`).
 4. **Loop Variable Leaking in List Comprehensions**: In Python 2.7, variables defined in list comprehensions leaked into the surrounding function or global scope. Python 3 isolates list comprehension variables into dedicated function scopes.
-5. **Lazy Evaluation of `zip()` and `map()`**: In Python 2.7, `zip()` and `map()` returned full lists. In Python 3, they return lazy iterators.
+5. **Exception Handling Syntax**: Python 2.7 used comma syntax `except Exception, e:`, whereas Python 3 mandates `except Exception as e:`.
 
 ```python
 # ==============================================================================
-# Python 2.7 Legacy Loop Sample
+# Python 2.7 Legacy Loop Examples & Behavioral Differences
 # ==============================================================================
-# 1. Range memory consumption:
-# In Python 2.7, range(1000000) creates a 1-million item list in RAM:
+
+# 1. Range vs xrange Memory Consumption:
+# range(1000000) allocates an explicit 1,000,000 element list in RAM.
+# xrange(1000000) creates a lazy generator object:
 for i in xrange(1, 6):
-    print "Iteration:", i,
+    print "Python 2.7 xrange iteration:", i,  # Statement syntax with trailing comma
 
 print ""  # Print newline
 
-# 2. Dictionary iteration:
+# 2. Dictionary Traversal (.iteritems()):
+# In Python 2.7, .items() returns a full list of tuples; .iteritems() yields an iterator:
 user_ages = {"Alan": 23, "Sara": 30}
 for name, age in user_ages.iteritems():
-    print name, "is", age
+    print name, "is", age, "years old."
 
-# 3. Variable scope leak in Python 2.7:
-[x for x in range(5)]
-# In Python 2.7, 'x' remains in scope after the comprehension with value 4.
-# In Python 3.x, 'x' is isolated and throws NameError if referenced outside.
+# 3. Loop Variable Leakage in List Comprehensions:
+# In Python 2.7, list comprehension loop variables leak into the surrounding scope:
+[val * 2 for val in range(5)]
+print "Leaked 'val' variable in Py2.7:", val  # Output: 4 (In Python 3.x, raises NameError)
+
+# 4. Exception Handling Syntax inside Loops:
+try:
+    for num in [10, 5, 0]:
+        print 100 / num
+except ZeroDivisionError, err:  # Old Python 2 comma exception syntax
+    print "Caught exception:", err
 ```
 
 ---
 
-### Code Evolution: Python 3.3 to Python 3.13
+### Version-by-Version Code Evolution: Python 3.3 to Python 3.13
 
-#### 1. Python 3.3 – Standard Memory-Efficient Iterators
-Python 3.3 established lazy `range()`, `zip()`, and `map()` iterators, eliminating unnecessary memory allocations during loop traversal.
-
-#### 2. Python 3.5 – Async Iteration (`async for`) & Matrix Multiplication (`@`)
-PEP 492 introduced asynchronous iteration for handling asynchronous data streams:
+#### 1. Python 3.3 – Standardized Lazy Generators & `yield from`
+Python 3.3 established lazy `range()`, `zip()`, and `map()` iterators, and introduced `yield from` for delegating sub-generator loop iteration:
 ```python
-# Python 3.5+ Syntax:
-async for data_chunk in async_data_stream():
-    await process_chunk(data_chunk)
+def flatten_nested_lists(nested_data):
+    for sublist in nested_data:
+        yield from sublist  # Replaces nested 'for item in sublist: yield item'
 ```
 
-#### 3. Python 3.8 – Assignment Expressions (The Walrus Operator `:=`)
+#### 2. Python 3.4 – Enumeration Iteration & `pathlib.Path` Traversal
+Native iteration over `enum.Enum` classes and object-oriented filesystem paths:
+```python
+from enum import Enum
+from pathlib import Path
+
+class Status(Enum):
+    PENDING = 1
+    ACTIVE = 2
+
+for status in Status:
+    print(status.name, status.value)
+
+for py_file in Path(".").glob("*.py"):
+    print(py_file.name)
+```
+
+#### 3. Python 3.5 – Asynchronous Loops (`async for` / `aiter`) & Extended Unpacking
+PEP 492 introduced native `async for` syntax for streaming data asynchronously:
+```python
+async def process_async_stream(data_stream):
+    async for chunk in data_stream:
+        await handle_chunk(chunk)
+```
+
+#### 4. Python 3.6 – Insertion-Ordered Dict Iteration & Async Comprehensions
+Guaranteed key ordering in dictionary loops and asynchronous comprehensions:
+```python
+# Keys strictly preserve insertion order during iteration
+user_data = {"id": 1, "name": "Alan", "role": "Admin"}
+for key, value in user_data.items():
+    print(f"{key}: {value}")
+
+# Asynchronous list comprehensions:
+# results = [await fetch(url) async for url in url_list]
+```
+
+#### 5. Python 3.7 – Data Class Iteration & Dict Conversions
+Iterating over `dataclass` fields using `dataclasses.asdict()` or `astuple()`:
+```python
+from dataclasses import dataclass, asdict
+
+@dataclass
+class User:
+    username: str
+    score: int
+
+user = User("Alan", 95)
+for field_name, value in asdict(user).items():
+    print(f"{field_name} -> {value}")
+```
+
+#### 6. Python 3.8 – Assignment Expressions (The Walrus Operator `:=`)
 PEP 572 enabled values to be assigned and evaluated directly inside `while` loop conditions:
 ```python
-# Python 3.8+ Syntax:
-# Reading lines until an empty line is encountered:
-while (line := file_handle.readline().strip()):
-    print(f"Processing line: {line}")
+# Read lines from a file handle until an empty line is encountered
+with open("words.txt", "r") as file:
+    while (line := file.readline().strip()):
+        print(f"Read line: {line}")
 ```
 
-#### 4. Python 3.10 – Structural Pattern Matching (`match-case`) inside Loops
-PEP 634 introduced `match-case` statements, streamlining conditional branching within loops:
+#### 7. Python 3.9 – Dictionary Union Operators in Loops
+Using `|` and `|=` operators to merge dictionaries cleanly inside loop bodies:
 ```python
-# Python 3.10+ Syntax:
-for command in commands_list:
-    match command.split():
-        case ["MOVE", direction]:
-            print(f"Moving {direction}")
-        case ["STOP"]:
-            break
-        case _:
-            print("Unknown instruction")
+defaults = {"theme": "dark", "notifications": True}
+user_settings = [{"theme": "light"}, {"font": "Roboto"}]
+
+for setting in user_settings:
+    defaults |= setting  # In-place dictionary update operator
 ```
 
-#### 5. Python 3.11 – Adaptive Interpreter Specialization & Fast Loops
-Python 3.11 introduced the **Faster CPython** initiative with specialized bytecode instructions like `FOR_ITER_LIST` and `FOR_ITER_RANGE`, accelerating list and range loops by up to 25-60%.
+#### 8. Python 3.10 – Structural Pattern Matching (`match-case`) & `zip(strict=True)`
+PEP 634 introduced `match-case` statements in loops, alongside strict length checks in `zip()`:
+```python
+commands = ["MOVE UP", "STOP", "UNKNOWN"]
 
-#### 6. Python 3.12 & 3.13 – Free-Threading & JIT Compiler Enhancements
-Python 3.12 and 3.13 added preliminary JIT compilation and experimental support for free-threaded execution (`--disable-gil`), allowing parallel loop execution across CPU cores without Global Interpreter Lock contention.
+for cmd in commands:
+    match cmd.split():
+        case ["MOVE", direction]:
+            print(f"Action: Moving {direction}")
+        case ["STOP"]:
+            print("Action: Stopping execution")
+        case _:
+            print("Action: Invalid command")
+
+# Strict zip verification raises ValueError if sequences are unequally sized:
+names = ["Alice", "Bob"]
+scores = [90, 85]
+for name, score in zip(names, scores, strict=True):
+    print(name, score)
+```
+
+#### 9. Python 3.11 – Adaptive Interpreter Specialization & Fast Loops
+Python 3.11 introduced CPython bytecode specialization (`FOR_ITER_LIST`, `FOR_ITER_RANGE`, `FOR_ITER_TUPLE`), accelerating loop execution by 25-60%. Tracebacks also pinpoint precise column locations in nested loops.
+
+#### 10. Python 3.12 – Comprehension Scope Inlining (PEP 709)
+Comprehensions are inlined directly into code objects rather than creating temporary function frames, making list and dict comprehensions up to 2x faster inside loops.
+
+#### 11. Python 3.13 – Free-Threaded Parallel Loops & Tier-1 JIT Compiler
+Python 3.13 enables multi-core CPU parallel loop execution without Global Interpreter Lock (`--disable-gil`) contention and includes a Tier-1 Just-In-Time (JIT) bytecode compiler.
 
 ---
 
