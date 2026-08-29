@@ -1,31 +1,79 @@
+"""Tuple Iteration, Accumulation, and String Length Analysis in Python.
 
-for number in (2, 4, 6, 3, 7, 9, 1, 5, 8, 10, 15, 17, 21):
-    print(number, end=' ')
+Demonstrates iterating over tuples, calculating total sums, and identifying the item
+with the longest string length using range-based tuple index comparison. Corrects city names.
 
-print('\n#################################################')
-# another way to go throw the name of list
-numbers = (22, 14, 6, 3, 71, 9, 1, 5, 8, 18, 5, 17, 11)
+Import Notes:
+    - 'from typing import Tuple, List': Standard library typing module imports
+      used for static type hints on tuple sequences and return types.
+"""
 
-for number in numbers:
-    print(number, end=' ')
+from typing import Tuple, List
 
-print('\n#################################################')
 
-names = ('Paris', 'London', 'Berlin', 'Tokyo', 'Bruccel', 'Roma')
-for name in names:
-    print(name, end=' ')
-
-print('\n#################################################')
-total = 0
-for number in (1, 2, 4, 6, 3, 7, 9, 1, 5, 8, 10, 15):
-    print(number, end=' ')
+def iterate_tuple_elements(elements: Tuple[int, ...]) -> List[int]:
+    """Iterate through tuple elements and print them horizontally."""
+    seen: List[int] = []
+    for item in elements:
+        seen.append(item)
+        print(item, end=" ")
     print()
-    total = total + number
+    return seen
 
-print('Total of all are:', total)
 
-longestname = 0
-for x in range(1, len(names)):
-    if len(names[x]) > len(names[longestname]):
-        longestname = x
-print('The longest name of the city is :', names[longestname])
+def accumulate_tuple_sum(numbers: Tuple[int, ...]) -> int:
+    """Calculate total sum of integers in a tuple using an accumulator loop."""
+    total = 0
+    print("Accumulating tuple elements:")
+    for num in numbers:
+        print(f"Adding {num:2d} -> Running Total: {total + num:3d}")
+        total += num
+    print(f"Total of all numbers: {total}")
+    return total
+
+
+def find_longest_string_in_tuple(names: Tuple[str, ...]) -> Tuple[str, int]:
+    """Find the longest string item in a tuple using index length comparisons.
+
+    Args:
+        names: Tuple of strings.
+
+    Returns:
+        Tuple containing (longest_string, index_position).
+    """
+    longest_idx = 0
+    for x in range(1, len(names)):
+        if len(names[x]) > len(names[longest_idx]):
+            longest_idx = x
+
+    longest_name = names[longest_idx]
+    print(f"The longest city name is: '{longest_name}' (Length: {len(longest_name)})")
+    return longest_name, longest_idx
+
+
+def demo_for_tuple() -> None:
+    """Run tuple iteration, summation, and string analysis demonstration."""
+    print("--- 1. Direct Literal Tuple Iteration ---")
+    iterate_tuple_elements((2, 4, 6, 3, 7, 9, 1, 5, 8, 10, 15, 17, 21))
+
+    print("\n--- 2. Tuple Variable Iteration ---")
+    sample_numbers = (22, 14, 6, 3, 71, 9, 1, 5, 8, 18, 5, 17, 11)
+    iterate_tuple_elements(sample_numbers)
+
+    # Corrected spelling: 'Bruccel' -> 'Brussels', 'Roma' -> 'Rome'
+    cities = ("Paris", "London", "Berlin", "Tokyo", "Brussels", "Rome")
+
+    print("\n--- 3. City Tuple Iteration ---")
+    for name in cities:
+        print(name, end=" ")
+    print()
+
+    print("\n--- 4. Tuple Sum Accumulation ---")
+    accumulate_tuple_sum((1, 2, 4, 6, 3, 7, 9, 1, 5, 8, 10, 15))
+
+    print("\n--- 5. Finding Longest City Name ---")
+    find_longest_string_in_tuple(cities)
+
+
+if __name__ == "__main__":
+    demo_for_tuple()
