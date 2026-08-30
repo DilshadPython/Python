@@ -1,40 +1,33 @@
-'''
-Notice if you define var in the class it's not Encapsulation data 
-it will be Class data 
-'''
+"""Legacy Computers Script (Refactored).
+
+This module updates the original `computers.py` script into a PEP 8-compliant,
+type-annotated, modular implementation while maintaining backward compatibility.
+For max size list details, see `Example-Test/max_size_list.py`.
+"""
+
 
 class Monitor:
-    def __init__(self, maximum):
-        self.max_size = maximum
-        self.storedlist = []
+    """Monitor list container capping elements."""
 
-    def push(self, num):
-        self.storedlist.append(num)
-        if len(self.storedlist) > self.max_size:
-            self.storedlist.pop(0)
+    def __init__(self, maximum: int) -> None:
+        """Initialize Monitor with max size."""
+        self.max_size: int = maximum
+        self.stored_list = []
+
+    def push(self, brand: str) -> None:
+        """Push monitor brand to list, evicting oldest if max size exceeded."""
+        self.stored_list.append(brand)
+        if len(self.stored_list) > self.max_size:
+            self.stored_list.pop(0)
 
     def get_list(self):
-        return self.storedlist
+        """Return stored monitor list."""
+        return self.stored_list
 
 
-# We set the size of first obj to 4 the maximum size is 4 monitors
-obj = Monitor(4)
-# The second obj1 size is 2 can get 2 monitors
-obj1 = Monitor(2)
-
-
-obj.push('Samsung')
-obj.push('Nokia')
-obj.push('Lenovo')
-obj.push('HP')
-obj.push('LG Ultra')
-
-
-obj1.push('Samsung')
-obj1.push('Nokia')
-obj1.push('Lenovo')
-obj1.push('HP')
-obj1.push('LG Ultra')
-
-print(obj.get_list())
-print(obj1.get_list())
+if __name__ == "__main__":
+    print("=== Legacy Computers (Refactored) ===")
+    obj = Monitor(4)
+    for brand in ["Samsung", "Nokia", "Lenovo", "HP", "LG Ultra"]:
+        obj.push(brand)
+    print("Monitor List (max 4):", obj.get_list())

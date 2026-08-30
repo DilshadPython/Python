@@ -1,10 +1,27 @@
-# Decorators; Class and Static methods
+# Static & Class Methods Decorator Module
 
-## A class methods takes the class (not instance) as argument and works with class object
+Welcome to the **Static & Class Methods Decorator Module**, demonstrating `@classmethod`, `@staticmethod`, and instance methods in Python.
 
-## A static methods required no argument and doesn't work with class or instance (but still belong
-## in the class code)
+---
 
-# A Decorator is a processor that modifies a function
+## Directory Structure & Module Catalog
 
-# @classmethod and @staticmethod modify the default binding that instance methods provide
+```text
+Static-Class-Methods-Decorator/
+├── README.md                           # Documentation and execution guide
+├── method_decorators.py                # Instance, @classmethod, and @staticmethod decorators
+├── test_static_class_methods.py        # Unit test suite
+└── [legacy wrappers]                   # Refactored entry points (class_method_decorator.py, etc.)
+```
+
+---
+
+## How to Run
+
+```bash
+# Run method decorators demonstration
+python3 method_decorators.py
+
+# Run unit tests
+python3 -m unittest test_static_class_methods.py
+```

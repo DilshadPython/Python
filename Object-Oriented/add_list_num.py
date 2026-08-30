@@ -1,18 +1,16 @@
-class ListNumber(object):
-    def __init__(self, new_num):
-        self.main_list = new_num
+"""Legacy List Number Addition Script (Refactored).
 
-    def __add__(self, second_num):
-        mylst = [x + y for x, y in zip(self.main_list, second_num.main_list)]
+This module updates the original `add_list_num.py` script into a PEP 8-compliant,
+type-annotated, modular implementation while maintaining backward compatibility.
+For detailed magic dunder methods, see `magic_dunder_methods.py`.
+"""
 
-        return ListNumber(mylst)
-
-    def __repr__(self):
-        return str(self.main_list)
+from magic_dunder_methods import ListNumber
 
 
-flst_1 = ListNumber([1, 2, 3, 4, 5, 6, 3, 4])
-slst_2 = ListNumber([10, 100, 200, 3000, 500, 400, 800, 700])
-
-total = flst_1 + slst_2
-print(total)
+if __name__ == "__main__":
+    print("=== Legacy List Number Addition (Refactored) ===")
+    flst_1 = ListNumber([1, 2, 3, 4, 5, 6, 3, 4])
+    slst_2 = ListNumber([10, 100, 200, 3000, 500, 400, 800, 700])
+    total = flst_1 + slst_2
+    print("Combined ListNumber:", total)

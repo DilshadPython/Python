@@ -1,20 +1,17 @@
-# class variables or class attribute and instance attribute
-# Important to understand how class attribute and instance attribute works
-class Language:
-    # class veriable
-    class_name = 'Python'
+"""Legacy Encapsulation Class/Instance Variable Script (Refactored).
+
+This module updates the original `encapsulate_classvar_instancevar.py` script into a PEP 8-compliant,
+type-annotated, modular implementation while maintaining backward compatibility.
+For detailed attribute deletion and fallback, see `attribute_encapsulation_and_deletion.py`.
+"""
+
+from attribute_encapsulation_and_deletion import LanguageEnvironment
 
 
-obj = Language()
-# calling call variable name we are reading it
-print('\nCalling class attribute: ', obj.class_name)
-
-# Now we set the name to JavaScript and become instance vairable or attribute
-obj.class_name = 'Javascript'
-print('\nCalling instance attribute: ', obj.class_name)
-
-# next we delete the class_name which is select the instance attribute not class attribute
-
-del obj.class_name
-print('\nWe have deleted the instance attribut here not class attribute automatically return to class attr')
-print(obj.class_name)
+if __name__ == "__main__":
+    print("=== Legacy Encapsulation Class/Instance Variable (Refactored) ===")
+    env = LanguageEnvironment()
+    env.language_name = "JavaScript"
+    print("Instance Name:", env.language_name)
+    del env.language_name
+    print("Restored Class Name:", env.language_name)

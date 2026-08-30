@@ -1,29 +1,16 @@
-'''
-This way is not be encapsulation or instance data, this is class data which not deliver what we want. 
-'''
-class MaxSizeList:
+"""Legacy Assignments Script (Refactored).
 
-	names = []
+This module updates the original `assignments.py` script into a PEP 8-compliant,
+type-annotated, modular implementation while maintaining backward compatibility.
+For detailed max size list behavior, see `max_size_list.py`.
+"""
 
-	def __init__(self, number):
-		self.number = number
-
-	def push(self, name):
-		self.names.append(name)
-		return self.names
-
-	def get_list(self):
-		list_name = ''
-		for name in self.names:
-			list_name += str(name) + ' '
-		return list_name
+from max_size_list import MaxSizeList
 
 
-# myobj = MaxSizeList()
-
-# myobj.push('Python')
-# myobj.push('Javas')
-# myobj.push('C++')
-# myobj.push('JavaScript')
-
-# print(myobj.get_list())
+if __name__ == "__main__":
+    print("=== Legacy Assignments (Refactored) ===")
+    myobj = MaxSizeList(4)
+    myobj.push("Python")
+    myobj.push("Java")
+    print(myobj.get_list())

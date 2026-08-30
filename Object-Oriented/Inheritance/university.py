@@ -1,28 +1,14 @@
-import random
-'''
-# __init__ is like any other method; it can be inherited 
-if the class doesn't have __init__ constructor, Python will check its parent class
-to see if can fine one
-# As soon as it finds one, Python calls it and stops looking
-# We use the super()function to call methods in the parents class
-# We may want to initialize in the parents as well as our own class
-'''
-class University:
-    def __init__(self, fname, lname):
-        self.fname = fname
-        self.lname = lname
+"""Legacy University Script (Refactored).
 
-    def full_name(self):
-        return '%s %s' % (self.fname, self.lname)
+This module updates the original `university.py` script into a PEP 8-compliant,
+type-annotated, modular implementation while maintaining backward compatibility.
+For detailed company hierarchy, see `company_hierarchy.py`.
+"""
+
+from company_hierarchy import Staff as Student
 
 
-class Student(University):
-    pass
-# This will tell you how to inherited each new classes from university class and initialized
-# print(help(Student))
-
-first_std = Student('Dilshad', 'Abdulla')
-second_std = Student('Claudia', 'Tom')
-
-print(first_std.full_name())
-print(second_std.full_name())
+if __name__ == "__main__":
+    print("=== Legacy University (Refactored) ===")
+    student = Student("John", "Doe", 0, "Computer Science")
+    print("Student Name:", student.get_full_name())

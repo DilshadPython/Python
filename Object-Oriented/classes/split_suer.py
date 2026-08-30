@@ -1,38 +1,16 @@
-import datetime
+"""Legacy Split User Script (Refactored).
+
+This module updates the original `split_suer.py` script into a PEP 8-compliant,
+type-annotated, modular implementation while maintaining backward compatibility.
+For detailed user profile details, see `split_user_details.py`.
+"""
+
+from split_user_details import UserProfile as User
 
 
-class User:
-
-    def __init__(self, fullname, dateofbirth):
-        self.mayname = fullname
-        self.dateofbirth = dateofbirth  # yyyymmdd
-
-        # split or extract fuill name
-        split_name = fullname.split(' ')
-        self.fname = split_name[0]
-        self.lname = split_name[-1]
-
-    def collect_age(self):
-        ''' Return the number of age '''
-        today = datetime.date(2018, 3, 28)
-        yyyy = int(self.dateofbirth[0:4])
-        mm = int(self.dateofbirth[4:6])
-        dd = int(self.dateofbirth[6:8])
-        dob = datetime.date(yyyy, mm, dd)  # the date of birth
-
-        age_in_days = (today - dob).days
-        print(age_in_days)
-        age_in_years = age_in_days / 365
-        return int(age_in_years)
-
-
-user = User('Dilshad Abdulla', '19750301')
-
-
-print(user.mayname)
-
-print(user.fname)
-print(user.lname)
-
-print(user.dateofbirth)
-print(user.collect_age())
+if __name__ == "__main__":
+    print("=== Legacy Split User (Refactored) ===")
+    user = User("John Doe", "19750301")
+    print("First Name:", user.first_name)
+    print("Last Name:", user.last_name)
+    print("Age:", user.calculate_age())

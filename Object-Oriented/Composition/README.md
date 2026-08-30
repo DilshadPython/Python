@@ -1,9 +1,27 @@
-# Composition vs inheritance
+# Composition Module
 
-## Inheritace can be brittle [a change may require changed elsewhere]
+Welcome to the **Composition Module**, demonstrating Object Composition ("Has-A" relationships) and component delegation in Python.
 
-## Decoupled code is classes, functions, etc that work independently and don't depend on one another
+---
 
-## As long as the interface is maintained, interaction between classes will work
+## Directory Structure & Module Catalog
 
-## Not checking or requiring practicular types is polymorphic and Pythonic.
+```text
+Composition/
+├── README.md                   # Documentation and execution guide
+├── object_composition.py       # Object composition with io.StringIO and file streams
+├── test_composition.py         # Unit test suite
+└── main.py                     # Legacy refactored entry point
+```
+
+---
+
+## How to Run
+
+```bash
+# Run composition demonstration
+python3 object_composition.py
+
+# Run unit tests
+python3 -m unittest test_composition.py
+```

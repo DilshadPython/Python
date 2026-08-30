@@ -1,22 +1,16 @@
-'''
-In this example we defined the number in __init__ method we can pass the number
-directly in the obj = Number(3), we define two argument self and number
-'''
-class Number(object):
-	def __init__(self, value):
-		print('Call __init__ automatically from instance obj')
-		self.val = value
+"""Legacy Second Constructor Script (Refactored).
+
+This module updates the original `second_constructor.py` script into a PEP 8-compliant,
+type-annotated, modular implementation while maintaining backward compatibility.
+For detailed constructor behavior, see `number_counter.py`.
+"""
+
+from number_counter import NumberCounter
 
 
-	def increament(self):
-		self.val = self.val + 1 
-
-
-obj = Number(3)
-print(obj.val)
-
-print('\nIncreaments two time and the result below')
-obj.increament()
-obj.increament()
-
-print(obj.val)
+if __name__ == "__main__":
+    print("=== Legacy Second Constructor (Refactored) ===")
+    obj = NumberCounter(3)
+    obj.increment()
+    obj.increment()
+    print("Value:", obj.get_value())

@@ -1,39 +1,14 @@
-'''
-This is shows how the instance methods work
-Static method requires no argument and does not work with
-class or instance, but stull belongs in the class cod
-'''
+"""Legacy Static Method Decorator Script (Refactored).
 
-class InstanceCounter(object):
-    """docstring for InstanceCount"""
-    count = 0
+This module updates the original `static_method_decorator.py` script into a PEP 8-compliant,
+type-annotated, modular implementation while maintaining backward compatibility.
+For detailed method decorators, see `method_decorators.py`.
+"""
 
-    def __init__(self, val):
-        # filterint() required an integer
-        self.val = self.filterint(val)
-        InstanceCounter.count += 1
-
-    '''
-    This is the static method to explain better don't use self use
-    directly the argument which is value called static method not
-    bound method.
-    Static method is not Bound method
-    '''
-    print('Decorator is a processor that modifies a function')
-
-    @staticmethod
-    def filterint(value):
-        # here if the value is not an integer than return 0
-        if not isinstance(value, int):
-            return 0
-        else:
-            return value
+from method_decorators import InstanceCounter
 
 
-a = InstanceCounter(107)
-b = InstanceCounter(22)
-c = InstanceCounter(81)
-d = InstanceCounter('Dilshad')
-
-for obj in (a, b, c, d):
-    print('Value of obj {}'.format(obj.val))
+if __name__ == "__main__":
+    print("=== Legacy Static Method Decorator (Refactored) ===")
+    d = InstanceCounter("NonIntegerVal")
+    print("Filtered Value:", d.val)

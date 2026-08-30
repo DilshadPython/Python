@@ -1,24 +1,15 @@
+"""Legacy MRO Script (Refactored).
 
-class A(object):
-    def do_this(self):
-        print(' Do this in A')
+This module updates the original `mro.py` script into a PEP 8-compliant,
+type-annotated, modular implementation while maintaining backward compatibility.
+For detailed MRO linearization, see `multiple_inheritance_mro.py`.
+"""
 
-
-class B(A):
-    pass
-
-
-class C(object):
-    def do_this(self):
-        print('Do this in C')
+from multiple_inheritance_mro import DerivedD1 as D, get_mro_class_names
 
 
-class D(B, C):
-    pass
-
-
-instance_obj = D()
-instance_obj.do_this()
-
-print(D.mro())
-print('D > B > A > C')
+if __name__ == "__main__":
+    print("=== Legacy MRO (Refactored) ===")
+    obj = D()
+    print("Action:", obj.execute_action())
+    print("MRO:", get_mro_class_names(D))

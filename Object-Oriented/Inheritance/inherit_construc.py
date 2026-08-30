@@ -1,29 +1,14 @@
-import random
-'''
-# __init__ is like any other method; it can be inherited 
-if the class doesn't have __init__ constructor, Python will check its parent class
-to see if can fine one
-# As soon as it finds one, Python calls it and stops looking
-# We use the super()function to call methods in the parents class
-# We may want to initialize in the parents as well as our own class
-'''
-class University(object):
-    def __init__(self, name):
-        self.name = name
+"""Legacy Inherit Constructor Script (Refactored).
+
+This module updates the original `inherit_construc.py` script into a PEP 8-compliant,
+type-annotated, modular implementation while maintaining backward compatibility.
+For detailed company hierarchy, see `company_hierarchy.py`.
+"""
+
+from company_hierarchy import Staff
 
 
-class Student(University):
-    def __init__(self, name):
-        super(Student, self).__init__(name)
-        self.departments = random.choice(['Business and Law', 'Science and Engineering',
-                                          'Humanities and Social Sciences', 'English and Media'])
-
-    def study(self, depart):
-        print('%s is study at %s departments in Anglia Ruskin University' %
-              self.name, self.depart)
-
-
-std_obj = Student('Dilshad')
-
-print(std_obj.name)
-print(std_obj.departments)
+if __name__ == "__main__":
+    print("=== Legacy Inherit Constructor (Refactored) ===")
+    s = Staff("Alex", "Jones", 45000, "C++")
+    print("Staff Skill:", s.primary_skill)

@@ -1,22 +1,16 @@
-'''
-The important point here is we have initializated num in init to 0 and not
-defined in the init method after self, in this case you can't add the number
-to the obj = Number() because it display an error two arguments is given where
-we define only self argument in init method.
-'''
-class Number(object):
-	# __init__ is like setter method set the valu or number to present
-	def __init__(self):
-		print('Call __init__ automatically from instance obj')
-		self.num = 0
+"""Legacy First Constructor Script (Refactored).
+
+This module updates the original `first_constructor.py` script into a PEP 8-compliant,
+type-annotated, modular implementation while maintaining backward compatibility.
+For detailed constructor behavior, see `number_counter.py`.
+"""
+
+from number_counter import NumberCounter
 
 
-	def increament(self):
-		self.num = self.num + 1 
-
-
-obj = Number()
-obj.increament()
-obj.increament()
-
-print(obj.num)
+if __name__ == "__main__":
+    print("=== Legacy First Constructor (Refactored) ===")
+    obj = NumberCounter()
+    obj.increment()
+    obj.increment()
+    print("Value:", obj.get_value())

@@ -1,25 +1,16 @@
-# coding: utf8
+"""Legacy Books Script (Refactored).
 
-# Class is a blueprint for an instance
-# Type: Indectats the class the instance belong to
-# Attribute: Any object value
-# Method: A callable attribute define in the class
-class Book:
-    pass
+This module updates the original `books.py` script into a PEP 8-compliant,
+type-annotated, modular implementation while maintaining backward compatibility.
+For detailed book encapsulation, see `book_instance.py`.
+"""
 
-# obj_1 is instance: A constructed object of the class
-obj_1 = Book()
-obj_2 = Book()
+from book_instance import Book
 
-obj_1.first = 'Data Science'
-obj_2.last = 'Computer Science'
-obj_1.cost = 20
-obj_2.cost = 39
 
-obj_1.owner = 'Martin SHulter'
-obj_2.owner = 'Tomas Adam'
-
-print(obj_1.cost)
-print(obj_2.cost)
-print(obj_1.owner)
-print(obj_2.owner)
+if __name__ == "__main__":
+    print("=== Legacy Books (Refactored) ===")
+    obj_1 = Book("Data Science", 20.0, "Martin Schulter")
+    obj_2 = Book("Computer Science", 39.0, "Tomas Adam")
+    print("Cost 1:", obj_1.cost)
+    print("Owner 1:", obj_1.owner)

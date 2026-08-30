@@ -1,38 +1,19 @@
-'''
-In this example we defined the number in __init__ method we can pass the number
-directly in the obj = Number(3), we define two argument self and number
-'''
+"""Legacy Third Constructor Script (Refactored).
+
+This module updates the original `third_constructor.py` script into a PEP 8-compliant,
+type-annotated, modular implementation while maintaining backward compatibility.
+For detailed constructor behavior, see `number_counter.py`.
+"""
+
+from number_counter import NumberCounter
 
 
-class Number(object):
-    def __init__(self, number):
-        print('Call __init__ automatically from instance obj')
-        try:
-            self.num = int(number)
-        except ValueError:
-            number = 0
-        self.num = number
+if __name__ == "__main__":
+    print("=== Legacy Third Constructor (Refactored) ===")
+    obj = NumberCounter(3)
+    obj.increment()
+    obj.increment()
+    print("Value:", obj.get_value())
 
-    def increament(self):
-        self.num = self.num + 1
-
-
-obj = Number(3)
-obj.increament()
-obj.increament()
-
-print(obj.num)
-
-print('\nThe result is 0 because we set number to 0 if the argument is string:\n')
-# We pass a string instead of int or bad argunment
-obj = Number('Welcome')
-
-print(obj.num)
-
-print('\nThis is only to avoide the error between str and int that is why use try:')
-try:
-    obj.num = 'Python'
-    obj.increament()
-    print(obj)
-except TypeError:
-    print('TypeError: can not concatenate str with int objects!')
+    obj_str = NumberCounter("Welcome")
+    print("String Input Value:", obj_str.get_value())

@@ -1,30 +1,15 @@
+"""Legacy Class Library Script (Refactored).
+
+This module updates the original `class_lib.py` script into a PEP 8-compliant,
+type-annotated, modular implementation while maintaining backward compatibility.
+For comprehensive class definition basics, see `class_definition_basics.py`.
 """
-class means object that how should look like
-An object is created on that class
 
-Example:
-    Class Person
-    Objects Man, Woman
+from class_definition_basics import Car, inspect_object_attributes
 
-    cClass Car
-    Object Audi, Ferrari
-"""
-# Create a class
-class Car:
-    name = 'Audi'
 
-print(Car)
-
-print(Car.name)
-
-print(dir(Car))
-
-print("=======================\n")
-print(dir(Car.name))
-
-# Create an object from Car class
-my_car = Car()
-print('\n================== The object of Car class ==================\n')
-print(my_car)
-print('=======================================\n')
-print(dir(my_car))
+if __name__ == "__main__":
+    print("=== Legacy Class Library (Refactored) ===")
+    print("Car Class Attributes:", inspect_object_attributes(Car))
+    my_car = Car()
+    print("Car Instance Attributes:", inspect_object_attributes(my_car))

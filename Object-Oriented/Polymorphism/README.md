@@ -1,6 +1,27 @@
-Poymorphism means many shapes, for examples you have two classes with the same interface
-like method or attribut how each class called own method or attribut via instance object
-has been created.
+# Polymorphism Module
 
-Duck typing refers to reading and object's attributes to decide whether 
-it is off a proper type, rather than checking the type itself.
+Welcome to the **Polymorphism Module**, demonstrating duck typing and interface polymorphism in Python.
+
+---
+
+## Directory Structure & Module Catalog
+
+```text
+Polymorphism/
+├── README.md                           # Documentation and execution guide
+├── polymorphic_animals.py              # Dog and Cat polymorphic method overriding
+├── test_polymorphism.py                # Unit test suite
+└── [legacy wrappers]                   # Refactored entry points (poly_morphism.py)
+```
+
+---
+
+## How to Run
+
+```bash
+# Run polymorphic demonstration
+python3 polymorphic_animals.py
+
+# Run unit tests
+python3 -m unittest test_polymorphism.py
+```

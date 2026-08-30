@@ -1,36 +1,15 @@
+"""Legacy Assign2 Script (Refactored).
 
-from datetime import datetime
+This module updates the original `assign2.py` script into a PEP 8-compliant,
+type-annotated, modular implementation while maintaining backward compatibility.
+For detailed formatters, see `file_formatters.py`.
+"""
 
-
-class WriteFile:
-	def __init__(self, filename, writer):
-		self.fh = open(filename, 'w')
-		self.formatter = writer()
-
-	def write(self, text):
-		self.fh.write(self.formatter.format(text))
-		self.fh.write('\n')
-
-	def close(self):
-		self.fh.close()
+from file_formatters import FileWriter as WriteFile, CSVFormatter, LogFormatter
 
 
-class CSVFormatter:
-	def __init__(self):
-		self.delim = ','
-
-	def format(self, this_list):
-		new_list = []
-		for element in this_list:
-			if self.delim in element:
-				new_list.append('"{0}"'.format(element))
-			else:
-				new_list.append(element)
-		return self.delim.join(new_list)
-
-
-class LogFormatter:
-	def format(self, this_line):
-		dt = datetime.now()
-		date_str = dt.starftime("%Y-%m-%d %H:%M")
-		return "{0}   {1}".format(date_str, this_line)
+if __name__ == "__main__":
+    print("=== Legacy Assign2 (Refactored) ===")
+    csv_writer = WriteFile("test2_legacy.csv", CSVFormatter)
+    csv_writer.write(["a", "b,2", "c"])
+    csv_writer.close()

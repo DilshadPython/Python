@@ -1,46 +1,16 @@
-''' 
-regular method and class method will taken the instance as first argument which 
-is self in the car_detail or payment method in this example
-'''
+"""Legacy Regular Methods Script (Refactored).
 
-# clas variables
+This module updates the original `regular_methods.py` script into a PEP 8-compliant,
+type-annotated, modular implementation while maintaining backward compatibility.
+For detailed car inventory, see `car_inventory.py`.
+"""
 
-
-class Car:
-
-    profit = 1.09
-    number_in_the_store = 0
-
-    def __init__(self, name, model, color, types, price):
-        self.name = name
-        self.model = model
-        self.color = color
-        self.types = types
-        self.price = price
-
-        Car.number_in_the_store += 1
-
-    def car_detail(self):
-        return '{}, {}, {}, {}'.format(self.name, self.model, self.color, self.types, self.price)
-
-    def payment(self):
-        self.price = float(self.price * self.profit)
-
-    '''
-	create class method
-	'''
-    @classmethod
-    def set_payment(cls, value):
-        cls.profit = value
+from car_inventory import Car
 
 
-obj_one = 'Ford-2010-Black-S3-33.100'
-# obj_two = 'Mini-2018-Red-M1-28.500'
-
-name, model, color, types, price = obj_one.split('-')
-# name, model, color, types, price = obj_two.split('-')
-
-new_obj = Car(name, model, color, types, price)
-
-print(new_obj.name + ' ' + new_obj.model + ' ' +
-      new_obj.color + ' ' + new_obj.types + '|' + new_obj.price)
+if __name__ == "__main__":
+    print("=== Legacy Regular Methods (Refactored) ===")
+    obj_one = "Ford-2010-Black-S3-33100"
+    name, model, color, types, price = obj_one.split("-")
+    car = Car(name, int(model), color, types, float(price))
+    print(car.get_details())

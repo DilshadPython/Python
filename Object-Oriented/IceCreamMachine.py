@@ -1,13 +1,14 @@
-class IceCreamMachine:
-    
-    def __init__(self, ingredients, toppings):
-        self.ingredients = ingredients
-        self.toppings = toppings
-        
-    def scoops(self):
-        self.ingredients = ['vanilla', 'chocolate']
-        self.toppings = ['chocolate souce']
-        return '{}, {}'.format(self.ingredients, self.toppings)
+"""Legacy Ice Cream Machine Script (Refactored).
 
-machine = IceCreamMachine(["vanilla", "chocolate"], ["chocolate sauce"])
-print(machine.scoops()) #should print[['vanilla', 'chocolate sauce'], ['chocolate', 'chocolate sauce']]
+This module updates the original `IceCreamMachine.py` script into a PEP 8-compliant,
+type-annotated, modular implementation while maintaining backward compatibility.
+For detailed domain modeling, see `ice_cream_machine.py`.
+"""
+
+from ice_cream_machine import IceCreamMachine
+
+
+if __name__ == "__main__":
+    print("=== Legacy Ice Cream Machine (Refactored) ===")
+    machine = IceCreamMachine(["vanilla", "chocolate"], ["chocolate sauce"])
+    print("Generated Scoops:", machine.generate_scoops())

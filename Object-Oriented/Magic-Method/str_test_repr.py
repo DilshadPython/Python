@@ -1,13 +1,15 @@
-a = [1, 2, 3, 4, 5, 6]
-b = 'Hello Python'
+"""Legacy Str Test Repr Script (Refactored).
 
-print('This is str for a:', str(a))
-print('This is repr for a:', repr(a))
+This module updates the original `str_test_repr.py` script into a PEP 8-compliant,
+type-annotated, modular implementation while maintaining backward compatibility.
+For detailed custom account dunder methods, see `account_dunder_methods.py`.
+"""
 
-print('This is str for b:', str(b))
-print('This is repr for b:', repr(b))
+from account_dunder_methods import CustomAccount as Account
 
-# >> > repr(a)
-# '[1, 2, 3, 4, 5]'
-# >> > repr(b)
-# "'Hello python'"
+
+if __name__ == "__main__":
+    print("=== Legacy Str Test Repr (Refactored) ===")
+    acc = Account("Math", "George", 60500)
+    print("str:", str(acc))
+    print("repr:", repr(acc))

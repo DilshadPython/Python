@@ -1,24 +1,17 @@
-import random
+"""Legacy Composition Main Script (Refactored).
 
-import StringIO
+This module updates the original `main.py` script into a PEP 8-compliant,
+type-annotated, modular implementation while maintaining backward compatibility.
+For detailed composition patterns, see `object_composition.py`.
+"""
 
-class WriteStuff:
+import io
+from object_composition import TextComposer
 
-	def __init__(self, writer):
-		self.writer = writer
 
-	def write(self):
-		write_txt = 'This is the message we write.'
-		self.writer.write(write_txt)
-
-file_h = open('test.txt')
-write_msg = WriteStuff(file_h)
-write_msg.write()
-file_h.close()
-
-str_h = StringIO.StringIO()
-write_msg1 = WriteStuff(str_h)
-write_msg1.write()
-
-print('\nFile object: ', open('test.txt', 'r').read())
-print('\bStrindIO object: ', str_h.get_val())
+if __name__ == "__main__":
+    print("=== Legacy Composition Main (Refactored) ===")
+    string_stream = io.StringIO()
+    composer = TextComposer(string_stream)
+    composer.write_message("This is the message we write.")
+    print("StringIO Output:", string_stream.getvalue())

@@ -1,26 +1,31 @@
-The relationships betwwen Class Attribute and Instance Attribute
-1. Attributes/Variables in the class are accessible through the instance object created
-	of the current class has been defined
-2. Instance Attribute as well accessible by the instance object
-3. When we use syntax object. Attribute, we're asking python to look up the attribute
-	- First in the instance
-	- Then in the class
-4. Method calls through the instance follow this lookup
+# Class and Instance Attributes Module
 
-The 6 important Points to understanding Classes
-1. Instance knows which class come it from.
-2. Variables are define in the class are available to the instance.
-3. A method on an instance passes instance as the first kwrg to the method
-	(renamed self in the method)
-4. Instances have their own data, instance attributes
-5. Variables defined in the class are called class attributes
-6. When we read an attribute, Python looks for it first in the instance, and then the class.
+Welcome to the **Class and Instance Attributes Module**, demonstrating how Python resolves variable lookups across class and instance namespaces.
 
-# What is the difference between Class Methods and Static Methods?
-- Instance methods access the state of a specific object through the self parameter.
-- You create class methods with the @classmethod decorator and use them for operations 
-    that involve class-level data. 
-- You use static methods for utility functionality that doesn’t need class or instance data,
-    and you create them with the @staticmethod decorator. 
-- Using class methods and static methods in your classes can improve class design and code
-    maintainability.
+---
+
+## Directory Structure & Module Catalog
+
+```text
+Class-and-Instance-Attribute/
+├── README.md                                   # Documentation and execution guide
+├── class_vs_instance_attributes.py             # Class defaults vs instance configuration
+├── attribute_encapsulation_and_deletion.py     # Attribute shadowing and del instance.attr fallback
+├── test_class_instance_attribute.py            # Unit test suite
+└── [legacy wrappers]                           # Refactored entry points (cls_attrib_and_instance_attrib.py, etc.)
+```
+
+---
+
+## How to Run
+
+```bash
+# Run class vs instance attributes demonstration
+python3 class_vs_instance_attributes.py
+
+# Run attribute shadowing and deletion demonstration
+python3 attribute_encapsulation_and_deletion.py
+
+# Run unit tests
+python3 -m unittest test_class_instance_attribute.py
+```

@@ -1,56 +1,14 @@
-''' 
-Inheritance allowed us to inheritace a attribute and method in the parent class.
+"""Legacy Parents Help Function Script (Refactored).
 
-We use helper function for each subclass will showes the full details of parent class
-with add methods are use from parent class show Method resolution order:
-'''
+This module updates the original `parents_help_func.py` script into a PEP 8-compliant,
+type-annotated, modular implementation while maintaining backward compatibility.
+For detailed company hierarchy, see `company_hierarchy.py`.
+"""
 
-# clas variables
-
-
-class Parent:
-
-    def __init__(self, first_name, last_name, age):
-        self.first_name = first_name
-        self.last_name = last_name
-        self.age = age
-
-    def parent_detail(self):
-        return '{}, {}, {}, {}'.format(self.name, self.last_name, self.age)
-
-    def fullname(self, first_name, last_name):
-        return '{} {}'.format(self.first_name, self.last_name)
-
-    def email_address(self):
-        return '{}.{}'.format(self.first_name, self.last_name) + '@' + 'gmail.com'
-
-obj = Parent('Tim', 'Alan', '44')
-print(obj.first_name + ' ' + obj.last_name + ' ' + obj.age)
+from company_hierarchy import Manager
 
 
-class Son(Parent):
-    pass
-
-
-class Daughter(Parent):
-    pass
-
-
-obj_1 = Daughter('Adam', 'Sophia', '25')
-obj_2 = Daughter('Adam', 'Claudia', '31')
-obj_3 = Son('David', 'Tom', '33')
-obj_4 = Son('David', 'Jeff', '29')
-
-print(help(Daughter))
-print(help(Son))
-# print(obj_1.first_name + ' ' + obj_1.last_name + ' ' + obj_1.age)
-# print(obj_1.email_address())
-# print(obj_2.first_name + ' ' + obj_2.last_name + ' ' + obj_2.age)
-# print(obj_2.email_address())
-
-# print('=============================================================')
-
-# print(obj_3.first_name + ' ' + obj_3.last_name + ' ' + obj_3.age)
-# print(obj_3.email_address())
-# print(obj_4.first_name + ' ' + obj_4.last_name + ' ' + obj_4.age)
-# print(obj_4.email_address())
+if __name__ == "__main__":
+    print("=== Legacy Parents Help Function (Refactored) ===")
+    mgr = Manager("Georgina", "Holland", 12000)
+    print("Manager Full Name:", mgr.get_full_name())

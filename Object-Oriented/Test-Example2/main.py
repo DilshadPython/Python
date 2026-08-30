@@ -1,10 +1,17 @@
-from files import LogFile, DelimFile
+"""Legacy Main Script (Refactored).
 
-log = LogFile('log.txt')
-c = DelimFile('text.csv', ',')
+This module updates the original `main.py` script into a PEP 8-compliant,
+type-annotated, modular implementation while maintaining backward compatibility.
+For detailed abstract file writers, see `abstract_file_writers.py`.
+"""
 
-log.write('\nSend this message as log')
-log.write('\nThis is second msg to send to log')
+from abstract_file_writers import LogFile, DelimFile
 
-c.write(['a', 'b', 'c', 'd'])
-c.write(['1', '2', '3', '4'])
+
+if __name__ == "__main__":
+    print("=== Legacy Main (Refactored) ===")
+    log = LogFile("log.txt")
+    c = DelimFile("text.csv", ",")
+
+    log.write("Send this message as log")
+    c.write(["a", "b", "c", "d"])

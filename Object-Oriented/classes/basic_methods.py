@@ -1,68 +1,15 @@
-''' 
-regular method and class method will taken the instance as first argument which 
-is self in the car_detail or payment method in this example
-'''
+"""Legacy Basic Methods Script (Refactored).
 
-# class variables are variable that are shared amound all instance in the class, were
-# instance variable can be unique for each instance like our name and
-# address in the class.
+This module updates the original `basic_methods.py` script into a PEP 8-compliant,
+type-annotated, modular implementation while maintaining backward compatibility.
+For detailed car inventory, see `car_inventory.py`.
+"""
 
-
-class Car:
-
-    profit = 1.09
-    number_in_the_store = 0
-
-    def __init__(self, name, model, color, types, price):
-        self.name = name
-        self.model = model
-        self.color = color
-        self.types = types
-        self.price = price
-
-        Car.number_in_the_store += 1
-
-    def car_detail(self):
-        return '{}, {}, {}, {}'.format(self.name, 
-                                        self.model,
-                                        self.color,
-                                        self.types,
-                                        self.price)
-
-    def payment(self):
-        self.price = float(self.price * self.profit)
-
-    '''
-	create class method
-	'''
-    @classmethod
-    def set_payment(cls, value):
-        cls.profit = value
+from car_inventory import Car
 
 
-obj_audi = Car('Audi', 2017, 'Black', 'S3', 33.000)
-obj_bmw = Car('BMW', 2016, 'Gray', 'Z3', 28.500)
-
-print(obj_audi.car_detail())
-print('Default profit: ')
-print(Car.profit)
-print(obj_audi.profit)
-print(obj_bmw.profit)
-
-# We try to change the profit now
-print(obj_audi.car_detail())
-Car.set_payment(1.17)
-print('Change or overwritten profit')
-print(Car.profit)
-print(obj_audi.profit)
-print(obj_bmw.profit)
-
-'''
- We try to change the profit now but use the instance object of audi insted 
- of the Car class see if it works for bmw
-'''
-obj_audi.set_payment(1.042)
-print('Change or overwritten profit using instance object')
-print(Car.profit)
-print(obj_audi.profit)
-print(obj_bmw.profit)
+if __name__ == "__main__":
+    print("=== Legacy Basic Methods (Refactored) ===")
+    obj_audi = Car("Audi", 2017, "Black", "S3", 33000)
+    print("Car Details:", obj_audi.get_details())
+    print("Profit Price:", obj_audi.calculate_price_with_profit())

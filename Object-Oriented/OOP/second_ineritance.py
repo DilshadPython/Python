@@ -1,40 +1,16 @@
+"""Legacy Second Inheritance Script (Refactored).
 
-class Dog(object):
-	# Here we initionlise the class, self represent an instance of Dog
-	def __init__(self, name, age, gender):
-		self.name = name
-		self.age  = age
-		self.gender = gender
+This module updates the original `second_ineritance.py` script into a PEP 8-compliant,
+type-annotated, modular implementation while maintaining backward compatibility.
+For detailed pet hierarchy, see `pet_hierarchy.py`.
+"""
 
-
-	def description(self):
-		print(f'My pets name is {self.name}, age {self.age}, and he is {self.gender}.')
-
-	def speak(self):
-		print('Bark !')
+from pet_hierarchy import Dog, Cat
 
 
-# Inheritance
-
-class Cat(Dog):
-	# This is constructor method and super() stand for Dog class here.
-	# if I define description method here we will overwrite the privouse one
-	# in dog class
-	def __init__(self, name, age, gender, color):
-		super().__init__(name, age, gender)
-		self.color = color
-
-	def speak(self):
-		print('Meow !')
-
-
-mydog = Dog('Raffi', 8, 'male')
-mydog.description()
-mydog.speak()
-
-
-mycat = Cat('Mimi', 2, 'female', 'black')
-mycat.description()
-mycat.speak()
-
-
+if __name__ == "__main__":
+    print("=== Legacy Second Inheritance (Refactored) ===")
+    mydog = Dog("Raffi", 8, "white", "male")
+    mycat = Cat("Mimi", 2, "black", "female")
+    print("Dog Sound:", mydog.speak())
+    print("Cat Sound:", mycat.speak())

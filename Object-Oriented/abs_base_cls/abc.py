@@ -1,41 +1,14 @@
-'''
-The abc module enables the reaction of an abstract base class
-'''
-import abc
+"""Legacy Abstract Base Class Script (Refactored).
 
-'''
-Create abstract class which can't create an object to access subclass
-The abstract class not designed to contract instance but can be subclassed 
-by regular classes
-'''
-class GetterSetter(object):
-    __metaclass__ = abc.ABCMeta
+This module updates the original `abc.py` script into a PEP 8-compliant,
+type-annotated, modular implementation while maintaining backward compatibility.
+For comprehensive abstract base class definitions, see `abstract_base_class.py`.
+"""
 
-    @abc.abstractmethod
-    def set_val(self, input):
-        ''' Set a value in the instance '''
-        return
-
-    @abc.abstractmethod
-    def get_val(self):
-        ''' Get and return a value from the instance '''
-        return
+from abstract_base_class import GetterSetter, ValueContainer
 
 
-class MyClass(GetterSetter):
-
-    ''' setter func '''
-
-    def set_val(self, input):
-        self.val = input
-
-    def get_val(self):
-        return self.val
-
-'''
-You can't instantiate the Abstract class only the Subclass I mean (x = GetterSetter())
-'''
-obj = MyClass()
-print(obj)
-
-
+if __name__ == "__main__":
+    print("=== Legacy Abstract Base Class (Refactored) ===")
+    obj = ValueContainer(100)
+    print("Value Container Value:", obj.get_val())

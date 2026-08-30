@@ -1,21 +1,20 @@
-class Employee:
-    # we use the __init__() function to assign values for name and age and access to it
-    def __init__(self, fname, lname, age):
-        self.firstname = fname
-        self.lastname = lname
-        self.age = age
-        self.email = fname + '.' + lname + '@company.com'
+"""Legacy Basic Class Example Script (Refactored).
 
-    def details(self):
-        return '{}, {}, {}'.format(self.firstname, self.lastname, self.age)
-        # or another way still works
-        # return self.firstname, self.lastname, self.age
+This module updates the original `basic_exmp.py` script into a PEP 8-compliant,
+type-annotated, modular implementation while maintaining backward compatibility.
+For comprehensive class definition basics, see `class_definition_basics.py`.
+"""
 
-first_emp = Employee('Dilshad', 'Abdulla', 44)
-second_emp = Employee('Tom', 'Smith', 54)
+from class_definition_basics import Employee
 
-print(first_emp.details())
-print(first_emp.email)
-print('==============================\n')
-print(second_emp.details())
-print(second_emp.email)
+
+if __name__ == "__main__":
+    print("=== Legacy Basic Class Example (Refactored) ===")
+    first_emp = Employee("John", "Doe", 44)
+    second_emp = Employee("Tom", "Smith", 54)
+
+    print(first_emp.get_details())
+    print(first_emp.email)
+    print("==============================\n")
+    print(second_emp.get_details())
+    print(second_emp.email)

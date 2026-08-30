@@ -1,13 +1,17 @@
-class LanguageList:
+"""Legacy Best Assign Script (Refactored).
 
-	def __init__(self, max):
-		self.max_size = max
-		self.innerlist = []
+This module updates the original `best_assign.py` script into a PEP 8-compliant,
+type-annotated, modular implementation while maintaining backward compatibility.
+For detailed max size list behavior, see `max_size_list.py`.
+"""
 
-	def push(self, lang):
-		self.innerlist.append(lang)
-		if len(self.innerlist) > self.max_size:
-			self.innerlist.pop(0)
+from max_size_list import MaxSizeList as LanguageList
 
-	def get_list(self):
-		return self.innerlist
+
+if __name__ == "__main__":
+    print("=== Legacy Best Assign (Refactored) ===")
+    lst = LanguageList(2)
+    lst.push("Python")
+    lst.push("C++")
+    lst.push("Java")
+    print(lst.get_list())

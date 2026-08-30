@@ -1,26 +1,35 @@
-Inheritance Hierachy
+# Inheritance Module
 
-1. Classes can be orginzed into an inheritance hierachy
-2. A child class can access the attribute of all parent (grandparent, etc)classes
-3. Inheritance promotes code collaboration and reuse
-4. Code not need to be appear twice.
+Welcome to the **Inheritance Module**, demonstrating single inheritance, `super()`, subclass method overriding, polymorphism, and class extensions.
 
-# Object.attribute lookup hierarchy [Inheriting Attribute look up]
-1. the instance
-2. the class
-3. and class from which this class inherits 
+---
 
-class MyAudi(Car)
-# And Inheritance class can cal also called:
- # Child class
- # Drive class
- # sub class
+## Directory Structure & Module Catalog
 
-class Car(object)
-# An inherited class can also called:
- # Base class
- # Parent class
- # superclass 
+```text
+Inheritance/
+├── README.md                   # Documentation and execution guide
+├── animal_hierarchy.py         # Animal base class & Cat/Pigeon polymorphism
+├── company_hierarchy.py        # CompanyEmployee base class & Staff/Manager subclasses
+├── date_time_extension.py      # Subclassing standard library datetime.date
+├── test_inheritance.py         # Unit test suite
+└── [legacy wrappers]           # Refactored entry points (animals.py, company.py, etc.)
+```
 
- # Inheritance Attribute:
- ## 
+---
+
+## How to Run
+
+```bash
+# Run animal hierarchy demonstration
+python3 animal_hierarchy.py
+
+# Run company hierarchy demonstration
+python3 company_hierarchy.py
+
+# Run date time extension demonstration
+python3 date_time_extension.py
+
+# Run unit tests
+python3 -m unittest test_inheritance.py
+```

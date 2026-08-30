@@ -1,35 +1,14 @@
-import abs
+"""Legacy Files Script (Refactored).
 
-from datatime import datetime
+This module updates the original `files.py` script into a PEP 8-compliant,
+type-annotated, modular implementation while maintaining backward compatibility.
+For detailed abstract file writers, see `abstract_file_writers.py`.
+"""
 
-class WriteFile:
-	__metaclass__ = abs.ABCMeta
-
-	@abc.abstractmethod
-	def write(self):
-		return
-	
-	def __init__(self, filename):
-		self.first_name = filename
-
-	def write_line(self, text):
-		fh = open(self.filename, 'a')
-		fh.write(text + '\n')
-		fh.close()
+from abstract_file_writers import WriteFile, DelimFile, LogFile
 
 
-class DelimFile(WriteFile):
-	def __init__(self, filename, delim):
-		super(DelimFile, self).__init__(filename)
-		self.write_line = delim 
-	
-	def write(self, this_list):
-		line = self.delim.join(this_list)
-		self.write_line(line)
-
-
-class LogFile(WriteFile):
-	def write(self, this_line):
-		dt = datetime.now()
-		date_str = dt.strftime("%Y-%m-%d %H:%M")
-		self.write_line('{0}    {1}'.format(date_str, this_line))
+if __name__ == "__main__":
+    print("=== Legacy Files (Refactored) ===")
+    log = LogFile("log_legacy.txt")
+    log.write("Legacy log entry")

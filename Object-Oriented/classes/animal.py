@@ -1,21 +1,25 @@
-# class with initialization __init__
+"""Legacy Animal Script (Refactored).
+
+This module updates the original `animal.py` script into a PEP 8-compliant,
+type-annotated, modular implementation while maintaining backward compatibility.
+"""
+
+
 class Animal:
+    """Animal class with name and sound attributes."""
 
-    def __init__(self, name, sound):
-        self.name = name
-        self.sound = sound
+    def __init__(self, name: str, sound: str) -> None:
+        """Initialize Animal."""
+        self.name: str = name
+        self.sound: str = sound
 
-    def sound_say(self):
-        if self.name == 'Dog':
-            print('The {} sound is bagging'.format(self.name))
-        elif self.name == 'Cat':
-            print('The {} sound is miaw'.format(self.name))
+    def sound_say(self) -> str:
+        """Return formatted sound string."""
+        return f"The {self.name} sound is {self.sound}."
 
-# Animal(name_required, sound_required)
 
-dogy = Animal('Dog', 'bugging')
-caty = Animal('Cat', 'miawing')
-
-dogy.sound_say()
-
-caty.sound_say()
+if __name__ == "__main__":
+    dogy = Animal("Dog", "barking")
+    caty = Animal("Cat", "meowing")
+    print(dogy.sound_say())
+    print(caty.sound_say())

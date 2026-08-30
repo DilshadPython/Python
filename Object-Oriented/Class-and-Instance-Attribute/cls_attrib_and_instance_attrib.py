@@ -1,24 +1,15 @@
-# class variables or class attribute and instance attribute
-class Car:
-    # class attribute or calss variable
-    class_var = 20
-    number_in_the_store = 0
+"""Legacy Class/Instance Attribute Script (Refactored).
 
-    def set_price(self):
-        # is attribute is set in instance_var
-        self.instance_var = 25
-        self.number_in_the_store = 3
+This module updates the original `cls_attrib_and_instance_attrib.py` script into a PEP 8-compliant,
+type-annotated, modular implementation while maintaining backward compatibility.
+For detailed attribute behavior, see `class_vs_instance_attributes.py`.
+"""
+
+from class_vs_instance_attributes import VehicleInventory
 
 
-
-obj = Car()
-# Here we call the number_in_the_store before instance method set_price
-print('\nCalling class variable: ', obj.class_var)
-print('\nthe number in the store is: ', obj.number_in_the_store)
-
-# To access the instance variable or attribute we must call the set_price() method first
-# to access instance_var otherwise display an error
-obj.set_price()
-
-print('\nCalling instance variable: ', obj.instance_var)
-print('\nThe number in the store is: ', obj.number_in_the_store)
+if __name__ == "__main__":
+    print("=== Legacy Class/Instance Attribute (Refactored) ===")
+    inv = VehicleInventory("Sedan")
+    inv.configure_inventory(25000.0, 3)
+    print("Instance stock count:", inv.stock_count)

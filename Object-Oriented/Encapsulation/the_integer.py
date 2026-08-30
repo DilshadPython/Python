@@ -1,47 +1,17 @@
-# self is an instance of TheIntegeror self is instance of which methods will be called
-# Encapsulation class
+"""Legacy The Integer Script (Refactored).
 
-class TheInteger(object):
-	def sent_number(self, num):
-		try:
-			num = int(num)
-		except ValueError:
-			return
-		self.num = num
+This module updates the original `the_integer.py` script into a PEP 8-compliant,
+type-annotated, modular implementation while maintaining backward compatibility.
+For detailed validated integer behavior, see `validated_integer.py`.
+"""
+
+from validated_integer import ValidatedInteger
 
 
-	def get_number(self):
-		return self.num
-
-
-	def increment_num(self):
-		self.num = self.num + 1
-
-obj = TheInteger()
-
-# we set only int
-obj.sent_number(19)
-print(obj.get_number())
-
-# try another value but not int
-obj.sent_number('Welcome')
-print(obj.get_number())
-
-# try another value but float this time
-obj.sent_number(88.06)
-print(obj.get_number(), '<< Return int not float!')
-
-# We try another instance obj
-new_obj = TheInteger()
-new_obj.num = 22
-print(new_obj.increment_num())
-
-# we try string here we get an error can't concatenate str to int
-# new_obj.num = 'Python'
-# print(new_obj.increment_num())
-
-try:
-	new_obj.num = 'Python3'
-	print(new_obj.increment_num())
-except:
-	print('Error the number is str not int : ', new_obj.num)
+if __name__ == "__main__":
+    print("=== Legacy The Integer (Refactored) ===")
+    obj = ValidatedInteger()
+    obj.set_number(19)
+    print("Number:", obj.get_number())
+    obj.increment()
+    print("Incremented Number:", obj.get_number())
