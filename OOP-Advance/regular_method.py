@@ -1,42 +1,18 @@
-class Staff:
+"""Legacy Regular Method Script (Refactored).
 
-    number_of_staff = 0
-    pay_more = 1.06
+This module updates the original `regular_method.py` script into a PEP 8-compliant,
+type-annotated, modular implementation while maintaining backward compatibility.
+For detailed instance method demonstrations, see `instance_regular_method.py`.
+"""
 
-    def __init__(self, fname, lname, salary):
-        self.fname = fname
-        self.lname = lname
-        self.salary = salary
-        self.mail = fname + '.' + lname + '@mail.com'
+from instance_regular_method import Staff
 
-        Staff.number_of_staff += 1
 
-    def full_name(self):
-        return self.fname + ' ' + self.lname
-
-    def show_email(self):
-        return  self.mail
-
-    def increase_salary(self):
-        self.salary = int(self.salary * self.pay_more)
-
-new_staff = Staff('John', 'Doe', 4100)
-print(new_staff.full_name())
-print(new_staff.show_email())
-print(new_staff.salary)
-new_staff.increase_salary()
-print(new_staff.salary)
-
-print()
-
-new_staff_1 = Staff('Jack', 'Wall', 3900)
-print(new_staff_1.full_name())
-print(new_staff_1.show_email())
-print(new_staff_1.salary)
-new_staff_1.increase_salary()
-print(new_staff_1.salary)
-
-print()
-print(Staff.pay_more)
-print(new_staff.pay_more)
-print(new_staff_1.pay_more)
+if __name__ == "__main__":
+    print("=== Legacy Regular Method (Refactored) ===")
+    staff1 = Staff("John", "Doe", 4100)
+    print("Full Name:", staff1.full_name())
+    print("Email:", staff1.show_email())
+    print("Salary:", staff1.salary)
+    staff1.increase_salary()
+    print("Updated Salary:", staff1.salary)

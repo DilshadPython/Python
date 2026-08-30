@@ -1,30 +1,15 @@
-# mylist is inherite from list object but indezes from 1 instead of 0
-class MyList(list):
+"""Legacy Inherit List Script (Refactored).
 
-    def __getitem__(self, index):
-        if index == 0:
-            raise IndexError(" error")
-        if index > 0:
-            index = index - 1
-           	# this method is called when we access a value with subscript (x[1], etc)
-        return list.__getitem__(self, index)
+This module updates the original `inherit_list.py` script into a PEP 8-compliant,
+type-annotated, modular implementation while maintaining backward compatibility.
+For detailed 1-based list indexing demonstrations, see `one_based_list.py`.
+"""
 
-    def __setitem__(self, index, value):
-        if index == 0:
-            raise IndexError(" error")
-        if index > 0:
-            index = index - 1
-        return list.__setitem__(self, index, value)
+from one_based_list import MyList
 
 
-obj = MyList(['ABc', 'DEf', 'GEh', 'IJk']) # __init__ inherited from builtin list
-
-print(obj)  # __repr__ inherited from builtin list
-
-obj.append('LMn')  # __appedn__ inherited from builtin list
-
-print(x[1]) # 'ABc' MyList.__getitem__() customized list superclass method index is 1 but refelect 0
-print(x[4]) # idex is 4 but refelect 3
-
-for x in obj: # the index start from 1
-    print(x)
+if __name__ == "__main__":
+    print("=== Legacy Inherit List (Refactored) ===")
+    obj = MyList(["ABc", "DEf", "GEh", "IJk"])
+    print("MyList Index 1:", obj[1])
+    print("MyList Index 4:", obj[4])

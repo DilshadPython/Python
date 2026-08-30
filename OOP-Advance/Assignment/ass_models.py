@@ -1,14 +1,15 @@
-# must be inherite from dict built-in methods
-class DoThis():
+"""Legacy Ass Models Script (Refactored).
 
-    def __setitem__(self, key, val):
+This module updates the original `ass_models.py` script into a PEP 8-compliant,
+type-annotated, modular implementation while maintaining backward compatibility.
+For detailed dictionary subclassing, see `dict_subclass_setitem.py`.
+"""
 
-        # Don't use this because become recursive loops or func call itself
-        # self[key] = vale
-        # this way avoid recursive function or loops
-        dict.__setitem__(self, key, val)
+from dict_subclass_setitem import DoThis
 
 
-obj = DoThis()
-
-obj['key'] = 'val'
+if __name__ == "__main__":
+    print("=== Legacy Ass Models (Refactored) ===")
+    obj = DoThis()
+    obj["key"] = "val"
+    print("Dict Object:", obj)

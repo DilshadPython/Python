@@ -1,16 +1,15 @@
-class Monitor:
-    def set_val(self, val):
-        self.value = val
+"""Legacy Encap Set Get Script (Refactored).
 
-    def get_val(self):
-        return self.value
+This module updates the original `encap_set_get.py` script into a PEP 8-compliant,
+type-annotated, modular implementation while maintaining backward compatibility.
+For detailed getter/setter method demonstrations, see `getter_setter_methods.py`.
+"""
+
+from getter_setter_methods import Monitor
 
 
-obj1 = Monitor()
-obj2 = Monitor()
-
-obj1.set_val(22)
-obj2.set_val(55)
-
-print(obj1.get_val())
-print(obj2.get_val())
+if __name__ == "__main__":
+    print("=== Legacy Encap Set Get (Refactored) ===")
+    obj1 = Monitor()
+    obj1.set_val(22)
+    print("Object 1 Value:", obj1.get_val())

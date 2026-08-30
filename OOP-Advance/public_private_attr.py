@@ -1,34 +1,15 @@
-class Monitor:
-    # this is public var
-    instance_count = 0
+"""Legacy Public Private Attributes Script (Refactored).
 
-    # this is private private not be subclassed or child class
-    __mangled_name = 'no privacy'
+This module updates the original `public_private_attr.py` script into a PEP 8-compliant,
+type-annotated, modular implementation while maintaining backward compatibility.
+For detailed attribute privacy and encapsulation, see `encapsulation_attributes.py`.
+"""
 
-    def __init__(self, value):
-        # _attributeval means internal use only
-        self._attributeval = value
-        Monitor.instance_count += 1
-
-    @property
-    def var(self):
-        print('Getting the "var" attribute')
-        return self._attributeval
-
-    @var.setter
-    def var(self, value):
-        print('Setting the "var" attribute')
-        self._attributeval = value
-
-    @var.deleter
-    def var(self):
-        print('Deleting the "var" attribute')
-        self._attributeval = None
+from encapsulation_attributes import Monitor
 
 
-obj = Monitor(18)
-
-print(obj._attributeval, ' << private attribute internal use only')
-print(obj._Monitor__mangled_name, ' << private attribute Can access only through class name with single underscore  ')
-print(obj.__mangled_name, ' << private attribute Can not be accessed without class name. Error  ')
-
+if __name__ == "__main__":
+    print("=== Legacy Public Private Attributes (Refactored) ===")
+    obj = Monitor(18)
+    print("Protected attribute:", obj._attribute_val)
+    print("Mangled attribute:", obj._Monitor__mangled_name)

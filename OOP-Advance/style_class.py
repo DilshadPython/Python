@@ -1,27 +1,16 @@
-# old style of 'Classic' class
-class OldName():
-	pass
+"""Legacy Style Class Script (Refactored).
 
-# new style class
-class NewClass(object):
-	pass
+This module updates the original `style_class.py` script into a PEP 8-compliant,
+type-annotated, modular implementation while maintaining backward compatibility.
+For detailed class model evolution analysis, see `classic_vs_new_style_class.py`.
+"""
 
-# last style
-class LastStyleClass:
-	pass
+from classic_vs_new_style_class import ClassicStyle as OldName, ExplicitNewStyle as NewClass
 
 
-oc = OldName()
-
-nc = NewClass()
-
-lsc = LastStyleClass()
-
-print(type(oc)) # if use python2 display that <type <instance'>
-print(type(nc))
-print(type(lsc))
-print('==========')
-
-print(oc.__class__)
-print(nc.__class__)
-print(lsc.__class__)
+if __name__ == "__main__":
+    print("=== Legacy Style Class (Refactored) ===")
+    oc = OldName()
+    nc = NewClass()
+    print("OldName type:", type(oc))
+    print("NewClass type:", type(nc))

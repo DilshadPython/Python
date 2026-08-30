@@ -1,22 +1,12 @@
+"""Legacy CLI Test Script (Refactored).
+
+This module updates the original `test.py` script into a PEP 8-compliant,
+type-annotated, modular implementation while maintaining backward compatibility.
+For detailed CLI config parsing, see `cli_config_parser.py`.
 """
-Usages:
-./test.py     (reads out the entrie config dict)
-./test.py this-key this-value    (sets 'this-key and 'this-value' in the dict)
-"""
 
-import sys
+from cli_config_parser import run_cli
 
-from solutions import ConfigDict
 
-obj = ConfigDict('config_file.txt')
-
-if len(sys.argv) == 3:
-	key = sys.argv[1]
-	value = sys.argv[2]
-	print('Writing date: {0}, {1}'.format(key, value))
-
-	obj[key] = value
-else:
-	print('Reading data')
-	for key in obj.keys():
-		print('  {0} = {1}'.format(key, obj[key]))
+if __name__ == "__main__":
+    run_cli()
