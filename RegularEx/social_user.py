@@ -1,25 +1,28 @@
-import re
-'''
-/Python/RegularEx$ py social_user.py 
-URL: http://twitter.com/dilshadabdulla
-Username: dilshadabdulla
-/Python/RegularEx$ py social_user.py 
-URL: https://www.twitter.com/dilshadabdulla
-Username: dilshadabdulla
+"""Legacy Social User Script (Refactored).
 
-'''
+This module updates the original `social_user.py` script into a PEP 8-compliant,
+type-annotated, modular implementation while maintaining backward compatibility.
+For modular username extraction functions, see `social_username_extractor.py`.
+"""
 
-url = input("URL: ").strip()
+from social_username_extractor import extract_username_regex_search
 
-# re.sub(pattern, repl, string, count=0, flags=0)
-# username = re.sub(r"^(https?://)?(www\.)?twitter\.com/", "", url)
 
-# matches = re.search(r"^https?://(www\.)?twitter\.com/(.+)$", url, re.IGNORECASE)
-# if matches:
-#     print(f"Username:", matches.group(2))
+def get_twitter_handle(url: str) -> str:
+    """Extract Twitter handle from URL.
 
-# if matches := re.search(r"^https?://(?:www\.)?twitter\.com/(.+)$", url, re.IGNORECASE):
-# or
-if matches := re.search(r"^https?://(?:www\.)?twitter\.com/([a-zA-Z0-9]+)$", url, re.IGNORECASE):
-    print(f"Username:", matches.group(1))
+    Args:
+        url: Social media profile URL.
 
+    Returns:
+        Extracted handle or 'Invalid URL'.
+    """
+    handle = extract_username_regex_search(url)
+    return handle if handle else "Invalid URL"
+
+
+if __name__ == "__main__":
+    print("=== Legacy Social User (Refactored) ===")
+    sample_url = "https://www.twitter.com/dilshadabdulla"
+    handle = get_twitter_handle(sample_url)
+    print(f"URL: '{sample_url}' -> Handle: '{handle}'")

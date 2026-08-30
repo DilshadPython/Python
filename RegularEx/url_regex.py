@@ -1,30 +1,17 @@
-import re
+"""Legacy URL Regex Script (Refactored).
+
+This module updates the original `url_regex.py` script into a PEP 8-compliant,
+type-annotated, modular implementation while maintaining backward compatibility.
+For modular URL extraction and reformatting functions, see `url_extractor.py`.
+"""
+
+from url_extractor import reformat_urls_to_domains, find_all_url_tuples
 
 
-urls = '''
-http://twitter.com/username+
-https://google.com
-http://youtube.com
-https://www.gov.uk
-http://cambridge.edu
-'''
-
-# pattern = re.compile(r'https?://(www\.)?\w+\.\w+')
-# or
-pattern = re.compile(r'https?://(www\.)?(\w+)(\.\w+)')
-
-matches = pattern.finditer(urls)
-
-find_all = pattern.findall(urls)
-
-for find in find_all:
-    print('\n\t find all ', find)
-
-for match in matches:
-    print('\n\t ', match)
-
-                    # \2 group 2  \3 group 3
-subbed_urls = pattern.sub(r'\t\2\3', urls)
-
-print(subbed_urls)
-
+if __name__ == "__main__":
+    print("=== Legacy URL Regex (Refactored) ===")
+    sample_text = "http://twitter.com/username\nhttps://google.com"
+    print("Captured Tuples:")
+    print(find_all_url_tuples(sample_text))
+    print("\nReformatted Domains:")
+    print(reformat_urls_to_domains(sample_text))

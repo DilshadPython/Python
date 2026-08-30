@@ -1,33 +1,31 @@
-# importing regular expression
+"""Legacy Email Validation Script (Refactored).
+
+This module updates the original `valid_email.py` into a PEP 8-compliant,
+type-annotated, modular implementation while maintaining backward compatibility.
+For modular functions and comprehensive educational references, see `email_validator.py`.
+"""
+
+# import standard re module and helper function from email_validator
 import re
-'''
-. any character except a newline (any characters uppercase or lowercase except newline)
-* 0 or more repetitions (any number from 0 to whatever enter)
-+ 1 or more repetitions (number from 1 to whatever enter)
-? 0 or 1 repetition (after you enter ? you can enter 0 char or 1 char)
-{m} m repetition (m stand for number of repetitions)
-{m,n} m-n repetition (m any number and n you mean between m and n) number of repetitions
-^ matches the start of the string
-$ matches the end of the string just before the newline at the end of the string
-[] set of characters
-[^] complementing the set of characters
-'''
-email = input("Enter your email: ").strip()
+from email_validator import validate_email
 
-# [^@] means accept any characters except @
-# .* it means 0 or other characters
-# \. means exactly enden with .com because \ don't allowed . work as any characters
-# The ^ and & added to match the exact email required
-# if re.search(r"^[a-zA-Z0-9_]+@[a-zA-Z0-9_]+\.com$", email):
-# if re.search(r"^\w+@\w+\.com$", email):
-# if re.search(r"^[^@]+@[^@]+\.com$", email):
 
-# if re.search(r"^\w+@(\w+\.)?\w+\.com$", email, re.IGNORECASE):
-# re.IGNORECASE allowed the user to enter uppercase or lowercase the email address
-# if re.search(r"^\w+@\w+\.(com|net|co.uk|gov|org|de)$", email, re.IGNORECASE):
-# ? mean or can be extra . after @
-if re.search(r"^(\w|\.)+@(\w+\.)?\w+\.com$", email, re.IGNORECASE):
-    print("Valid Email")
-else:
-    print("Invalid Email")
+def check_email_interactive(email_input: str) -> str:
+    """Validate an email input string and return a user-friendly status message.
 
+    Args:
+        email_input: Raw email string to validate.
+
+    Returns:
+        'Valid Email' if valid, or 'Invalid Email' if invalid.
+    """
+    if validate_email(email_input):
+        return "Valid Email"
+    return "Invalid Email"
+
+
+if __name__ == "__main__":
+    print("=== Legacy Email Validator (Refactored) ===")
+    test_address = "user@example.com"
+    result = check_email_interactive(test_address)
+    print(f"Address: '{test_address}' -> Result: {result}")

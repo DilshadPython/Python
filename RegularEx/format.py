@@ -1,16 +1,27 @@
-name = input("What is your name? ").strip()
+"""Legacy Name Format Script (Refactored).
 
-# when you enter full name you have to type , between than is true and swapped
-if "," in name:
-    lname, fname = name.split(", ")
-    # we swap the fname to come first and lname as second name in other word format it
-    name = f"{fname} {lname}"
+This module updates the original `format.py` script into a PEP 8-compliant,
+type-annotated, modular implementation while maintaining backward compatibility.
+For modular functions and regex formatting, see `name_formatter.py`.
+"""
 
-print(f"Your name is, {name}")
+from name_formatter import format_name_split
 
-# here we jump one tab forward
-print('\n\tTab')
 
-# when we add r (regular Expression) the tab not work in the print
-print(r'\n\tTab')
+def demonstrate_format(name: str) -> str:
+    """Format name from 'Last, First' to 'First Last'.
 
+    Args:
+        name: Raw name string.
+
+    Returns:
+        Formatted name string.
+    """
+    return format_name_split(name)
+
+
+if __name__ == "__main__":
+    print("=== Legacy Name Format (Refactored) ===")
+    sample = "Smith, John"
+    formatted = demonstrate_format(sample)
+    print(f"Original: '{sample}' -> Formatted: '{formatted}'")

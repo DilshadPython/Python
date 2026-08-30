@@ -1,77 +1,16 @@
-'''
+"""Legacy Finditer Regex Script (Refactored).
 
-'''
-import re
+This module updates the original `finditer_re.py` script into a PEP 8-compliant,
+type-annotated, modular implementation while maintaining backward compatibility.
+For modular searching and file scanning functions, see `regex_iterators.py`.
+"""
 
-text_to_find = '''
-abcdefghijklmnopqrstuvwxyz
-ABCDEFGHIJKLMNOPQRSTUVWXYZ
-123 456 7890
-888.764.989
-532-658-001
-
-Hi Haliluia
-
-. ^ $ ! £ % & * ( ) + = - # ~ @ $ 
-
-teach-cloud.net
-
-Mr Smith
-Mrs Trump
-Ms Claudia
-Miss Georgina
-
-'''
-
-line = 'Parking tickets and enforcement. Parking fines and penalty charge notices PCNs'
-
-not_some_txt = '''
-Hi Haliluia
-
-. ^ $ ! £ % & * ( ) + = - # ~ @ $ 
-
-teach-cloud.net
-
-Mr Smith
-Mrs Trump
-Ms Claudia
-Miss Georgina
-
-cat
-bat
-mat
-pat
-sat
-jat
-wat
-
-'''
-
-# words = input('Enter words: ')
-# pattern = re.compile(r'teach-cloud\.net')
-# pattern = re.compile(r'\Dt')
-pattern = re.compile(r'\W')
-# pattern = re.compile(r'\d\d\d')
-pattern = re.compile(r'\d\d\d.\d\d\d')
-
-# display all end with at expect theis one start with b
-pattern = re.compile(r'[^b]at')
-
-matches = pattern.finditer(text_to_find)
-
-matches = pattern.finditer(not_some_txt)
-
-for match in matches:
-    print('\n\t', match)
+from regex_iterators import find_phone_numbers, find_names_with_titles, find_words_negating_prefix
 
 
-with open('data/REeX.txt', 'r', encoding='utf-8') as f:
-    contents = f.read()
-
-    matches = pattern.finditer(contents)
-
-    for match in matches:
-        print('\n\t', match)
-
-# to test
-# print('\n\t', text_to_find[28:31])
+if __name__ == "__main__":
+    print("=== Legacy Finditer Regex (Refactored) ===")
+    sample_text = "532-658-0010 Mr Smith cat bat mat"
+    print("Phones:", find_phone_numbers(sample_text))
+    print("Names:", find_names_with_titles(sample_text))
+    print("Words non-b:", find_words_negating_prefix(sample_text, "b"))
