@@ -23,6 +23,9 @@ The `Methods/` tutorial module demonstrates Python method binding mechanics, bui
 | `random_math_evaluator.py` | Random values with arithmetic evaluation | `evaluate_math_operations(x, y)` |
 | `functional_reduce_product.py` | Sequence cumulative product via `reduce()` | `calculate_cumulative_product(numbers)` |
 | `function_vs_method_comparison.py` | Comparative analysis: Functions vs Methods | `compare_function_and_method()` |
+| `method_basics.py` | Comprehensive Python methods & object architecture | `BankAccount`, `UserProfile`, `StudentGrade`, `Vector2D`, `ProductInventory` |
+| `MethodTutorial.md` | Master pedagogical reference guide | Full tutorial documentation covering Python 2.7 to 3.13 |
+| `test_method_tutorial.py` | Automated unit test suite | Automated tests verifying all method mechanics |
 
 ---
 
