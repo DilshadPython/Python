@@ -16,6 +16,8 @@ RegularEx/
 ├── url_extractor.py              # Scanning multi-line text for URLs via re.findall(), re.finditer(), & re.sub()
 ├── regex_iterators.py            # Compiling patterns, searching phone numbers/titles, & external file scanning
 ├── regex_advanced.py             # Verbose regex (re.VERBOSE), named groups, lookaround assertions, & dir()
+├── regex_basics.py               # Standardized comprehensive tutorial module combining all regex utilities
+├── test_regex_tutorial.py        # Automated unit test suite verifying regex_basics.py (6 tests)
 ├── test_regular_ex.py            # Comprehensive unittest test suite (10 test cases)
 ├── data/
 │   └── REeX.txt                  # Sample dataset for file searching tests
