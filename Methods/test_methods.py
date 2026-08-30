@@ -1,5 +1,5 @@
-"""
-Comprehensive Unit Test Suite for Python Methods & Function Modules.
+"""Comprehensive Unit Test Suite for Python Methods & Function Modules.
+
 Tests dynamic attribute deletion, dict key deletion, factorial calculations,
 mean filtering, map transformations, string manipulations, reduce operations,
 and Function vs Method object comparisons.
@@ -29,23 +29,26 @@ from string_uppercase_converter import convert_to_uppercase
 from function_vs_method_comparison import (
     standalone_function,
     CalculatorService,
-    compare_function_and_method
+    compare_function_and_method,
+    inspect_method_attributes,
 )
 
 
 class TestClassAndObjectMethods(unittest.TestCase):
     """Test dynamic attribute and dictionary deletion functions."""
 
-    def test_inspect_and_delete_attribute(self):
+    def test_inspect_and_delete_attribute(self) -> None:
+        """Verify dynamic deletion of class attributes."""
         class DummyVehicle:
             name = "Volvo"
             year = 2010
 
-        before, after = inspect_and_delete_attribute(DummyVehicle, 'name')
+        before, after = inspect_and_delete_attribute(DummyVehicle, "name")
         self.assertTrue(before)
         self.assertFalse(after)
 
-    def test_object_vs_dict_deleter(self):
+    def test_object_vs_dict_deleter(self) -> None:
+        """Verify object attribute deletion vs dictionary key deletion."""
         car = CarProfile("Audi", 2005, "A3")
         self.assertTrue(delete_object_attribute(car, "year"))
         self.assertFalse(hasattr(car, "year"))
@@ -58,55 +61,66 @@ class TestClassAndObjectMethods(unittest.TestCase):
 class TestStringMethods(unittest.TestCase):
     """Test string built-in method wrappers."""
 
-    def test_string_length(self):
+    def test_string_length(self) -> None:
+        """Verify string length measurement."""
         self.assertEqual(calculate_string_length("Python"), 6)
 
-    def test_lowercase_and_uppercase(self):
+    def test_lowercase_and_uppercase(self) -> None:
+        """Verify lowercase and uppercase conversions."""
         self.assertEqual(convert_to_lowercase("PYTHON"), "python")
         self.assertEqual(convert_to_uppercase("python"), "PYTHON")
 
-    def test_string_split(self):
+    def test_string_split(self) -> None:
+        """Verify string splitting with delimiter."""
         self.assertEqual(split_string("apple,banana", ","), ["apple", "banana"])
 
-    def test_whitespace_strip(self):
+    def test_whitespace_strip(self) -> None:
+        """Verify stripping surrounding whitespace."""
         self.assertEqual(strip_whitespace("  hello  "), "hello")
 
 
 class TestFunctionalMethods(unittest.TestCase):
     """Test higher-order functional methods (map, filter, reduce, factorial)."""
 
-    def test_factorial(self):
+    def test_factorial(self) -> None:
+        """Verify factorial computation and error handling."""
         self.assertEqual(calculate_factorial(5), 120)
         self.assertEqual(calculate_factorial(0), 1)
         with self.assertRaises(ValueError):
             calculate_factorial(-5)
 
-    def test_iterable_filter_mean(self):
+    def test_iterable_filter_mean(self) -> None:
+        """Verify mean calculation and filtering above/below mean."""
         data = [2.0, 4.0, 6.0, 8.0, 10.0]
         avg, above, below = filter_numbers_by_mean(data)
         self.assertEqual(avg, 6.0)
         self.assertEqual(above, [8.0, 10.0])
         self.assertEqual(below, [2.0, 4.0])
 
-    def test_falsy_filter(self):
-        items = ['Rome', '', False, None, 0, 'Paris']
-        self.assertEqual(remove_falsy_values(items), ['Rome', 'Paris'])
+    def test_falsy_filter(self) -> None:
+        """Verify filtering falsy elements using filter(None, ...)."""
+        items = ["Rome", "", False, None, 0, "Paris"]
+        self.assertEqual(remove_falsy_values(items), ["Rome", "Paris"])
 
-    def test_temperature_map(self):
-        celsius = [('Moscow', -10.0), ('Cairo', 20.0)]
+    def test_temperature_map(self) -> None:
+        """Verify Celsius to Fahrenheit sequence mapping."""
+        celsius = [("Moscow", -10.0), ("Cairo", 20.0)]
         fahrenheit = convert_celsius_to_fahrenheit(celsius)
-        self.assertEqual(fahrenheit, [('Moscow', 14.0), ('Cairo', 68.0)])
+        self.assertEqual(fahrenheit, [("Moscow", 14.0), ("Cairo", 68.0)])
 
-    def test_circle_area_map(self):
+    def test_circle_area_map(self) -> None:
+        """Verify circle area mapping for a sequence of radii."""
         radii = [1.0, 2.0]
         areas = calculate_areas_for_radii(radii)
         self.assertAlmostEqual(areas[0], 3.14159, places=4)
 
-    def test_reduce_product(self):
+    def test_reduce_product(self) -> None:
+        """Verify cumulative product computation using reduce()."""
         self.assertEqual(calculate_cumulative_product([2, 3, 4]), 24)
         self.assertEqual(calculate_cumulative_product([]), 0)
 
-    def test_random_math_evaluator(self):
+    def test_random_math_evaluator(self) -> None:
+        """Verify random number generation and arithmetic evaluation."""
         num = generate_random_number(1, 10)
         self.assertTrue(1 <= num <= 10)
         a, b, c, d, e, f = evaluate_math_operations(10, 2)
@@ -116,7 +130,8 @@ class TestFunctionalMethods(unittest.TestCase):
 class TestFunctionVsMethodComparison(unittest.TestCase):
     """Test comparison between standalone functions and class methods."""
 
-    def test_compare_function_and_method(self):
+    def test_compare_function_and_method(self) -> None:
+        """Verify comparisons between functions, instance methods, class methods, and static methods."""
         self.assertEqual(standalone_function(10, 20), 30)
         service = CalculatorService(100)
         self.assertEqual(service.instance_method(50), 150)
@@ -127,7 +142,14 @@ class TestFunctionVsMethodComparison(unittest.TestCase):
         self.assertEqual(comp["function_analysis"]["type"], "function")
         self.assertEqual(comp["instance_method_analysis"]["type"], "method")
         self.assertTrue(comp["instance_method_analysis"]["self_bound"])
+        self.assertEqual(comp["instance_method_analysis"]["underlying_func"], "instance_method")
+
+    def test_inspect_method_attributes(self) -> None:
+        """Verify dir() attribute inspection helper."""
+        service = CalculatorService(100)
+        attrs = inspect_method_attributes(service.instance_method)
+        self.assertIsInstance(attrs, list)
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     unittest.main()
