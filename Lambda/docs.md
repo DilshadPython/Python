@@ -107,3 +107,49 @@ divide_safe = lambda a, b: a / b if b != 0 else float('nan')
 | **Return Mechanism** | Explicit `return` statement | Implicit expression return |
 | **Type Annotations** | Native syntax (`def f(x: int) -> int:`) | Variable annotations (`f: Callable[[int], int] = lambda x: x`) |
 | **Primary Use Cases** | Domain logic, complex algorithms, multi-line routines | Short callbacks, key functions (`sort(key=...)`), dispatch tables |
+
+---
+
+## 8. Range Object Architecture: Version Evolutions & Performance Notes
+
+### Python 2.7 vs Python 3.3 ➔ 3.13 `range` Evolution
+In **Python 2.7**, `range()` was a built-in function that immediately evaluated and allocated an in-memory `list` containing all integer elements. For large intervals (e.g., `range(1000000)`), this resulted in $O(N)$ memory space allocation. Python 2.7 offered `xrange()` as a separate generator-like type to avoid full list allocation.
+
+In **Python 3.3 through Python 3.13**, `xrange()` was removed, and `range` became an immutable sequence object implementing the sequence protocol:
+1. **$O(1)$ Space Complexity**: `range(start, stop, step)` stores only three integer attributes (`start`, `stop`, `step`) regardless of range size (whether `range(10)` or `range(10**12)`).
+2. **$O(1)$ Time Complexity for Membership Testing**: In Python 3.3+, checking `x in range(start, stop, step)` evaluates mathematically via integer arithmetic rather than iterating sequentially through elements:
+   $$\text{contains}(x) = (x \ge \text{start}) \land (x < \text{stop}) \land ((x - \text{start}) \pmod{\text{step}} == 0)$$
+3. **Sequence Operations**: `range` supports slicing (`range(10)[2:5]`), indexed lookup (`range(10)[3]`), reverse iteration (`reversed(range(10))`), and length computation (`len(range(10))`) all in $O(1)$ constant time.
+
+---
+
+## 9. `range` Reflection Matrix (`dir(range)`) & Lambda Functional Integration
+
+Executing `dir(range)` exposes the sequence protocol methods and public attributes of the `range` object:
+
+| Dunder / Public Method | Data Type | Description & Functional Purpose |
+| :--- | :--- | :--- |
+| `start` | `int` | Read-only property representing the starting integer (inclusive). |
+| `stop` | `int` | Read-only property representing the stopping integer bound (exclusive). |
+| `step` | `int` | Read-only property representing the step increment between sequence values. |
+| `count(value)` | `method` | Returns count of occurrences of `value` in the range (0 or 1 in $O(1)$ time). |
+| `index(value)` | `method` | Returns 0-based index of `value` within the range; raises `ValueError` if absent. |
+| `__iter__()` | `method` | Returns a range iterator (`range_iterator`) for looping. |
+| `__len__()` | `method` | Returns sequence length ($O(1)$ calculation without iterating). |
+| `__getitem__()` | `method` | Enables direct indexing (`r[0]`) and slicing (`r[1:4]`) returning a new `range` object. |
+| `__contains__()` | `method` | Implements $O(1)$ constant-time membership testing (`val in r`). |
+| `__reversed__()` | `method` | Returns a reverse iterator producing elements in descending order. |
+
+### Lambda Expressions with `range()`
+Lambda functions frequently operate over `range` sequences when used with higher-order functions such as `map()`, `filter()`, and `reduce()`:
+
+```python
+# Square range elements using lambda and map (lazy evaluation in Py3)
+squared_gen = map(lambda x: x ** 2, range(1, 6))
+# Result: [1, 4, 9, 16, 25]
+
+# Filter even numbers from range using lambda
+evens_gen = filter(lambda x: x % 2 == 0, range(1, 10))
+# Result: [2, 4, 6, 8]
+```
+

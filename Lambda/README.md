@@ -32,6 +32,22 @@ lambda arguments: expression
 
 ---
 
+## Performance Notes & `range()` Functional Integration
+
+- **Lazy Evaluation**: In Python 3.3+, standard functions like `map()` and `filter()` return lazy iterators when combined with `lambda` expressions, eliminating memory overhead.
+- **Range Object Efficiency**: Modern `range(start, stop, step)` sequence objects maintain $O(1)$ memory complexity and constant-time $O(1)$ membership testing (`x in range(...)`).
+- **Inspection via `dir()`**: Running `dir(lambda)` reveals internal dunder attributes (`__name__`, `__qualname__`, `__code__`, `__closure__`), while `dir(range)` lists sequence protocol attributes (`start`, `stop`, `step`, `count`, `index`).
+
+---
+
+## Python Version Evolutions (Python 2.7 ➔ Python 3.3 ➔ Python 3.13)
+
+- **Python 2.7**: Allowed tuple parameter unpacking (`lambda (x, y): x + y`) and allocated full lists for `range()` and `map()`.
+- **Python 3.3+**: Removed tuple unpacking (PEP 3113), introduced `__qualname__` for nested lambda inspection, and made `range` and `map` memory-efficient lazy sequence/iterator objects.
+- **Python 3.13**: CPython interpreter specialization optimizes boolean ternary dispatch (`TO_BOOL`, `POP_JUMP_IF_FALSE`) and call frames for inline lambda execution.
+
+---
+
 ## Running Unit Tests
 
 Execute all unit tests using CPython's test runner from the root directory:
@@ -40,4 +56,5 @@ Execute all unit tests using CPython's test runner from the root directory:
 python3 -m unittest discover Lambda
 ```
 
-All 11 test cases verify string formatting, arithmetic accuracy, division by zero edge cases, and dictionary dispatch table lookups.
+All unit tests verify string formatting, arithmetic accuracy, division by zero edge cases, sequence operations, and dictionary dispatch table lookups.
+

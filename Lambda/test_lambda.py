@@ -4,13 +4,16 @@ Tests lambda operations including arithmetic, string formatting, last-name sorti
 division by zero handling, exponentiation, and dictionary dispatch table calculations.
 """
 
+# "import module" imports the standard library modules into the script's global namespace.
 import sys
 import unittest
+# "from module import name" imports specific class/function symbols directly into local scope.
 from pathlib import Path
 
 # Add current directory to sys.path for direct module imports
 sys.path.insert(0, str(Path(__file__).parent))
 
+# Import tutorial module functions and lambda definitions directly into test namespace
 from lambda_name_formatter import format_full_name, sort_names_by_last_name
 from lambda_addition import add_eight, add_two_numbers, calculate_addition
 from lambda_division import divide_by_eight, divide_two_numbers, calculate_division
@@ -20,6 +23,7 @@ from lambda_remainder import remainder_by_eight, remainder_two_integers, calcula
 from lambda_string_concat import append_surname, format_full_name_string, build_full_name
 from lambda_subtraction import subtract_eight, subtract_two_numbers, calculate_subtraction
 from lambda_calculator_dispatch import CALCULATOR_OPS, calculate_operation
+
 
 
 class TestLambdaStringOperations(unittest.TestCase):
@@ -92,5 +96,29 @@ class TestLambdaDispatchTable(unittest.TestCase):
             calculate_operation(10, 5, '^')
 
 
+class TestLambdaRangeIntegration(unittest.TestCase):
+    """Test lambda functions integrated with range objects and dir() reflection."""
+
+    def test_lambda_map_range(self):
+        r = range(1, 6)
+        squares = list(map(lambda x: x ** 2, r))
+        self.assertEqual(squares, [1, 4, 9, 16, 25])
+
+    def test_lambda_filter_range(self):
+        r = range(1, 10)
+        evens = list(filter(lambda x: x % 2 == 0, r))
+        self.assertEqual(evens, [2, 4, 6, 8])
+
+    def test_range_attributes_reflection(self):
+        r = range(2, 20, 3)
+        self.assertEqual(r.start, 2)
+        self.assertEqual(r.stop, 20)
+        self.assertEqual(r.step, 3)
+        self.assertIn('start', dir(r))
+        self.assertIn('stop', dir(r))
+        self.assertIn('step', dir(r))
+
+
 if __name__ == '__main__':
     unittest.main()
+
