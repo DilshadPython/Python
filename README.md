@@ -31,7 +31,8 @@ The table below outlines the exact pedagogical sequence for learning Python. Eve
 | **19** | **Decorators & Methods** | Metaprogramming, binding & descriptors | Wrappers, `@property`, `@classmethod`, `@staticmethod`, descriptors | `Methods/` | ![Updated](https://img.shields.io/badge/Status-Updated-brightgreen) |
 | **20** | **Object-Oriented (OOP)** | Class-based programming | Classes, objects, inheritance, encapsulation, polymorphism | `Object-Oriented/` / `OOP-Advance/` | ![Updated](https://img.shields.io/badge/Status-Updated-brightgreen) |
 | **21** | **Type Hints & Static Analysis**| Enforcing type safety | Annotations, `typing` module, `mypy`, `pydantic` | `TypeHints/` | ![Pending](https://img.shields.io/badge/Status-Pending-lightgrey) |
-| **22** | **Software Testing & QA** | Code verification and unit testing | `unittest` framework, `pytest`, test runners | `unittest/` / `Pytest/` | ![Pending](https://img.shields.io/badge/Status-Pending-lightgrey) |
+| **22** | **Software Testing & QA** | Code verification and unit testing | `unittest` framework, `pytest`, test runners | `unittest/` / `Pytest/` | ![Updated](https://img.shields.io/badge/Status-Updated-brightgreen) |
+
 | **23** | **Date & Time Utilities** | Date manipulation and formatting | `datetime`, `date`, `time`, `calendar` | `Date-and-Time/` | ![Pending](https://img.shields.io/badge/Status-Pending-lightgrey) |
 | **24** | **Math & Statistics** | Mathematical algorithms | `math`, `random`, `statistics`, numeric built-ins | `Math-and-Statistics/` | ![Pending](https://img.shields.io/badge/Status-Pending-lightgrey) |
 | **25** | **Regular Expressions** | Advanced pattern matching | `re` module, regex search, substitute, split | `RegularEx/` | ![Updated](https://img.shields.io/badge/Status-Updated-brightgreen) |
