@@ -82,3 +82,19 @@ def power(base: Numeric, exponent: Numeric) -> Numeric:
         Numeric: Result of base ** exponent.
     """
     return base ** exponent
+
+
+def square(number: Numeric) -> Numeric:
+    """
+    Compute the square of a numeric value.
+
+    Args:
+        number (Numeric): Number to square.
+
+    Returns:
+        Numeric: Result of number * number.
+    """
+    if isinstance(number, bool) or not isinstance(number, (int, float)):
+        raise TypeError("Input number must be a valid int or float.")
+    return number * number
+

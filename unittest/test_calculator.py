@@ -4,7 +4,7 @@ Unit test suite verifying calculator arithmetic functions, zero division checks,
 # "import module" loads unittest from standard library.
 import unittest
 # "from module import name" imports calculator arithmetic functions into test scope.
-from calculator import add, divide, multiply, power, subtract
+from calculator import add, divide, multiply, power, square, subtract
 
 
 class TestCalculator(unittest.TestCase):
@@ -40,6 +40,13 @@ class TestCalculator(unittest.TestCase):
             divide(10, 0)
         self.assertIn("Divisor cannot be zero", str(ctx.exception))
 
+    def test_square(self):
+        """Test square calculation with positive, negative, and zero values."""
+        self.assertEqual(square(5), 25)
+        self.assertEqual(square(4), 16)
+        self.assertEqual(square(-6), 36)
+        self.assertEqual(square(0), 0)
+
     def test_power_subtests(self):
         """Demonstrate Python 3.4+ self.subTest() for parameterized power testing."""
         cases = [
@@ -55,3 +62,4 @@ class TestCalculator(unittest.TestCase):
 
 if __name__ == '__main__':
     unittest.main()
+
