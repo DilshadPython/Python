@@ -39,6 +39,8 @@ with EXPRESSION as TARGET:
 | `class_context_manager.py` | Class-based context manager (`OpenTextFile`) implementing `__enter__` and `__exit__`. |
 | `generator_context_manager.py` | Generator context manager (`open_text_file`) using `contextlib.contextmanager`. |
 | `context_manager_directory_change.py` | Directory switching context manager (`change_directory`) preserving CWD state. |
+| `dir_first/` | Single-resource context management, stream safety, and unit test suite. |
+| `dir_second/` | Multi-resource dynamic `ExitStack` context management and unit test suite. |
 | `test_context_managers.py` | Automated `unittest` suite covering all context manager modules in this directory. |
 
 ---
@@ -117,5 +119,5 @@ print("Public Members:", [m for m in dir(r) if not m.startswith("__")])
 Execute the unit test suite from the repository root:
 
 ```bash
-python3 -m unittest discover -s Context-Managers -p "test_*.py"
+python3 -m unittest discover -s context_managers -p "test_*.py"
 ```

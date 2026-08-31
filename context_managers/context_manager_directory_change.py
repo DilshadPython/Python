@@ -35,15 +35,15 @@ def change_directory(target_path: Path) -> Generator[Path, None, None]:
 if __name__ == "__main__":
     print("=== Directory Change Context Manager Demonstration ===")
     base_dir = Path(__file__).parent
-    dir_first = base_dir / "dir-first"
-    dir_second = base_dir / "dir-second"
+    dir_first = base_dir / "dir_first"
+    dir_second = base_dir / "dir_second"
 
     print(f"Starting directory: {os.getcwd()}")
 
     with change_directory(dir_first):
-        print(f"Inside dir-first context : {os.getcwd()}")
+        print(f"Inside dir_first context : {os.getcwd()}")
 
     with change_directory(dir_second):
-        print(f"Inside dir-second context: {os.getcwd()}")
+        print(f"Inside dir_second context: {os.getcwd()}")
 
     print(f"Restored directory       : {os.getcwd()}")

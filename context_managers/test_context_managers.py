@@ -1,5 +1,5 @@
 """
-Comprehensive Unit Test Suite for Context-Managers Module.
+Comprehensive Unit Test Suite for context_managers Module.
 
 Tests class-based context managers (OpenTextFile), directory switching context managers
 (change_directory), and generator-based context managers (open_text_file).
