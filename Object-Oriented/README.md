@@ -24,6 +24,7 @@ Object-Oriented/
 │   ├── abstract_base_classes.py  # Interfaces using abc.ABC & @abstractmethod
 │   ├── builtin_subclassing.py    # Subclassing native dict and list containers
 │   ├── magic_dunder_methods.py   # Special dunder methods (__getitem__, __add__)
+│   ├── mixins_and_descriptors.py # Descriptor protocol, Mixins & __init_subclass__
 │   ├── range_version_evolution.py# Range sequence memory efficiency & dir()
 │   └── test_design_patterns.py   # Unit tests for Step 3
 │

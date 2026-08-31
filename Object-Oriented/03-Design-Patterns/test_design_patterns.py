@@ -9,11 +9,12 @@ import unittest
 from abstract_base_classes import Circle, Rectangle, Shape
 from builtin_subclassing import LoggingDict, OneBasedList
 from magic_dunder_methods import Vector2D
+from mixins_and_descriptors import BoundedIntegerDescriptor, JSONSerializerMixin, PluginBase
 from range_version_evolution import compare_range_memory_efficiency, demonstrate_range_features, inspect_range_attributes
 
 
 class TestOOPDesignPatterns(unittest.TestCase):
-    """Test suite covering ABC interface contracts, dunder methods, built-in subclassing, and range evolution."""
+    """Test suite covering ABC interface contracts, dunder methods, built-in subclassing, descriptors, and range evolution."""
 
     def test_abstract_base_classes(self):
         """Verify Shape abstract base class and derived Circle/Rectangle calculations."""
@@ -68,6 +69,35 @@ class TestOOPDesignPatterns(unittest.TestCase):
 
         range_bytes, list_bytes = compare_range_memory_efficiency()
         self.assertLess(range_bytes, list_bytes)
+
+    def test_mixins_descriptors_and_subclass_hooks(self):
+        """Verify BoundedIntegerDescriptor validation, JSONSerializerMixin, and __init_subclass__ plugin registration."""
+        class Product(JSONSerializerMixin):
+            rating = BoundedIntegerDescriptor(min_value=1, max_value=5)
+
+            def __init__(self, name: str, rating: int) -> None:
+                self.name = name
+                self.rating = rating
+
+        p = Product("Laptop", 5)
+        self.assertEqual(p.rating, 5)
+
+        with self.assertRaises(ValueError):
+            p.rating = 10  # Exceeds max 5
+
+        with self.assertRaises(TypeError):
+            p.rating = "invalid"  # Invalid type
+
+        json_data = p.to_json()
+        self.assertIn('"name": "Laptop"', json_data)
+        self.assertIn('"rating": 5', json_data)
+
+        # Test __init_subclass__ registration hook
+        class AudioPlugin(PluginBase, plugin_name="audio"):
+            pass
+
+        self.assertIn("audio", PluginBase.registered_plugins)
+        self.assertIsInstance(AudioPlugin(), PluginBase)
 
 
 if __name__ == "__main__":

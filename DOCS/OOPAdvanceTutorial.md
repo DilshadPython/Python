@@ -185,9 +185,30 @@ class Circle(BaseShape):
 
 ## 7. Range Object Architecture & Performance Notes
 
-- **$O(1)$ Memory Footprint**: `range` stores 3 integer attributes (`start`, `stop`, `step`), taking ~48 bytes in RAM regardless of upper bound size.
-- **$O(1)$ Containment Evaluation**: `x in range(...)` evaluates using direct modulus arithmetic without loop iterations.
-- **Sequence Reflection Matrix (`dir(range)`)**: `start`, `stop`, `step`, `count`, `index`, `__contains__`, `__iter__`.
+### Range Evolution Across Python Versions
+- **Python 2.7**: `range()` generated a full materialized `list` in memory. `xrange()` was a custom generator type for memory-friendly sequence iteration.
+- **Python 3.0+**: `range()` replaced `xrange()` entirely, becoming an immutable sequence object that computes elements lazily in $O(1)$ memory.
+
+### Range Memory & Performance Benchmark
+```python
+import sys
+
+r = range(1_000_000)
+lst = list(r[:1000])
+
+print(f"range(1_000_000) RAM footprint: {sys.getsizeof(r)} bytes")  # ~48 bytes (O(1))
+print(f"list(1_000) RAM footprint:       {sys.getsizeof(lst)} bytes") # ~8000+ bytes (O(N))
+```
+
+### Introspection & Reflection Matrix (`dir(range)`)
+```python
+r = range(10, 100, 5)
+print("Start:", r.start) # 10
+print("Stop:",  r.stop)  # 100
+print("Step:",  r.step)  # 5
+print("Attributes:", [a for a in dir(r) if not a.startswith("__")])
+# ['count', 'index', 'start', 'step', 'stop']
+```
 
 ---
 
@@ -205,16 +226,22 @@ print([attr for attr in dir(obj) if not attr.startswith("__")])
 
 ## 9. Cross-Version Behavioral Analysis (Python 2.7 to 3.13)
 
-```
-Python 2.7 ──────────────────► Python 3.3 - 3.8 ─────────► Python 3.11 - 3.13
-Classic vs. New-style classes  All classes inherit object  Type slot vectorcall optimization
-xrange() separate type        range() replaces xrange()  Specialized opcodes for @property
-Manual super(Class, self)     super() without arguments  Inline attribute cache & zero-cost ABC
-```
+### Version Evolution Matrix
 
-1. **New-Style Classes**: In Python 2.7, classes required explicit `class Foo(object):`. In Python 3.0+, all classes automatically inherit from `object`.
-2. **`super()` Simplification**: Python 3.0+ permits argumentless `super()`, avoiding `super(SubClass, self).__init__()`.
-3. **CPython 3.13 Optimizations**: Specialized inline attribute caches accelerate `@property` getter evaluation by **~15–20%**.
+| Python Version | Core OOP Enhancements & Behavioral Changes | Architectural & Performance Impact |
+| :--- | :--- | :--- |
+| **Python 2.7 (Legacy)** | Classic classes (without `object`) vs New-Style classes (`class Foo(object)`). Mandatory explicit `super(Child, self)`. `__nonzero__` method instead of `__bool__`. Metaclass syntax `__metaclass__ = Meta`. | Legacy object model; classic classes used old depth-first MRO causing lookup bugs; unbound method objects `<unbound method>`. |
+| **Python 3.3** | Zero-argument `super()`, implicit `object` base class inheritance, `__qualname__` attribute introduced on classes and functions (PEP 3155), PEP 393 flexible string representation. | Modernized class object representation; simplified inheritance boilerplate (`super().__init__()`); nested class tracing. |
+| **Python 3.4** | `abc.ABC` subclass helper introduced to simplify abstract base classes (replacing `metaclass=abc.ABCMeta`), Enum module (`enum.Enum`), `__weakref__` slot improvements. | Simplified ABC syntax without metaclass boilerplate; standardized enumeration classes. |
+| **Python 3.5** | Type hinting annotations (`PEP 484`) for class attribute and method parameter typing, `@` matrix multiplication dunder methods (`__matmul__`, `__rmatmul__`, `__imatmul__`). | Foundation for static type checkers (Mypy) in OOP codebases; custom numerical matrix class operator overloading. |
+| **Python 3.6** | Class variable type annotations (`PEP 526`), `__init_subclass__()` subclass initialization hook (`PEP 487`), `__set_name__()` descriptor protocol hook, insertion-ordered class `__dict__`. | Replaced complex metaclasses with clean `__init_subclass__` hooks; automatic descriptor attribute naming (`__set_name__`). |
+| **Python 3.7** | Dataclasses introduced (`@dataclass` via PEP 557) auto-generating `__init__`, `__repr__`, `__eq__`; module `__getattr__` and `__dir__` hooks; postponed type evaluation (`from __future__ import annotations`). | Eliminates boilerplate `__init__` code; fast data container class creation. |
+| **Python 3.8** | Positional-only parameter syntax (`/` PEP 570) in method signatures, `@cached_property` introduced in `functools`, assignment expressions (`:=` walrus operator) inside OOP method conditions. | Enforces strict method API boundaries; caches expensive property computations on instance `__dict__`. |
+| **Python 3.9** | Built-in Generic Types in standard collections (`list[str]`, `dict[str, Any]` PEP 585) in class attribute type hints, `str.removeprefix()`/`str.removesuffix()` string methods for attribute cleaning. | Removed need to import `typing.List` / `typing.Dict` for class type annotations. |
+| **Python 3.10** | Explicit Type Union operator (`X \| Y` PEP 604) for OOP method parameters, Structural Pattern Matching (`match / case` PEP 634) on class instances via `__match_args__`, precise error locations in tracebacks. | Enables pattern matching over class objects; cleaner type union annotations (`str \| None`). |
+| **Python 3.11** | Specializing Adaptive Interpreter (CPython PEP 659) accelerates OOP method calls by **10–25%**, `@override` decorator (`typing.override` PEP 698) for static verification of inherited method overrides, Zero-cost exception handling. | Major CPython runtime performance boost for method dispatching and attribute lookup; static override safety. |
+| **Python 3.12** | PEP 695 Type Parameter Syntax for Generic Classes (`class Stack[T]: ...`), isolated subinterpreters (`per-interpreter GIL`), CPython inline method cache speedups. | Simplified generic class syntax; clean subinterpreter isolation. |
+| **Python 3.13** | Free-threaded CPython (PEP 703 - optional no-GIL build) accelerating multi-threaded parallel execution of OOP instances, Tier 2 JIT compiler, enhanced interactive REPL & class introspection. | True parallel multi-threading for OOP instance execution; next-generation CPython speed optimizations. |
 
 ---
 

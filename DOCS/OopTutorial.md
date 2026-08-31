@@ -169,6 +169,24 @@ class BankAccountSecure:
         if amount < 0:
             raise ValueError("Balance cannot be negative")
         self.__balance = amount
+
+# Custom Descriptor Protocol Example (__set_name__, __get__, __set__)
+class BoundedQuantity:
+    def __init__(self, min_val: int = 0):
+        self.min_val = min_val
+        self.private_name = ""
+
+    def __set_name__(self, owner, name):
+        self.private_name = f"_{name}"
+
+    def __get__(self, instance, owner):
+        if instance is None: return self
+        return getattr(instance, self.private_name, self.min_val)
+
+    def __set__(self, instance, val):
+        if val < self.min_val:
+            raise ValueError(f"Value must be >= {self.min_val}")
+        setattr(instance, self.private_name, val)
 ```
 
 ---
