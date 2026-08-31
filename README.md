@@ -8,41 +8,42 @@ Welcome to the **Python Tutorials Repository**. This repository is structured to
 
 The table below outlines the exact pedagogical sequence for learning Python. Every topic builds upon the concepts mastered in previous steps.
 
-| Step | Topic / Subject | Description | Core Concepts Covered | Target Directory |
-| :--- | :--- | :--- | :--- | :--- |
-| **01** | **Print & Console I/O** | Outputting data and reading user input | `print()`, `input()`, f-strings, basic escape sequences | `Print/` |
-| **02** | **Numbers & Data Types** | Working with numeric values | `int`, `float`, `complex`, casting, arithmetic operations | `Numbers/` |
-| **03** | **Operators** | Expressions, comparisons, and logic | Arithmetic (`+`, `-`, `*`), Logical (`and`, `or`, `not`), Bitwise | `Operators/` |
-| **04** | **Strings** | Text processing and formatting | Slicing, string methods (`upper`, `join`, `split`), immutability | `Strings/` |
-| **05** | **If-Statement (Conditionals)** | Control flow and decision making | `if`, `elif`, `else`, ternary operators, `match-case` | `If-Statement/` |
-| **06** | **Loops** | Repeated execution and iteration | `for` loops, `while` loops, `range()`, `enumerate()`, `break`, `continue` | `Loops/` |
-| **07** | **List** | Mutable ordered sequences | Indexing, slicing, `append()`, `extend()`, `pop()`, sorting | `List/` |
-| **08** | **Tuple** | Immutable ordered sequences | Tuple packing/unpacking, memory efficiency, fixed records | `Tuple/` |
-| **09** | **Set** | Unordered collections of unique elements | Deduplication, set math (`union`, `intersection`, `difference`) | `Set/` |
-| **10** | **Dictionary** | Key-value pairs and hash maps | Keys, values, `get()`, dictionary views, nested structures | `Dictionary/` |
-| **11** | **List Comprehensions** | Concise data transformation | List/Set/Dict comprehensions, filtering conditionals | `List-comprehensions/` |
-| **12** | **Function (Basics)** | Modular reusable code blocks | `def`, positional/keyword parameters, `return`, docstrings | `Function/` |
-| **13** | **Functions (Advanced)** | Higher-order functions & variable scope | `*args`, `**kwargs`, `lambda`, `map()`, `filter()`, LEGB scope rule | `Functions-Advanced/` |
-| **14** | **Modules & Packages** | Organizing code across files | `import`, `from ... import`, `__name__ == '__main__'`, custom libs | `Module/` |
-| **15** | **File Handling & I/O** | Reading and writing files | File I/O (`open`), CSV parsing, JSON, XML, Pickling | `InputOutput/` / `Fio/` |
-| **16** | **Exception Handling** | Error management and logging | `try`, `except`, `finally`, `raise`, custom exceptions, logging | `Try-except/` |
-| **17** | **Iterators & Generators** | Lazy evaluation and memory control | `iter()`, `next()`, `yield`, generator functions & expressions | `Generators/` / `iterator/` |
-| **18** | **Context Managers** | Safe resource acquisition & cleanup | `with` statement, `__enter__`, `__exit__`, `contextlib` | `Context-Manager/` |
-| **19** | **Decorators** | Metaprogramming and function wrapping | Wrappers, `@property`, `@classmethod`, `@staticmethod` | `Property-Decorator/` |
-| **20** | **Object-Oriented (OOP)** | Class-based programming | Classes, objects, inheritance, encapsulation, polymorphism | `Object-Oriented/` |
-| **21** | **Type Hints & Static Analysis**| Enforcing type safety | Annotations, `typing` module, `mypy`, `pydantic` | `TypeHints/` |
-| **22** | **Software Testing & QA** | Code verification and unit testing | `unittest` framework, `pytest`, test runners | `Testing/` / `unittest/` |
-| **23** | **Date & Time Utilities** | Date manipulation and formatting | `datetime`, `date`, `time`, `calendar` | `Date-time/` |
-| **24** | **Math & Statistics** | Mathematical algorithms | `math`, `random`, `statistics`, numeric built-ins | `Math/` |
-| **25** | **Regular Expressions** | Advanced pattern matching | `re` module, regex search, substitute, split | `RegularEx/` |
-| **26** | **System & OS Integration** | Interacting with the operating system | `os`, `sys`, `shutil`, `argparse` CLI interfaces | `OS/` / `Sys/` |
-| **27** | **Data Structures & Algorithms**| Advanced data modeling | Stacks, queues, linked lists, graphs, recursion, sorting | `Data-Structure/` |
-| **28** | **Networking & APIs** | HTTP clients and sockets | `requests`, `urllib`, REST APIs, socket programming | `Requests/` / `Socket/` |
-| **29** | **Web Scraping** | Extracting data from web pages | `BeautifulSoup`, `Scrapy`, HTML parsing | `BeautifulSoup/` |
-| **30** | **Databases & SQL** | Data persistence | SQLite, PostgreSQL, SQL queries | `Database/` |
-| **31** | **Data Science & Analysis** | Numerical analysis and visualization | `NumPy`, `Pandas`, `Matplotlib`, `Seaborn` | `Pandas/` / `Data-Analysis/` |
-| **32** | **Machine Learning & AI** | Machine Learning & Artificial Intelligence | ML models, AI pipelines, predictive modeling | `ML/` / `ai/` / `AIPython/` |
-| **33** | **GUI & Practical Projects** | Desktop UI and application building | `Tkinter`, `Turtle`, Desktop games, automation scripts | `Tkinter/` / `Games/` |
+| Step | Topic / Subject | Description | Core Concepts Covered | Target Directory | Status |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| **01** | **Print & Console I/O** | Outputting data and reading user input | `print()`, `input()`, f-strings, basic escape sequences | `Print/` | ![Updated](https://img.shields.io/badge/Status-Updated-brightgreen) |
+| **02** | **Numbers & Data Types** | Working with numeric values | `int`, `float`, `complex`, casting, arithmetic operations | `Numbers/` | ![Pending](https://img.shields.io/badge/Status-Pending-lightgrey) |
+| **03** | **Operators** | Expressions, comparisons, and logic | Arithmetic (`+`, `-`, `*`), Logical (`and`, `or`, `not`), Bitwise | `Operators/` | ![Pending](https://img.shields.io/badge/Status-Pending-lightgrey) |
+| **04** | **Strings** | Text processing and formatting | Slicing, string methods (`upper`, `join`, `split`), immutability | `Strings/` | ![Pending](https://img.shields.io/badge/Status-Pending-lightgrey) |
+| **05** | **If-Statement (Conditionals)** | Control flow and decision making | `if`, `elif`, `else`, ternary operators, `match-case` | `If-Statement/` | ![Pending](https://img.shields.io/badge/Status-Pending-lightgrey) |
+| **06** | **Loops** | Repeated execution and iteration | `for` loops, `while` loops, `range()`, `enumerate()`, `break`, `continue` | `While-loop/` / `Loops/` | ![Updated](https://img.shields.io/badge/Status-Updated-brightgreen) |
+| **07** | **List** | Mutable ordered sequences | Indexing, slicing, `append()`, `extend()`, `pop()`, sorting | `List/` | ![Pending](https://img.shields.io/badge/Status-Pending-lightgrey) |
+| **08** | **Tuple** | Immutable ordered sequences | Tuple packing/unpacking, memory efficiency, fixed records | `Tuple/` | ![Pending](https://img.shields.io/badge/Status-Pending-lightgrey) |
+| **09** | **Set** | Unordered collections of unique elements | Deduplication, set math (`union`, `intersection`, `difference`) | `Set/` | ![Pending](https://img.shields.io/badge/Status-Pending-lightgrey) |
+| **10** | **Dictionary** | Key-value pairs and hash maps | Keys, values, `get()`, dictionary views, nested structures | `Dictionary/` | ![Pending](https://img.shields.io/badge/Status-Pending-lightgrey) |
+| **11** | **List Comprehensions** | Concise data transformation | List/Set/Dict comprehensions, filtering conditionals | `List-comprehensions/` | ![Pending](https://img.shields.io/badge/Status-Pending-lightgrey) |
+| **12** | **Function (Basics)** | Modular reusable code blocks | `def`, positional/keyword parameters, `return`, docstrings | `Function/` | ![Updated](https://img.shields.io/badge/Status-Updated-brightgreen) |
+| **13** | **Functions (Advanced)** | Higher-order functions & variable scope | `*args`, `**kwargs`, `lambda`, `map()`, `filter()`, LEGB scope rule | `Lambda/` / `Functions-Advanced/` | ![Updated](https://img.shields.io/badge/Status-Updated-brightgreen) |
+| **14** | **Modules & Packages** | Organizing code across files | `import`, `from ... import`, `__name__ == '__main__'`, custom libs | `Modules-and-Packages/` | ![Pending](https://img.shields.io/badge/Status-Pending-lightgrey) |
+| **15** | **File Handling & I/O** | Reading and writing files | File I/O (`open`), CSV parsing, JSON, XML, Pickling | `File-Handling-and-IO/` | ![Pending](https://img.shields.io/badge/Status-Pending-lightgrey) |
+| **16** | **Exception Handling** | Error management and logging | `try`, `except`, `finally`, `raise`, custom exceptions, logging | `Exception-Handling/` | ![Pending](https://img.shields.io/badge/Status-Pending-lightgrey) |
+| **17** | **Iterators & Generators** | Lazy evaluation and memory control | `iter()`, `next()`, `yield`, generator functions & expressions | `Yield/` / `iterator/` | ![Updated](https://img.shields.io/badge/Status-Updated-brightgreen) |
+| **18** | **Context Managers** | Safe resource acquisition & cleanup | `with` statement, `__enter__`, `__exit__`, `contextlib` | `With/` | ![Updated](https://img.shields.io/badge/Status-Updated-brightgreen) |
+| **19** | **Decorators & Methods** | Metaprogramming, binding & descriptors | Wrappers, `@property`, `@classmethod`, `@staticmethod`, descriptors | `Methods/` | ![Updated](https://img.shields.io/badge/Status-Updated-brightgreen) |
+| **20** | **Object-Oriented (OOP)** | Class-based programming | Classes, objects, inheritance, encapsulation, polymorphism | `Object-Oriented/` / `OOP-Advance/` | ![Updated](https://img.shields.io/badge/Status-Updated-brightgreen) |
+| **21** | **Type Hints & Static Analysis**| Enforcing type safety | Annotations, `typing` module, `mypy`, `pydantic` | `TypeHints/` | ![Pending](https://img.shields.io/badge/Status-Pending-lightgrey) |
+| **22** | **Software Testing & QA** | Code verification and unit testing | `unittest` framework, `pytest`, test runners | `unittest/` / `Pytest/` | ![Pending](https://img.shields.io/badge/Status-Pending-lightgrey) |
+| **23** | **Date & Time Utilities** | Date manipulation and formatting | `datetime`, `date`, `time`, `calendar` | `Date-and-Time/` | ![Pending](https://img.shields.io/badge/Status-Pending-lightgrey) |
+| **24** | **Math & Statistics** | Mathematical algorithms | `math`, `random`, `statistics`, numeric built-ins | `Math-and-Statistics/` | ![Pending](https://img.shields.io/badge/Status-Pending-lightgrey) |
+| **25** | **Regular Expressions** | Advanced pattern matching | `re` module, regex search, substitute, split | `RegularEx/` | ![Updated](https://img.shields.io/badge/Status-Updated-brightgreen) |
+| **26** | **System & OS Integration** | Interacting with the operating system | `os`, `sys`, `shutil`, `argparse` CLI interfaces | `OS-and-System/` / `Sys/` | ![Pending](https://img.shields.io/badge/Status-Pending-lightgrey) |
+| **27** | **Data Structures & Algorithms**| Advanced data modeling | Stacks, queues, linked lists, graphs, recursion, sorting | `Data-Structure/` | ![Pending](https://img.shields.io/badge/Status-Pending-lightgrey) |
+| **28** | **Networking & APIs** | HTTP clients and sockets | `requests`, `urllib`, REST APIs, socket programming | `Networking-and-APIs/` | ![Pending](https://img.shields.io/badge/Status-Pending-lightgrey) |
+| **29** | **Web Scraping** | Extracting data from web pages | `BeautifulSoup`, `Scrapy`, HTML parsing | `Web-Scraping/` | ![Pending](https://img.shields.io/badge/Status-Pending-lightgrey) |
+| **30** | **Databases & SQL** | Data persistence | SQLite, PostgreSQL, SQL queries | `Database/` | ![Pending](https://img.shields.io/badge/Status-Pending-lightgrey) |
+| **31** | **Data Science & Analysis** | Numerical analysis and visualization | `NumPy`, `Pandas`, `Matplotlib`, `Seaborn` | `Pandas/` / `Data-Science/` | ![Pending](https://img.shields.io/badge/Status-Pending-lightgrey) |
+| **32** | **Machine Learning & AI** | Machine Learning & Artificial Intelligence | ML models, AI pipelines, predictive modeling | `Machine-Learning-and-AI/` | ![Pending](https://img.shields.io/badge/Status-Pending-lightgrey) |
+| **33** | **GUI & Practical Projects** | Desktop UI and application building | `Tkinter`, `Turtle`, Desktop games, automation scripts | `GUI-and-Projects/` | ![Pending](https://img.shields.io/badge/Status-Pending-lightgrey) |
+
 
 ---
 
