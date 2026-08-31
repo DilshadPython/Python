@@ -1,88 +1,97 @@
-x = 8
-print(x)
-print('=========\n')
+"""
+Python Operators: Comprehensive Operator Demonstration Entrypoint.
 
-print('========= : += \n')
-a = 7
-a += 5
-# a = a + 5
-print(a)
+This script demonstrates all major categories of Python operators:
+- Arithmetic: +, -, *, /, //, %, **, @
+- Assignment & Augmented Assignment: =, +=, -=, *=, /=, %=, //=, **=, &=, |=, ^=, <<=, >>=, :=
+- Comparison / Relational: ==, !=, >, <, >=, <=
+- Logical & Bitwise: and, or, not, &, |, ^, ~, <<, >>
+- Identity & Membership: is, is not, in, not in
+"""
+# "import module" loads sys module.
+import sys
+# "from typing import ..." imports specific type hint symbols.
+from typing import Dict, List, Tuple
 
 
-print('========= : -= \n')
-b = -9
-b -= 10
-# b = b - 10
-print(b)
+def demonstrate_all_assignment_operators() -> Dict[str, float]:
+    """
+    Demonstrate basic and augmented assignment operators.
 
-print('========= : -= \n')
-c = 76
-c -= 26
-# c = c - 26
-print(c)
+    Returns:
+        Dict[str, float]: Mutated variable state values.
+    """
+    results: Dict[str, float] = {}
 
-print('========= : *= \n')
-d = 9
-d *= 8
-# d = d * 8
-print(d)
+    # Basic assignment =
+    x = 8.0
+    results["assignment"] = x
 
-print('========= : /= \n')
-e = 81
-e /= 14
-# e = e / 14
-print(e)
+    # Augmented arithmetic assignments
+    x += 5   # x = x + 5 (13.0)
+    results["add_assign"] = x
 
-print('========= :  %= \n')
-f = 9
-f %= 2
-# f = 9 % 2
-print(f)
+    x -= 3   # x = x - 3 (10.0)
+    results["sub_assign"] = x
 
-print('========= : //= \n')
-g = 21
-g //= 7
-# g = g // 7
-print(g)
+    x *= 2   # x = x * 2 (20.0)
+    results["mul_assign"] = x
 
-print('========= : **= \n')
-h = 5
-h **= 3
-# h = h ** 3
-print(h)
+    x /= 4   # x = x / 4 (5.0)
+    results["div_assign"] = x
 
-print('========= : &= \n')
-i = 16
-i &= 4
-# i = i & 4
-print(i)
+    x %= 3   # x = x % 3 (2.0)
+    results["mod_assign"] = x
 
-print('========= : |= \n')
-j = 8
-j |= 4
-print(j)
+    x //= 1  # x = x // 1 (2.0)
+    results["floor_div_assign"] = x
 
-print('========= : ^= \n')
-k = 5
-k ^= 4
-print(k)
+    x **= 3  # x = x ** 3 (8.0)
+    results["pow_assign"] = x
 
-print('========= : <<= \n')
-l = 5
-l <<= 2
-print(l)
+    # Walrus operator := assignment expression (Python 3.8+)
+    if (walrus_val := x + 2) > 9:
+        results["walrus_assign"] = walrus_val
 
-print('========= : >>= \n')
-m = 5
-m >>= 2
-print(m)
+    return results
 
-print('\n========= : &>> \n')
-n = 5
-n &= 4
-print(n)
 
-print('=========\n')
+def demonstrate_all_bitwise_assignment_operators() -> Dict[str, int]:
+    """
+    Demonstrate bitwise augmented assignment operators.
 
-print('\n========= : := \n')
-print(o := 9)
+    Returns:
+        Dict[str, int]: Mutated bitwise values.
+    """
+    results: Dict[str, int] = {}
+    val = 16
+
+    val &= 4   # 16 & 4 = 0
+    results["and_assign"] = val
+
+    val = 8
+    val |= 4   # 8 | 4 = 12
+    results["or_assign"] = val
+
+    val ^= 4   # 12 ^ 4 = 8
+    results["xor_assign"] = val
+
+    val <<= 2  # 8 << 2 = 32
+    results["left_shift_assign"] = val
+
+    val >>= 3  # 32 >> 3 = 4
+    results["right_shift_assign"] = val
+
+    return results
+
+
+if __name__ == "__main__":
+    print("=== Python Operators Master Demonstration ===")
+    assignment_res = demonstrate_all_assignment_operators()
+    for op, val in assignment_res.items():
+        print(f"  {op:<20}: {val}")
+
+    print("\n=== Bitwise Assignment Operators ===")
+    bitwise_res = demonstrate_all_bitwise_assignment_operators()
+    for op, val in bitwise_res.items():
+        print(f"  {op:<20}: {val}")
