@@ -20,6 +20,7 @@ Welcome to the **Python Object-Oriented Programming (OOP) Master Guide**, a comp
 12. [Abstract Base Classes (`abc.ABC`) & Structural Subtyping](#12-abstract-base-classes-abc--structural-subtyping)
 13. [Memory Optimization with `__slots__`](#13-memory-optimization-with-__slots__)
 14. [Python Version Evolution Breakdown (Python 2.7 & Python 3.3 ➔ Python 3.13)](#14-python-version-evolution-breakdown-python-27--python-33--python-313)
+15. [Range Sequence Performance & Reflection (`dir(range)`)](#15-range-sequence-performance--reflection-dirrange)
 
 ---
 
@@ -355,3 +356,33 @@ By default, Python instances store attributes in a dynamic `__dict__`, consuming
 | **Python 3.11** | Specializing Adaptive Interpreter (CPython PEP 659) accelerates OOP method calls by **10–25%**, `@override` decorator (`typing.override` PEP 698) for static verification of inherited method overrides, Zero-cost exception handling. | Major CPython runtime performance boost for method dispatching and attribute lookup; static override safety. |
 | **Python 3.12** | PEP 695 Type Parameter Syntax for Generic Classes (`class Stack[T]: ...`), isolated subinterpreters (`per-interpreter GIL`), CPython inline method cache speedups. | Simplified generic class syntax; clean subinterpreter isolation. |
 | **Python 3.13** | Free-threaded CPython (PEP 703 - optional no-GIL build) accelerating multi-threaded parallel execution of OOP instances, Tier 2 JIT compiler, enhanced interactive REPL & class introspection. | True parallel multi-threading for OOP instance execution; next-generation CPython speed optimizations. |
+
+---
+
+## 15. Range Sequence Performance & Reflection (`dir(range)`)
+
+### Range Evolution Across Python Versions
+- **Python 2.7**: `range()` generated a full materialized `list` in memory. `xrange()` was a custom generator type for memory-friendly iteration.
+- **Python 3.0+**: `range()` replaced `xrange()` entirely, becoming an immutable sequence object that computes elements lazily in $O(1)$ memory.
+
+### Range Memory & Performance Benchmark
+```python
+import sys
+
+r = range(1_000_000)
+lst = list(r[:1000])
+
+print(f"range(1_000_000) RAM footprint: {sys.getsizeof(r)} bytes")  # ~48 bytes (O(1))
+print(f"list(1_000) RAM footprint:       {sys.getsizeof(lst)} bytes") # ~8000+ bytes (O(N))
+```
+
+### Introspection Matrix (`dir(range)`)
+```python
+r = range(10, 100, 5)
+print("Start:", r.start) # 10
+print("Stop:",  r.stop)  # 100
+print("Step:",  r.step)  # 5
+print("Attributes:", [a for a in dir(r) if not a.startswith("__")])
+# ['count', 'index', 'start', 'step', 'stop']
+```
+
