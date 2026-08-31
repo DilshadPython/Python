@@ -29,7 +29,8 @@ The table below outlines the exact pedagogical sequence for learning Python. Eve
 | **17** | **Iterators & Generators** | Lazy evaluation and memory control | `iter()`, `next()`, `yield`, generator functions & expressions | `Yield/` / `iterator/` | ![Updated](https://img.shields.io/badge/Status-Updated-brightgreen) |
 | **18** | **Context Managers** | Safe resource acquisition & cleanup | `with` statement, `__enter__`, `__exit__`, `contextlib` | `With/` | ![Updated](https://img.shields.io/badge/Status-Updated-brightgreen) |
 | **19** | **Decorators & Methods** | Metaprogramming, binding & descriptors | Wrappers, `@property`, `@classmethod`, `@staticmethod`, descriptors | `Methods/` | ![Updated](https://img.shields.io/badge/Status-Updated-brightgreen) |
-| **20** | **Object-Oriented (OOP)** | Class-based programming | Classes, objects, inheritance, encapsulation, polymorphism | `Object-Oriented/` / `OOP-Advance/` | ![Updated](https://img.shields.io/badge/Status-Updated-brightgreen) |
+| **20** | **Object-Oriented (OOP)** | Class-based programming | Classes, objects, inheritance, encapsulation, polymorphism | `Object-Oriented/` | ![Updated](https://img.shields.io/badge/Status-Updated-brightgreen) |
+
 | **21** | **Type Hints & Static Analysis**| Enforcing type safety | Annotations, `typing` module, `mypy`, `pydantic` | `TypeHints/` | ![Pending](https://img.shields.io/badge/Status-Pending-lightgrey) |
 | **22** | **Software Testing & QA** | Code verification and unit testing | `unittest` framework, `pytest`, test runners | `unittest/` / `Pytest/` | ![Updated](https://img.shields.io/badge/Status-Updated-brightgreen) |
 
