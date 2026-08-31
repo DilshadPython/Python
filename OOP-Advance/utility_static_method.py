@@ -5,7 +5,9 @@ grouped logically inside a class namespace without accessing or modifying instan
 or class (`cls`) state.
 """
 
+# "import module" loads datetime module from standard library into namespace.
 import datetime
+# "from typing import ..." imports Type and TypeVar annotations directly into local scope.
 from typing import Type, TypeVar
 
 TStaff = TypeVar("TStaff", bound="Staff")

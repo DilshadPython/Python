@@ -5,6 +5,7 @@ This module demonstrates using `@classmethod` decorators for two core OOP design
 2. Factory Constructors: Parsing custom formatted data (e.g., hyphenated strings) to instantiate objects.
 """
 
+# "from typing import ..." imports Type and TypeVar annotations directly into local scope.
 from typing import Type, TypeVar
 
 # TypeVar bound to Staff class for accurate classmethod return type hints
