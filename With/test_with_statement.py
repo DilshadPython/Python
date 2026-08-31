@@ -4,6 +4,7 @@ Tests custom class context managers (__enter__ and __exit__), exception handling
 and suppression, file reading context managers, and custom MessageWriter wrappers.
 """
 
+# "import module" loads standard library modules for OS file operations, system path management, and testing.
 import os
 import sys
 import tempfile
@@ -12,11 +13,13 @@ import unittest
 # Ensure module directory is in sys.path for direct imports
 sys.path.insert(0, os.path.dirname(__file__))
 
+# "from module import name" imports specific class and function symbols directly into local scope.
 from with_custom_context_manager import StudentContextManager, run_student_context
 from with_context_manager_exception_handling import StudentExceptionContextManager, run_exception_context
 from with_file_reading import read_lines_with_context, read_lines_legacy_close
 from with_custom_file_writer import MessageWriter, write_message_with_writer
 from build_with_files import temporary_file_builder, build_multiple_files, remove_file_safely
+
 
 
 class TestWithCustomContextManager(unittest.TestCase):
@@ -119,6 +122,28 @@ class TestWithGeneratorAndContextlib(unittest.TestCase):
         self.assertFalse(result)
 
 
+class TestRangeAndReflectionIntegration(unittest.TestCase):
+    """Test range sequence behavior and dir() attribute reflection on context managers."""
+
+    def test_range_properties_and_dir(self):
+        r = range(5, 50, 5)
+        self.assertEqual(r.start, 5)
+        self.assertEqual(r.stop, 50)
+        self.assertEqual(r.step, 5)
+        self.assertIn('start', dir(r))
+        self.assertIn('stop', dir(r))
+        self.assertIn('step', dir(r))
+        self.assertTrue(25 in r)
+        self.assertFalse(27 in r)
+
+    def test_context_manager_reflection(self):
+        manager = StudentContextManager()
+        attributes = dir(manager)
+        self.assertIn('__enter__', attributes)
+        self.assertIn('__exit__', attributes)
+
+
 if __name__ == '__main__':
     unittest.main()
+
 

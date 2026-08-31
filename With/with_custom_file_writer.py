@@ -1,8 +1,11 @@
 """
 Demonstrates building a custom file writer context manager class wrapping open() and close().
 """
+# "import module" loads the os standard library module for filesystem operations.
 import os
+# "from module import name" imports specific type annotation helpers directly into local scope.
 from typing import Any, Optional, Type
+
 
 
 class MessageWriter:

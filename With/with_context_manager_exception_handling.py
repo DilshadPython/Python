@@ -1,7 +1,11 @@
 """
 Demonstrates exception inspection and suppression logic inside __exit__ context manager methods.
 """
+# "from module import name" imports specific type hint symbols directly into local scope.
+# Any allows arbitrary parameter types, Optional[T] handles T or None, Tuple specifies return pairs,
+# and Type[BaseException] annotations represent exception class types.
 from typing import Any, Optional, Tuple, Type
+
 
 
 class StudentExceptionContextManager:

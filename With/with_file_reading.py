@@ -1,8 +1,11 @@
 """
 Demonstrates automatic file resource cleanup using 'with' vs legacy manual close().
 """
+# "import module" loads the os standard library module for path verification.
 import os
+# "from module import name" imports the List type hint symbol directly into local scope.
 from typing import List
+
 
 
 def read_lines_with_context(filepath: str) -> List[str]:

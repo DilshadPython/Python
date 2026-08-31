@@ -3,9 +3,12 @@ Demonstrates generator-based context managers using contextlib, ExitStack for mu
 management, and contextlib.suppress for safe error handling during file building operations.
 """
 
+# "import module" loads the os standard library module for filesystem operations.
 import os
+# "from module import name" imports specific context manager utilities and type annotations directly into local scope.
 from contextlib import ExitStack, contextmanager, suppress
 from typing import Dict, Generator, List
+
 
 
 @contextmanager
