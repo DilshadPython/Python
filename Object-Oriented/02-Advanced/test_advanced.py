@@ -12,11 +12,12 @@ from builtin_subclassing import LoggingDict, OneBasedList
 from class_methods_factory import Staff
 from magic_dunder_methods import Vector2D
 from property_encapsulation import Monitor
+from range_version_evolution import compare_range_memory_efficiency, demonstrate_range_features, inspect_range_attributes
 from static_utility_methods import WorkCalendar
 
 
 class TestOOPAdvanced(unittest.TestCase):
-    """Test suite covering class methods, static methods, properties, ABCs, and dunder methods."""
+    """Test suite covering class methods, static methods, properties, ABCs, dunder methods, and range evolution."""
 
     def test_class_method_factory(self):
         """Verify Staff class method factory and salary raise rate modification."""
@@ -96,6 +97,23 @@ class TestOOPAdvanced(unittest.TestCase):
         self.assertEqual(str(v1), "(2, 3)")
         self.assertEqual(len(v1), 2)
 
+    def test_range_version_evolution(self):
+        """Verify range attributes, containment testing, and O(1) memory efficiency."""
+        attrs = inspect_range_attributes()
+        self.assertIn("start", attrs)
+        self.assertIn("stop", attrs)
+        self.assertIn("step", attrs)
+
+        start, stop, step, contains_50 = demonstrate_range_features()
+        self.assertEqual(start, 10)
+        self.assertEqual(stop, 100)
+        self.assertEqual(step, 5)
+        self.assertTrue(contains_50)
+
+        range_bytes, list_bytes = compare_range_memory_efficiency()
+        self.assertLess(range_bytes, list_bytes)
+
 
 if __name__ == "__main__":
     unittest.main()
+
