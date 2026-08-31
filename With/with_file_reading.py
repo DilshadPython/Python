@@ -1,43 +1,66 @@
 """
-Demonstrates automatic file resource cleanup using 'with' vs legacy manual close().
+File Reading Context Manager Demonstration Module.
+
+This module demonstrates automatic file resource cleanup using the 'with' statement
+versus legacy manual open() and close() file handling patterns.
 """
-# "import module" loads the os standard library module for path verification.
+# "import os" imports standard operating system interface routines.
 import os
-# "from module import name" imports the List type hint symbol directly into local scope.
+# "from pathlib import Path" imports object-oriented filesystem paths.
+from pathlib import Path
+# "from typing import List" imports list type annotation helper.
 from typing import List
 
 
-
 def read_lines_with_context(filepath: str) -> List[str]:
-    """Read lines from file safely utilizing 'with' context manager."""
-    if not os.path.exists(filepath):
+    """
+    Read lines from file safely utilizing 'with' context manager.
+
+    Args:
+        filepath (str): Path to text file.
+
+    Returns:
+        List[str]: List of stripped text lines.
+    """
+    path = Path(filepath)
+    if not path.exists():
         raise FileNotFoundError(f"File not found: {filepath}")
 
     cleaned_lines: List[str] = []
-    with open(filepath, 'r', encoding='utf-8') as fh:
-        for line in fh:
-            cleaned_lines.append(line.rstrip('\n'))
+    with open(path, "r", encoding="utf-8") as file_handle:
+        for line in file_handle:
+            cleaned_lines.append(line.rstrip("\n"))
 
     return cleaned_lines
 
 
 def read_lines_legacy_close(filepath: str) -> List[str]:
-    """Read lines from file using legacy manual open() and close()."""
-    if not os.path.exists(filepath):
+    """
+    Read lines from file using legacy manual open() and close() within try-finally.
+
+    Args:
+        filepath (str): Path to text file.
+
+    Returns:
+        List[str]: List of stripped text lines.
+    """
+    path = Path(filepath)
+    if not path.exists():
         raise FileNotFoundError(f"File not found: {filepath}")
 
     cleaned_lines: List[str] = []
-    fh = open(filepath, 'r', encoding='utf-8')
+    file_handle = open(path, "r", encoding="utf-8")
     try:
-        for line in fh:
-            cleaned_lines.append(line.rstrip('\n'))
+        for line in file_handle:
+            cleaned_lines.append(line.rstrip("\n"))
     finally:
-        fh.close()
+        file_handle.close()
 
     return cleaned_lines
 
 
-if __name__ == '__main__':
-    sample_file = os.path.join(os.path.dirname(__file__), 'with_sample.txt')
+if __name__ == "__main__":
+    print("=== File Reading Context Manager Demonstration ===")
+    sample_file = str(Path(__file__).parent / "with_sample.txt")
     lines = read_lines_with_context(sample_file)
     print("Lines read safely via context manager:", lines)
