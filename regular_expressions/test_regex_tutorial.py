@@ -1,5 +1,5 @@
 import unittest
-from regex_basics import (
+from cloud_app.tutorials.regex_basics import (
     validate_email_address,
     format_person_name,
     extract_social_handle,
