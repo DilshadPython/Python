@@ -15,6 +15,10 @@ from logical_bitwise_operators import (
     demonstrate_logical_operators,
     demonstrate_short_circuit_evaluation,
 )
+from chained_comparisons_and_short_circuit import (
+    evaluate_chained_range_comparison,
+    evaluate_short_circuit_safety,
+)
 
 
 class TestComparisonAndLogicalOperators(unittest.TestCase):
@@ -77,6 +81,21 @@ class TestComparisonAndLogicalOperators(unittest.TestCase):
         self.assertEqual(bit_not, -13)     # ~12 = -13
         self.assertEqual(shift_l, 48)      # 12 << 2 = 48
         self.assertEqual(shift_r, 5)       # 10 >> 1 = 5
+
+    def test_chained_range_comparison(self):
+        """Verify pythonic chained comparison logic."""
+        self.assertTrue(evaluate_chained_range_comparison(50, 10, 100))
+        self.assertFalse(evaluate_chained_range_comparison(5, 10, 100))
+
+    def test_short_circuit_safety(self):
+        """Verify short-circuiting guards against division by zero."""
+        possible, val = evaluate_short_circuit_safety([20, 10])
+        self.assertTrue(possible)
+        self.assertEqual(val, 5)
+
+        possible_empty, val_empty = evaluate_short_circuit_safety([])
+        self.assertFalse(possible_empty)
+        self.assertEqual(val_empty, -1)
 
 
 if __name__ == "__main__":

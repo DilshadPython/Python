@@ -11,6 +11,10 @@ from assignment_operators import (
     demonstrate_augmented_bitwise_assignment,
     demonstrate_walrus_assignment_expression,
 )
+from advanced_arithmetic_and_assignment_examples import (
+    calculate_complex_arithmetic,
+    demonstrate_inplace_sequence_mutations,
+)
 
 
 class TestArithmeticAndAssignmentOperators(unittest.TestCase):
@@ -67,6 +71,20 @@ class TestArithmeticAndAssignmentOperators(unittest.TestCase):
         long_words, count = demonstrate_walrus_assignment_expression(words)
         self.assertEqual(long_words, ["APPLE", "ELEPHANT", "BANANA"])
         self.assertEqual(count, 3)
+
+    def test_complex_arithmetic_operations(self):
+        """Verify complex number arithmetic calculations."""
+        res = calculate_complex_arithmetic(3 + 4j, 1 - 2j)
+        self.assertEqual(res["addition"], 4 + 2j)
+        self.assertEqual(res["subtraction"], 2 + 6j)
+        self.assertEqual(res["multiplication"], 11 - 2j)
+
+    def test_inplace_sequence_mutations(self):
+        """Verify augmented assignment on list and set containers."""
+        mutated_list, mutated_set = demonstrate_inplace_sequence_mutations()
+        self.assertEqual(len(mutated_list), 10)
+        self.assertEqual(mutated_list[:5], [1, 2, 3, 4, 5])
+        self.assertEqual(mutated_set, {20, 30, 40})
 
 
 if __name__ == "__main__":

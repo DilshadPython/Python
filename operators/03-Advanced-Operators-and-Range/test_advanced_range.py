@@ -11,6 +11,7 @@ from range_operator_evolution import (
     inspect_range_attributes,
 )
 from walrus_and_special_operators import ItemRecord, calculate_discounted_price, sort_records_using_operator_getters
+from dunder_operator_overloading_and_bitwise_flags import PermissionFlags
 
 
 class TestAdvancedOperatorsAndRange(unittest.TestCase):
@@ -61,6 +62,20 @@ class TestAdvancedOperatorsAndRange(unittest.TestCase):
         """Verify range O(1) RAM footprint relative to materialized list sample."""
         range_bytes, list_bytes = compare_range_memory_efficiency()
         self.assertLess(range_bytes, list_bytes)
+
+    def test_custom_permission_flags_dunder_operators(self):
+        """Verify Bitwise OR (|), AND (&), and Membership (in) dunder overloading."""
+        read = PermissionFlags(PermissionFlags.READ)
+        write = PermissionFlags(PermissionFlags.WRITE)
+        exec_flag = PermissionFlags(PermissionFlags.EXEC)
+
+        read_write = read | write
+        self.assertTrue(PermissionFlags.READ in read_write)
+        self.assertTrue(PermissionFlags.WRITE in read_write)
+        self.assertFalse(PermissionFlags.EXEC in read_write)
+
+        all_perms = read_write | exec_flag
+        self.assertEqual(all_perms, PermissionFlags(0b111))
 
 
 if __name__ == "__main__":
