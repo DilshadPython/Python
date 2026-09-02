@@ -1,3 +1,0 @@
-Hello Python
-Hello Djnago
-Welcome to Flask Tutorials in Python
