@@ -4,7 +4,7 @@ NumPy and Python Range Memory Performance and Version Evolution Module.
 This module documents and benchmarks:
 - Memory footprint using sys.getsizeof for range() vs np.arange() vs materialized list.
 - Computational time complexity and evaluation mechanisms (O(1) lazy range vs O(N) memory allocation).
-- Comprehensive Python version evolution matrix (Python 2.7 to Python 3.13).
+- Comprehensive Python version evolution matrix from Python 3.3 to Python 3.13 with NumPy.
 """
 
 # Import sys for memory size introspection (sys.getsizeof)
@@ -66,18 +66,23 @@ def benchmark_iteration_performance(element_count: int = 100_000) -> dict[str, f
 
 
 def get_version_evolution_matrix() -> dict[str, str]:
-    """Provide historical and modern breakdown of range and array evolution.
+    """Provide historical and modern breakdown of range and NumPy evolution from Python 3.3 to 3.13.
 
     Returns:
-        dict[str, str]: Evolution matrix across Python releases.
+        dict[str, str]: Detailed evolution matrix across Python 3.3-3.13 releases.
     """
     return {
-        "Python 2.7": "range() created a fully materialized list in RAM O(N). xrange() was a custom sequence type for lazy O(1) iteration.",
-        "Python 3.0": "range() replaced xrange() entirely as an immutable lazy O(1) sequence object. Materialized range list removed.",
-        "Python 3.3": "range objects added support for slicing range(100)[::2] yielding new lazy range objects in O(1) time.",
-        "Python 3.8": "Positional-only parameter boundary syntax (/), vectorized SIMD performance updates in NumPy.",
-        "Python 3.11": "CPython Specializing Adaptive Interpreter accelerated integer loop evaluation over ranges by 10-25%.",
-        "Python 3.13": "Free-threaded CPython (PEP 703) enables parallel multi-threaded NumPy matrix operations without GIL bottlenecks.",
+        "Python 3.3": "O(1) lazy range sequence slicing support (range(100)[::2]); yield from generator delegation.",
+        "Python 3.4": "enum module and pathlib integration for safe path-based NumPy binary file saving (.npy).",
+        "Python 3.5": "PEP 465 matrix multiplication operator (@) introduced for NumPy ndarray.__matmul__.",
+        "Python 3.6": "Formated string literals (f-strings) for fast matrix logging and inline variable formatting.",
+        "Python 3.7": "Dataclasses; CPython opcode optimizations accelerating numeric loop dispatches.",
+        "Python 3.8": "Positional-only parameter syntax (/) (PEP 570) and Walrus operator (:=) (PEP 572) for array filtering.",
+        "Python 3.9": "Dictionary union operators (| and |=); built-in generic type hints (list[int] instead of typing.List).",
+        "Python 3.10": "Structural Pattern Matching (match/case PEP 634) over ndarray shapes and dimensions.",
+        "Python 3.11": "CPython Specializing Adaptive Interpreter (PEP 659) accelerates binary operator dispatches by 10-25%.",
+        "Python 3.12": "Per-interpreter GIL and detailed traceback error indicators for vector arithmetic.",
+        "Python 3.13": "Free-threaded CPython (PEP 703 - GIL removal) and Tier 2 JIT compilation for multi-threaded NumPy operations.",
     }
 
 
@@ -95,6 +100,6 @@ if __name__ == "__main__":
     print(f"NumPy arr.sum():       {perf['numpy_array_sum_seconds']:.6f} sec")
     print(f"NumPy Vector Speedup: {perf['speedup_factor']:.2f}x faster")
 
-    print("\n--- Python Version Evolution Matrix ---")
+    print("\n--- Python 3.3 to Python 3.13 Evolution Matrix ---")
     for ver, desc in get_version_evolution_matrix().items():
         print(f"[{ver}]: {desc}")

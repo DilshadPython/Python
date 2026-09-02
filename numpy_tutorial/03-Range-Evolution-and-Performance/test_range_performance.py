@@ -64,10 +64,12 @@ class TestRangePerformanceAndEvolution(unittest.TestCase):
         self.assertGreater(perf["speedup_factor"], 0.0)
 
     def test_version_evolution_matrix(self) -> None:
-        """Verify Python evolution matrix dictionary keys."""
+        """Verify Python 3.3 to Python 3.13 evolution matrix dictionary keys."""
         evo = get_version_evolution_matrix()
-        self.assertIn("Python 2.7", evo)
-        self.assertIn("Python 3.0", evo)
+        self.assertIn("Python 3.3", evo)
+        self.assertIn("Python 3.5", evo)
+        self.assertIn("Python 3.8", evo)
+        self.assertIn("Python 3.11", evo)
         self.assertIn("Python 3.13", evo)
 
     def test_introspect_range_attributes(self) -> None:
@@ -81,13 +83,15 @@ class TestRangePerformanceAndEvolution(unittest.TestCase):
 
     def test_introspect_ndarray_attributes(self) -> None:
         """Verify reflection and statistics for dir(np.ndarray)."""
-        mat = np.array([[1, 2], [3, 4]])
+        mat = np.array([[10, 20], [30, 40]])
         info = introspect_ndarray_attributes(mat)
-        self.assertEqual(info["sum"], 10.0)
-        self.assertEqual(info["mean"], 2.5)
-        self.assertEqual(info["max"], 4.0)
-        self.assertEqual(info["min"], 1.0)
-        self.assertEqual(info["flattened_list"], [1, 2, 3, 4])
+        self.assertEqual(info["sum"], 100.0)
+        self.assertEqual(info["mean"], 25.0)
+        self.assertEqual(info["max"], 40.0)
+        self.assertEqual(info["min"], 10.0)
+        self.assertEqual(info["argmax"], 3)
+        self.assertEqual(info["argmin"], 0)
+        self.assertEqual(info["flattened_list"], [10, 20, 30, 40])
 
 
 if __name__ == "__main__":
