@@ -21,6 +21,7 @@ from file_handling_and_io.csv_file_operations import (
     read_csv_dict,
     sort_csv_records_by_field,
     analyze_google_stock_csv,
+    read_city_counties_csv,
 )
 from file_handling_and_io.file_search_and_filter import (
     search_keyword_in_file,
@@ -77,7 +78,7 @@ class TestFileHandlingAndIO(unittest.TestCase):
         self.assertEqual(hex_rep, "89 50 4E 47")
 
     def test_csv_file_operations(self) -> None:
-        """Tests CSV writing, DictReader parsing, lambda sorting, and google.csv stock analysis."""
+        """Tests CSV writing, DictReader parsing, lambda sorting, and dataset parsing."""
         csv_path = os.path.join(self.test_dir.name, "data_test.csv")
         headers = ["Name", "Age"]
         rows = [["Alice", "30"], ["Bob", "25"], ["Charlie", "35"]]
@@ -96,6 +97,11 @@ class TestFileHandlingAndIO(unittest.TestCase):
         metrics = analyze_google_stock_csv(google_csv)
         self.assertIn("total_days", metrics)
         self.assertGreater(metrics["total_days"], 200)
+
+        # Test dict_city.csv reading
+        dict_city_csv = os.path.join(base_dir, "dict_city.csv")
+        city_counties = read_city_counties_csv(dict_city_csv)
+        self.assertGreater(len(city_counties), 0)
 
     def test_file_search_and_filter(self) -> None:
         """Tests line searching, email extraction, and word counting."""

@@ -92,6 +92,28 @@ def analyze_google_stock_csv(filepath: str) -> Dict[str, Any]:
     }
 
 
+def read_city_counties_csv(filepath: str) -> List[Tuple[str, str]]:
+    """
+    Reads a headerless CSV file (`dict_city.csv`) mapping cities to UK counties.
+
+    Args:
+        filepath (str): Path to dict_city.csv.
+
+    Returns:
+        List[Tuple[str, str]]: List of (city, county) tuples.
+    """
+    if not os.path.exists(filepath):
+        return []
+
+    entries: List[Tuple[str, str]] = []
+    with open(filepath, "r", newline="", encoding="utf-8") as f:
+        reader = csv.reader(f)
+        for row in reader:
+            if len(row) >= 2 and row[0].strip():
+                entries.append((row[0].strip(), row[1].strip()))
+    return entries
+
+
 def sort_csv_records_by_field(records: List[Dict[str, str]], field_name: str, reverse: bool = False) -> List[Dict[str, str]]:
     """
     Sorts a list of dictionary records by a specific field key using lambda sorting.
@@ -116,6 +138,7 @@ def main() -> None:
     base_dir = os.path.dirname(os.path.abspath(__file__))
     sample_csv = os.path.join(base_dir, "sample_data.csv")
     google_csv = os.path.join(base_dir, "google.csv")
+    dict_city_csv = os.path.join(base_dir, "dict_city.csv")
 
     # 1. Custom CSV Writing
     headers = ["Name", "City", "Age", "Role"]
@@ -133,8 +156,14 @@ def main() -> None:
     for rec in records:
         print(f"   {rec}")
 
-    # 3. Financial Analysis of Google Stock Data
-    print("\n3. Analyzing `google.csv` Stock Dataset:")
+    # 3. Read city/county CSV
+    city_counties = read_city_counties_csv(dict_city_csv)
+    print(f"\n3. Parsed `dict_city.csv` ({len(city_counties)} city/county entries):")
+    for city, county in city_counties[:3]:
+        print(f"   City: {city}, County: {county}")
+
+    # 4. Financial Analysis of Google Stock Data
+    print("\n4. Analyzing `google.csv` Stock Dataset:")
     metrics = analyze_google_stock_csv(google_csv)
     for key, val in metrics.items():
         if isinstance(val, float):
