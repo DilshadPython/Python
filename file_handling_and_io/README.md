@@ -1,6 +1,6 @@
 # 📁 File Handling & I/O (`file_handling_and_io`) Pedagogical Module
 
-Welcome to the **`file_handling_and_io` Pedagogical Module**. This module provides a complete reference architecture for mastering Python file handling, text modes (`r`, `w`, `a`, `x`), binary modes (`rb`, `wb`), chunked buffer stream copying, structured CSV operations (`csv.reader`, `csv.DictReader`), regex pattern filtering, temporary file management (`tempfile`), and `pathlib.Path` metadata inspection.
+Welcome to the **`file_handling_and_io` Pedagogical Module**. This module provides a complete reference architecture for mastering Python file handling, text modes (`r`, `w`, `a`, `x`), binary modes (`rb`, `wb`), chunked buffer stream copying, structured CSV operations (`csv.reader`, `csv.DictReader`), financial stock analysis (`google.csv`), regex pattern filtering, temporary file management (`tempfile`), and `pathlib.Path` metadata inspection.
 
 ---
 
@@ -10,23 +10,32 @@ Welcome to the **`file_handling_and_io` Pedagogical Module**. This module provid
 file_handling_and_io/
 ├── text_file_operations.py      # Text file modes ('r', 'w', 'a', 'x'), line streaming, seek() & tell()
 ├── binary_file_operations.py    # Binary file I/O ('rb', 'wb'), chunked stream copying, & magic number inspection
-├── csv_file_operations.py       # Structured CSV parsing (csv.writer, csv.DictReader) & lambda sorting
-├── file_search_and_filter.py    # Keyword search, regex email extraction (re.findall), & word counting
+├── csv_file_operations.py       # Structured CSV parsing, lambda sorting, & google.csv stock analysis
+├── file_search_and_filter.py    # Keyword search, email extraction (re.findall), & word counting
 ├── temp_and_file_system.py      # Auto-cleaning temporary files (tempfile) & pathlib.Path metadata
-├── test_file_handling_and_io.py # Unittest suite validating all 5 File I/O modules
+├── test_file_handling_and_io.py # Unittest suite validating all 5 File I/O modules & datasets
 ├── requirements.txt             # Dependency specification (Standard library footprint)
-└── README.md                    # Module documentation and usage guide
+├── README.md                    # Module documentation and usage guide
+├── walkthrough.md               # Detailed walkthrough documentation
+│
+└── Data Assets:
+    ├── cities.txt               # Sample text dataset of international city names
+    ├── appendfile.txt           # Sample text dataset for appending operations
+    ├── dict_city.csv            # Sample CSV dataset mapping cities and UK counties
+    ├── emailList.txt            # Sample email dataset for regex search
+    ├── email_from.txt           # Sample email header log dataset for regex parsing
+    └── google.csv               # Historical Google stock market CSV dataset (2014-2015)
 ```
 
 ---
 
 ## 🌟 What is New in This Module Update
 
-1. **Consolidation of 50 Legacy Files**: Replaced 50 fragmented, duplicated, and misspelled scripts (`readfile.py`, `how_to_open_file.py`, `randon.py`, `append_pro.py`, etc.) with 5 clean, production-ready modules.
+1. **Dataset Integration & Real-World Analysis**: Aligned code modules to directly parse and analyze real data assets including `google.csv` (stock market volume and prices), `dict_city.csv`, `emailList.txt`, and `cities.txt`.
 2. **Standardized Python Naming**: All module filenames are valid Python identifiers enabling clean imports (`from file_handling_and_io.text_file_operations import ...`).
 3. **Chunked Binary Stream Processing**: Added memory-efficient byte copying for binary assets using fixed 4KB buffer chunks.
 4. **PEP 8 Compliance & Type Annotations**: Modernized code with standard Pythonic conventions, complete type hints (`List`, `Dict`, `Tuple`, `Optional`), docstrings, and `if __name__ == "__main__":` entry points.
-5. **Comprehensive Unittest Suite**: Introduced `test_file_handling_and_io.py` covering text, binary, CSV, regex search, and temporary file operations using Python's `unittest` framework.
+5. **Comprehensive Unittest Suite**: Introduced `test_file_handling_and_io.py` covering text, binary, CSV, stock dataset analysis, regex email search, and temporary file operations using Python's `unittest` framework.
 
 ---
 
@@ -98,18 +107,20 @@ raw_bytes, hex_string = inspect_binary_header("src.png", num_bytes=4)
 
 ---
 
-### 3. `csv_file_operations.py` — Structured CSV Processing
+### 3. `csv_file_operations.py` — Structured CSV & Stock Dataset Analysis
 
 ```python
 from file_handling_and_io.csv_file_operations import (
     write_csv_rows,
     read_csv_dict,
+    analyze_google_stock_csv,
     sort_csv_records_by_field,
 )
 
-# Parse CSV into dict records and sort using lambda key
-records = read_csv_dict("data.csv")
-sorted_recs = sort_csv_records_by_field(records, field_name="Age", reverse=True)
+# Analyze google.csv historical stock metrics
+metrics = analyze_google_stock_csv("google.csv")
+print("Total trading days:", metrics["total_days"])
+print("Max closing price:", metrics["max_close"])
 ```
 
 ---
@@ -123,8 +134,8 @@ from file_handling_and_io.file_search_and_filter import (
     count_words_in_file,
 )
 
-# Extract unique emails using regex
-emails = extract_emails_from_file("document.txt")
+# Extract unique emails using regex from emailList.txt
+emails = extract_emails_from_file("emailList.txt")
 ```
 
 ---

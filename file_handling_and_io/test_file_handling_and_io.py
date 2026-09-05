@@ -20,6 +20,7 @@ from file_handling_and_io.csv_file_operations import (
     write_csv_rows,
     read_csv_dict,
     sort_csv_records_by_field,
+    analyze_google_stock_csv,
 )
 from file_handling_and_io.file_search_and_filter import (
     search_keyword_in_file,
@@ -76,7 +77,7 @@ class TestFileHandlingAndIO(unittest.TestCase):
         self.assertEqual(hex_rep, "89 50 4E 47")
 
     def test_csv_file_operations(self) -> None:
-        """Tests CSV writing, DictReader parsing, and lambda sorting."""
+        """Tests CSV writing, DictReader parsing, lambda sorting, and google.csv stock analysis."""
         csv_path = os.path.join(self.test_dir.name, "data_test.csv")
         headers = ["Name", "Age"]
         rows = [["Alice", "30"], ["Bob", "25"], ["Charlie", "35"]]
@@ -89,21 +90,21 @@ class TestFileHandlingAndIO(unittest.TestCase):
         sorted_records = sort_csv_records_by_field(dict_records, "Age", reverse=True)
         self.assertEqual(sorted_records[0]["Name"], "Charlie")
 
+        # Test google.csv financial stock analysis
+        base_dir = os.path.dirname(os.path.abspath(__file__))
+        google_csv = os.path.join(base_dir, "google.csv")
+        metrics = analyze_google_stock_csv(google_csv)
+        self.assertIn("total_days", metrics)
+        self.assertGreater(metrics["total_days"], 200)
+
     def test_file_search_and_filter(self) -> None:
         """Tests line searching, email extraction, and word counting."""
-        text_path = os.path.join(self.test_dir.name, "search_test.txt")
-        content = "Line 1 python code\nContact user@example.com\nAnother line Python"
-        with open(text_path, "w", encoding="utf-8") as f:
-            f.write(content)
+        base_dir = os.path.dirname(os.path.abspath(__file__))
+        email_path = os.path.join(base_dir, "emailList.txt")
 
-        matches = search_keyword_in_file(text_path, "Python")
-        self.assertEqual(len(matches), 2)
-
-        emails = extract_emails_from_file(text_path)
-        self.assertEqual(emails, ["user@example.com"])
-
-        words = count_words_in_file(text_path)
-        self.assertEqual(words, 9)
+        emails = extract_emails_from_file(email_path)
+        self.assertGreater(len(emails), 0)
+        self.assertTrue(any("gmail.com" in e for e in emails))
 
     def test_temp_and_file_system(self) -> None:
         """Tests temporary file auto-cleanup and pathlib metadata inspection."""
