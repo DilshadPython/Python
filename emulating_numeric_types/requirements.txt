@@ -1,0 +1,6 @@
+# Emulating Numeric Types Module Requirements
+# All numeric emulation modules utilize standard Python Data Model dunder methods.
+# Minimum Python Version: 3.10+
+
+# Testing Framework (Optional)
+pytest>=7.0.0
