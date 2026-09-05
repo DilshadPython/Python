@@ -1,34 +1,32 @@
-"""
-Fraction Range Evolution, Sequence Generation, & Introspection Module.
+"""Fractional Range Evolution, Sequence Generation, & Introspection Module.
 
-This module demonstrates and documents:
-- Generating fractional sequence steps using list comprehensions and generators over range()
-- Memory and performance comparison between range() and Fraction sequence lists
-- Full introspection of range object attributes via dir(range)
-- Version evolution breakdown for fractions and range from Python 2.7 to Python 3.13
+Provides functions demonstrating:
+- Fractional range sequence generation
+- O(1) space memory footprint comparison between `range()` and `List[Fraction]`
+- Introspection of `range` object attributes via `dir(range)`
+- Python version evolution breakdown from Python 2.7 to Python 3.13
 """
-# "from fractions import Fraction" imports rational fraction class.
-from fractions import Fraction
-# "import sys" imports system-specific parameters and functions.
+
 import sys
-# "from typing import List, Dict, Any" imports type hint annotations.
-from typing import List, Dict, Any
+from fractions import Fraction
+from typing import Any, Dict, List
 
 
-def generate_fractional_range(start: Fraction, stop: Fraction, step: Fraction) -> List[Fraction]:
-    """
-    Generate a list of Fraction values over a fractional start, stop, and step range.
+def generate_fractional_range(
+    start: Fraction, stop: Fraction, step: Fraction
+) -> List[Fraction]:
+    """Generate a list of Fraction values over a fractional start, stop, and step range.
 
-    Since standard range() only supports integer arguments, fractional steps are generated
-    by iterating with integer range() multipliers or generator loops.
+    Since standard `range()` only supports integer arguments, fractional steps are generated
+    by iterating with step increments in a loop.
 
     Args:
-        start (Fraction): Starting fraction value inclusive.
-        stop (Fraction): Stopping fraction bound exclusive.
-        step (Fraction): Step increment fraction.
+        start: Starting fraction value inclusive.
+        stop: Stopping fraction bound exclusive.
+        step: Step increment fraction.
 
     Returns:
-        List[Fraction]: List of exact Fraction step values.
+        List of exact Fraction step values.
     """
     result: List[Fraction] = []
     current = start
@@ -43,19 +41,20 @@ def generate_fractional_range(start: Fraction, stop: Fraction, step: Fraction) -
     return result
 
 
-def compare_range_and_fraction_memory_efficiency(element_count: int = 1000) -> Dict[str, Any]:
-    """
-    Compare O(1) memory footprint of range() vs materialized List[Fraction].
+def compare_range_and_fraction_memory_efficiency(
+    element_count: int = 1000
+) -> Dict[str, Any]:
+    """Compare O(1) memory footprint of `range()` vs materialized `List[Fraction]`.
 
-    Documentation & Performance Note:
-    - range() stores only start, stop, and step attributes in C memory (~48 bytes), operating in O(1) space.
+    Performance Note:
+    - `range()` stores only start, stop, and step attributes in C memory (~48 bytes), operating in O(1) space.
     - Materialized sequence lists store individual object pointers in memory, scaling linearly in O(N) space.
 
     Args:
-        element_count (int): Number of items in range sequence.
+        element_count: Number of items in range sequence.
 
     Returns:
-        Dict[str, Any]: Memory size comparison in bytes.
+        Memory size comparison in bytes.
     """
     r = range(element_count)
     fraction_list = [Fraction(i, 3) for i in range(element_count)]
@@ -70,11 +69,10 @@ def compare_range_and_fraction_memory_efficiency(element_count: int = 1000) -> D
 
 
 def inspect_range_attributes_and_methods() -> Dict[str, Any]:
-    """
-    Demonstrate introspection of range object attributes and methods using dir(range).
+    """Demonstrate introspection of range object attributes using `dir(range)`.
 
     Returns:
-        Dict[str, Any]: Range attributes matrix and public methods list.
+        Range attributes matrix and public methods list.
     """
     r = range(10, 100, 5)
     public_attrs = [attr for attr in dir(range) if not attr.startswith("__")]
@@ -92,11 +90,10 @@ def inspect_range_attributes_and_methods() -> Dict[str, Any]:
 
 
 def document_python_version_evolution() -> Dict[str, str]:
-    """
-    Summarize version evolution of fractions and range from Python 2.7 to Python 3.13.
+    """Summarize version evolution of fractions and range from Python 2.7 to Python 3.13.
 
     Returns:
-        Dict[str, str]: Evolution notes per major Python release milestone.
+        Evolution notes per major Python release milestone.
     """
     return {
         "Python 2.7": (
@@ -123,13 +120,19 @@ def document_python_version_evolution() -> Dict[str, str]:
     }
 
 
-if __name__ == "__main__":
-    print("=== Step 3: Range Evolution, Memory & Introspection ===")
+def main() -> None:
+    """Demonstrate fractional range and memory inspection operations."""
+    print("--- Fractional Range & Introspection Operations ---")
+
     f_range = generate_fractional_range(Fraction(0, 1), Fraction(1, 1), Fraction(1, 4))
-    print(f"Fractional range [0 to 1 step 1/4]: {f_range}")
+    print(f"[generate_fractional_range] [0 to 1 step 1/4]: {f_range}")
 
     mem_info = compare_range_and_fraction_memory_efficiency(1000)
-    print(f"Memory Efficiency: {mem_info}")
+    print(f"\n[memory_efficiency] {mem_info}")
 
     range_info = inspect_range_attributes_and_methods()
-    print(f"dir(range) Introspection: {range_info}")
+    print(f"\n[dir(range) introspection] {range_info}")
+
+
+if __name__ == "__main__":
+    main()
