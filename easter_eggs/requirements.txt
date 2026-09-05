@@ -1,0 +1,6 @@
+# Easter Eggs Pedagogical Module Requirements
+# All easter egg modules utilize built-in Python standard library components.
+# Minimum Python Version: 3.10+
+
+# Development & Testing (Optional)
+pytest>=7.0.0
