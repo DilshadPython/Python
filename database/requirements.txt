@@ -1,0 +1,7 @@
+# Database drivers and relational database connectivity libraries
+
+# MySQL Official Connector
+mysql-connector-python>=8.0.0
+
+# Pure Python MySQL Driver (Alternative)
+pymysql>=1.0.0
