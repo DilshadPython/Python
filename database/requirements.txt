@@ -5,3 +5,6 @@ mysql-connector-python>=8.0.0
 
 # Pure Python MySQL Driver (Alternative)
 pymysql>=1.0.0
+
+# Testing framework
+pytest>=7.0.0

@@ -65,49 +65,23 @@ pip install --upgrade pip
 pip install -r requirements.txt
 ```
 
-#### Step 4 (Optional): Install MySQL Server on Windows
-- Download the official MySQL Installer from [MySQL Community Downloads](https://dev.mysql.com/downloads/installer/).
-- Run the installer and select **Developer Default**.
-- Remember your `root` password for configuration in `mysql_db.py`.
-
 ---
 
 ### 🍎 2. macOS Installation Guide
 
-#### Step 1: Open Terminal
-Press `Cmd + Space`, type `Terminal`, and press `Enter`.
+#### Step 1: Open Terminal (`Cmd + Space` -> `Terminal`)
 
-#### Step 2: Ensure Python 3 is Installed
+#### Step 2: Create and Activate Virtual Environment
 ```bash
-python3 --version
-```
-*(If Python is not installed, install it using Homebrew: `brew install python3`)*
-
-#### Step 3: Create and Activate a Virtual Environment
-```bash
-# Navigate to your project folder
 cd /path/to/your/project/database
-
-# Create virtual environment
 python3 -m venv venv
-
-# Activate virtual environment
 source venv/bin/activate
 ```
 
-#### Step 4: Install Dependencies
+#### Step 3: Install Dependencies
 ```bash
 pip install --upgrade pip
 pip install -r requirements.txt
-```
-
-#### Step 5 (Optional): Install MySQL Server on macOS
-```bash
-# Install MySQL using Homebrew
-brew install mysql
-
-# Start MySQL Service
-brew services start mysql
 ```
 
 ---
@@ -116,51 +90,43 @@ brew services start mysql
 
 #### Step 1: Open Terminal (`Ctrl + Alt + T`)
 
-#### Step 2: Install Python 3, venv, and pip
-- **Ubuntu / Debian**:
-  ```bash
-  sudo apt update
-  sudo apt install -y python3 python3-pip python3-venv
-  ```
-- **Fedora / RHEL**:
-  ```bash
-  sudo dnf install -y python3 python3-pip
-  ```
-- **Arch Linux**:
-  ```bash
-  sudo pacman -S python python-pip
-  ```
-
-#### Step 3: Create and Activate a Virtual Environment
+#### Step 2: Create and Activate Virtual Environment
 ```bash
 cd /path/to/your/project/database
 python3 -m venv venv
 source venv/bin/activate
 ```
 
-#### Step 4: Install Dependencies
+#### Step 3: Install Dependencies
 ```bash
 pip install --upgrade pip
 pip install -r requirements.txt
 ```
 
-#### Step 5 (Optional): Install MySQL / MariaDB Server on Linux
-- **Ubuntu / Debian**:
-  ```bash
-  sudo apt install -y mysql-server
-  sudo systemctl start mysql
-  ```
-
 ---
 
-## 📦 Requirements File (`requirements.txt`)
+## 🧪 Automated Testing & Security Verification
 
-```text
-# Official MySQL driver
-mysql-connector-python>=8.0.0
+To guarantee code security, data integrity, and prevent regression bugs or SQL Injection vulnerabilities, an automated unit test suite is included in the `tests/` directory.
 
-# Pure Python MySQL driver alternative
-pymysql>=1.0.0
+### 🛡️ What is Tested for Security & Stability?
+
+1. **SQL Injection Defense**: Tests tautology attacks (`' OR '1'='1`), piggybacked `DROP TABLE` attempts, and `UNION` query injection payloads against all search functions to ensure parameters are properly bound.
+2. **SQLite Operations Test**: Tests connection management, table creation, batch static insertion, dynamic user input handling, filtering, limit pagination, updates, and deletions in isolated temporary database instances (`tempfile`).
+3. **MySQL Manager Test**: Tests configuration validation, connection failure handling, fallback states, and mock query executions.
+
+### 🏃 How to Run the Test Suite
+
+Run the full test suite using Python's built-in `unittest` runner:
+
+```bash
+python3 -m unittest discover -v -s tests
+```
+
+Or using `pytest`:
+
+```bash
+pytest -v tests/
 ```
 
 ---
@@ -169,10 +135,15 @@ pymysql>=1.0.0
 
 ```text
 database/
-├── README.md                  # Complete documentation and beginner guide
-├── requirements.txt           # External python package dependencies
+├── README.md                  # Complete documentation, setup, and testing guide
+├── requirements.txt           # External package dependencies (MySQL drivers, pytest)
 ├── mysql_db.py                # Object-oriented MySQL database manager
-└── sqlite3/
+├── tests/
+│   ├── __init__.py            # Test package marker
+│   ├── test_sqlite_modules.py # SQLite CRUD operations test suite
+│   ├── test_mysql_manager.py  # MySQLDatabaseManager test suite
+│   └── test_security_sql_injection.py # Security & SQL Injection test suite
+└── sqlite_db/
     ├── __init__.py            # Package marker
     ├── beginner_starter.py    # Step-by-step beginner tutorial script
     ├── connect_db.py          # Connection and cursor initialization demo
@@ -192,120 +163,9 @@ database/
 
 ---
 
-## 🏁 Quick Start: Beginner Code Tutorial
-
-If you are starting for the first time, run the interactive beginner starter script:
-
-```bash
-python3 sqlite3/beginner_starter.py
-```
-
-### Beginner Code Walkthrough ([sqlite3/beginner_starter.py](file:///home/monika/PycharmProjects/Devel/Python/database/sqlite3/beginner_starter.py))
-
-```python
-import sqlite3
-
-# 1. Connect to Database (Creates file if missing)
-with sqlite3.connect("starter_demo.db") as connection:
-    cursor = connection.cursor()
-
-    # 2. Create Table (Schema definition with data types)
-    cursor.execute("""
-        CREATE TABLE IF NOT EXISTS Products (
-            id INTEGER PRIMARY KEY AUTOINCREMENT,
-            name TEXT NOT NULL,
-            price REAL NOT NULL,
-            quantity INTEGER DEFAULT 0
-        )
-    """)
-
-    # 3. Create / Insert Records
-    cursor.execute(
-        "INSERT INTO Products (name, price, quantity) VALUES (?, ?, ?)",
-        ("Wireless Mouse", 25.50, 100)
-    )
-    connection.commit()  # Save changes to disk
-
-    # 4. Read Records
-    cursor.execute("SELECT * FROM Products")
-    rows = cursor.fetchall()
-    for row in rows:
-        print(row)
-
-    # 5. Update Records
-    cursor.execute("UPDATE Products SET price = ? WHERE name = ?", (19.99, "Wireless Mouse"))
-    connection.commit()
-
-    # 6. Delete Records
-    cursor.execute("DELETE FROM Products WHERE name = ?", ("Wireless Mouse",))
-    connection.commit()
-```
-
----
-
-## 🛠️ Detailed Method & File Reference
-
-### 1. `mysql_db.py` - MySQL Database Manager
-
-#### Class: `MySQLDatabaseManager`
-
-##### Attributes
-- `config` (`Dict[str, Any]`): Connection parameters dictionary (host, user, password, database, port).
-- `connection` (`Optional[Any]`): Active MySQL connection object instance.
-
-##### Methods
-1. `__init__(self, config: Dict[str, Any]) -> None`: Initializes manager with configuration parameters.
-2. `connect(self) -> bool`: Establishes connection to MySQL server.
-3. `disconnect(self) -> None`: Safely closes the active connection.
-4. `create_table(self, query: str) -> None`: Executes DDL statement to create a table.
-5. `execute_query(self, query: str, params: Optional[Tuple[Any, ...]] = None) -> List[Tuple[Any, ...]]`: Executes `SELECT` queries and returns results.
-6. `execute_update(self, query: str, params: Optional[Tuple[Any, ...]] = None) -> int`: Executes `INSERT`/`UPDATE`/`DELETE` DML statements and commits changes.
-
-##### Usage Example:
-```python
-from mysql_db import MySQLDatabaseManager
-
-db_config = {
-    "host": "localhost",
-    "user": "root",
-    "password": "your_password",
-    "database": "test_db",
-    "port": 3306
-}
-
-db = MySQLDatabaseManager(db_config)
-if db.connect():
-    db.create_table("CREATE TABLE IF NOT EXISTS Users (id INT AUTO_INCREMENT PRIMARY KEY, name VARCHAR(50))")
-    db.execute_update("INSERT INTO Users (name) VALUES (%s)", ("Alice",))
-    print(db.execute_query("SELECT * FROM Users"))
-    db.disconnect()
-```
-
----
-
-### 2. SQLite Modules Summary
-
-| Module | Description | Function / Entry Point |
-| :--- | :--- | :--- |
-| **`sqlite3/beginner_starter.py`** | Comprehensive beginner guide covering all CRUD steps. | `run_beginner_tutorial()` |
-| **`sqlite3/connect_db.py`** | Basic database connection and cursor closing demo. | `connect_database()` |
-| **`sqlite3/create_table.py`** | Demonstrates `CREATE TABLE IF NOT EXISTS`. | `create_car_table()` |
-| **`sqlite3/insert_static_data.py`** | Demonstrates batch inserting static tuples into SQLite. | `setup_database()` |
-| **`sqlite3/insert_dynamic_data.py`** | Demonstrates dynamic parameterized user input insertion. | `dynamic_insert_data()` |
-| **`sqlite3/read_all_data.py`** | Reads all rows from database (`SELECT *`). | `read_all_records()` |
-| **`sqlite3/read_filtered_data.py`** | Reads rows matching condition (`WHERE Name = ?`). | `read_filtered_records()` |
-| **`sqlite3/read_by_user_input.py`** | Search database by brand input parameter. | `read_by_user_input()` |
-| **`sqlite3/read_by_multiple_inputs.py`** | Search using multiple compound parameters (`Name` and `Version`). | `read_by_multiple_inputs()` |
-| **`sqlite3/read_with_limit.py`** | Paginated query results using `LIMIT N`. | `read_with_limit()` |
-| **`sqlite3/update_data.py`** | Modifies existing rows using `UPDATE`. | `update_records()` |
-| **`sqlite3/delete_data.py`** | Demonstrates `DELETE` within active transaction. | `delete_records()` |
-| **`sqlite3/delete_data_with_commit.py`** | Demonstrates `DELETE` with explicit transaction `commit()`. | `delete_records_with_commit()` |
-| **`sqlite3/email_counter_crud.py`** | Parses mail logs and aggregates counts per sender email address. | `process_email_log()` |
-
----
-
 ## 💡 Best Practices Checklist
 
 1. **Use Parameterized Queries**: Always use `?` (SQLite) or `%s` (MySQL) to pass variables safely and prevent SQL injection.
 2. **Always Use Context Managers**: Use `with sqlite3.connect(...) as connection:` to handle connection cleanup automatically.
 3. **Commit Transactions**: DML commands (`INSERT`, `UPDATE`, `DELETE`) require `connection.commit()` to persist changes to disk.
+4. **Run Unit Tests**: Execute `python3 -m unittest discover -v -s tests` before committing code changes.
