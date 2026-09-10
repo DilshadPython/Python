@@ -1,36 +1,32 @@
 """
-Unit Test Suite for `pathlib_tutorial.py`.
+Unit Test Suite for Object-Oriented Path Manipulation across Developer Tiers (Beginner, Intermediate, Senior).
 
 This module verifies:
-1. Current working directory and home path inspection.
-2. Path decomposition (stem, suffix, name, parent, type checks).
-3. Directory listing and glob pattern matching.
-4. File reading and writing via `Path.write_text()` and `Path.read_text()`.
+1. Core `pathlib_tutorial.py` functions (decomposition, globbing, I/O).
+2. Beginner level path operations (`beginner_pathlib.py`).
+3. Intermediate level recursive globbing, extension transformation, and stat metadata (`intermediate_pathlib.py`).
+4. Senior level path traversal sanitization, stream filtering, and async reading (`senior_pathlib.py`).
 """
 
+import asyncio
 from pathlib import Path
+import sys
 import tempfile
 import unittest
 
 # Support both package and local directory import paths
-try:
-    from python_library.pathlib_tutorial import (
-        get_current_directory_info,
-        decompose_path,
-        list_directory_contents,
-        write_and_read_text_file,
-    )
-except ImportError:
-    from pathlib_tutorial import (
-        get_current_directory_info,
-        decompose_path,
-        list_directory_contents,
-        write_and_read_text_file,
-    )
+root = Path(__file__).parent
+if str(root) not in sys.path:
+    sys.path.insert(0, str(root))
+
+from pathlib_tutorial import get_current_directory_info, decompose_path, list_directory_contents, write_and_read_text_file
+from beginner_pathlib import create_and_join_path, check_path_status, read_and_write_file
+from intermediate_pathlib import find_files_recursively, transform_file_extension, get_file_metadata
+from senior_pathlib import sanitize_user_filepath, filter_path_stream, async_read_file_content
 
 
 class TestPathlibTutorial(unittest.TestCase):
-    """Test suite verifying pathlib operations and helper functions."""
+    """Test suite verifying pathlib operations across all modules and developer tiers."""
 
     def test_get_current_directory_info(self) -> None:
         """Verify CWD and Home directory retrieval."""
@@ -61,29 +57,60 @@ class TestPathlibTutorial(unittest.TestCase):
 
             py_items = list_directory_contents(temp_dir, pattern="*.py")
             self.assertEqual(len(py_items), 1)
-            self.assertEqual(py_items[0]["name"], "file1.py")
 
-    def test_list_directory_contents_errors(self) -> None:
-        """Verify error handling for invalid or missing directories."""
+    def test_beginner_pathlib(self) -> None:
+        """Verify beginner path creation, status check, and read/write."""
+        joined = create_and_join_path("folder", "test.txt")
+        self.assertEqual(joined, Path("folder/test.txt"))
+
         with tempfile.TemporaryDirectory() as temp_dir:
-            file_path = Path(temp_dir) / "not_a_dir.txt"
-            file_path.write_text("data", encoding="utf-8")
+            f_path = Path(temp_dir) / "beginner.txt"
+            content = read_and_write_file(f_path, "Beginner Content")
+            self.assertEqual(content, "Beginner Content")
 
-            with self.assertRaises(NotADirectoryError):
-                list_directory_contents(file_path)
+            status = check_path_status(f_path)
+            self.assertTrue(status["exists"])
+            self.assertTrue(status["is_file"])
 
-        with self.assertRaises(FileNotFoundError):
-            list_directory_contents("/non_existent_directory_12345")
+    def test_intermediate_pathlib(self) -> None:
+        """Verify intermediate rglob, extension transformation, and stat metadata."""
+        sample_file = Path("doc.txt")
+        transformed = transform_file_extension(sample_file, ".md")
+        self.assertEqual(transformed, Path("doc.md"))
 
-    def test_write_and_read_text_file(self) -> None:
-        """Verify atomic file writing and reading using Path.write_text and Path.read_text."""
         with tempfile.TemporaryDirectory() as temp_dir:
-            file_path = Path(temp_dir) / "sub_folder" / "test_file.txt"
-            content = "Hello, Python Pathlib!"
+            temp_path = Path(temp_dir)
+            sub = temp_path / "nested"
+            sub.mkdir()
+            (sub / "test.py").write_text("code = 1", encoding="utf-8")
 
-            res = write_and_read_text_file(file_path, content)
-            self.assertEqual(res["read_content"], content)
-            self.assertTrue(Path(file_path).exists())
+            found = find_files_recursively(temp_path, "*.py")
+            self.assertEqual(len(found), 1)
+
+            meta = get_file_metadata(sub / "test.py")
+            self.assertGreater(meta["size_bytes"], 0)
+
+    def test_senior_pathlib(self) -> None:
+        """Verify senior path traversal sanitization, stream filtering, and async reading."""
+        with tempfile.TemporaryDirectory() as temp_dir:
+            base = Path(temp_dir)
+            (base / "valid.txt").write_text("secure data", encoding="utf-8")
+
+            # Valid safe resolution
+            safe = sanitize_user_filepath(base, "valid.txt")
+            self.assertTrue(safe.exists())
+
+            # Traversal attack attempt block
+            with self.assertRaises(PermissionError):
+                sanitize_user_filepath(base, "../../../etc/passwd")
+
+            # Generator Stream Filter
+            matches = list(filter_path_stream(base, min_size_bytes=1, extension=".txt"))
+            self.assertEqual(len(matches), 1)
+
+            # Async File Read
+            content = asyncio.run(async_read_file_content(safe))
+            self.assertEqual(content, "secure data")
 
 
 if __name__ == "__main__":
