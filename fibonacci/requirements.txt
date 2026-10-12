@@ -1,0 +1,6 @@
+# Fibonacci & Algorithms Module Requirements
+# All sequence modules utilize standard Python mathematical and functools built-ins.
+# Minimum Python Version: 3.10+
+
+# Testing Framework (Optional)
+pytest>=7.0.0

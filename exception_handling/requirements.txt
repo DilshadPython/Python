@@ -1,0 +1,6 @@
+# Exception Handling Module Requirements
+# All exception handling modules utilize standard Python built-in exceptions.
+# Minimum Python Version: 3.10+
+
+# Testing Framework (Optional)
+pytest>=7.0.0

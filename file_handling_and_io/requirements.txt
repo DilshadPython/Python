@@ -1,0 +1,6 @@
+# File Handling & I/O Module Requirements
+# All file handling modules utilize built-in Python standard library components.
+# Minimum Python Version: 3.10+
+
+# Testing Framework (Optional)
+pytest>=7.0.0

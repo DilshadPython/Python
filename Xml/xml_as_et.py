@@ -1,1 +1,0 @@
-# https://stackoverflow.com/questions/39509069/how-to-save-data-from-xml-file-to-postgresql-database-in-django-1-9

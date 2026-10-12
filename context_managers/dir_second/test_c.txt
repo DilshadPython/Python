@@ -1,0 +1,4 @@
+# Secondary Log File C for Dir-Second Module
+[DEBUG] Entering subfolder dir-second scope
+[INFO] Multi-file handling and ExitStack demonstration
+[SUCCESS] Execution pipeline finished

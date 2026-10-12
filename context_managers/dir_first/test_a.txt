@@ -1,0 +1,4 @@
+# Sample Data File A for Dir-First Module
+Line 1: Context Manager Directory Isolation Demonstration
+Line 2: Target path dir-first active context
+Line 3: Automatic directory cleanup and restoration

@@ -1,0 +1,3 @@
+# String Formatting Operations Module Dependencies
+# Note: All functionality relies on the Python Standard Library (Python 3.10+)
+# No external third-party packages are required.

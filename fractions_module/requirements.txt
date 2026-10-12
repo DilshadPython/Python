@@ -1,0 +1,4 @@
+# Fractions Module Dependencies
+# Note: All functionality relies on the Python Standard Library (Python 3.10+)
+# Modules used: fractions, decimal, math, sys, typing, unittest.
+# No external third-party packages are required.
