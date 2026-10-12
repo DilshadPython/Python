@@ -11,20 +11,15 @@ def make_tea(func):
 
 @make_tea
 def new_tea(type_tea, time_need):
-    print('Start make a new tea {type_tea} to drink.')
-    start_time = time.time()
+    print('Start make a new tea to drink.')
     time.sleep(time_need)
-    end_time = time.time()
-    print(f'Tea time: {end_time - start_time}, seconds.')
+    print(f'Tea time: {time_need}, seconds.')
 
 new_tea('Balck Tea', 2)
 
 @make_tea
 def match_tea():
-    print('Time match')
-    start_time = time.time()
     time.sleep(2)
-    end_time = time.time()
-    print(f'Time match: {end_time - start_time}')
+    print(f'Time match')
 
 match_tea()
