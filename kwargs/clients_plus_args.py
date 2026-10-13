@@ -1,6 +1,8 @@
-def register_client(name, age, *args):
+def register_client(name, age, *extras):
     print(name, age)
-    print('args contains:', args)
+    # print('args contains:', extras)
+    for arg in extras:
+        print('---> ', arg)
 
 register_client('Alice', 25)
 register_client('Bob', 28)
