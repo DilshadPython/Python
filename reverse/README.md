@@ -1,68 +1,68 @@
-# 🔄 Python Sequence Reversal Master Module
+# 🔄 Python Reverse Sequence & Traversal Master Tutorial
 
-Welcome to the definitive master tutorial module for **Python Sequence & Range Reversal**. This directory features a **3-step sequential curriculum**—guiding students step-by-step from fundamental string and in-place list reversal, to custom `__reversed__()` dunder protocols, dictionary view reversal, and $O(1)$ memory range iterator benchmarks.
-
----
-
-## 📁 Repository Directory Architecture
-
-```
-reverse/
-├── 01-Sequence-Reversal-Basics/
-│   ├── string_reversal.py         # Slice [::-1], reversed() iterator, join(), word/sentence reversal
-│   ├── list_in_place_reversal.py  # In-place list.reverse() vs out-of-place list copy & side effects
-│   └── test_reversal_basics.py    # 8 Unit tests for string & list reversal techniques
-├── 02-Advanced-Reversal-Protocols/
-│   ├── custom_reversed_protocol.py# Custom __reversed__() protocol hook & __len__/__getitem__ fallback
-│   ├── iterator_reversal_helpers.py# Dict view reversal (Python 3.8+), deque reversal & tuple slicing
-│   └── test_reversal_protocols.py # 6 Unit tests for custom protocol hooks & container views
-├── 03-Range-Reversal-and-Performance/
-│   ├── range_reversal_evolution.py# reversed(range(n)), negative step range(), memory benchmarks & dir(range)
-│   └── test_range_reversal.py     # 5 Unit tests for range reversal & memory footprint
-├── reverse_text.py                # Standardized PEP 8 master demonstration entrypoint
-├── test_reverse_master.py         # Master unittest suite runner executing all 19 unit tests
-├── README.md                      # Pedagogical overview & quickstart instructions
-└── docs.md                        # Technical documentation, dunder protocol hooks & version matrices
-```
+Welcome to the **Python Reverse Sequence & Traversal Tutorial**. This curriculum provides a complete pedagogical walkthrough of Python sequence reversal mechanisms—ranging from built-in `reversed()`, extended slicing `[::-1]`, and in-place `.reverse()`, to custom class `__reversed__()` hooks, 2D matrix transformations, dictionary view reversing, $O(1)$ range sequence reversal, memory profiling, and CPython interpreter version evolution (Python 2.7 ➔ 3.3 ➔ 3.13).
 
 ---
 
-## 🚀 Quickstart & Execution Guide
+## 📌 Project Architecture & Subfolder Hierarchy
 
-### 1. Running the Master Demonstration Entrypoint
-```bash
-python3 reverse/reverse_text.py
 ```
-
-### 2. Running Individual Curriculum Steps
-```bash
-# Step 1: Sequence Reversal Basics
-python3 reverse/01-Sequence-Reversal-Basics/string_reversal.py
-python3 reverse/01-Sequence-Reversal-Basics/list_in_place_reversal.py
-
-# Step 2: Advanced Reversal Protocols & Containers
-python3 reverse/02-Advanced-Reversal-Protocols/custom_reversed_protocol.py
-python3 reverse/02-Advanced-Reversal-Protocols/iterator_reversal_helpers.py
-
-# Step 3: Range Reversal & Performance
-python3 reverse/03-Range-Reversal-and-Performance/range_reversal_evolution.py
-```
-
-### 3. Running Unit Test Suites
-```bash
-# Run Master Test Suite via unittest
-python3 reverse/test_reverse_master.py
-
-# Run Master Test Suite via pytest
-pytest reverse/
+reverse_sequence/
+├── 01-Fundamentals/
+│   ├── reverse_sequence_basics.py      # reversed() iterator, list.reverse() in-place mutation
+│   ├── reverse_slicing_conversions.py  # Sequence slicing [::-1], type casting, TypeError handling
+│   └── test_fundamentals.py            # Step 1 unit tests
+├── 02-Advanced-Math-and-Operators/
+│   ├── custom_reversible_class.py      # Custom __reversed__() hooks & sequence protocol fallback
+│   ├── matrix_and_dict_reverse.py      # Dict views reversal (keys, values, items) & 2D grid matrix ops
+│   └── test_advanced_reverse.py       # Step 2 unit tests
+├── 03-Range-Evolution-and-Performance/
+│   ├── range_reverse_evolution.py     # Negative step range(), sys.getsizeof memory benchmarks, dir()
+│   └── test_range_evolution.py        # Step 3 unit tests
+├── reverse_sequence_basics.py          # Master entrypoint running all curriculum steps
+├── test_reverse_tutorial.py           # Master unittest suite executing all tests
+└── README.md                          # Comprehensive technical documentation & run guide
 ```
 
 ---
 
-## 💡 Key Pedagogical Concepts Covered
+## 🚀 How to Run the Code & Execute Tests
 
-1. **String Immutability & Reversal**: Understanding why strings cannot be modified in-place and comparing extended slicing `text[::-1]` against `reversed()` iterator joining.
-2. **Command-Query Separation (`list.reverse()`)**: Explaining why `list.reverse()` mutates the list in-place and returns `None`, contrasting with `list[::-1]` and `reversed(list)`.
-3. **`__reversed__()` Dunder Hook (PEP 322)**: Implementing custom reverse iteration protocol hooks on user-defined classes and utilizing `__len__()` + `__getitem__()` fallbacks.
-4. **Dictionary View Reversal (Python 3.8+ PEP 584)**: Leveraging ordered dictionaries to reverse `keys()`, `values()`, and `items()` views.
-5. **Range Iterator Memory Benchmark**: Demonstrating $O(1)$ space memory efficiency of `reversed(range(n))` vs $O(N)$ space materialized lists.
+### 1. Running standard Python entrypoints:
+```bash
+# Run master entrypoint
+python3 reverse_sequence/reverse_sequence_basics.py
+
+# Run individual subfolder modules
+python3 reverse_sequence/01-Fundamentals/reverse_sequence_basics.py
+python3 reverse_sequence/02-Advanced-Math-and-Operators/custom_reversible_class.py
+python3 reverse_sequence/03-Range-Evolution-and-Performance/range_reverse_evolution.py
+```
+
+### 2. Running Unit Tests:
+```bash
+# Run master test suite via pytest
+pytest reverse_sequence/test_reverse_tutorial.py -v
+
+# Run subfolder tests via unittest
+python3 -m unittest discover -s reverse_sequence -p "test_*.py"
+```
+
+---
+
+## 💡 Key Features & Concepts Covered
+
+1. **Built-in `reversed(seq)` Iterator**: Traverses lists, tuples, strings, and ranges in $O(1)$ lazy memory without mutating the original sequence.
+2. **In-place `.reverse()`**: Mutates list objects directly in place and returns `None`.
+3. **Extended Slicing `[::-1]`**: Constructs a shallow copy of sequence elements in reverse order.
+4. **Custom Reversible OOP Classes**: Implements `__reversed__()` dunder method for customized reverse traversal logic, or relies on `__len__()` + `__getitem__()` sequence fallback.
+5. **Dictionary & View Reversing**: Reverses dictionary keys, values, and key-value items maintaining insertion order (Python 3.8+).
+6. **2D Matrix Reversing**: Vertical row reversal (`matrix[::-1]`), horizontal column reversal (`[r[::-1] for r in matrix]`), and 180-degree rotation.
+7. **$O(1)$ Memory Overhead**: Benchmarks lazy `reversed(range(1_000_000))` (48 bytes) vs $O(N)$ linear memory of materialized list slices (`list(range(1_000_000))[::-1]`).
+8. **CPython Version Evolution (2.7 ➔ 3.3 ➔ 3.13)**: Documents `xrange` replacement, `range_iterator` specializations, `dict` view reversing, and Python 3.13 `FOR_ITER` adaptive bytecode optimizations.
+
+---
+
+## 📜 License & Compliance
+
+All code adheres strictly to PEP 8 standards with modern type hints (`typing`) and comprehensive docstrings.
