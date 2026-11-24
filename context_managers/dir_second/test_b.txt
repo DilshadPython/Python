@@ -1,0 +1,4 @@
+# Batch Log File B for Dir-Second Module
+[INFO] Context manager initialized in dir-second
+[INFO] Multi-resource ExitStack processing active
+[SUCCESS] Batch step 1 completed

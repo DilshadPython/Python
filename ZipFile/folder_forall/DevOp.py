@@ -1,1 +1,0 @@
- I love python programming more than DEVOP

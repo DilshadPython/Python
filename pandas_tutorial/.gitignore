@@ -1,0 +1,4 @@
+.pvenv/
+__pycache__/
+*.pyc
+temp_pandas_io/

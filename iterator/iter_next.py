@@ -1,29 +1,32 @@
-# Iterator is read the num or string in the list but when we called with next 
-# it read only one index but if called more than go to next is like for loop
-# but manualy see the example below
+"""
+Manual Next Call Demonstration Script.
 
-numbers = [1, 2, 3, 4, 5,]
+This script demonstrates iterating over lists manually using iter() and next().
+"""
+# "from typing import List, Tuple" imports type hint annotations.
+from typing import List, Tuple
 
-# we make the list iterable
-itr = iter(numbers)
 
-print(itr.__next__())
+def demonstrate_manual_next_calls() -> Tuple[List[int], List[str]]:
+    """
+    Demonstrate manual next() calls over numbers and car models.
 
-print('*******************')
-names = ['Paris', 'London', 'Berlin', 'Tokyo', 'Roma']
+    Returns:
+        Tuple[List[int], List[str]]: Extracted elements.
+    """
+    numbers = [1, 2, 3, 4, 5]
+    num_iter = iter(numbers)
+    extracted_nums = [next(num_iter), next(num_iter)]
 
-name = iter(names)
-print(name.__next__())
-print(name.__next__())
-print(name.__next__())
-print(name.__next__())
-print(name.__next__())
+    cars = ["Audi", "Fiat", "Alfa Romeo", "Porsche", "Volvo"]
+    car_iter = iter(cars)
+    extracted_cars = [next(car_iter), next(car_iter), next(car_iter)]
 
-print('#####################')
+    return extracted_nums, extracted_cars
 
-cars = ['Audi', 'Fiat', 'Alfa Romie', 'Porsh', 'Volvo']
 
-car = iter(cars)
-print(next(car))
-print(next(car))
-print(next(car))
+if __name__ == "__main__":
+    print("=== Manual next() Demonstration ===")
+    nums, cars = demonstrate_manual_next_calls()
+    print(f"Extracted Numbers : {nums}")
+    print(f"Extracted Cars    : {cars}")

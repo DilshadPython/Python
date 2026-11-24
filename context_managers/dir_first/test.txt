@@ -1,0 +1,4 @@
+# Configuration Data for Dir-First Context Module
+environment=development
+max_connections=10
+debug_mode=True
