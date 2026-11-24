@@ -1,19 +1,42 @@
+"""Beverage preparation timing decorator (Coffee).
+
+Demonstrates a parameterized beverage preparation decorator with clean type
+hints and accurate spelling.
+"""
+
+import functools
 import time
-
-def make_coffe(func):
-    def mix_coffe(type_coff, time_need):
-        print('start time:', time.time())
-        start_time = time.time()
-        func(type_coff, time_need)
-        end_time = time.time()
-        print(f'coffe time: {end_time - start_time}, seconds.')
-    return mix_coffe
+from typing import Any, Callable
 
 
-@make_coffe
-def new_coffe(type_coff, time_need):
-    start_time = time.time()
-    time.sleep(time_need)
-    end_time = time.time()
+def make_coffee(func: Callable[..., Any]) -> Callable[..., Any]:
+    """Decorator timing the coffee brewing process."""
+    @functools.wraps(func)
+    def mix_coffee(type_coffee: str, time_needed: float = 0.05) -> Any:
+        start_time = time.perf_counter()
+        result = func(type_coffee, time_needed)
+        end_time = time.perf_counter()
+        elapsed = end_time - start_time
+        print(f"Coffee ({type_coffee}) brew time: {elapsed:.4f} seconds.")
+        return result
 
-new_coffe('Back coffe', 2)
+    return mix_coffee
+
+
+# Backward compatibility aliases
+make_coffe = make_coffee
+
+
+@make_coffee
+def new_coffee(type_coffee: str, time_needed: float = 0.05) -> str:
+    """Brew a new cup of coffee."""
+    time.sleep(time_needed)
+    return f"{type_coffee} brewed successfully."
+
+
+new_coffe = new_coffee
+
+
+if __name__ == "__main__":
+    result = new_coffee("Black Coffee", 0.1)
+    print(result)

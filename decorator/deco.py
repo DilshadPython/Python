@@ -1,13 +1,22 @@
+"""Manual timing baseline vs Decorator comparison.
+
+Demonstrates how manual before/after timing code can be abstracted cleanly
+into reusable decorators.
+"""
+
 import time
 
-def go_to_work():
 
-    start_walk = time.time()
+def go_to_work(walk_duration: float = 0.05) -> float:
+    """Simulate manual time measurement around a function block."""
+    start_walk = time.perf_counter()
     print("Walking...")
-    time.sleep(1)
-    end_walk = time.time()
-    print("Walking took", end_walk - start_walk)
-    result = end_walk - start_walk
-    print(f'result: {result}')
+    time.sleep(walk_duration)
+    end_walk = time.perf_counter()
+    elapsed = end_walk - start_walk
+    print(f"Walking took: {elapsed:.4f} seconds")
+    return elapsed
 
-go_to_work()
+
+if __name__ == "__main__":
+    go_to_work()
