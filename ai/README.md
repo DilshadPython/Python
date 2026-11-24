@@ -146,9 +146,35 @@ python3 -m unittest ai/test_models.py
 ```
 Expected output:
 ```text
-......
+.......
 ----------------------------------------------------------------------
-Ran 6 tests in 0.002s
+Ran 7 tests in 0.000s
 
 OK
 ```
+
+---
+
+## 6. Quick Package Installation with `uv`
+
+> [!NOTE]
+> Since this module uses `pyproject.toml` and `uv.lock` without a traditional `requirements.txt`, you can install all required packages in one command:
+
+```bash
+uv add huggingface-hub langchain langchain-openai langgraph python-dotenv sentence-transformers
+```
+
+Or install them into your existing `.venv` using `uv pip`:
+
+```bash
+uv pip install huggingface-hub langchain langchain-openai langgraph python-dotenv sentence-transformers
+```
+
+### Core Package List:
+* `huggingface-hub`: Client library to download models and interface with Hugging Face Hub.
+* `langchain`: Framework for building LLM and agentic workflows.
+* `langchain-openai`: OpenAI provider integration for LangChain.
+* `langgraph`: Multi-agent orchestration and cyclical graph execution.
+* `python-dotenv`: Loads environment variables from `.env` files.
+* `sentence-transformers`: Dense vector embeddings and semantic search models.
+
